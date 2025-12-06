@@ -1,0 +1,320 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI Materials .Net\\Homy\\Homy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\usersubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\usersubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\savedproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\savedproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\propertytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\propertytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\propertyimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\propertyimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\propertyamenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\propertyamenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\amenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\amenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\homy\\homy\\homy.domin\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\iti materials .net\\homy\\homy\\homy.infurastructure\\data\\homeycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\data\\homeycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\homy\\homy\\homy.presentaion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\iti materials .net\\homy\\homy\\homy.infurastructure\\homy.infurastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\homy.infurastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\homy\\homy\\homy.presentaion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Amenity.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Amenity.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\Amenity.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Amenity.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\Amenity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:21:27.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Project.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\Project.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Project.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\Project.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:22:29.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Property.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Property.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\Property.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Property.cs*",
+              "RelativeToolTip": "Homy.Domin\\models\\Property.cs*",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwBoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:22:39.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PropertyType.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\PropertyType.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\PropertyType.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\PropertyType.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\PropertyType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:24:12.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PropertyAmenity.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\PropertyAmenity.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\PropertyAmenity.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\PropertyAmenity.cs*",
+              "RelativeToolTip": "Homy.Domin\\models\\PropertyAmenity.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:23:01.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PropertyImage.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\PropertyImage.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\PropertyImage.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\PropertyImage.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\PropertyImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:23:17.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SavedProperty.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\SavedProperty.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\SavedProperty.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\SavedProperty.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\SavedProperty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:24:26.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\User.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\User.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\User.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:24:36.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserSubscription.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\UserSubscription.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\UserSubscription.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\UserSubscription.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\UserSubscription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:24:56.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Package.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Package.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\Package.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\Package.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\Package.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:22:19.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "District.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\District.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\District.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\District.cs*",
+              "RelativeToolTip": "Homy.Domin\\models\\District.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:22:05.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\City.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\City.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\City.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:21:54.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\BaseEntity.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Domin\\models\\BaseEntity.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:21:44.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeyContext.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Infurastructure\\Data\\HomeyContext.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Data\\HomeyContext.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Infurastructure\\Data\\HomeyContext.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Data\\HomeyContext.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA4wAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:29:12.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.presentaion\\Program.cs",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Program.cs",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.presentaion\\Program.cs",
+              "RelativeToolTip": "Homy.presentaion\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:33:22.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Homy.Infurastructure",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Homy.Infurastructure.csproj",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+              "RelativeToolTip": "Homy.Infurastructure\\Homy.Infurastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-24T01:58:38.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.presentaion\\appsettings.json",
+              "RelativeDocumentMoniker": "Homy.presentaion\\appsettings.json",
+              "ToolTip": "D:\\ITI Materials .Net\\Homy\\Homy\\Homy.presentaion\\appsettings.json",
+              "RelativeToolTip": "Homy.presentaion\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T01:29:50.64Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Graduation_project\\Homy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\graduation_project\\homy\\homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Genric_Repo.cs",
+              "DocumentMoniker": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "ToolTip": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T18:00:01.265Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
