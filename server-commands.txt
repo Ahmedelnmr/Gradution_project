@@ -1,0 +1,18 @@
+1-run this commands on cmd global =====> npm i -g json-server  
+
+
+2-run this commands on cmd folder server ===>npm init
+
+
+3-run this commands on cmd on folder server =====> npm i json-server  
+
+
+4-to run db.json ===>  json-server --watch db.json
+
+
+to convert js to json 
+
+https://www.convertsimple.com/convert-javascript-to-json/
+
+
+
