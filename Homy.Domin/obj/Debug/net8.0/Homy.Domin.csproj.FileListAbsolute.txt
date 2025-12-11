@@ -23,3 +23,4 @@ D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
 D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
 D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
 D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll
+D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json

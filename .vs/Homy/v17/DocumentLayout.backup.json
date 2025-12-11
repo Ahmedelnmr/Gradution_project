@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Graduation_project\\Homy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\graduation_project\\homy\\homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\graduation_project\\homy\\homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Genric_Repo.cs",
-              "DocumentMoniker": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
-              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
-              "ToolTip": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
-              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Graduation_project\\Homy\\Homy.Domin\\models\\User.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\models\\User.cs",
+              "ToolTip": "D:\\Graduation_project\\Homy\\Homy.Domin\\models\\User.cs",
+              "RelativeToolTip": "Homy.Domin\\models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T18:00:01.265Z",
+              "WhenOpened": "2025-12-11T17:30:13.648Z",
               "EditorCaption": ""
             }
           ]

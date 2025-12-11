@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هومي - إدارة الباقات</title>
+    <meta name="description" content="إدارة باقات الاشتراك في منصة هومي">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-brand">
+                <i class="fas fa-home"></i>
+                <span>هومي</span>
+            </a>
+            <button class="sidebar-close d-lg-none" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة
+                            التحكم</span></a></li>
+                <li class="nav-item"><a href="users.html" class="nav-link"><i class="fas fa-users"></i><span>إدارة
+                            المستخدمين</span><span class="badge bg-danger">12</span></a></li>
+                <li class="nav-item"><a href="ads.html" class="nav-link"><i class="fas fa-bullhorn"></i><span>إدارة
+                            الإعلانات</span><span class="badge bg-danger">28</span></a></li>
+                <li class="nav-item"><a href="subscriptions.html" class="nav-link"><i
+                            class="fas fa-credit-card"></i><span>إدارة الاشتراكات</span></a></li>
+                <li class="nav-item active"><a href="packages.html" class="nav-link"><i
+                            class="fas fa-box"></i><span>إدارة الباقات</span></a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link"><i
+                            class="fas fa-building"></i><span>المشاريع والكمبوندات</span></a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link"><i class="fas fa-headset"></i><span>الشكاوى
+                            والدعم</span></a></li>
+                <li class="nav-item"><a href="reports.html" class="nav-link"><i
+                            class="fas fa-chart-bar"></i><span>الإحصائيات والتقارير</span></a></li>
+                <li class="nav-divider"></li>
+                <li class="nav-item"><a href="login.html" class="nav-link text-danger"><i
+                            class="fas fa-sign-out-alt"></i><span>تسجيل الخروج</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=40" alt="Admin"
+                    class="user-avatar">
+                <div class="user-details">
+                    <span class="user-name">أدمن هومي</span>
+                    <span class="user-role">مدير النظام</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+        <nav class="top-navbar">
+            <div class="navbar-right">
+                <button class="menu-toggle d-lg-none" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <a href="index.html" class="navbar-brand d-lg-none"><i class="fas fa-home"></i><span>هومي</span></a>
+            </div>
+            <div class="navbar-left">
+                <button class="nav-icon-btn" id="themeToggle" title="تغيير المظهر"><i class="fas fa-moon"></i></button>
+                <div class="nav-dropdown">
+                    <button class="user-dropdown-btn" id="userDropdownBtn">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=36"
+                            alt="Admin" class="user-avatar-sm">
+                        <span class="user-name-nav d-none d-md-inline">أدمن هومي</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-content">
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-box text-primary"></i>
+                        إدارة الباقات
+                    </h1>
+                    <nav class="breadcrumb-nav">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active">إدارة الباقات</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        إضافة باقة جديدة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Basic Package -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card">
+                        <div class="pricing-header bg-success">
+                            <h3 class="pricing-title">الباقة الأساسية</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">200</span>
+                                <span class="price-currency">جنيه</span>
+                                <span class="price-period">/ 6 أشهر</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check text-success"></i> 10 إعلانات شهرياً</li>
+                                <li><i class="fas fa-check text-success"></i> ظهور في نتائج البحث</li>
+                                <li><i class="fas fa-check text-success"></i> دعم فني عبر الإيميل</li>
+                                <li><i class="fas fa-times text-muted"></i> إعلانات مميزة</li>
+                                <li><i class="fas fa-times text-muted"></i> تقارير تفصيلية</li>
+                                <li><i class="fas fa-times text-muted"></i> أولوية في الظهور</li>
+                            </ul>
+                            <div class="pricing-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 450 مشترك</span>
+                            </div>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-outline-success w-100">
+                                <i class="fas fa-edit"></i> تعديل الباقة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card featured">
+                        <div class="pricing-badge">الأكثر مبيعاً</div>
+                        <div class="pricing-header bg-primary">
+                            <h3 class="pricing-title">الباقة البريميوم</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">500</span>
+                                <span class="price-currency">جنيه</span>
+                                <span class="price-period">/ سنة</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check text-success"></i> 30 إعلان شهرياً</li>
+                                <li><i class="fas fa-check text-success"></i> ظهور في نتائج البحث</li>
+                                <li><i class="fas fa-check text-success"></i> دعم فني على مدار الساعة</li>
+                                <li><i class="fas fa-check text-success"></i> 5 إعلانات مميزة</li>
+                                <li><i class="fas fa-check text-success"></i> تقارير تفصيلية</li>
+                                <li><i class="fas fa-times text-muted"></i> أولوية في الظهور</li>
+                            </ul>
+                            <div class="pricing-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 680 مشترك</span>
+                            </div>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-edit"></i> تعديل الباقة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIP Package -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card">
+                        <div class="pricing-header bg-purple">
+                            <h3 class="pricing-title">باقة VIP</h3>
+                            <div class="pricing-price">
+                                <span class="price-amount">1,000</span>
+                                <span class="price-currency">جنيه</span>
+                                <span class="price-period">/ سنة</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check text-success"></i> إعلانات غير محدودة</li>
+                                <li><i class="fas fa-check text-success"></i> أولوية في الظهور</li>
+                                <li><i class="fas fa-check text-success"></i> دعم فني VIP مخصص</li>
+                                <li><i class="fas fa-check text-success"></i> إعلانات مميزة غير محدودة</li>
+                                <li><i class="fas fa-check text-success"></i> تقارير تفصيلية متقدمة</li>
+                                <li><i class="fas fa-check text-success"></i> شارة VIP مميزة</li>
+                            </ul>
+                            <div class="pricing-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 118 مشترك</span>
+                            </div>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-outline-purple w-100">
+                                <i class="fas fa-edit"></i> تعديل الباقة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package Comparison Table -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        <i class="fas fa-table"></i>
+                        مقارنة الباقات
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>الميزة</th>
+                                    <th class="text-center">أساسي</th>
+                                    <th class="text-center">بريميوم</th>
+                                    <th class="text-center">VIP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>عدد الإعلانات الشهرية</td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">30</td>
+                                    <td class="text-center">غير محدود</td>
+                                </tr>
+                                <tr>
+                                    <td>إعلانات مميزة</td>
+                                    <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">غير محدود</td>
+                                </tr>
+                                <tr>
+                                    <td>أولوية الظهور</td>
+                                    <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                    <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                    <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>تقارير تفصيلية</td>
+                                    <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                                    <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                    <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>الدعم الفني</td>
+                                    <td class="text-center">إيميل</td>
+                                    <td class="text-center">24/7</td>
+                                    <td class="text-center">VIP مخصص</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 هومي - جميع الحقوق محفوظة</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

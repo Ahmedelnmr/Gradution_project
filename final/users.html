@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هومي - إدارة المستخدمين</title>
+    <meta name="description" content="إدارة المستخدمين والسماسرة في هومي">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-brand">
+                <i class="fas fa-home"></i>
+                <span>هومي</span>
+            </a>
+            <button class="sidebar-close d-lg-none" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="users.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>إدارة المستخدمين</span>
+                        <span class="badge bg-danger">12</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="ads.html" class="nav-link">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>إدارة الإعلانات</span>
+                        <span class="badge bg-danger">28</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="subscriptions.html" class="nav-link">
+                        <i class="fas fa-credit-card"></i>
+                        <span>إدارة الاشتراكات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="packages.html" class="nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>إدارة الباقات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">
+                        <i class="fas fa-building"></i>
+                        <span>المشاريع والكمبوندات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link">
+                        <i class="fas fa-headset"></i>
+                        <span>الشكاوى والدعم</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>الإحصائيات والتقارير</span>
+                    </a>
+                </li>
+                <li class="nav-divider"></li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link text-danger">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>تسجيل الخروج</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=40" alt="Admin"
+                    class="user-avatar">
+                <div class="user-details">
+                    <span class="user-name">أدمن هومي</span>
+                    <span class="user-role">مدير النظام</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content" id="mainContent">
+        <!-- Top Navbar -->
+        <nav class="top-navbar">
+            <div class="navbar-right">
+                <button class="menu-toggle d-lg-none" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <i class="fas fa-home"></i>
+                    <span>هومي</span>
+                </a>
+                <div class="search-box d-none d-lg-flex">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="بحث عن مستخدم..." class="search-input">
+                    <span class="search-shortcut">⌘K</span>
+                </div>
+            </div>
+
+            <div class="navbar-left">
+                <button class="nav-icon-btn" id="themeToggle" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="nav-dropdown">
+                    <button class="nav-icon-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="dropdown-menu notification-menu" id="notificationMenu">
+                        <div class="dropdown-header">
+                            <h6>الإشعارات</h6>
+                            <a href="#">عرض الكل</a>
+                        </div>
+                        <div class="dropdown-body">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon bg-primary">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>تم تسجيل مستخدم جديد</p>
+                                    <span class="notification-time">منذ 5 دقائق</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <button class="user-dropdown-btn" id="userDropdownBtn">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=36"
+                            alt="Admin" class="user-avatar-sm">
+                        <span class="user-name-nav d-none d-md-inline">أدمن هومي</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu user-menu" id="userDropdownMenu">
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            <span>الملف الشخصي</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="login.html" class="dropdown-item text-danger">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>تسجيل الخروج</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-users text-primary"></i>
+                        إدارة المستخدمين
+                    </h1>
+                    <nav class="breadcrumb-nav">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active">إدارة المستخدمين</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        إضافة مستخدم جديد
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs mb-4">
+                <button class="filter-tab active" data-filter="all">
+                    <span>الكل</span>
+                    <span class="tab-count">324</span>
+                </button>
+                <button class="filter-tab" data-filter="new">
+                    <span>جديد</span>
+                    <span class="tab-count">12</span>
+                </button>
+                <button class="filter-tab" data-filter="verified">
+                    <span>موثق</span>
+                    <span class="tab-count">286</span>
+                </button>
+                <button class="filter-tab" data-filter="blocked">
+                    <span>محظور</span>
+                    <span class="tab-count">26</span>
+                </button>
+            </div>
+
+            <!-- Users List -->
+            <div class="users-list">
+                <!-- User Card 1 -->
+                <div class="user-card">
+                    <div class="user-card-main">
+                        <div class="user-avatar-large">
+                            <img src="https://ui-avatars.com/api/?name=محمد+أحمد&background=6366f1&color=fff&size=80"
+                                alt="">
+                            <span class="user-status online"></span>
+                        </div>
+                        <div class="user-info-detailed">
+                            <h5 class="user-name-large">محمد أحمد</h5>
+                            <p class="user-role-text">سمسار عقارات</p>
+                            <div class="user-meta">
+                                <span><i class="fas fa-phone"></i> 01234567890</span>
+                                <span><i class="fas fa-map-marker-alt"></i> سوهاج - الكوثر</span>
+                                <span><i class="fas fa-calendar"></i> انضم: 2024/01/15</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">إعلان</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">128</span>
+                            <span class="stat-label">مشاهدة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.8</span>
+                            <span class="stat-label">التقييم</span>
+                        </div>
+                    </div>
+                    <div class="user-card-actions">
+                        <span class="status-badge status-verified">موثق</span>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                            <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon btn-block" title="حظر"><i class="fas fa-ban"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Card 2 -->
+                <div class="user-card">
+                    <div class="user-card-main">
+                        <div class="user-avatar-large">
+                            <img src="https://ui-avatars.com/api/?name=أحمد+محمود&background=10b981&color=fff&size=80"
+                                alt="">
+                            <span class="user-status online"></span>
+                        </div>
+                        <div class="user-info-detailed">
+                            <h5 class="user-name-large">أحمد محمود</h5>
+                            <p class="user-role-text">مطور عقاري</p>
+                            <div class="user-meta">
+                                <span><i class="fas fa-phone"></i> 01098765432</span>
+                                <span><i class="fas fa-map-marker-alt"></i> أسيوط - المدينة الجديدة</span>
+                                <span><i class="fas fa-calendar"></i> انضم: 2024/02/20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">23</span>
+                            <span class="stat-label">إعلان</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">89</span>
+                            <span class="stat-label">مشاهدة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.5</span>
+                            <span class="stat-label">التقييم</span>
+                        </div>
+                    </div>
+                    <div class="user-card-actions">
+                        <span class="status-badge status-verified">موثق</span>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                            <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon btn-block" title="حظر"><i class="fas fa-ban"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Card 3 - New -->
+                <div class="user-card">
+                    <div class="user-card-main">
+                        <div class="user-avatar-large">
+                            <img src="https://ui-avatars.com/api/?name=خالد+إبراهيم&background=f59e0b&color=fff&size=80"
+                                alt="">
+                            <span class="user-status offline"></span>
+                        </div>
+                        <div class="user-info-detailed">
+                            <h5 class="user-name-large">خالد إبراهيم</h5>
+                            <p class="user-role-text">سمسار عقارات</p>
+                            <div class="user-meta">
+                                <span><i class="fas fa-phone"></i> 01112223344</span>
+                                <span><i class="fas fa-map-marker-alt"></i> قنا - وسط البلد</span>
+                                <span><i class="fas fa-calendar"></i> انضم: 2024/12/10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">إعلان</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">مشاهدة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">-</span>
+                            <span class="stat-label">التقييم</span>
+                        </div>
+                    </div>
+                    <div class="user-card-actions">
+                        <span class="status-badge status-new">جديد</span>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-approve" title="توثيق"><i class="fas fa-check"></i></button>
+                            <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                            <button class="btn-icon btn-reject" title="رفض"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Card 4 - Blocked -->
+                <div class="user-card blocked">
+                    <div class="user-card-main">
+                        <div class="user-avatar-large">
+                            <img src="https://ui-avatars.com/api/?name=سعيد+عبدالله&background=ef4444&color=fff&size=80"
+                                alt="">
+                            <span class="user-status offline"></span>
+                        </div>
+                        <div class="user-info-detailed">
+                            <h5 class="user-name-large">سعيد عبدالله</h5>
+                            <p class="user-role-text">سمسار عقارات</p>
+                            <div class="user-meta">
+                                <span><i class="fas fa-phone"></i> 01555666777</span>
+                                <span><i class="fas fa-map-marker-alt"></i> الأقصر - شرق النيل</span>
+                                <span><i class="fas fa-calendar"></i> انضم: 2023/06/10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">إعلان</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35</span>
+                            <span class="stat-label">مشاهدة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2.1</span>
+                            <span class="stat-label">التقييم</span>
+                        </div>
+                    </div>
+                    <div class="user-card-actions">
+                        <span class="status-badge status-rejected">محظور</span>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                            <button class="btn-icon btn-restore" title="إلغاء الحظر"><i
+                                    class="fas fa-undo"></i></button>
+                            <button class="btn-icon btn-delete" title="حذف"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Card 5 -->
+                <div class="user-card">
+                    <div class="user-card-main">
+                        <div class="user-avatar-large">
+                            <img src="https://ui-avatars.com/api/?name=علي+حسن&background=8b5cf6&color=fff&size=80"
+                                alt="">
+                            <span class="user-status online"></span>
+                        </div>
+                        <div class="user-info-detailed">
+                            <h5 class="user-name-large">علي حسن</h5>
+                            <p class="user-role-text">مستثمر عقاري</p>
+                            <div class="user-meta">
+                                <span><i class="fas fa-phone"></i> 01288899900</span>
+                                <span><i class="fas fa-map-marker-alt"></i> سوهاج - أخميم</span>
+                                <span><i class="fas fa-calendar"></i> انضم: 2024/03/05</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">67</span>
+                            <span class="stat-label">إعلان</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">245</span>
+                            <span class="stat-label">مشاهدة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">التقييم</span>
+                        </div>
+                    </div>
+                    <div class="user-card-actions">
+                        <span class="status-badge status-verified">موثق</span>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                            <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                            <button class="btn-icon btn-block" title="حظر"><i class="fas fa-ban"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Card 6 - New -->
+                <div class="user-card">
+                    <div class="user-card-main">
+                        <div class="user-avatar-large">
+                            <img src="https://ui-avatars.com/api/?name=عمر+فاروق&background=06b6d4&color=fff&size=80"
+                                alt="">
+                            <span class="user-status offline"></span>
+                        </div>
+                        <div class="user-info-detailed">
+                            <h5 class="user-name-large">عمر فاروق</h5>
+                            <p class="user-role-text">سمسار عقارات</p>
+                            <div class="user-meta">
+                                <span><i class="fas fa-phone"></i> 01066677788</span>
+                                <span><i class="fas fa-map-marker-alt"></i> المنيا - وسط البلد</span>
+                                <span><i class="fas fa-calendar"></i> انضم: 2024/12/11</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-card-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">إعلان</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">مشاهدة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">-</span>
+                            <span class="stat-label">التقييم</span>
+                        </div>
+                    </div>
+                    <div class="user-card-actions">
+                        <span class="status-badge status-new">جديد</span>
+                        <div class="action-buttons">
+                            <button class="btn-icon btn-approve" title="توثيق"><i class="fas fa-check"></i></button>
+                            <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                            <button class="btn-icon btn-reject" title="رفض"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination-nav mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 هومي - جميع الحقوق محفوظة | صُنع بـ <i class="fas fa-heart text-danger"></i> في صعيد مصر</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

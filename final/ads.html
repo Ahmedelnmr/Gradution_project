@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هومي - إدارة الإعلانات</title>
+    <meta name="description" content="إدارة إعلانات العقارات في هومي">
+
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-brand">
+                <i class="fas fa-home"></i>
+                <span>هومي</span>
+            </a>
+            <button class="sidebar-close d-lg-none" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>إدارة المستخدمين</span>
+                        <span class="badge bg-danger">12</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="ads.html" class="nav-link">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>إدارة الإعلانات</span>
+                        <span class="badge bg-danger">28</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="subscriptions.html" class="nav-link">
+                        <i class="fas fa-credit-card"></i>
+                        <span>إدارة الاشتراكات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="packages.html" class="nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>إدارة الباقات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">
+                        <i class="fas fa-building"></i>
+                        <span>المشاريع والكمبوندات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="support.html" class="nav-link">
+                        <i class="fas fa-headset"></i>
+                        <span>الشكاوى والدعم</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>الإحصائيات والتقارير</span>
+                    </a>
+                </li>
+                <li class="nav-divider"></li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link text-danger">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>تسجيل الخروج</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=40" alt="Admin"
+                    class="user-avatar">
+                <div class="user-details">
+                    <span class="user-name">أدمن هومي</span>
+                    <span class="user-role">مدير النظام</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content" id="mainContent">
+        <!-- Top Navbar -->
+        <nav class="top-navbar">
+            <div class="navbar-right">
+                <button class="menu-toggle d-lg-none" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <i class="fas fa-home"></i>
+                    <span>هومي</span>
+                </a>
+                <div class="search-box d-none d-lg-flex">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="بحث في الإعلانات..." class="search-input">
+                    <span class="search-shortcut">⌘K</span>
+                </div>
+            </div>
+
+            <div class="navbar-left">
+                <button class="nav-icon-btn" id="themeToggle" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="nav-dropdown">
+                    <button class="nav-icon-btn" id="notificationBtn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="dropdown-menu notification-menu" id="notificationMenu">
+                        <div class="dropdown-header">
+                            <h6>الإشعارات</h6>
+                            <a href="#">عرض الكل</a>
+                        </div>
+                        <div class="dropdown-body">
+                            <a href="#" class="notification-item unread">
+                                <div class="notification-icon bg-warning">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <p>إعلان جديد ينتظر المراجعة</p>
+                                    <span class="notification-time">منذ 5 دقائق</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <button class="user-dropdown-btn" id="userDropdownBtn">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=36"
+                            alt="Admin" class="user-avatar-sm">
+                        <span class="user-name-nav d-none d-md-inline">أدمن هومي</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu user-menu" id="userDropdownMenu">
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            <span>الملف الشخصي</span>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <span>الإعدادات</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="login.html" class="dropdown-item text-danger">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>تسجيل الخروج</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-bullhorn text-primary"></i>
+                        إدارة الإعلانات
+                    </h1>
+                    <nav class="breadcrumb-nav">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active">إدارة الإعلانات</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        إضافة إعلان جديد
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs mb-4">
+                <button class="filter-tab active" data-filter="all">
+                    <span>الكل</span>
+                    <span class="tab-count">156</span>
+                </button>
+                <button class="filter-tab" data-filter="pending">
+                    <span>تحت المراجعة</span>
+                    <span class="tab-count">28</span>
+                </button>
+                <button class="filter-tab" data-filter="active">
+                    <span>نشط</span>
+                    <span class="tab-count">98</span>
+                </button>
+                <button class="filter-tab" data-filter="rejected">
+                    <span>مرفوض</span>
+                    <span class="tab-count">30</span>
+                </button>
+            </div>
+
+            <!-- Ads Grid -->
+            <div class="row g-4">
+                <!-- Ad Card 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+                                alt="شقة للبيع">
+                            <span class="ad-status status-pending">تحت المراجعة</span>
+                            <div class="ad-price">950,000 جنيه</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">شقة للبيع في الكوثر</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                سوهاج - الكوثر
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-bed"></i> 3 غرف</span>
+                                <span><i class="fas fa-bath"></i> 2 حمام</span>
+                                <span><i class="fas fa-vector-square"></i> 150 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=محمد&background=random&size=24" alt="">
+                                    <span>محمد أحمد</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-approve" title="موافقة"><i
+                                            class="fas fa-check"></i></button>
+                                    <button class="btn-icon btn-reject" title="رفض"><i
+                                            class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 2 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop"
+                                alt="فيلا">
+                            <span class="ad-status status-active">نشط</span>
+                            <div class="ad-price">2,500,000 جنيه</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">فيلا بحديقة في سوهاج</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                سوهاج - المدينة الجديدة
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-bed"></i> 5 غرف</span>
+                                <span><i class="fas fa-bath"></i> 4 حمام</span>
+                                <span><i class="fas fa-vector-square"></i> 350 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=أحمد&background=random&size=24" alt="">
+                                    <span>أحمد محمود</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+                                alt="شقة">
+                            <span class="ad-status status-rejected">مرفوض</span>
+                            <div class="ad-price">8,000 جنيه/شهر</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">محل تجاري للإيجار</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                سوهاج - وسط البلد
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-store"></i> محل</span>
+                                <span><i class="fas fa-vector-square"></i> 80 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=خالد&background=random&size=24" alt="">
+                                    <span>خالد إبراهيم</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon btn-restore" title="استعادة"><i
+                                            class="fas fa-undo"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 4 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop"
+                                alt="أرض">
+                            <span class="ad-status status-pending">تحت المراجعة</span>
+                            <div class="ad-price">1,200,000 جنيه</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">أرض بناء في أسيوط</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                أسيوط - المنطقة الصناعية
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-expand"></i> أرض</span>
+                                <span><i class="fas fa-vector-square"></i> 500 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=سعيد&background=random&size=24" alt="">
+                                    <span>سعيد عبدالله</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-approve" title="موافقة"><i
+                                            class="fas fa-check"></i></button>
+                                    <button class="btn-icon btn-reject" title="رفض"><i
+                                            class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 5 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop"
+                                alt="شقة">
+                            <span class="ad-status status-active">نشط</span>
+                            <div class="ad-price">4,500 جنيه/شهر</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">شقة مفروشة في قنا</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                قنا - شارع الجيش
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-bed"></i> 2 غرف</span>
+                                <span><i class="fas fa-bath"></i> 1 حمام</span>
+                                <span><i class="fas fa-vector-square"></i> 100 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=علي&background=random&size=24" alt="">
+                                    <span>علي حسن</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 6 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=400&h=300&fit=crop"
+                                alt="شقة">
+                            <span class="ad-status status-active">نشط</span>
+                            <div class="ad-price">1,100,000 جنيه</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">شقة تمليك في أخميم</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                سوهاج - أخميم
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-bed"></i> 3 غرف</span>
+                                <span><i class="fas fa-bath"></i> 2 حمام</span>
+                                <span><i class="fas fa-vector-square"></i> 140 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=حسن&background=random&size=24" alt="">
+                                    <span>حسن محمود</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 7 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400&h=300&fit=crop"
+                                alt="شقة">
+                            <span class="ad-status status-pending">تحت المراجعة</span>
+                            <div class="ad-price">750,000 جنيه</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">شقة في المنشاة</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                سوهاج - المنشاة
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-bed"></i> 2 غرف</span>
+                                <span><i class="fas fa-bath"></i> 1 حمام</span>
+                                <span><i class="fas fa-vector-square"></i> 110 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=عمر&background=random&size=24" alt="">
+                                    <span>عمر فاروق</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-approve" title="موافقة"><i
+                                            class="fas fa-check"></i></button>
+                                    <button class="btn-icon btn-reject" title="رفض"><i
+                                            class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ad Card 8 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="ad-card">
+                        <div class="ad-image">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop"
+                                alt="فيلا">
+                            <span class="ad-status status-active">نشط</span>
+                            <div class="ad-price">3,200,000 جنيه</div>
+                        </div>
+                        <div class="ad-content">
+                            <h5 class="ad-title">فيلا دوبلكس في الأقصر</h5>
+                            <p class="ad-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                الأقصر - البر الغربي
+                            </p>
+                            <div class="ad-details">
+                                <span><i class="fas fa-bed"></i> 6 غرف</span>
+                                <span><i class="fas fa-bath"></i> 4 حمام</span>
+                                <span><i class="fas fa-vector-square"></i> 400 م²</span>
+                            </div>
+                            <div class="ad-footer">
+                                <div class="ad-owner">
+                                    <img src="https://ui-avatars.com/api/?name=يوسف&background=random&size=24" alt="">
+                                    <span>يوسف عادل</span>
+                                </div>
+                                <div class="ad-actions">
+                                    <button class="btn-icon btn-view" title="عرض"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon btn-edit" title="تعديل"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination-nav mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>&copy; 2024 هومي - جميع الحقوق محفوظة | صُنع بـ <i class="fas fa-heart text-danger"></i> في صعيد مصر</p>
+        </footer>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هومي - الإحصائيات والتقارير</title>
+    <meta name="description" content="إحصائيات وتقارير منصة هومي العقارية">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-brand"><i class="fas fa-home"></i><span>هومي</span></a>
+            <button class="sidebar-close d-lg-none" id="sidebarClose"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-th-large"></i><span>لوحة
+                            التحكم</span></a></li>
+                <li class="nav-item"><a href="users.html" class="nav-link"><i class="fas fa-users"></i><span>إدارة
+                            المستخدمين</span><span class="badge bg-danger">12</span></a></li>
+                <li class="nav-item"><a href="ads.html" class="nav-link"><i class="fas fa-bullhorn"></i><span>إدارة
+                            الإعلانات</span><span class="badge bg-danger">28</span></a></li>
+                <li class="nav-item"><a href="subscriptions.html" class="nav-link"><i
+                            class="fas fa-credit-card"></i><span>إدارة الاشتراكات</span></a></li>
+                <li class="nav-item"><a href="packages.html" class="nav-link"><i class="fas fa-box"></i><span>إدارة
+                            الباقات</span></a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link"><i
+                            class="fas fa-building"></i><span>المشاريع والكمبوندات</span></a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link"><i class="fas fa-headset"></i><span>الشكاوى
+                            والدعم</span></a></li>
+                <li class="nav-item active"><a href="reports.html" class="nav-link"><i
+                            class="fas fa-chart-bar"></i><span>الإحصائيات والتقارير</span></a></li>
+                <li class="nav-divider"></li>
+                <li class="nav-item"><a href="login.html" class="nav-link text-danger"><i
+                            class="fas fa-sign-out-alt"></i><span>تسجيل الخروج</span></a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=40" alt="Admin"
+                    class="user-avatar">
+                <div class="user-details"><span class="user-name">أدمن هومي</span><span class="user-role">مدير
+                        النظام</span></div>
+            </div>
+        </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+        <nav class="top-navbar">
+            <div class="navbar-right">
+                <button class="menu-toggle d-lg-none" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <a href="index.html" class="navbar-brand d-lg-none"><i class="fas fa-home"></i><span>هومي</span></a>
+            </div>
+            <div class="navbar-left">
+                <button class="nav-icon-btn" id="themeToggle" title="تغيير المظهر"><i class="fas fa-moon"></i></button>
+                <div class="nav-dropdown">
+                    <button class="user-dropdown-btn" id="userDropdownBtn">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=36"
+                            alt="Admin" class="user-avatar-sm">
+                        <span class="user-name-nav d-none d-md-inline">أدمن هومي</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="page-content">
+            <div class="page-header">
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-chart-bar text-primary"></i>
+                        الإحصائيات والتقارير
+                    </h1>
+                    <nav class="breadcrumb-nav">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active">الإحصائيات والتقارير</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-outline-primary me-2">
+                        <i class="fas fa-download"></i>
+                        تصدير التقرير
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-print"></i>
+                        طباعة
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="row g-4 mb-4">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="stat-card stat-primary">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-content">
+                            <h3 class="stat-value">2,458</h3>
+                            <p class="stat-label">إجمالي المستخدمين</p>
+                        </div>
+                        <div class="stat-trend up"><i class="fas fa-arrow-up"></i><span>18%</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="stat-card stat-success">
+                        <div class="stat-icon"><i class="fas fa-bullhorn"></i></div>
+                        <div class="stat-content">
+                            <h3 class="stat-value">8,642</h3>
+                            <p class="stat-label">إجمالي الإعلانات</p>
+                        </div>
+                        <div class="stat-trend up"><i class="fas fa-arrow-up"></i><span>24%</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="stat-card stat-warning">
+                        <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                        <div class="stat-content">
+                            <h3 class="stat-value">156K</h3>
+                            <p class="stat-label">المشاهدات الشهرية</p>
+                        </div>
+                        <div class="stat-trend up"><i class="fas fa-arrow-up"></i><span>32%</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6">
+                    <div class="stat-card stat-purple">
+                        <div class="stat-icon"><i class="fas fa-coins"></i></div>
+                        <div class="stat-content">
+                            <h3 class="stat-value">485K <small>جنيه</small></h3>
+                            <p class="stat-label">إيرادات السنة</p>
+                        </div>
+                        <div class="stat-trend up"><i class="fas fa-arrow-up"></i><span>45%</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <!-- Revenue Chart -->
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                <i class="fas fa-chart-line"></i>
+                                الإيرادات الشهرية
+                            </h5>
+                            <div class="card-actions">
+                                <select class="form-select form-select-sm" style="width: auto;">
+                                    <option>2024</option>
+                                    <option>2023</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-placeholder">
+                                <div class="chart-bars">
+                                    <div class="chart-bar" style="height: 60%;" data-month="يناير" data-value="35,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 75%;" data-month="فبراير" data-value="42,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 50%;" data-month="مارس" data-value="28,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 85%;" data-month="أبريل" data-value="48,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 70%;" data-month="مايو" data-value="40,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 90%;" data-month="يونيو" data-value="52,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 65%;" data-month="يوليو" data-value="38,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 80%;" data-month="أغسطس" data-value="45,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 95%;" data-month="سبتمبر" data-value="55,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 88%;" data-month="أكتوبر" data-value="50,000">
+                                    </div>
+                                    <div class="chart-bar" style="height: 100%;" data-month="نوفمبر"
+                                        data-value="58,000"></div>
+                                    <div class="chart-bar active" style="height: 92%;" data-month="ديسمبر"
+                                        data-value="54,000"></div>
+                                </div>
+                                <div class="chart-labels">
+                                    <span>يناير</span><span>فبراير</span><span>مارس</span><span>أبريل</span><span>مايو</span><span>يونيو</span>
+                                    <span>يوليو</span><span>أغسطس</span><span>سبتمبر</span><span>أكتوبر</span><span>نوفمبر</span><span>ديسمبر</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distribution -->
+                <div class="col-xl-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                <i class="fas fa-chart-pie"></i>
+                                توزيع الإعلانات
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="distribution-list">
+                                <div class="distribution-item">
+                                    <div class="dist-info">
+                                        <span class="dist-color" style="background: var(--primary);"></span>
+                                        <span class="dist-label">شقق للبيع</span>
+                                    </div>
+                                    <div class="dist-bar">
+                                        <div class="dist-progress" style="width: 45%; background: var(--primary);">
+                                        </div>
+                                    </div>
+                                    <span class="dist-value">45%</span>
+                                </div>
+                                <div class="distribution-item">
+                                    <div class="dist-info">
+                                        <span class="dist-color" style="background: var(--success);"></span>
+                                        <span class="dist-label">شقق للإيجار</span>
+                                    </div>
+                                    <div class="dist-bar">
+                                        <div class="dist-progress" style="width: 25%; background: var(--success);">
+                                        </div>
+                                    </div>
+                                    <span class="dist-value">25%</span>
+                                </div>
+                                <div class="distribution-item">
+                                    <div class="dist-info">
+                                        <span class="dist-color" style="background: var(--warning);"></span>
+                                        <span class="dist-label">فيلات</span>
+                                    </div>
+                                    <div class="dist-bar">
+                                        <div class="dist-progress" style="width: 15%; background: var(--warning);">
+                                        </div>
+                                    </div>
+                                    <span class="dist-value">15%</span>
+                                </div>
+                                <div class="distribution-item">
+                                    <div class="dist-info">
+                                        <span class="dist-color" style="background: var(--purple);"></span>
+                                        <span class="dist-label">أراضي</span>
+                                    </div>
+                                    <div class="dist-bar">
+                                        <div class="dist-progress" style="width: 10%; background: var(--purple);"></div>
+                                    </div>
+                                    <span class="dist-value">10%</span>
+                                </div>
+                                <div class="distribution-item">
+                                    <div class="dist-info">
+                                        <span class="dist-color" style="background: var(--info);"></span>
+                                        <span class="dist-label">محلات تجارية</span>
+                                    </div>
+                                    <div class="dist-bar">
+                                        <div class="dist-progress" style="width: 5%; background: var(--info);"></div>
+                                    </div>
+                                    <span class="dist-value">5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Regions & Recent Activity -->
+            <div class="row g-4">
+                <!-- Top Regions -->
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                <i class="fas fa-map-marked-alt"></i>
+                                أكثر المناطق نشاطاً
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>المنطقة</th>
+                                            <th>الإعلانات</th>
+                                            <th>المشاهدات</th>
+                                            <th>النمو</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><i class="fas fa-medal text-warning"></i> سوهاج</td>
+                                            <td>1,250</td>
+                                            <td>45,000</td>
+                                            <td><span class="text-success"><i class="fas fa-arrow-up"></i> 28%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><i class="fas fa-medal text-secondary"></i> أسيوط</td>
+                                            <td>980</td>
+                                            <td>38,000</td>
+                                            <td><span class="text-success"><i class="fas fa-arrow-up"></i> 22%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><i class="fas fa-medal text-warning" style="opacity: 0.6;"></i> قنا</td>
+                                            <td>750</td>
+                                            <td>28,000</td>
+                                            <td><span class="text-success"><i class="fas fa-arrow-up"></i> 15%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>المنيا</td>
+                                            <td>620</td>
+                                            <td>22,000</td>
+                                            <td><span class="text-success"><i class="fas fa-arrow-up"></i> 12%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>الأقصر</td>
+                                            <td>480</td>
+                                            <td>18,000</td>
+                                            <td><span class="text-danger"><i class="fas fa-arrow-down"></i> 5%</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Comparison -->
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                <i class="fas fa-balance-scale"></i>
+                                مقارنة الأداء الشهري
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="comparison-list">
+                                <div class="comparison-item">
+                                    <div class="comp-label">إعلانات جديدة</div>
+                                    <div class="comp-values">
+                                        <span class="comp-current">458</span>
+                                        <span class="comp-vs">vs</span>
+                                        <span class="comp-previous">380</span>
+                                    </div>
+                                    <span class="comp-change text-success"><i class="fas fa-arrow-up"></i> +20.5%</span>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comp-label">مستخدمين جدد</div>
+                                    <div class="comp-values">
+                                        <span class="comp-current">125</span>
+                                        <span class="comp-vs">vs</span>
+                                        <span class="comp-previous">98</span>
+                                    </div>
+                                    <span class="comp-change text-success"><i class="fas fa-arrow-up"></i> +27.5%</span>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comp-label">اشتراكات جديدة</div>
+                                    <div class="comp-values">
+                                        <span class="comp-current">85</span>
+                                        <span class="comp-vs">vs</span>
+                                        <span class="comp-previous">72</span>
+                                    </div>
+                                    <span class="comp-change text-success"><i class="fas fa-arrow-up"></i> +18.1%</span>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comp-label">الإيرادات</div>
+                                    <div class="comp-values">
+                                        <span class="comp-current">54,000</span>
+                                        <span class="comp-vs">vs</span>
+                                        <span class="comp-previous">45,000</span>
+                                    </div>
+                                    <span class="comp-change text-success"><i class="fas fa-arrow-up"></i> +20%</span>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comp-label">تذاكر الدعم</div>
+                                    <div class="comp-values">
+                                        <span class="comp-current">28</span>
+                                        <span class="comp-vs">vs</span>
+                                        <span class="comp-previous">35</span>
+                                    </div>
+                                    <span class="comp-change text-success"><i class="fas fa-arrow-down"></i> -20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 هومي - جميع الحقوق محفوظة</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -33,3 +33,4 @@ D:\Graduation_project\Homy\Homy.Infurastructure\bin\Debug\net8.0\Homy.Domin.pdb
 D:\Graduation_project\Homy\Homy.Infurastructure\obj\Debug\net8.0\Homy.Inf.68AD0EFB.Up2Date
 D:\Graduation_project\Homy\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.genruntimeconfig.cache
 D:\Graduation_project\Homy\Homy.Infurastructure\obj\Debug\net8.0\ref\Homy.Infurastructure.dll
+D:\Graduation_project\Homy\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.sourcelink.json

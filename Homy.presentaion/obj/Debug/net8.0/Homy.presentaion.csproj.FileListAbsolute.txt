@@ -306,7 +306,7 @@ D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.bui
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
+D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
