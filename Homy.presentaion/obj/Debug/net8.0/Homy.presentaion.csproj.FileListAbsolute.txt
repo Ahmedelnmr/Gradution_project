@@ -310,3 +310,5 @@ D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.U
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
 D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
+D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
+D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
