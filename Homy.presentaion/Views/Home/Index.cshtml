@@ -1,8 +1,344 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Homy.Application.Dtos.DashboardDto
+@{
+    ViewData["Title"] = "لوحة التحكم - هومي";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="dashboard-container">
+    <!-- Hero Welcome Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <i class="fas fa-home-lg-alt"></i>
+                    مرحباً في لوحة تحكم هومي
+                </h1>
+                <p class="hero-subtitle">نظرة شاملة على أداء المنصة وإحصائيات النظام في الوقت الفعلي</p>
+            </div>
+            <div class="hero-stats-mini">
+                <div class="mini-stat">
+                    <i class="fas fa-chart-line"></i>
+                    <span>نمو مستمر</span>
+                </div>
+                <div class="mini-stat">
+                    <i class="fas fa-shield-check"></i>
+                    <span>آمن تماماً</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Statistics Cards -->
+    <div class="stats-grid">
+        <!-- Users Card -->
+        <div class="stat-card-modern stat-primary">
+            <div class="stat-card-header">
+                <div class="stat-icon-wrapper">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-badge">مستخدمين</div>
+            </div>
+            <div class="stat-card-body">
+                <h2 class="stat-number" data-target="@Model.UsersCount">0</h2>
+                <p class="stat-label">إجمالي المستخدمين</p>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>+12% هذا الشهر</span>
+                </div>
+            </div>
+            <div class="stat-card-footer">
+                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <!-- Ads Card -->
+        <div class="stat-card-modern stat-success">
+            <div class="stat-card-header">
+                <div class="stat-icon-wrapper">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="stat-badge">إعلانات</div>
+            </div>
+            <div class="stat-card-body">
+                <h2 class="stat-number" data-target="@Model.AdsCount">0</h2>
+                <p class="stat-label">إجمالي الإعلانات</p>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>+8% هذا الشهر</span>
+                </div>
+            </div>
+            <div class="stat-card-footer">
+                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <!-- Active Properties Card -->
+        <div class="stat-card-modern stat-warning">
+            <div class="stat-card-header">
+                <div class="stat-icon-wrapper">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="stat-badge">عقارات نشطة</div>
+            </div>
+            <div class="stat-card-body">
+                <h2 class="stat-number" data-target="@(Model.AdsCount - 15)">0</h2>
+                <p class="stat-label">عقارات قيد العرض</p>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>+5% هذا الأسبوع</span>
+                </div>
+            </div>
+            <div class="stat-card-footer">
+                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <!-- Revenue Card -->
+        <div class="stat-card-modern stat-purple">
+            <div class="stat-card-header">
+                <div class="stat-icon-wrapper">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-badge">إيرادات</div>
+            </div>
+            <div class="stat-card-body">
+                <h2 class="stat-number">$45,890</h2>
+                <p class="stat-label">الإيرادات الشهرية</p>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>+18% هذا الشهر</span>
+                </div>
+            </div>
+            <div class="stat-card-footer">
+                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-section">
+        <h2 class="section-title">
+            <i class="fas fa-chart-pie"></i>
+            التحليلات والرسوم البيانية
+        </h2>
+        
+        <div class="charts-grid">
+            <!-- Users Distribution Chart -->
+            <div class="chart-card">
+                <div class="chart-card-header">
+                    <h3 class="chart-title">توزيع المستخدمين</h3>
+                    <div class="chart-actions">
+                        <button class="chart-action-btn" title="تحديث">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="usersChart"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #6366f1;"></span>
+                        <span class="legend-label">مستخدمين نشطين</span>
+                        <span class="legend-value">65%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #8b5cf6;"></span>
+                        <span class="legend-label">مستخدمين جدد</span>
+                        <span class="legend-value">25%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #ec4899;"></span>
+                        <span class="legend-label">غير نشطين</span>
+                        <span class="legend-value">10%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ads Distribution Chart -->
+            <div class="chart-card">
+                <div class="chart-card-header">
+                    <h3 class="chart-title">توزيع الإعلانات</h3>
+                    <div class="chart-actions">
+                        <button class="chart-action-btn" title="تحديث">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="adsChart"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #10b981;"></span>
+                        <span class="legend-label">إعلانات نشطة</span>
+                        <span class="legend-value">70%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #f59e0b;"></span>
+                        <span class="legend-label">قيد المراجعة</span>
+                        <span class="legend-value">20%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #ef4444;"></span>
+                        <span class="legend-label">منتهية</span>
+                        <span class="legend-value">10%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Types Chart -->
+            <div class="chart-card">
+                <div class="chart-card-header">
+                    <h3 class="chart-title">أنواع العقارات</h3>
+                    <div class="chart-actions">
+                        <button class="chart-action-btn" title="تحديث">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="propertyTypesChart"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #06b6d4;"></span>
+                        <span class="legend-label">شقق</span>
+                        <span class="legend-value">45%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #8b5cf6;"></span>
+                        <span class="legend-label">فيلات</span>
+                        <span class="legend-value">30%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #f59e0b;"></span>
+                        <span class="legend-label">أراضي</span>
+                        <span class="legend-value">15%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #ec4899;"></span>
+                        <span class="legend-label">أخرى</span>
+                        <span class="legend-value">10%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Access Section -->
+    <div class="quick-access-section">
+        <h2 class="section-title">
+            <i class="fas fa-bolt"></i>
+            الوصول السريع
+        </h2>
+        
+        <div class="quick-access-grid">
+            <!-- Users Management -->
+            <a href="#" class="quick-access-card card-gradient-1">
+                <div class="quick-card-icon">
+                    <i class="fas fa-user-gear"></i>
+                </div>
+                <div class="quick-card-content">
+                    <h3 class="quick-card-title">إدارة المستخدمين</h3>
+                    <p class="quick-card-desc">عرض، تعديل، وإدارة حسابات المستخدمين</p>
+                    <div class="quick-card-stats">
+                        <span><i class="fas fa-users"></i> @Model.UsersCount مستخدم</span>
+                    </div>
+                </div>
+                <div class="quick-card-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Ads Management -->
+            <a href="#" class="quick-access-card card-gradient-2">
+                <div class="quick-card-icon">
+                    <i class="fas fa-signs-post"></i>
+                </div>
+                <div class="quick-card-content">
+                    <h3 class="quick-card-title">إدارة الإعلانات</h3>
+                    <p class="quick-card-desc">مراجعة، الموافقة، ورفض الإعلانات</p>
+                    <div class="quick-card-stats">
+                        <span><i class="fas fa-bullhorn"></i> @Model.AdsCount إعلان</span>
+                    </div>
+                </div>
+                <div class="quick-card-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Subscriptions -->
+            <a href="#" class="quick-access-card card-gradient-3">
+                <div class="quick-card-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="quick-card-content">
+                    <h3 class="quick-card-title">إدارة الاشتراكات</h3>
+                    <p class="quick-card-desc">الباقات والاشتراكات النشطة</p>
+                    <div class="quick-card-stats">
+                        <span><i class="fas fa-star"></i> 24 اشتراك نشط</span>
+                    </div>
+                </div>
+                <div class="quick-card-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Reports -->
+            <a href="#" class="quick-access-card card-gradient-4">
+                <div class="quick-card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="quick-card-content">
+                    <h3 class="quick-card-title">التقارير والإحصائيات</h3>
+                    <p class="quick-card-desc">تقارير مفصلة عن الأداء والنمو</p>
+                    <div class="quick-card-stats">
+                        <span><i class="fas fa-file-chart-line"></i> 12 تقرير جديد</span>
+                    </div>
+                </div>
+                <div class="quick-card-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Support -->
+            <a href="#" class="quick-access-card card-gradient-5">
+                <div class="quick-card-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="quick-card-content">
+                    <h3 class="quick-card-title">الدعم والشكاوى</h3>
+                    <p class="quick-card-desc">إدارة طلبات الدعم والشكاوى</p>
+                    <div class="quick-card-stats">
+                        <span><i class="fas fa-ticket"></i> 7 تذاكر مفتوحة</span>
+                    </div>
+                </div>
+                <div class="quick-card-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Settings -->
+            <a href="#" class="quick-access-card card-gradient-6">
+                <div class="quick-card-icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="quick-card-content">
+                    <h3 class="quick-card-title">الإعدادات</h3>
+                    <p class="quick-card-desc">ضبط إعدادات النظام والتفضيلات</p>
+                    <div class="quick-card-stats">
+                        <span><i class="fas fa-sliders-h"></i> إعدادات متقدمة</span>
+                    </div>
+                </div>
+                <div class="quick-card-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="~/js/dashboard-charts.js"></script>
+}

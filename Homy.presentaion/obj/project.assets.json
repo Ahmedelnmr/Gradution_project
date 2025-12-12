@@ -1565,6 +1565,20 @@
           }
         }
       },
+      "Homy.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Homy.Infurastructure": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.22"
+        },
+        "compile": {
+          "bin/placeholder/Homy.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Homy.Application.dll": {}
+        }
+      },
       "Homy.Domin/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4161,6 +4175,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Homy.Application/1.0.0": {
+      "type": "project",
+      "path": "../Homy.Application/Homy.Application.csproj",
+      "msbuildProject": "../Homy.Application/Homy.Application.csproj"
+    },
     "Homy.Domin/1.0.0": {
       "type": "project",
       "path": "../Homy.Domin/Homy.Domin.csproj",
@@ -4174,6 +4193,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Homy.Application >= 1.0.0",
       "Homy.Domin >= 1.0.0",
       "Homy.Infurastructure >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.22",
@@ -4212,6 +4232,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj": {
+              "projectPath": "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj"
+            },
             "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj": {
               "projectPath": "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj"
             },

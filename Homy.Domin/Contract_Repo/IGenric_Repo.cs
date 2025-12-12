@@ -18,5 +18,6 @@ namespace Homy.Domin.Contract_Repo
         
 
         
+        public Task<int> CountAsync();
     }
 }

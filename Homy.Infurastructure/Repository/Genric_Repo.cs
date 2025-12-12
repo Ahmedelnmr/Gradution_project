@@ -24,29 +24,40 @@ namespace Homy.Infurastructure.Repository
             return dbset.AsQueryable();  
         }
 
-        Task<T> IGenric_Repo<T>.AddAsync(T item)
+        public async Task<int> CountAsync()
         {
-            throw new NotImplementedException();
+            return await dbset.CountAsync();
         }
 
-        Task<T> IGenric_Repo<T>.DeleteAsync(int id)
+        public async Task<T> AddAsync(T item)
         {
-            throw new NotImplementedException();
+            await dbset.AddAsync(item);
+            return item;
         }
 
-        Task<IEnumerable<T>> IGenric_Repo<T>.GetAllAsync()
+        public async Task<T> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var entity = await dbset.FindAsync(id);
+            if (entity != null)
+            {
+                dbset.Remove(entity);
+            }
+            return entity;
         }
 
-        Task<T> IGenric_Repo<T>.GetByIdAsync(int id)
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await dbset.ToListAsync();
         }
 
-        void IGenric_Repo<T>.Update(T item)
+        public async Task<T> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await dbset.FindAsync(id);
+        }
+
+        public void Update(T item)
+        {
+            dbset.Update(item);
         }
     }
 }
