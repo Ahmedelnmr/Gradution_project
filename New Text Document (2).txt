@@ -1,0 +1,11 @@
+git checkout -b name origin/name  
+name the name of branch
+
+git fetch --all
+to get all branches
+
+git add .
+ 
+git commit -m "message"
+
+git push

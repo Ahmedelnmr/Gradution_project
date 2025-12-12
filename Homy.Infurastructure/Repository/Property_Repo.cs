@@ -8,6 +8,8 @@ namespace Homy.Infurastructure.Repository
     {
         public Property_Repo(HomyContext context) : base(context)
         {
+
+        
         }
     }
 }

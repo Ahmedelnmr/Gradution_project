@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homy.Infurastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42fa69fbecf4e6d8484143ea058a2a92578c4258")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bc00a9b39cde338c91dab256decd0410c25a33d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Homy.Infurastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homy.Infurastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
