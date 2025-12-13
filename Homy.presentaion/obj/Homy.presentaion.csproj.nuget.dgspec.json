@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Graduation_project\\Homy\\Homy.presentaion\\Homy.presentaion.csproj": {}
+    "D:\\Final_projectt\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {}
   },
   "projects": {
-    "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj": {
+    "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj",
+        "projectUniqueName": "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
         "projectName": "Homy.Application",
-        "projectPath": "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Homy\\Homy.Application\\obj\\",
+        "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "D:\\Final_projectt\\Gradution_project\\Homy.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-                "projectPath": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+              "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+                "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
               }
             }
           }
@@ -75,24 +75,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj": {
+    "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj",
+        "projectUniqueName": "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
         "projectName": "Homy.Domin",
-        "projectPath": "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Homy\\Homy.Domin\\obj\\",
+        "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -146,24 +146,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+    "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+        "projectUniqueName": "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
         "projectName": "Homy.Infurastructure",
-        "projectPath": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\obj\\",
+        "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -178,8 +178,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               }
             }
           }
@@ -235,24 +235,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Graduation_project\\Homy\\Homy.presentaion\\Homy.presentaion.csproj": {
+    "D:\\Final_projectt\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Homy\\Homy.presentaion\\Homy.presentaion.csproj",
+        "projectUniqueName": "D:\\Final_projectt\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
         "projectName": "Homy.presentaion",
-        "projectPath": "D:\\Graduation_project\\Homy\\Homy.presentaion\\Homy.presentaion.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Homy\\Homy.presentaion\\obj\\",
+        "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "D:\\Final_projectt\\Gradution_project\\Homy.presentaion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -267,14 +267,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj": {
-                "projectPath": "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj"
+              "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
+                "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Homy.Application.csproj"
               },
-              "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\Graduation_project\\Homy\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               },
-              "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-                "projectPath": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+              "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+                "projectPath": "D:\\Final_projectt\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
               }
             }
           }
@@ -325,7 +325,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
