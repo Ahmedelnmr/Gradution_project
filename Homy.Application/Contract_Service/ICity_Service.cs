@@ -1,6 +1,60 @@
+using Homy.Application.Dtos;
+using Homy.Domin.models;
+
 namespace Homy.Domin.Contract_Service
 {
     public interface ICity_Service
     {
+        /// <summary>
+        /// ??? ?? ????? (???? ??????)
+        /// </summary>
+        Task<IEnumerable<City>> GetAllCitiesAsync();
+
+        /// <summary>
+        /// ??? ?? ????? ?? ???????
+        /// </summary>
+        Task<IEnumerable<City>> GetAllCitiesWithDistrictsAsync();
+
+        /// <summary>
+        /// ??? ????? ?????
+        /// </summary>
+        Task<City> GetCityByIdAsync(int id);
+
+        /// <summary>
+        /// ??? ????? ?? ?? ????????
+        /// </summary>
+        Task<City> GetCityWithDetailsAsync(long id);
+
+        /// <summary>
+        /// ??? ????? ?????? ???
+        /// </summary>
+        Task<IEnumerable<City>> GetActiveCitiesAsync();
+
+        /// <summary>
+        /// ????? ?? ?????
+        /// </summary>
+        Task<IEnumerable<City>> SearchCitiesAsync(string searchTerm);
+
+        /// <summary>
+        /// ????? ????? ?????
+        /// </summary>
+        Task<City> CreateCityAsync(string name, Guid? createdById);
+
+        /// <summary>
+        /// ????? ?????
+        /// </summary>
+        Task<City> UpdateCityAsync(long id, string name, Guid? updatedById);
+
+        /// <summary>
+        /// ??? ????? (Soft Delete)
+        /// </summary>
+        Task<bool> DeleteCityAsync(long id);
+
+        /// <summary>
+        /// ??? ???????? ???????
+        /// </summary>
+        Task<CityStatsDto> GetCityStatsAsync(long cityId);
     }
+
+
 }

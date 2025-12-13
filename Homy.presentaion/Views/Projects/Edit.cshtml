@@ -1,0 +1,183 @@
+﻿@model Homy.Application.Dtos.UpdateProjectDto
+@{
+    ViewData["Title"] = $"تعديل: {Model.Name}";
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <i class="fas fa-edit text-primary"></i>
+            تعديل مشروع: @Model.Name
+        </h1>
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">المشاريع</a></li>
+                <li class="breadcrumb-item active">تعديل</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Form Card -->
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-edit"></i>
+                    تحديث بيانات المشروع
+                </h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" method="post">
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(m => m.Id)
+
+                    <!-- Validation Summary -->
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <!-- اسم المشروع -->
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">
+                            <i class="fas fa-building text-primary"></i> اسم المشروع *
+                        </label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <!-- المدينة -->
+                    <div class="mb-3">
+                        <label asp-for="CityId" class="form-label">
+                            <i class="fas fa-city text-primary"></i> المدينة *
+                        </label>
+                        <select asp-for="CityId" class="form-select" id="citySelect">
+                            <option value="">-- اختر المدينة --</option>
+                            @if (ViewBag.Cities != null)
+                            {
+                                foreach (var city in ViewBag.Cities)
+                                {
+                                    <option value="@city.Id" selected="@(Model.CityId == city.Id)">
+                                        @city.Name
+                                    </option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="CityId" class="text-danger"></span>
+                    </div>
+
+                    <!-- الحي -->
+                    <div class="mb-3">
+                        <label asp-for="DistrictId" class="form-label">
+                            <i class="fas fa-map-marked-alt text-primary"></i> الحي (اختياري)
+                        </label>
+                        <select asp-for="DistrictId" class="form-select" id="districtSelect">
+                            <option value="">-- اختر الحي --</option>
+                            @if (ViewBag.Districts != null)
+                            {
+                                foreach (var district in ViewBag.Districts)
+                                {
+                                    <option value="@district.Id" data-city-id="@district.CityId"
+                                            selected="@(Model.DistrictId == district.Id)">
+                                        @district.Name
+                                    </option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="DistrictId" class="text-danger"></span>
+                    </div>
+
+                    <!-- وصف الموقع -->
+                    <div class="mb-3">
+                        <label asp-for="LocationDescription" class="form-label">
+                            <i class="fas fa-map-marker-alt text-primary"></i> وصف الموقع (اختياري)
+                        </label>
+                        <textarea asp-for="LocationDescription" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="LocationDescription" class="text-danger"></span>
+                    </div>
+
+                    <!-- رابط الشعار -->
+                    <div class="mb-3">
+                        <label asp-for="LogoUrl" class="form-label">
+                            <i class="fas fa-image text-primary"></i> رابط شعار المشروع (اختياري)
+                        </label>
+                        <input asp-for="LogoUrl" class="form-control" type="url" />
+                        <span asp-validation-for="LogoUrl" class="text-danger"></span>
+                        @if (!string.IsNullOrEmpty(Model.LogoUrl))
+                        {
+                            <div class="mt-2">
+                                <img src="@Model.LogoUrl" alt="Logo Preview"
+                                     class="img-thumbnail" style="max-height: 100px;" />
+                            </div>
+                        }
+                    </div>
+
+                    <!-- رابط صورة الغلاف -->
+                    <div class="mb-3">
+                        <label asp-for="CoverImageUrl" class="form-label">
+                            <i class="fas fa-image text-primary"></i> رابط صورة الغلاف (اختياري)
+                        </label>
+                        <input asp-for="CoverImageUrl" class="form-control" type="url" />
+                        <span asp-validation-for="CoverImageUrl" class="text-danger"></span>
+                        @if (!string.IsNullOrEmpty(Model.CoverImageUrl))
+                        {
+                            <div class="mt-2">
+                                <img src="@Model.CoverImageUrl" alt="Cover Preview"
+                                     class="img-thumbnail" style="max-height: 150px;" />
+                            </div>
+                        }
+                    </div>
+
+                    <!-- الحالة -->
+                    <div class="mb-3 form-check">
+                        <input asp-for="IsActive" class="form-check-input" type="checkbox" />
+                        <label asp-for="IsActive" class="form-check-label">
+                            <i class="fas fa-check-circle text-success"></i> مشروع نشط
+                        </label>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> حفظ التعديلات
+                        </button>
+                        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> إلغاء
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Filter Districts based on selected City
+        document.getElementById('citySelect').addEventListener('change', function() {
+            const selectedCityId = this.value;
+            const districtSelect = document.getElementById('districtSelect');
+            const districtOptions = districtSelect.querySelectorAll('option[data-city-id]');
+
+            // Show/Hide districts based on selected city
+            districtOptions.forEach(option => {
+                if (selectedCityId === '' || option.dataset.cityId === selectedCityId) {
+                    option.style.display = '';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        });
+
+        // Trigger on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const citySelect = document.getElementById('citySelect');
+            citySelect.dispatchEvent(new Event('change'));
+        });
+    </script>
+}

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Homy.Infurastructure.Migrations
 {
     [DbContext(typeof(HomyContext))]
-    [Migration("20251124020647_init")]
-    partial class init
+    [Migration("20251213223711_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
