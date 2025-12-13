@@ -26,5 +26,6 @@ namespace Homy.Domin.models
 
         public virtual User User { get; set; } = null!;
         public virtual Package Package { get; set; } = null!;
+        
     }
 }

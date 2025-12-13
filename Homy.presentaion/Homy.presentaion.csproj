@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Homy.Domin\Homy.Domin.csproj" />
     <ProjectReference Include="..\Homy.Infurastructure\Homy.Infurastructure.csproj" />
+    <ProjectReference Include="..\Homy.Application\Homy.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -28,3 +28,4 @@ D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\Homy.Application.dl
 D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\refint\Homy.Application.dll
 D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\Homy.Application.pdb
 D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\ref\Homy.Application.dll
+D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\Homy.Application.sourcelink.json
