@@ -1,18 +1,173 @@
-1-run this commands on cmd global =====> npm i -g json-server  
+Homy Real Estate Platform README
+Project Overview
+Homy is a real estate platform tailored for the Upper Egypt market, particularly Sohag and surrounding areas, inspired by platforms like Bayut.eg. The platform connects buyers/renters (users) with verified agents/brokers to browse, search, and contact for properties (apartments, villas, lands, commercial spaces). It emphasizes trust through agent verification and property approval, revenue through subscription-based agent plans, and user engagement through free browsing and personalized recommendations.
+Project Goals
+
+Build trust in the local real estate market by verifying agents and reviewing listings to prevent fraud.
+Generate revenue via tiered subscriptions for agents to post regular and premium listings.
+Provide a user-friendly experience for free users to search and contact agents.
+Expand to include projects/compounds and partnerships for financing.
+Ensure scalability for the entire Upper Egypt region.
+
+Target Audience
+
+Agents/Brokers: Local real estate professionals or offices in Sohag who pay to list properties.
+Users: Buyers/renters searching for properties (free access).
+Admins: Platform owners/managers who oversee operations.
+
+Key Differentiators
+
+Local focus on Sohag/Upper Egypt with Arabic RTL support and colloquial language.
+Mandatory agent verification and property approval for quality control.
+Subscription model with limited regular/premium listings per tier.
+Personalized property recommendations for users based on search history.
+Support for project-linked listings (e.g., compounds like Palm Hills).
+
+Business Model
+Homy's revenue is primarily from agent subscriptions. No fees for users or transaction commissions (at launch; future addition possible). No deposit or internal payments – all deals happen offline between users and agents.
+Revenue Streams
+
+Subscription Packages (main source):
+Silver: EGP 500/month – 10 regular listings + 2 premium (premium appear at top of search results or filters).
+Platinum: EGP 1,500/month – 30 regular + 10 premium.
+Gold: EGP 3,000/month – Unlimited listings + unlimited premium + priority placement.
+
+Future Streams (deferred):
+Success fees (1% on closed deals verified offline).
+Premium project listings for developers (e.g., EGP 500/month per compound).
+Partnerships with banks for financing referrals (0.5% commission on loans).
+Ads from related services (e.g., Google Ads on site).
 
 
-2-run this commands on cmd folder server ===>npm init
+Monetization Rules
 
+Agents must subscribe to a package to post any listings (no free postings).
+Premium listings get priority in search results, filters, and homepage.
+Subscriptions are monthly; admins manually verify payments (Vodafone Cash, bank transfer) and activate.
+Discounts for first month or annual payments to encourage uptake.
 
-3-run this commands on cmd on folder server =====> npm i json-server  
+Projected Economics (Initial Estimates for Sohag)
 
+Target: 50 agents in first 6 months (free trial initially to build listings).
+Average revenue per agent: EGP 1,000/month.
+Monthly revenue: EGP 50,000 after 6 months.
+Expenses: Hosting (EGP 500/month), admin salary (EGP 10,000/month), marketing (EGP 5,000/month).
+Break-even: 20 paying agents.
 
-4-to run db.json ===>  json-server --watch db.json
+Risks and Mitigation
 
+Fraud: Mitigated by agent verification and property approval.
+Low Adoption: Free trial for agents + Facebook/TikTok marketing in Sohag groups.
+Competition: Local focus on Upper Egypt differentiates from Bayut (which has limited Sohag coverage).
 
-to convert js to json 
+User Roles and Responsibilities
+1. Admin (Platform Manager)
 
-https://www.convertsimple.com/convert-javascript-to-json/
+Full access to dashboard.
+Responsibilities:
+Verify new agent registrations (check ID card, license, photo; approve/reject with reason).
+Review and approve/reject property listings (check images, description, price, address; reject with specific reason e.g., "images unclear").
+Manage subscriptions: Verify payments, activate/renew/cancel, send reminders.
+Manage packages: Create/edit/delete subscription tiers.
+Manage projects/compounds: Add/edit (name, logo, cover image, city/district, description).
+Handle support tickets/sh complaints: View, reply, close (from users or agents).
+View analytics: Daily visitors, new listings, revenue, top searches/regions.
+Ban/deactivate agents for violations (e.g., fake listings).
 
+Notifications: Admins receive alerts for new registrations, pending listings, payments.
 
+2. Agent/Broker (Paid User)
 
+Registers with ID verification (approved by admin).
+Responsibilities:
+Subscribe to a package to post listings.
+Post properties (title, description, images, price, location, amenities, project if linked).
+Edit/re-submit rejected listings based on admin feedback.
+View dashboard: Their listings, subscription status, view counts, clicks.
+
+Limitations: Can't post without subscription; premium listings limited by package.
+Notifications: Approval/rejection of listings, subscription expiration, payment reminders.
+
+3. User (Buyer/Renter – Free)
+
+No registration required for browsing (optional for saving favorites).
+Responsibilities:
+Search/filter properties (city, district, type, price, rooms, purpose: sale/rent, projects).
+View details: Images, description, agent contact (phone/Whatsapp).
+Save favorites, receive personalized recommendations based on search history (similar properties by price/location).
+Submit support tickets/complaints.
+
+Notifications: Optional alerts for new matching properties (via email/phone).
+
+Key Features
+Core Features
+
+Agent Registration & Verification: Agents submit ID/license; admin approves/rejects with reason.
+Property Posting & Review: Agents post listings (regular/premium, linked to projects); admin reviews/approves/rejects with detailed reason.
+Subscription System: Tiered packages; manual payment verification by admin; auto-limit listings based on package.
+Search & Filtering: Users search by city/district/type/price/rooms/purpose/projects; premium listings prioritized.
+Personalized Recommendations: Based on user search history (similar properties by price/location).
+Projects/Compounds: Agents link listings to projects; admins manage project database.
+Support System: Users/agents submit tickets; admins reply/close.
+Analytics: Admins view reports (visitors, listings, revenue, top regions).
+
+Security & Quality Controls
+
+All listings pending until admin approval.
+Soft delete for all entities.
+Audit logs (CreatedBy/UpdatedBy) for traceability.
+Role-based access (Identity).
+
+Future Features (Deferred)
+
+AI assistant for users (chatbot for searches/recommendations).
+Push notifications for new listings.
+Success fees on deals.
+Bank partnerships for financing.
+Voice search.
+
+Technical Architecture
+
+Back-End: ASP.NET Core 8 MVC for admin dashboard; layered architecture (Domain: Entities/Enums; Infrastructure: DbContext/Repos/UnitOfWork; Application: Services/DTOs/Mapster; Presentation: MVC Controllers/Views).
+Database: SQL Server with EF Core; entities include Users, Properties, PropertyImages, Amenities, Packages, Subscriptions, Projects (with soft delete and audit).
+Front-End: MVC Razor Views with Bootstrap 5 + HTML/CSS/JS for admin; Angular 18 for user/agent interface.
+Authentication: ASP.NET Identity with JWT (roles: Admin, Agent, Owner).
+Notifications: Email (SendGrid) + SMS/WhatsApp (Twilio) for approvals/rejections/reminders.
+Deployment: Azure/AWS; CI/CD with GitHub Actions.
+
+Database Schema Summary
+
+Users: Id (Guid), FullName, PhoneNumber, WhatsAppNumber, PasswordHash, Role (Enum), IsVerified, IsActive, ProfileImageUrl, Properties (ICollection), SavedProperties, Subscriptions.
+Properties: Id (long), Title, Description, PropertyTypeId, CityId, DistrictId, ProjectId, Price, RentPriceMonthly, Area, Rooms, Bathrooms, FloorNumber, FinishingType (Enum), Purpose (Enum), Latitude/Longitude, AddressDetails, IsAgricultural, UserId, ViewCount, WhatsAppClicks, PhoneClicks, IsFeatured, FeaturedUntil, Status (Enum), Images (ICollection), PropertyAmenities, SavedByUsers.
+PropertyImages: Id (long), PropertyId, ImageUrl, IsMain, SortOrder.
+PropertyAmenities: Id (long), PropertyId, AmenityId.
+Amenities: Id (long), Name, IconUrl.
+PropertyTypes: Id (long), Name, IconUrl, Properties.
+Cities: Id (long), Name, Districts, Properties, Projects.
+Districts: Id (long), CityId, Name, Properties, Projects.
+SavedProperties: Id (long), UserId, PropertyId, SavedAt.
+Packages: Id (long), Name, Price, DurationDays, MaxProperties, MaxFeatured, CanBumpUp, Subscriptions.
+UserSubscriptions: Id (long), UserId, PackageId, StartDate, EndDate, IsActive, PaymentMethod, AmountPaid.
+Projects: Id (long), Name, LogoUrl, CoverImageUrl, CityId, DistrictId, LocationDescription, IsActive, Properties.
+BaseEntity (inherited): Id, CreatedAt, UpdatedAt, CreatedById, UpdatedById, IsDeleted.
+
+Deployment and Setup
+
+Prerequisites: .NET 8 SDK, SQL Server, Visual Studio.
+Setup:
+Clone repo: git clone [repo-url].
+Restore packages: dotnet restore.
+Update connection string in appsettings.json.
+Migrate database: dotnet ef migrations add Initial then dotnet ef database update.
+Run: dotnet run.
+
+Seed Data: Add initial cities (Sohag, Tahta), districts (Al-Kawthar), property types (Apartment, Villa), packages (Silver, Platinum, Gold).
+Testing: Use Postman for MVC endpoints; test verification flows.
+
+Future Enhancements
+
+AI chatbot for user searches/recommendations.
+Automated notifications (push/email/SMS).
+Integration with payment gateways (Fawry/Vodafone Cash).
+Analytics dashboard with charts (Chart.js).
+Mobile app for users/agents.
