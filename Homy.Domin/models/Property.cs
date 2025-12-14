@@ -59,16 +59,17 @@ namespace Homy.Domin.models
         public bool IsFeatured { get; set; } = false;
         public DateTime? FeaturedUntil { get; set; }
 
-        public PropertyStatus Status { get; set; } = PropertyStatus.Active;
+        public PropertyStatus Status { get; set; } = PropertyStatus.PendingReview;
 
         // العلاقات
         public virtual ICollection<PropertyImage> Images { get; set; } = new List<PropertyImage>();
         public virtual ICollection<PropertyAmenity> PropertyAmenities { get; set; } = new List<PropertyAmenity>();
         public virtual ICollection<SavedProperty> SavedByUsers { get; set; } = new List<SavedProperty>();
+        public virtual ICollection<PropertyReview> Reviews { get; set; } = new List<PropertyReview>();
     }
 
     public enum FinishingType : byte { None = 0, Semi = 1, Full = 2 }
     public enum PropertyPurpose : byte { ForSale = 1, ForRent = 2, Both = 3 }
-    public enum PropertyStatus : byte { Active = 1, SoldOrRented = 2, Hidden = 3 }
+    public enum PropertyStatus : byte { PendingReview = 0, Active = 1, SoldOrRented = 2, Hidden = 3, Rejected = 4 }
 }
 

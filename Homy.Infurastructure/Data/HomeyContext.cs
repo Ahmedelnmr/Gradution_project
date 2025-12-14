@@ -26,6 +26,8 @@ namespace Homy.Infurastructure.Data
         public DbSet<Package> Packages { get; set; }
         public DbSet<UserSubscription> UserSubscriptions { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<PropertyReview> PropertyReviews { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
         // ====================== Model Configuration ======================
         protected override void OnModelCreating(ModelBuilder builder)
@@ -184,6 +186,35 @@ namespace Homy.Infurastructure.Data
             ConfigureBaseEntityRelations<Package>(builder);
             ConfigureBaseEntityRelations<UserSubscription>(builder);
             ConfigureBaseEntityRelations<Project>(builder);
+            ConfigureBaseEntityRelations<PropertyReview>(builder);
+            ConfigureBaseEntityRelations<Notification>(builder);
+
+            // ====================== PropertyReview Relations ======================
+            builder.Entity<PropertyReview>()
+                .HasOne(pr => pr.Property)
+                .WithMany(p => p.Reviews)
+                .HasForeignKey(pr => pr.PropertyId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<PropertyReview>()
+                .HasOne(pr => pr.Admin)
+                .WithMany()
+                .HasForeignKey(pr => pr.AdminId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // ====================== Notification Relations ======================
+            builder.Entity<Notification>()
+                .HasOne(n => n.User)
+                .WithMany(u => u.Notifications)
+                .HasForeignKey(n => n.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<Notification>()
+                .HasOne(n => n.Property)
+                .WithMany()
+                .HasForeignKey(n => n.PropertyId)
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.SetNull);
 
             // ====================== Indexes for Performance ======================
             builder.Entity<Property>()
@@ -224,6 +255,8 @@ namespace Homy.Infurastructure.Data
             builder.Entity<User>().HasQueryFilter(e => !e.IsDeleted);
             builder.Entity<SavedProperty>().HasQueryFilter(e => !e.IsDeleted);
             builder.Entity<PropertyAmenity>().HasQueryFilter(e => !e.IsDeleted);
+            builder.Entity<PropertyReview>().HasQueryFilter(e => !e.IsDeleted);
+            builder.Entity<Notification>().HasQueryFilter(e => !e.IsDeleted);
         }
 
         // ====================== SaveChanges Override للـ Audit ======================

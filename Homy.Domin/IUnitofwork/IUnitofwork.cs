@@ -17,6 +17,8 @@ namespace Homy.Infurastructure.Unitofworks
         IPackage_Repo PackageRepo { get; }
         IUserSubscription_Repo UserSubscriptionRepo { get; }
         IProject_Repo ProjectRepo { get; }
+        IPropertyReview_Repo PropertyReviewRepo { get; }
+        INotification_Repo NotificationRepo { get; }
 
         Task Save();
     }

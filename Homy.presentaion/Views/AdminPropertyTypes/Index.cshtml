@@ -1,0 +1,90 @@
+@using Homy.Application.Dtos.Admin
+@model IEnumerable<PropertyTypeDto>
+
+@{
+    ViewData["Title"] = "إدارة أنواع العقارات";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>إدارة أنواع العقارات</h2>
+        <a href="@Url.Action("Create")" class="btn btn-primary">
+            <i class="fas fa-plus"></i> إضافة نوع جديد
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>الأيقونة</th>
+                            <th>عدد الإعلانات</th>
+                            <th>تاريخ الإنشاء</th>
+                            <th class="text-end">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var type in Model)
+                        {
+                            <tr>
+                                <td class="fw-bold">@type.Name</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(type.IconUrl))
+                                    {
+                                        <img src="@type.IconUrl" alt="@type.Name" style="width: 30px; height: 30px;">
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">-</span>
+                                    }
+                                </td>
+                                <td>
+                                    <span class="badge bg-primary">@type.PropertiesCount إعلان</span>
+                                </td>
+                                <td class="text-muted">@type.CreatedAt.ToShortDateString()</td>
+                                <td class="text-end">
+                                    <a href="@Url.Action("Edit", new { id = type.Id })" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-edit"></i> تعديل
+                                    </a>
+                                    <form asp-action="Delete" asp-route-id="@type.Id" method="post" class="d-inline" onsubmit="return confirm('هل أنت متأكد من الحذف؟');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            <i class="fas fa-trash"></i> حذف
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                @if (!Model.Any())
+                {
+                    <div class="text-center py-5 text-muted">
+                        <i class="fas fa-box-open fa-3x mb-3"></i>
+                        <p>لا توجد أنواع مضافة بعد</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

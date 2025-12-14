@@ -24,6 +24,8 @@ namespace Homy.Infurastructure.Unitofworks
         private IPackage_Repo _packageRepo;
         private IUserSubscription_Repo _userSubscriptionRepo;
         private IProject_Repo _projectRepo;
+        private IPropertyReview_Repo _propertyReviewRepo;
+        private INotification_Repo _notificationRepo;
 
         public Unitofwork(HomyContext homyContext)
         {
@@ -41,6 +43,8 @@ namespace Homy.Infurastructure.Unitofworks
         public IPackage_Repo PackageRepo => _packageRepo ??= new Package_Repo(_homyContext);
         public IUserSubscription_Repo UserSubscriptionRepo => _userSubscriptionRepo ??= new UserSubscription_Repo(_homyContext);
         public IProject_Repo ProjectRepo => _projectRepo ??= new Project_Repo(_homyContext);
+        public IPropertyReview_Repo PropertyReviewRepo => _propertyReviewRepo ??= new PropertyReview_Repo(_homyContext);
+        public INotification_Repo NotificationRepo => _notificationRepo ??= new Notification_Repo(_homyContext);
 
         public async Task Save()
         {

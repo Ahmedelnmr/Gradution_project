@@ -8,7 +8,7 @@ namespace Homy.presentaion
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +25,17 @@ namespace Homy.presentaion
             // Register Repositories
             builder.Services.AddScoped(typeof(IGenric_Repo<>), typeof(Genric_Repo<>));
             builder.Services.AddScoped<IProperty_Repo, Property_Repo>();
+
+            // Register UnitOfWork
+            builder.Services.AddScoped<Homy.Infurastructure.Unitofworks.IUnitofwork, Homy.Infurastructure.Unitofworks.Unitofwork>();
+
+            // Register Services
+            builder.Services.AddScoped<Homy.Domin.Contract_Service.IDashboard_Service, Homy.Infurastructure.Service.Dashboard_Service>();
+            builder.Services.AddScoped<Homy.Domin.Contract_Service.IAdminProperty_Service, Homy.Application.Service.AdminProperty_Service>();
+            builder.Services.AddScoped<Homy.Domin.Contract_Service.IPropertyType_AdminService, Homy.Application.Service.PropertyType_AdminService>();
+
+            // Register Mapster Mappings
+            Homy.Application.Mapping.MappingConfig.RegisterMappings();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -41,6 +52,7 @@ namespace Homy.presentaion
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
             app.Run();
         }

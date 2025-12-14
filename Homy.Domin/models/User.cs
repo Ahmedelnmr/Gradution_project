@@ -34,6 +34,7 @@ namespace Homy.Domin.models
         public virtual ICollection<Property> Properties { get; set; } = new List<Property>();
         public virtual ICollection<SavedProperty> SavedProperties { get; set; } = new List<SavedProperty>();
         public virtual ICollection<UserSubscription> Subscriptions { get; set; } = new List<UserSubscription>();
+        public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
     }
 
     public enum UserRole : byte { Owner = 1, Agent = 2, Admin = 3 }
