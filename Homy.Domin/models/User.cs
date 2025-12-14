@@ -21,11 +21,12 @@ namespace Homy.Domin.models
 
         public bool IsDeleted { get; set; }
 
-        //public string? PasswordHash { get; set; }
+        public string? PasswordHash { get; set; }
 
         public UserRole Role { get; set; } = UserRole.Owner; // Owner, Agent, Admin
         public bool IsVerified { get; set; } = false;
         public bool IsActive { get; set; } = true;
+        public DateTime CreatedAt { get; set; }
 
         [MaxLength(500)]
         public string? ProfileImageUrl { get; set; }
@@ -34,6 +35,7 @@ namespace Homy.Domin.models
         public virtual ICollection<Property> Properties { get; set; } = new List<Property>();
         public virtual ICollection<SavedProperty> SavedProperties { get; set; } = new List<SavedProperty>();
         public virtual ICollection<UserSubscription> Subscriptions { get; set; } = new List<UserSubscription>();
+        public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
     }
 
     public enum UserRole : byte { Owner = 1, Agent = 2, Admin = 3 }

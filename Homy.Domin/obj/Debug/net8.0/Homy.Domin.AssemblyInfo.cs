@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homy.Domin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e4bf23b798547c296106dcc9ad195e6622e76ac")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb8132fd3a953058c024bcbcbe60c57f5d68b844")]
+>>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
 [assembly: System.Reflection.AssemblyProductAttribute("Homy.Domin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homy.Domin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

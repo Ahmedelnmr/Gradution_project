@@ -60,7 +60,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Amenities", (string)null);
+                    b.ToTable("Amenities");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.City", b =>
@@ -97,7 +97,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Cities", (string)null);
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.District", b =>
@@ -139,7 +139,67 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Districts", (string)null);
+                    b.ToTable("Districts");
+<<<<<<< HEAD
+                });
+
+            modelBuilder.Entity("Homy.Domin.models.Notification", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long?>("PropertyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<byte>("Type")
+                        .HasColumnType("tinyint");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("UpdatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
+
+                    b.HasIndex("PropertyId");
+
+                    b.HasIndex("UpdatedById");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Notifications");
+=======
+>>>>>>> sharqawy
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Package", b =>
@@ -191,7 +251,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Packages", (string)null);
+                    b.ToTable("Packages");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Project", b =>
@@ -253,7 +313,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Projects", (string)null);
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Property", b =>
@@ -379,7 +439,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Properties", (string)null);
+                    b.ToTable("Properties");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyAmenity", b =>
@@ -422,7 +482,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("PropertyId", "AmenityId")
                         .IsUnique();
 
-                    b.ToTable("PropertyAmenities", (string)null);
+                    b.ToTable("PropertyAmenities");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyImage", b =>
@@ -470,7 +530,59 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("PropertyImages", (string)null);
+                    b.ToTable("PropertyImages");
+<<<<<<< HEAD
+                });
+
+            modelBuilder.Entity("Homy.Domin.models.PropertyReview", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<byte>("Action")
+                        .HasColumnType("tinyint");
+
+                    b.Property<Guid>("AdminId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long>("PropertyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("UpdatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdminId");
+
+                    b.HasIndex("CreatedById");
+
+                    b.HasIndex("PropertyId");
+
+                    b.HasIndex("UpdatedById");
+
+                    b.ToTable("PropertyReviews");
+=======
+>>>>>>> sharqawy
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyType", b =>
@@ -511,7 +623,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("PropertyTypes", (string)null);
+                    b.ToTable("PropertyTypes");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.SavedProperty", b =>
@@ -557,7 +669,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("UserId", "PropertyId")
                         .IsUnique();
 
-                    b.ToTable("SavedProperties", (string)null);
+                    b.ToTable("SavedProperties");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.User", b =>
@@ -572,6 +684,9 @@ namespace Homy.Infurastructure.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -713,7 +828,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserSubscriptions", (string)null);
+                    b.ToTable("UserSubscriptions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
@@ -906,6 +1021,38 @@ namespace Homy.Infurastructure.Migrations
                     b.Navigation("UpdatedBy");
                 });
 
+            modelBuilder.Entity("Homy.Domin.models.Notification", b =>
+                {
+                    b.HasOne("Homy.Domin.models.User", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Homy.Domin.models.Property", "Property")
+                        .WithMany()
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Homy.Domin.models.User", "UpdatedBy")
+                        .WithMany()
+                        .HasForeignKey("UpdatedById")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Homy.Domin.models.User", "User")
+                        .WithMany("Notifications")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CreatedBy");
+
+                    b.Navigation("Property");
+
+                    b.Navigation("UpdatedBy");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Homy.Domin.models.Package", b =>
                 {
                     b.HasOne("Homy.Domin.models.User", "CreatedBy")
@@ -1060,6 +1207,39 @@ namespace Homy.Infurastructure.Migrations
                         .WithMany()
                         .HasForeignKey("UpdatedById")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("CreatedBy");
+
+                    b.Navigation("Property");
+
+                    b.Navigation("UpdatedBy");
+                });
+
+            modelBuilder.Entity("Homy.Domin.models.PropertyReview", b =>
+                {
+                    b.HasOne("Homy.Domin.models.User", "Admin")
+                        .WithMany()
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Homy.Domin.models.User", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Homy.Domin.models.Property", "Property")
+                        .WithMany("Reviews")
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Homy.Domin.models.User", "UpdatedBy")
+                        .WithMany()
+                        .HasForeignKey("UpdatedById")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Admin");
 
                     b.Navigation("CreatedBy");
 
@@ -1239,6 +1419,8 @@ namespace Homy.Infurastructure.Migrations
 
                     b.Navigation("PropertyAmenities");
 
+                    b.Navigation("Reviews");
+
                     b.Navigation("SavedByUsers");
                 });
 
@@ -1249,6 +1431,8 @@ namespace Homy.Infurastructure.Migrations
 
             modelBuilder.Entity("Homy.Domin.models.User", b =>
                 {
+                    b.Navigation("Notifications");
+
                     b.Navigation("Properties");
 
                     b.Navigation("SavedProperties");

@@ -2927,23 +2927,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\mohamed ayman\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+>>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\iti .net\\Project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
       "projectName": "Homy.Application",
       "projectPath": "F:\\iti .net\\Project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
       "packagesPath": "C:\\Users\\mohamed ayman\\.nuget\\packages\\",
       "outputPath": "F:\\iti .net\\Project\\Gradution_project\\Homy.Application\\obj\\",
+=======
+      "projectUniqueName": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+      "projectName": "Homy.Application",
+      "projectPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\obj\\",
+>>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\mohamed ayman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2958,8 +2974,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "F:\\iti .net\\Project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
               "projectPath": "F:\\iti .net\\Project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+=======
+            "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+              "projectPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+>>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
             }
           }
         }
@@ -2974,7 +2995,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -3001,7 +3022,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
       }
     }
   }

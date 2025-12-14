@@ -1,0 +1,131 @@
+@using Homy.Application.Dtos.Admin
+@using Homy.Domin.models
+@model Homy.Application.Dtos.Common.PaginatedResult<PropertyListDto>
+
+@{
+    ViewData["Title"] = "إدارة الإعلانات";
+    var statusCounts = ViewBag.StatusCounts as Dictionary<PropertyStatus, int>;
+    int GetCount(PropertyStatus status) => statusCounts != null && statusCounts.ContainsKey(status) ? statusCounts[status] : 0;
+    int totalAds = statusCounts != null ? statusCounts.Values.Sum() : 0;
+    
+    PropertyStatus? currentStatus = Context.Request.Query["Status"].ToString() switch 
+    {
+        "PendingReview" => PropertyStatus.PendingReview,
+        "Active" => PropertyStatus.Active,
+        "Rejected" => PropertyStatus.Rejected,
+        _ => null
+    };
+}
+
+<div class="page-content">
+    <div class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">
+                <i class="fas fa-bullhorn text-primary"></i>
+                إدارة الإعلانات
+            </h1>
+        </div>
+    </div>
+
+    <div class="filter-tabs mb-4">
+        <a href="@Url.Action("Index")" class="filter-tab @(currentStatus == null ? "active" : "")">
+            <span>الكل</span>
+            <span class="tab-count">@totalAds</span>
+        </a>
+        <a href="@Url.Action("Index", new { Status = PropertyStatus.PendingReview })" class="filter-tab @(currentStatus == PropertyStatus.PendingReview ? "active" : "")">
+            <span>تحت المراجعة</span>
+            <span class="tab-count">@GetCount(PropertyStatus.PendingReview)</span>
+        </a>
+        <a href="@Url.Action("Index", new { Status = PropertyStatus.Active })" class="filter-tab @(currentStatus == PropertyStatus.Active ? "active" : "")">
+            <span>نشط</span>
+            <span class="tab-count">@GetCount(PropertyStatus.Active)</span>
+        </a>
+        <a href="@Url.Action("Index", new { Status = PropertyStatus.Rejected })" class="filter-tab @(currentStatus == PropertyStatus.Rejected ? "active" : "")">
+            <span>مرفوض</span>
+            <span class="tab-count">@GetCount(PropertyStatus.Rejected)</span>
+        </a>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var item in Model.Items)
+        {
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="position-relative">
+                        <img src="@(string.IsNullOrEmpty(item.ImageUrl) ? "/images/placeholder.jpg" : item.ImageUrl)" class="card-img-top" alt="@item.Title" style="height: 200px; object-fit: cover;">
+                        
+                        @switch (item.Status)
+                        {
+                            case PropertyStatus.PendingReview:
+                                <span class="position-absolute top-0 start-0 badge bg-warning m-2">تحت المراجعة</span>
+                                break;
+                            case PropertyStatus.Active:
+                                <span class="position-absolute top-0 start-0 badge bg-success m-2">نشط</span>
+                                break;
+                            case PropertyStatus.Rejected:
+                                <span class="position-absolute top-0 start-0 badge bg-danger m-2">مرفوض</span>
+                                break;
+                        }
+
+                        <div class="position-absolute bottom-0 end-0 bg-primary text-white px-2 py-1 m-2 rounded">
+                            @if(item.Purpose == PropertyPurpose.ForRent && item.RentPriceMonthly.HasValue)
+                            {
+                                <small>@item.RentPriceMonthly.Value.ToString("N0") جنيه/شهر</small>
+                            }
+                            else
+                            {
+                                <small>@item.Price.ToString("N0") جنيه</small>
+                            }
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">@item.Title</h6>
+                        <p class="card-text text-muted small">
+                            <i class="fas fa-map-marker-alt"></i> @item.CityName
+                        </p>
+                        <div class="d-flex justify-content-between text-muted small mb-3">
+                            <span><i class="fas fa-bed"></i> @item.Rooms</span>
+                            <span><i class="fas fa-bath"></i> @item.Bathrooms</span>
+                            <span><i class="fas fa-vector-square"></i> @item.Area م²</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">@item.OwnerName</small>
+                            <a href="@Url.Action("Details", new { id = item.Id })" class="btn btn-sm btn-primary">
+                                <i class="fas fa-eye"></i> عرض
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        
+        @if (!Model.Items.Any())
+        {
+            <div class="col-12 text-center py-5">
+                <p class="text-muted">لا توجد إعلانات</p>
+            </div>
+        }
+    </div>
+
+    @if (Model.TotalPages > 1)
+    {
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item @(Model.HasPrevious ? "" : "disabled")">
+                    <a class="page-link" href="@Url.Action("Index", new { Status = currentStatus, Page = Model.Page - 1 })">السابق</a>
+                </li>
+                
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(Model.Page == i ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { Status = currentStatus, Page = i })">@i</a>
+                    </li>
+                }
+                
+                <li class="page-item @(Model.HasNext ? "" : "disabled")">
+                    <a class="page-link" href="@Url.Action("Index", new { Status = currentStatus, Page = Model.Page + 1 })">التالي</a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
