@@ -141,6 +141,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.ToTable("Districts");
 <<<<<<< HEAD
+<<<<<<< HEAD
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Notification", b =>
@@ -200,6 +201,8 @@ namespace Homy.Infurastructure.Migrations
                     b.ToTable("Notifications");
 =======
 >>>>>>> sharqawy
+=======
+>>>>>>> origin/hani
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Package", b =>
@@ -532,6 +535,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.ToTable("PropertyImages");
 <<<<<<< HEAD
+<<<<<<< HEAD
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyReview", b =>
@@ -583,6 +587,8 @@ namespace Homy.Infurastructure.Migrations
                     b.ToTable("PropertyReviews");
 =======
 >>>>>>> sharqawy
+=======
+>>>>>>> origin/hani
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyType", b =>

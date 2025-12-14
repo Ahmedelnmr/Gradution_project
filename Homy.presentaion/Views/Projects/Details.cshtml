@@ -1,0 +1,198 @@
+﻿@model Homy.Application.Dtos.ProjectDto
+@{
+    ViewData["Title"] = $"{Model.Name} - تفاصيل المشروع";
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <i class="fas fa-building text-primary"></i>
+            @Model.Name
+        </h1>
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">المشاريع</a></li>
+                <li class="breadcrumb-item active">@Model.Name</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="header-actions">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+            <i class="fas fa-edit"></i> تعديل
+        </a>
+        <form asp-action="ToggleStatus" asp-route-id="@Model.Id" method="post" style="display: inline;">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn @(Model.IsActive ? "btn-warning" : "btn-success")">
+                <i class="fas fa-@(Model.IsActive ? "pause" : "play")-circle"></i>
+                @(Model.IsActive ? "إلغاء التفعيل" : "تفعيل")
+            </button>
+        </form>
+        <form asp-action="Delete" asp-route-id="@Model.Id" method="post"
+              onsubmit="return confirm('هل أنت متأكد من حذف هذا المشروع؟');" style="display: inline;">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-danger">
+                <i class="fas fa-trash"></i> حذف
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Project Details Card -->
+<div class="row g-4">
+    <!-- Main Info -->
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-info-circle"></i>
+                    معلومات المشروع
+                </h5>
+            </div>
+            <div class="card-body">
+                <!-- Cover Image -->
+                @if (!string.IsNullOrEmpty(Model.CoverImageUrl))
+                {
+                    <div class="mb-4">
+                        <img src="@Model.CoverImageUrl" alt="@Model.Name"
+                             class="img-fluid rounded" style="max-height: 400px; width: 100%; object-fit: cover;">
+                    </div>
+                }
+
+                <!-- Basic Info -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p><strong><i class="fas fa-city text-primary"></i> المدينة:</strong> @Model.CityName</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <strong><i class="fas fa-map-marked-alt text-primary"></i> الحي:</strong>
+                            @(Model.DistrictName ?? "غير محدد")
+                        </p>
+                    </div>
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.LocationDescription))
+                {
+                    <div class="mb-3">
+                        <p><strong><i class="fas fa-map-marker-alt text-primary"></i> الموقع:</strong></p>
+                        <p class="text-muted">@Model.LocationDescription</p>
+                    </div>
+                }
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <p>
+                            <strong><i class="fas fa-home text-success"></i> عدد الوحدات:</strong>
+                            @Model.PropertiesCount
+                        </p>
+                    </div>
+                    @if (Model.MinPrice.HasValue)
+                    {
+                        <div class="col-md-4">
+                            <p>
+                                <strong><i class="fas fa-tag text-warning"></i> السعر من:</strong>
+                                @Model.MinPrice.Value.ToString("N0") جنيه
+                            </p>
+                        </div>
+                    }
+                    @if (Model.MinArea.HasValue && Model.MaxArea.HasValue)
+                    {
+                        <div class="col-md-4">
+                            <p>
+                                <strong><i class="fas fa-ruler-combined text-info"></i> المساحة:</strong>
+                                @Model.MinArea - @Model.MaxArea م²
+                            </p>
+                        </div>
+                    }
+                </div>
+
+                <div class="mb-3">
+                    <p>
+                        <strong><i class="fas fa-calendar text-primary"></i> تاريخ الإضافة:</strong>
+                        @Model.CreatedAt.ToString("dd/MM/yyyy")
+                    </p>
+                </div>
+
+                <div>
+                    <span class="badge @(Model.IsActive ? "bg-success" : "bg-warning") p-2">
+                        <i class="fas fa-@(Model.IsActive ? "check" : "pause")-circle"></i>
+                        @(Model.IsActive ? "مشروع نشط" : "غير نشط")
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo & Quick Actions -->
+    <div class="col-lg-4">
+        <!-- Logo Card -->
+        @if (!string.IsNullOrEmpty(Model.LogoUrl))
+        {
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        <i class="fas fa-image"></i>
+                        شعار المشروع
+                    </h5>
+                </div>
+                <div class="card-body text-center">
+                    <img src="@Model.LogoUrl" alt="@Model.Name Logo"
+                         class="img-fluid rounded" style="max-height: 200px;">
+                </div>
+            </div>
+        }
+
+        <!-- Quick Stats -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-chart-bar"></i>
+                    إحصائيات سريعة
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="stat-item mb-3 p-3 bg-light rounded">
+                    <div class="stat-number text-primary" style="font-size: 2rem; font-weight: bold;">
+                        @Model.PropertiesCount
+                    </div>
+                    <div class="stat-label text-muted">وحدة متاحة</div>
+                </div>
+
+                @if (Model.MinPrice.HasValue)
+                {
+                    <div class="stat-item mb-3 p-3 bg-light rounded">
+                        <div class="stat-number text-success" style="font-size: 1.5rem; font-weight: bold;">
+                            @Model.MinPrice.Value.ToString("N0")
+                        </div>
+                        <div class="stat-label text-muted">أقل سعر (جنيه)</div>
+                    </div>
+                }
+
+                <a asp-controller="Properties" asp-action="Index" asp-route-projectId="@Model.Id"
+                   class="btn btn-primary w-100">
+                    <i class="fas fa-list"></i> عرض الوحدات
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Toast notifications
+        @if (TempData["SuccessMessage"] != null)
+        {
+                <text>
+                showToast('@TempData["SuccessMessage"]', 'success');
+                </text>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+                <text>
+                showToast('@TempData["ErrorMessage"]', 'danger');
+                </text>
+        }
+    </script>
+}
