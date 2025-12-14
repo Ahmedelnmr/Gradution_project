@@ -29,3 +29,21 @@ D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\refint\Homy.Applica
 D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\Homy.Application.pdb
 D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\ref\Homy.Application.dll
 D:\Graduation_project\Homy\Homy.Application\obj\Debug\net8.0\Homy.Application.sourcelink.json
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.dll
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\refint\Homy.Application.dll
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.pdb
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.csproj.AssemblyReference.cache
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.AssemblyInfoInputs.cache
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.AssemblyInfo.cs
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.csproj.CoreCompileInputs.cache
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.sourcelink.json
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Application.deps.json
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Application.dll
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Application.pdb
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Domin.dll
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Infurastructure.dll
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Infurastructure.pdb
+F:\iti .net\Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Domin.pdb
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.App.F310B7D4.Up2Date
+F:\iti .net\Project\Gradution_project\Homy.Application\obj\Debug\net8.0\ref\Homy.Application.dll

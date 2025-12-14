@@ -1,0 +1,639 @@
+@model Homy.Application.Dtos.ReportsDto
+@{
+    ViewData["Title"] = "الإحصائيات والتقارير - هومي";
+}
+
+<div class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <i class="fas fa-chart-bar text-primary"></i>
+            الإحصائيات والتقارير
+        </h1>
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
+                <li class="breadcrumb-item active">الإحصائيات والتقارير</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="header-actions">
+        <button class="btn btn-outline-primary me-2" onclick="window.print()">
+            <i class="fas fa-print"></i>
+            طباعة
+        </button>
+        <button class="btn btn-primary" onclick="exportReport()">
+            <i class="fas fa-download"></i>
+            تصدير التقرير
+        </button>
+    </div>
+</div>
+
+<!-- Stats Overview -->
+<div class="row g-4 mb-4">
+    <div class="col-xl-3 col-lg-6">
+        <div class="stat-card stat-primary">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-content">      
+                <h3 class="stat-value">@Model.TotalUsers.ToString("N0")</h3>
+                <p class="stat-label">إجمالي المستخدمين</p>
+            </div>
+            <div class="stat-trend @(Model.UsersGrowthPercentage >= 0 ? "up" : "down")">
+                <i class="fas fa-arrow-@(Model.UsersGrowthPercentage >= 0 ? "up" : "down")"></i>
+                <span>@Model.UsersGrowthPercentage.ToString("0.0")%</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6">
+        <div class="stat-card stat-success">
+            <div class="stat-icon"><i class="fas fa-bullhorn"></i></div>
+            <div class="stat-content">
+                <h3 class="stat-value">@Model.TotalAds.ToString("N0")</h3>
+                <p class="stat-label">إجمالي الإعلانات</p>
+            </div>
+            <div class="stat-trend @(Model.AdsGrowthPercentage >= 0 ? "up" : "down")">
+                <i class="fas fa-arrow-@(Model.AdsGrowthPercentage >= 0 ? "up" : "down")"></i>
+                <span>@Model.AdsGrowthPercentage.ToString("0.0")%</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6">
+        <div class="stat-card stat-warning">
+            <div class="stat-icon"><i class="fas fa-eye"></i></div>
+            <div class="stat-content">
+                <h3 class="stat-value">@Model.MonthlyViews.ToString("N0")</h3>
+                <p class="stat-label">المشاهدات الكلية</p>
+            </div>
+            <div class="stat-trend @(Model.ViewsGrowthPercentage >= 0 ? "up" : "down")">
+                <i class="fas fa-arrow-@(Model.ViewsGrowthPercentage >= 0 ? "up" : "down")"></i>
+                <span>@Model.ViewsGrowthPercentage.ToString("0.0")%</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6">
+        <div class="stat-card stat-purple">
+            <div class="stat-icon"><i class="fas fa-coins"></i></div>
+            <div class="stat-content">
+                <h3 class="stat-value" id="totalRevenueValue">@Model.TotalRevenue.ToString("N0") <small>جنيه</small></h3>
+                <p class="stat-label">إيرادات السنة</p>
+            </div>
+            <div class="stat-trend @(Model.RevenueGrowthPercentage >= 0 ? "up" : "down")">
+                <i class="fas fa-arrow-@(Model.RevenueGrowthPercentage >= 0 ? "up" : "down")"></i>
+                <span>@Model.RevenueGrowthPercentage.ToString("0.0")%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-4">
+    <!-- Revenue Chart -->
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-chart-line"></i>
+                    الإيرادات الشهرية
+                </h5>
+                <div class="card-actions">
+                    <select id="revenueYear" class="form-select form-select-sm" style="width: auto;">
+                        <option value="@DateTime.Now.Year">@DateTime.Now.Year</option>
+                        <option value="@(DateTime.Now.Year - 1)">@(DateTime.Now.Year - 1)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="revenueChart" style="max-height: 350px;"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Distribution -->
+    <div class="col-xl-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-chart-pie"></i>
+                    توزيع الإعلانات
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="distribution-list">
+                    @foreach (var dist in Model.AdsDistribution)
+                    {
+                        <div class="distribution-item">
+                            <div class="dist-info">
+                                <span class="dist-color" style="background: @dist.Color;"></span>
+                                <span class="dist-label">@dist.PropertyType</span>
+                            </div>
+                            <div class="dist-bar">
+                                <div class="dist-progress" style="width: @dist.Percentage.ToString("0.0")%; background: @dist.Color;"></div>
+                            </div>
+                            <span class="dist-value">@dist.Percentage.ToString("0.0")%</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Top Regions & Monthly Comparison -->
+<div class="row g-4">
+    <!-- Top Regions -->
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-map-marked-alt"></i>
+                    أكثر المناطق نشاطاً
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>المنطقة</th>
+                                <th>الإعلانات</th>
+                                <th>المشاهدات</th>
+                                <th>النمو</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var region in Model.TopRegions)
+                            {
+                                <tr>
+                                    <td>@region.Rank</td>
+                                    <td>
+                                        @if (region.Rank == 1)
+                                        {
+                                            <i class="fas fa-medal text-warning"></i>
+                                        }
+                                        else if (region.Rank == 2)
+                                        {
+                                            <i class="fas fa-medal text-secondary"></i>
+                                        }
+                                        else if (region.Rank == 3)
+                                        {
+                                            <i class="fas fa-medal" style="color: #cd7f32;"></i>
+                                        }
+                                        @region.RegionName
+                                    </td>
+                                    <td>@region.AdsCount.ToString("N0")</td>
+                                    <td>@region.ViewsCount.ToString("N0")</td>
+                                    <td>
+                                        <span class="text-@(region.GrowthPercentage >= 0 ? "success" : "danger")">
+                                            <i class="fas fa-arrow-@(region.GrowthPercentage >= 0 ? "up" : "down")"></i> 
+                                            @region.GrowthPercentage.ToString("0.0")%
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monthly Comparison -->
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    <i class="fas fa-balance-scale"></i>
+                    مقارنة الأداء الشهري
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="comparison-list">
+                    <div class="comparison-item">
+                        <div class="comp-label">إعلانات جديدة</div>
+                        <div class="comp-values">
+                            <span class="comp-current">@Model.MonthlyComparison.NewAds.CurrentValue</span>
+                            <span class="comp-vs">vs</span>
+                            <span class="comp-previous">@Model.MonthlyComparison.NewAds.PreviousValue</span>
+                        </div>
+                        <span class="comp-change text-@(Model.MonthlyComparison.NewAds.IsPositive ? "success" : "danger")">
+                            <i class="fas fa-arrow-@(Model.MonthlyComparison.NewAds.IsPositive ? "up" : "down")"></i> 
+                            @Model.MonthlyComparison.NewAds.ChangePercentage.ToString("0.0")%
+                        </span>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comp-label">مستخدمين جدد</div>
+                        <div class="comp-values">
+                            <span class="comp-current">@Model.MonthlyComparison.NewUsers.CurrentValue</span>
+                            <span class="comp-vs">vs</span>
+                            <span class="comp-previous">@Model.MonthlyComparison.NewUsers.PreviousValue</span>
+                        </div>
+                        <span class="comp-change text-@(Model.MonthlyComparison.NewUsers.IsPositive ? "success" : "danger")">
+                            <i class="fas fa-arrow-@(Model.MonthlyComparison.NewUsers.IsPositive ? "up" : "down")"></i> 
+                            @Model.MonthlyComparison.NewUsers.ChangePercentage.ToString("0.0")%
+                        </span>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comp-label">اشتراكات جديدة</div>
+                        <div class="comp-values">
+                            <span class="comp-current">@Model.MonthlyComparison.NewSubscriptions.CurrentValue</span>
+                            <span class="comp-vs">vs</span>
+                            <span class="comp-previous">@Model.MonthlyComparison.NewSubscriptions.PreviousValue</span>
+                        </div>
+                        <span class="comp-change text-@(Model.MonthlyComparison.NewSubscriptions.IsPositive ? "success" : "danger")">
+                            <i class="fas fa-arrow-@(Model.MonthlyComparison.NewSubscriptions.IsPositive ? "up" : "down")"></i> 
+                            @Model.MonthlyComparison.NewSubscriptions.ChangePercentage.ToString("0.0")%
+                        </span>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comp-label">الإيرادات</div>
+                        <div class="comp-values">
+                            <span class="comp-current">@Model.MonthlyComparison.Revenue.CurrentValue.ToString("N0")</span>
+                            <span class="comp-vs">vs</span>
+                            <span class="comp-previous">@Model.MonthlyComparison.Revenue.PreviousValue.ToString("N0")</span>
+                        </div>
+                        <span class="comp-change text-@(Model.MonthlyComparison.Revenue.IsPositive ? "success" : "danger")">
+                            <i class="fas fa-arrow-@(Model.MonthlyComparison.Revenue.IsPositive ? "up" : "down")"></i> 
+                            @Model.MonthlyComparison.Revenue.ChangePercentage.ToString("0.0")%
+                        </span>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="comp-label">تذاكر الدعم</div>
+                        <div class="comp-values">
+                            <span class="comp-current">@Model.MonthlyComparison.SupportTickets.CurrentValue</span>
+                            <span class="comp-vs">vs</span>
+                            <span class="comp-previous">@Model.MonthlyComparison.SupportTickets.PreviousValue</span>
+                        </div>
+                        <span class="comp-change text-@(Model.MonthlyComparison.SupportTickets.IsPositive ? "danger" : "success")">
+                            <i class="fas fa-arrow-@(Model.MonthlyComparison.SupportTickets.IsPositive ? "up" : "down")"></i> 
+                            @Model.MonthlyComparison.SupportTickets.ChangePercentage.ToString("0.0")%
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        // Revenue Chart
+        // Revenue Chart
+        let revenueChart;
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        
+        function initChart(data) {
+            if (revenueChart) {
+                revenueChart.destroy();
+            }
+
+            revenueChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.map(d => d.month || d.Month),
+                    datasets: [{
+                        label: 'الإيرادات (جنيه)',
+                        data: data.map(d => d.revenue || d.Revenue),
+                        backgroundColor: 'rgba(99, 102, 241, 0.8)',
+                        borderColor: 'rgba(99, 102, 241, 1)',
+                        borderWidth: 2,
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                font: { family: 'Cairo', size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y.toLocaleString('ar-EG') + ' جنيه';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString('ar-EG');
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize with server-side data
+        const initialData = @Html.Raw(Json.Serialize(Model.MonthlyRevenues));
+        initChart(initialData);
+
+        // Handle Year Change
+        document.getElementById('revenueYear').addEventListener('change', function() {
+            const year = this.value;
+            fetch(`/Reports/GetMonthlyRevenue?year=${year}`)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        initChart(result.data);
+                        
+                        // Update Total Revenue Text
+                        const totalRevenueElement = document.getElementById('totalRevenueValue');
+                        if (totalRevenueElement) {
+                            // Format number with commas (e.g. 42,700)
+                            const formattedRevenue = result.totalRevenue.toLocaleString('en-US');
+                            // Ensure the small tag is preserved with correct margin
+                            totalRevenueElement.innerHTML = `${formattedRevenue} <small>جنيه</small>`;
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+
+        function exportReport() {
+            alert('جاري تصدير التقرير...');
+            // يمكن إضافة منطق التصدير هنا
+        }
+    </script>
+}
+
+<style>
+/* ... باقي الأنماط ... */
+
+/* النمط الجديد لترتيب القيمة والنسبة على نفس السطر */
+.stat-content {
+    /* للحفاظ على ترتيب الأيقونة وباقي المحتوى عمودياً */
+    display: flex;
+    flex-direction: column; 
+    /* إزالة الهامش السفلي الكبير إذا كان موجوداً */
+    /* margin-bottom: 0.5rem; */
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between; /* تفريق القيمة إلى اليمين والنسبة إلى اليسار */
+    align-items: center;
+    margin-bottom: 0; /* لإزالة أي هامش علوي غير مرغوب فيه */
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0; /* مهم: إلغاء الهامش السفلي */
+    /* ضمان عرض القيمة بشكل صحيح بجوار النسبة */
+    display: flex; 
+    align-items: center; 
+}
+
+.stat-label {
+    color: #9ca3af; 
+    margin: 0;
+    margin-top: 0.3rem; /* مسافة بسيطة بين القيمة والوصف */
+}
+
+.stat-trend {
+    /* إزالة absolute positioning الذي كان يسبب التداخل */
+    position: static !important; 
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+/* Stat Card Layout Fixes */
+.stat-card {
+    background: #1e293b !important;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+    display: flex;
+    align-items: center; /* Vertically center icon and content block */
+    flex-direction: row; 
+}
+
+.stat-icon {
+    font-size: 1.75rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    /* Space between Icon (Right) and Content */
+    margin-left: 1.25rem; 
+}
+
+.stat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* Align text to the Right (Start in RTL) */
+    align-items: flex-start;
+    justify-content: center;
+    
+    /* Crucial: Push content slightly to the right (away from the left edge where the badge is) */
+    /* In RTL, padding-left is the END side (Left). This pushes content towards the Right. */
+    padding-left: 4rem; 
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    color: #f3f4f6;
+    display: flex;
+    align-items: baseline;
+}
+
+.stat-value small {
+    font-size: 0.5em;
+    font-weight: 500;
+    margin-right: 0.4rem; 
+    color: #9ca3af;
+}
+
+.stat-label {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Trend Badge: Positioned Absolute on the Left */
+.stat-trend {
+    position: absolute !important;
+    /* Align vertically with the 'stat-content' top padding (approximately) */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center it relative to the card? */
+    /* User said: "Equal to numbers". Numbers are top. 
+       Let's try aligning it with the row. 
+       Actually, centering it vertically on the left side looks cleanest and "equal" to the block. 
+       Or does "equal to numbers" mean top-aligned? 
+       "Ratio on the left but equal to the numbers" probably means same vertical level as the number line. 
+    */
+    /* Let's try top: 1.7rem to match the text baseline roughly */
+    top: 1.7rem; 
+    transform: none;
+    
+    left: 1.5rem !important; 
+    right: auto !important;
+    
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: fit-content;
+}
+
+/* Hover Effect */
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.stat-trend {
+position: absolute;
+top: 1.5rem;
+left: 1.5rem;
+padding: 0.25rem 0.75rem;
+border-radius: 20px;
+font-size: 0.875rem;
+font-weight: 600;
+}
+
+.stat-trend.up {
+background: #153a29; /* خلفية خضراء داكنة */
+color: #34d399; /* نص أخضر فاتح */
+}
+
+.stat-trend.down {
+background: #451b1b; /* خلفية حمراء داكنة */
+color: #f87171; /* نص أحمر فاتح */
+}
+
+.distribution-list {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.distribution-item {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.dist-info {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+min-width: 150px;
+}
+
+.dist-color {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+}
+
+.dist-bar {
+flex: 1;
+height: 8px;
+background: #374151; /* تم تغيير لون الخلفية ليكون داكناً */
+border-radius: 4px;
+overflow: hidden;
+}
+
+.dist-progress {
+height: 100%;
+transition: width 0.3s ease;
+}
+
+.dist-value {
+min-width: 50px;
+text-align: left;
+font-weight: 600;
+}
+
+.comparison-list {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.comparison-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+background: #2f3e53;
+border-radius: 8px;
+}
+
+.comp-values {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: 600;
+}
+
+.comp-current {
+color: #8183fa;
+font-size: 1.25rem;
+}
+
+.comp-vs {
+color: #6b7280;
+font-size: 0.875rem;
+}
+
+.comp-previous {
+color: #9ca3af;
+}
+
+.comp-change {
+font-weight: 600;
+white-space: nowrap;
+}
+
+/* لضمان أن النص في الـ card يكون فاتحاً على الخلفية الداكنة */
+.card {
+background-color: #1e293b !important;
+color: #f3f4f6;
+}
+
+.card-header {
+border-bottom: 1px solid #374151;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+background-color: #2f3e53 !important;
+}
+
+/* تغيير لون أيقونة الإيرادات في الـ Chart */
+#revenueChart {
+filter: invert(0.9) hue-rotate(180deg); /* محاولة عكس الألوان في الـ Chart إذا كان ذلك ممكناً أو قم بتغيير الألوان في الـ JS */
+}
+
+</style>
