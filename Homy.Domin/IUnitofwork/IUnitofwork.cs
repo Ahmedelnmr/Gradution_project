@@ -17,8 +17,12 @@ namespace Homy.Infurastructure.Unitofworks
         IPackage_Repo PackageRepo { get; }
         IUserSubscription_Repo UserSubscriptionRepo { get; }
         IProject_Repo ProjectRepo { get; }
+<<<<<<< HEAD
         IPropertyReview_Repo PropertyReviewRepo { get; }
         INotification_Repo NotificationRepo { get; }
+=======
+        IUserRepo UserRepo { get; }
+>>>>>>> sharqawy
 
         Task Save();
     }

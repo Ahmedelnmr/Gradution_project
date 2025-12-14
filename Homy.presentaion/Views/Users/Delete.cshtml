@@ -1,0 +1,137 @@
+﻿@using Homy.Application.Dtos.UserDtos
+@model UserDto
+@{
+    ViewData["Title"] = "حذف المستخدم";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Header -->
+            <div class="text-center mb-4">
+                <i class="fas fa-exclamation-triangle text-danger" style="font-size: 4rem;"></i>
+                <h2 class="mt-3 text-danger">⚠️ تحذير: حذف المستخدم</h2>
+            </div>
+
+            <!-- Warning Card -->
+            <div class="card border-danger mb-4 shadow">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="mb-0"><i class="fas fa-trash"></i> تأكيد الحذف</h5>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-danger" role="alert">
+                        <h5 class="alert-heading">
+                            <i class="fas fa-exclamation-circle"></i> هل أنت متأكد من حذف هذا المستخدم؟
+                        </h5>
+                        <hr>
+                        <p class="mb-0">
+                            <strong>ملاحظة مهمة:</strong> هذا الإجراء <strong>لا يمكن التراجع عنه!</strong>
+                            <br>
+                            سيتم إخفاء المستخدم من النظام (Soft Delete) وإلغاء تفعيل حسابه.
+                        </p>
+                    </div>
+
+                    <!-- بيانات المستخدم المراد حذفه -->
+                    <div class="row mt-4">
+                        <div class="col-md-4 text-center">
+                            @if (!string.IsNullOrEmpty(Model.ProfileImageUrl))
+                            {
+                                <img src="@Model.ProfileImageUrl" alt="@Model.FullName"
+                                     class="img-fluid rounded-circle shadow" style="width: 150px; height: 150px; object-fit: cover;">
+                            }
+                            else
+                            {
+                                <div class="bg-danger text-white rounded-circle mx-auto d-flex align-items-center justify-content-center shadow"
+                                     style="width: 150px; height: 150px;">
+                                    <i class="fas fa-user fa-4x"></i>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="text-danger">@Model.FullName</h4>
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 40%;"><i class="fas fa-phone"></i> الهاتف:</th>
+                                        <td>@Model.PhoneNumber</td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-user-tag"></i> الدور:</th>
+                                        <td>@Model.RoleText</td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-home"></i> عدد الإعلانات:</th>
+                                        <td><span class="badge bg-danger">@Model.PropertiesCount</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-heart"></i> الإعلانات المحفوظة:</th>
+                                        <td><span class="badge bg-danger">@Model.SavedPropertiesCount</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-calendar"></i> تاريخ التسجيل:</th>
+                                        <td>@Model.CreatedAt.ToString("yyyy/MM/dd")</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- معلومات إضافية -->
+                    @if (Model.PropertiesCount > 0 || Model.SavedPropertiesCount > 0)
+                    {
+                        <div class="alert alert-warning mt-3" role="alert">
+                            <i class="fas fa-info-circle"></i>
+                            <strong>تنبيه:</strong>
+                            هذا المستخدم لديه
+                            @if (Model.PropertiesCount > 0)
+                            {
+                                <strong>@Model.PropertiesCount إعلان</strong>
+                            }
+                            @if (Model.PropertiesCount > 0 && Model.SavedPropertiesCount > 0)
+                            {
+                                <span>و</span>
+                            }
+                            @if (Model.SavedPropertiesCount > 0)
+                            {
+                                <strong>@Model.SavedPropertiesCount إعلان محفوظ</strong>
+                            }
+                            في النظام.
+                        </div>
+                    }
+
+                    <!-- Form -->
+                    <form asp-action="Delete" method="post" class="mt-4">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg">
+                                <i class="fas fa-times"></i> إلغاء
+                            </a>
+                            <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-info btn-lg">
+                                <i class="fas fa-eye"></i> مراجعة البيانات
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg"
+                                    onclick="return confirm('هل أنت متأكد تماماً من حذف هذا المستخدم؟ لا يمكن التراجع عن هذا الإجراء!');">
+                                <i class="fas fa-trash"></i> تأكيد الحذف
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- إذا كان أدمن -->
+            @if (Model.Role == Homy.Domin.models.UserRole.Admin)
+            {
+                <div class="alert alert-danger text-center" role="alert">
+                    <i class="fas fa-ban fa-3x mb-3"></i>
+                    <h4>لا يمكن حذف حساب الأدمن!</h4>
+                    <p>حسابات الأدمن محمية من الحذف للحفاظ على أمان النظام.</p>
+                    <a asp-action="Index" class="btn btn-secondary mt-3">
+                        <i class="fas fa-arrow-right"></i> رجوع للقائمة
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
