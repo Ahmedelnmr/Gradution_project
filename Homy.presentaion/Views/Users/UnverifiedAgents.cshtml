@@ -1,0 +1,140 @@
+﻿@using Homy.Application.Dtos.UserDtos
+@model IEnumerable<UserDto>
+@{
+    ViewData["Title"] = "السماسرة غير الموثقين";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-clock"></i> السماسرة في انتظار التوثيق</h2>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i> رجوع للقائمة الرئيسية
+                </a>
+            </div>
+
+            <!-- Alerts -->
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="fas fa-check-circle"></i> @TempData["Success"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+            @if (TempData["Info"] != null)
+            {
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <i class="fas fa-info-circle"></i> @TempData["Info"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <!-- Agents Card -->
+            <div class="card">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0">قائمة السماسرة (@Model.Count())</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>الاسم</th>
+                                        <th>رقم الهاتف</th>
+                                        <th>الواتساب</th>
+                                        <th>الإيميل</th>
+                                        <th>تاريخ التسجيل</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var agent in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    @if (!string.IsNullOrEmpty(agent.ProfileImageUrl))
+                                                    {
+                                                        <img src="@agent.ProfileImageUrl" alt="@agent.FullName"
+                                                             class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="bg-warning text-dark rounded-circle me-2 d-flex align-items-center justify-content-center"
+                                                             style="width: 40px; height: 40px;">
+                                                            <i class="fas fa-user"></i>
+                                                        </div>
+                                                    }
+                                                    <strong>@agent.FullName</strong>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="fas fa-phone"></i> @agent.PhoneNumber
+                                            </td>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(agent.WhatsAppNumber))
+                                                {
+                                                    <i class="fab fa-whatsapp text-success"></i> 
+                                                    @agent.WhatsAppNumber
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">-</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(agent.Email))
+                                                {
+                                                    <i class="fas fa-envelope"></i> 
+                                                    @agent.Email
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">-</span>
+                                                }
+                                            </td>
+                                            <td>@agent.CreatedAt.ToString("yyyy/MM/dd HH:mm")</td>
+                                            <td>
+                                                <div class="btn-group" role="group">
+                                                    <a asp-action="Details" asp-route-id="@agent.Id"
+                                                       class="btn btn-sm btn-info" title="التفاصيل">
+                                                        <i class="fas fa-eye"></i> عرض
+                                                    </a>
+                                                    <a asp-action="VerifyAgent" asp-route-id="@agent.Id"
+                                                       class="btn btn-sm btn-success" title="التحقق">
+                                                        <i class="fas fa-check"></i> توثيق
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-success text-center" role="alert">
+                            <i class="fas fa-check-circle fa-3x mb-3"></i>
+                            <h5>رائع! 🎉</h5>
+                            <p>لا يوجد سماسرة في انتظار التوثيق</p>
+                            <p>جميع السماسرة تم توثيقهم بنجاح</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

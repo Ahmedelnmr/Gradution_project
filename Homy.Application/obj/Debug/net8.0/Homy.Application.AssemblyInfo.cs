@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homy.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c2472bd125bf11ac6ed94a84ef3f54df22060bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb8132fd3a953058c024bcbcbe60c57f5d68b844")]
 [assembly: System.Reflection.AssemblyProductAttribute("Homy.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homy.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

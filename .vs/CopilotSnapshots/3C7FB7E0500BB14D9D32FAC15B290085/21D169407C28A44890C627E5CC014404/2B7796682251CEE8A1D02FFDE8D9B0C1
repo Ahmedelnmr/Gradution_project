@@ -1,0 +1,419 @@
+﻿@model IEnumerable<Homy.Application.Dtos.UserDto>
+@{
+    ViewData["Title"] = "إدارة المستخدمين";
+    var filter = ViewBag.CurrentFilter as Homy.Application.Dtos.UserFilterDto ?? new Homy.Application.Dtos.UserFilterDto();
+    var totalCount = (int)(ViewBag.TotalCount ?? 0);
+    var totalPages = (int)Math.Ceiling((double)totalCount / filter.PageSize);
+    var currentPage = filter.PageNumber;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-users"></i> إدارة المستخدمين</h2>
+                <div>
+                    <a asp-action="UnverifiedAgents" class="btn btn-warning">
+                        <i class="fas fa-clock"></i> السماسرة غير الموثقين
+                    </a>
+                    <a asp-action="Statistics" class="btn btn-info">
+                        <i class="fas fa-chart-bar"></i> الإحصائيات
+                    </a>
+                </div>
+            </div>
+
+            <!-- Alerts -->
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="fas fa-check-circle"></i> @TempData["Success"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <!-- Filters Card -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-filter"></i> الفلترة والبحث</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Index" method="get" class="row g-3">
+                        <!-- البحث -->
+                        <div class="col-md-3">
+                            <label class="form-label">البحث</label>
+                            <input type="text" name="SearchTerm" class="form-control"
+                                   placeholder="اسم، هاتف، إيميل..." value="@filter.SearchTerm">
+                        </div>
+
+                        <!-- الدور -->
+                        <div class="col-md-2">
+                            <label class="form-label">الدور</label>
+                            <select name="Role" class="form-select">
+                                <option value="">الكل</option>
+                                <option value="1" selected="@(filter.Role == Homy.Domin.models.UserRole.Owner)">مالك</option>
+                                <option value="2" selected="@(filter.Role == Homy.Domin.models.UserRole.Agent)">سمسار</option>
+                                <option value="3" selected="@(filter.Role == Homy.Domin.models.UserRole.Admin)">أدمن</option>
+                            </select>
+                        </div>
+
+                        <!-- التحقق -->
+                        <div class="col-md-2">
+                            <label class="form-label">حالة التوثيق</label>
+                            <select name="IsVerified" class="form-select">
+                                <option value="">الكل</option>
+                                <option value="true" selected="@(filter.IsVerified == true)">موثق</option>
+                                <option value="false" selected="@(filter.IsVerified == false)">غير موثق</option>
+                            </select>
+                        </div>
+
+                        <!-- التفعيل -->
+                        <div class="col-md-2">
+                            <label class="form-label">حالة التفعيل</label>
+                            <select name="IsActive" class="form-select">
+                                <option value="">الكل</option>
+                                <option value="true" selected="@(filter.IsActive == true)">نشط</option>
+                                <option value="false" selected="@(filter.IsActive == false)">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- عدد النتائج -->
+                        <div class="col-md-2">
+                            <label class="form-label">عدد النتائج</label>
+                            <select name="PageSize" class="form-select">
+                                <option value="10" selected="@(filter.PageSize == 10)">10</option>
+                                <option value="20" selected="@(filter.PageSize == 20)">20</option>
+                                <option value="50" selected="@(filter.PageSize == 50)">50</option>
+                                <option value="100" selected="@(filter.PageSize == 100)">100</option>
+                            </select>
+                        </div>
+
+                        <!-- الأزرار -->
+                        <div class="col-md-1">
+                            <label class="form-label">&nbsp;</label>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-search"></i> بحث
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Users Table -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        قائمة المستخدمين
+                        <span class="badge bg-primary">@totalCount</span>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>الاسم</th>
+                                        <th>رقم الهاتف</th>
+                                        <th>الدور</th>
+                                        <th>التوثيق</th>
+                                        <th>الحالة</th>
+                                        <th>عدد الإعلانات</th>
+                                        <th>تاريخ التسجيل</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var user in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    @if (!string.IsNullOrEmpty(user.ProfileImageUrl))
+                                                    {
+                                                        <img src="@user.ProfileImageUrl" alt="@user.FullName"
+                                                             class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="bg-primary text-white rounded-circle me-2 d-flex align-items-center justify-content-center"
+                                                             style="width: 40px; height: 40px;">
+                                                            <i class="fas fa-user"></i>
+                                                        </div>
+                                                    }
+                                                    <strong>@user.FullName</strong>
+                                                </div>
+                                            </td>
+                                            <td>@user.PhoneNumber</td>
+                                            <td>
+                                                @if (user.Role == Homy.Domin.models.UserRole.Admin)
+                                                {
+                                                    <span class="badge bg-danger">@user.RoleText</span>
+                                                }
+                                                else if (user.Role == Homy.Domin.models.UserRole.Agent)
+                                                {
+                                                    <span class="badge bg-warning">@user.RoleText</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-secondary">@user.RoleText</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (user.IsVerified)
+                                                {
+                                                    <span class="badge bg-success">
+                                                        <i class="fas fa-check-circle"></i> موثق
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-warning">
+                                                        <i class="fas fa-clock"></i> غير موثق
+                                                    </span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (user.IsActive)
+                                                {
+                                                    <span class="badge bg-success">نشط</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-secondary">معطل</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-info">@user.PropertiesCount</span>
+                                            </td>
+                                            <td>@user.CreatedAt?.ToString("yyyy/MM/dd")</td>
+                                            <td>
+                                                <div class="btn-group" role="group">
+                                                    <a asp-action="Details" asp-route-id="@user.Id"
+                                                       class="btn btn-sm btn-info" title="التفاصيل">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+
+                                                    @if (user.Role == Homy.Domin.models.UserRole.Agent && !user.IsVerified)
+                                                    {
+                                                        <a asp-action="VerifyAgent" asp-route-id="@user.Id"
+                                                           class="btn btn-sm btn-warning" title="توثيق السمسار">
+                                                            <i class="fas fa-check"></i>
+                                                        </a>
+                                                    }
+
+                                                    <button type="button" class="btn btn-sm btn-@(user.IsActive ? "secondary" : "success")"
+                                                            onclick="toggleActive('@user.Id', @(!user.IsActive).ToString().ToLower())"
+                                                            title="@(user.IsActive ? "إلغاء التفعيل" : "تفعيل")">
+                                                        <i class="fas fa-power-off"></i>
+                                                    </button>
+
+                                                    @if (user.Role != Homy.Domin.models.UserRole.Admin)
+                                                    {
+                                                        <a asp-action="Delete" asp-route-id="@user.Id"
+                                                           class="btn btn-sm btn-danger" title="حذف">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        @* ==================== Pagination ==================== *@
+                        @if (totalPages > 1)
+                        {
+                            <nav aria-label="Page navigation" class="mt-4">
+                                <ul class="pagination justify-content-center">
+
+                                    @* زر الصفحة الأولى *@
+                                    <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                                        <a class="page-link"
+                                           asp-action="Index"
+                                           asp-route-pageNumber="1"
+                                           asp-route-pageSize="@filter.PageSize"
+                                           asp-route-searchTerm="@filter.SearchTerm"
+                                           asp-route-role="@filter.Role"
+                                           asp-route-isVerified="@filter.IsVerified"
+                                           asp-route-isActive="@filter.IsActive">
+                                            <i class="fas fa-angle-double-right"></i>
+                                        </a>
+                                    </li>
+
+                                    @* زر السابق *@
+                                    <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                                        <a class="page-link"
+                                           asp-action="Index"
+                                           asp-route-pageNumber="@(currentPage - 1)"
+                                           asp-route-pageSize="@filter.PageSize"
+                                           asp-route-searchTerm="@filter.SearchTerm"
+                                           asp-route-role="@filter.Role"
+                                           asp-route-isVerified="@filter.IsVerified"
+                                           asp-route-isActive="@filter.IsActive">
+                                            <i class="fas fa-angle-right"></i>
+                                        </a>
+                                    </li>
+
+                                    @* أرقام الصفحات *@
+                                    @{
+                                        // حساب نطاق الصفحات اللي هتظهر
+                                        int startPage = Math.Max(1, currentPage - 2);
+                                        int endPage = Math.Min(totalPages, currentPage + 2);
+
+                                        // لو في صفحات قبل النطاق
+                                        if (startPage > 1)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                   asp-action="Index"
+                                                   asp-route-pageNumber="1"
+                                                   asp-route-pageSize="@filter.PageSize"
+                                                   asp-route-searchTerm="@filter.SearchTerm"
+                                                   asp-route-role="@filter.Role"
+                                                   asp-route-isVerified="@filter.IsVerified"
+                                                   asp-route-isActive="@filter.IsActive">
+                                                    1
+                                                </a>
+                                            </li>
+
+                                            if (startPage > 2)
+                                            {
+                                                <li class="page-item disabled">
+                                                    <span class="page-link">...</span>
+                                                </li>
+                                            }
+                                        }
+
+                                        // عرض أرقام الصفحات في النطاق
+                                        for (int i = startPage; i <= endPage; i++)
+                                        {
+                                            <li class="page-item @(i == currentPage ? "active" : "")">
+                                                <a class="page-link"
+                                                   asp-action="Index"
+                                                   asp-route-pageNumber="@i"
+                                                   asp-route-pageSize="@filter.PageSize"
+                                                   asp-route-searchTerm="@filter.SearchTerm"
+                                                   asp-route-role="@filter.Role"
+                                                   asp-route-isVerified="@filter.IsVerified"
+                                                   asp-route-isActive="@filter.IsActive">
+                                                    @i
+                                                </a>
+                                            </li>
+                                        }
+
+                                        // لو في صفحات بعد النطاق
+                                        if (endPage < totalPages)
+                                        {
+                                            if (endPage < totalPages - 1)
+                                            {
+                                                <li class="page-item disabled">
+                                                    <span class="page-link">...</span>
+                                                </li>
+                                            }
+
+                                            <li class="page-item">
+                                                <a class="page-link"
+                                                   asp-action="Index"
+                                                   asp-route-pageNumber="@totalPages"
+                                                   asp-route-pageSize="@filter.PageSize"
+                                                   asp-route-searchTerm="@filter.SearchTerm"
+                                                   asp-route-role="@filter.Role"
+                                                   asp-route-isVerified="@filter.IsVerified"
+                                                   asp-route-isActive="@filter.IsActive">
+                                                    @totalPages
+                                                </a>
+                                            </li>
+                                        }
+                                    }
+
+                                    @* زر التالي *@
+                                    <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                                        <a class="page-link"
+                                           asp-action="Index"
+                                           asp-route-pageNumber="@(currentPage + 1)"
+                                           asp-route-pageSize="@filter.PageSize"
+                                           asp-route-searchTerm="@filter.SearchTerm"
+                                           asp-route-role="@filter.Role"
+                                           asp-route-isVerified="@filter.IsVerified"
+                                           asp-route-isActive="@filter.IsActive">
+                                            <i class="fas fa-angle-left"></i>
+                                        </a>
+                                    </li>
+
+                                    @* زر الصفحة الأخيرة *@
+                                    <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                                        <a class="page-link"
+                                           asp-action="Index"
+                                           asp-route-pageNumber="@totalPages"
+                                           asp-route-pageSize="@filter.PageSize"
+                                           asp-route-searchTerm="@filter.SearchTerm"
+                                           asp-route-role="@filter.Role"
+                                           asp-route-isVerified="@filter.IsVerified"
+                                           asp-route-isActive="@filter.IsActive">
+                                            <i class="fas fa-angle-double-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                @* معلومات عن الصفحة الحالية *@
+                                <div class="text-center text-muted mt-2">
+                                    <small>
+                                        عرض
+                                        <strong>@((currentPage - 1) * filter.PageSize + 1)</strong>
+                                        إلى
+                                        <strong>@Math.Min(currentPage * filter.PageSize, totalCount)</strong>
+                                        من أصل
+                                        <strong>@totalCount</strong>
+                                        مستخدم
+                                    </small>
+                                </div>
+                            </nav>
+                        }
+                        @* ==================== End Pagination ==================== *@
+                    }
+                    else
+                    {
+                        <div class="alert alert-info text-center" role="alert">
+                            <i class="fas fa-info-circle fa-3x mb-3"></i>
+                            <h5>لا توجد نتائج</h5>
+                            <p>لم يتم العثور على مستخدمين بهذه المعايير</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Toggle Active/Inactive
+        function toggleActive(userId, isActive) {
+            if (confirm('هل أنت متأكد من ' + (isActive ? 'تفعيل' : 'إلغاء تفعيل') + ' هذا المستخدم؟')) {
+                $.post('@Url.Action("ToggleActive")', {
+                    userId: userId,
+                    isActive: isActive
+                }, function (response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert(response.message);
+                    }
+                });
+            }
+        }
+    </script>
+}

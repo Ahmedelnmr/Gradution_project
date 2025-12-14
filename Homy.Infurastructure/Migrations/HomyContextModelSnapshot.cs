@@ -60,7 +60,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Amenities", (string)null);
+                    b.ToTable("Amenities");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.City", b =>
@@ -97,7 +97,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Cities", (string)null);
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.District", b =>
@@ -139,7 +139,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Districts", (string)null);
+                    b.ToTable("Districts");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Package", b =>
@@ -191,7 +191,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Packages", (string)null);
+                    b.ToTable("Packages");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Project", b =>
@@ -253,7 +253,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("Projects", (string)null);
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Property", b =>
@@ -379,7 +379,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Properties", (string)null);
+                    b.ToTable("Properties");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyAmenity", b =>
@@ -422,7 +422,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("PropertyId", "AmenityId")
                         .IsUnique();
 
-                    b.ToTable("PropertyAmenities", (string)null);
+                    b.ToTable("PropertyAmenities");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyImage", b =>
@@ -470,7 +470,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("PropertyImages", (string)null);
+                    b.ToTable("PropertyImages");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyType", b =>
@@ -511,7 +511,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UpdatedById");
 
-                    b.ToTable("PropertyTypes", (string)null);
+                    b.ToTable("PropertyTypes");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.SavedProperty", b =>
@@ -557,7 +557,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("UserId", "PropertyId")
                         .IsUnique();
 
-                    b.ToTable("SavedProperties", (string)null);
+                    b.ToTable("SavedProperties");
                 });
 
             modelBuilder.Entity("Homy.Domin.models.User", b =>
@@ -572,6 +572,9 @@ namespace Homy.Infurastructure.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -713,7 +716,7 @@ namespace Homy.Infurastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserSubscriptions", (string)null);
+                    b.ToTable("UserSubscriptions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>

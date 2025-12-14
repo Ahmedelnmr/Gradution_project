@@ -2927,23 +2927,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj",
+      "projectUniqueName": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
       "projectName": "Homy.Application",
-      "projectPath": "D:\\Graduation_project\\Homy\\Homy.Application\\Homy.Application.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Graduation_project\\Homy\\Homy.Application\\obj\\",
+      "projectPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2958,8 +2958,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-              "projectPath": "D:\\Graduation_project\\Homy\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+            "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+              "projectPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
             }
           }
         }
@@ -2974,7 +2974,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -3001,7 +3001,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

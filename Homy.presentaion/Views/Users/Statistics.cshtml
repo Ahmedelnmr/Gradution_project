@@ -1,0 +1,388 @@
+﻿@using Homy.Application.Dtos.UserDtos
+@model UserStatisticsDto
+@{
+    ViewData["Title"] = "إحصائيات المستخدمين";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-chart-bar"></i> إحصائيات المستخدمين</h2>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i> رجوع للقائمة
+                </a>
+            </div>
+
+            <!-- Alerts -->
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <!-- إحصائيات عامة -->
+            <div class="row mb-4">
+                <!-- إجمالي المستخدمين -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        إجمالي المستخدمين
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalUsers</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-users fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المستخدمين النشطين -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        المستخدمين النشطين
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.ActiveUsers</div>
+                                    <small class="text-muted">
+                                        @if (Model.TotalUsers > 0)
+                                        {
+                                        @(((double)Model.ActiveUsers / Model.TotalUsers * 100).ToString("F1"))
+                                                                                
+                                                                                }
+                                    </small>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- السماسرة الموثقين -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                        السماسرة الموثقين
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.VerifiedAgents</div>
+                                    <small class="text-muted">من أصل @Model.TotalAgents</small>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- في انتظار التوثيق -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                        في انتظار التوثيق
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.UnverifiedAgents</div>
+                                    @if (Model.UnverifiedAgents > 0)
+                                    {
+                                        <a asp-action="UnverifiedAgents" class="btn btn-sm btn-warning mt-2">
+                                            <i class="fas fa-eye"></i> عرض
+                                        </a>
+                                    }
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-clock fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row">
+                <!-- User Distribution Pie Chart -->
+                <div class="col-xl-6 col-lg-6 mb-4">
+                    <div class="card shadow h-100">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                <i class="fas fa-chart-pie"></i> توزيع المستخدمين حسب الدور
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="userRoleChart"></canvas>
+                            <div class="mt-4 text-center">
+                                <span class="mr-3">
+                                    <i class="fas fa-circle text-primary"></i> أصحاب العقارات: @Model.TotalOwners
+                                </span>
+                                <span class="mr-3">
+                                    <i class="fas fa-circle text-warning"></i> السماسرة: @Model.TotalAgents
+                                </span>
+                                <span>
+                                    <i class="fas fa-circle text-danger"></i> المشرفين: @Model.Admins
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agent Verification Status -->
+                <div class="col-xl-6 col-lg-6 mb-4">
+                    <div class="card shadow h-100">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                <i class="fas fa-user-shield"></i> حالة توثيق السماسرة
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="agentVerificationChart"></canvas>
+                            <div class="mt-4 text-center">
+                                <span class="mr-3">
+                                    <i class="fas fa-circle text-success"></i> موثقين: @Model.VerifiedAgents
+                                </span>
+                                <span>
+                                    <i class="fas fa-circle text-warning"></i> غير موثقين: @Model.UnverifiedAgents
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تفاصيل إضافية -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow">
+                        <div class="card-header py-3 bg-gradient-primary text-white">
+                            <h6 class="m-0 font-weight-bold">
+                                <i class="fas fa-info-circle"></i> تفاصيل الإحصائيات
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>الفئة</th>
+                                            <th>العدد</th>
+                                            <th>النسبة</th>
+                                            <th>الإجراءات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-users"></i> إجمالي المستخدمين</td>
+                                            <td><strong>@Model.TotalUsers</strong></td>
+                                            <td>100%</td>
+                                            <td>
+                                                <a asp-action="Index" class="btn btn-sm btn-primary">
+                                                    <i class="fas fa-list"></i> عرض الكل
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-success">
+                                            <td><i class="fas fa-user-check"></i> المستخدمين النشطين</td>
+                                            <td><strong>@Model.ActiveUsers</strong></td>
+                                            <td>
+                                                @if (Model.TotalUsers > 0)
+                                                {
+                                                @(((double)Model.ActiveUsers / Model.TotalUsers * 100).ToString("F1"))
+                                                                                                
+                                                                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="Index" asp-route-isActive="true" class="btn btn-sm btn-success">
+                                                    <i class="fas fa-filter"></i> فلترة
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-user"></i> أصحاب العقارات</td>
+                                            <td><strong>@Model.TotalOwners</strong></td>
+                                            <td>
+                                                @if (Model.TotalUsers > 0)
+                                                {
+                                                @(((double)Model.TotalOwners / Model.TotalUsers * 100).ToString("F1"))
+                                                                                                
+                                                                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="Index" asp-route-role="1" class="btn btn-sm btn-secondary">
+                                                    <i class="fas fa-filter"></i> فلترة
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-warning">
+                                            <td><i class="fas fa-user-tie"></i> إجمالي السماسرة</td>
+                                            <td><strong>@Model.TotalAgents</strong></td>
+                                            <td>
+                                                @if (Model.TotalUsers > 0)
+                                                {
+                                                @(((double)Model.TotalAgents / Model.TotalUsers * 100).ToString("F1"))
+                                                                                                
+                                                                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="Index" asp-route-role="2" class="btn btn-sm btn-warning">
+                                                    <i class="fas fa-filter"></i> فلترة
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-info">
+                                            <td><i class="fas fa-check-circle"></i> السماسرة الموثقين</td>
+                                            <td><strong>@Model.VerifiedAgents</strong></td>
+                                            <td>
+                                                @if (Model.TotalAgents > 0)
+                                                {
+                                                @(((double)Model.VerifiedAgents / Model.TotalAgents * 100).ToString("F1"))
+                                                                                                
+                                                                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="Index" asp-route-role="2" asp-route-isVerified="true"
+                                                   class="btn btn-sm btn-info">
+                                                    <i class="fas fa-filter"></i> فلترة
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-warning">
+                                            <td><i class="fas fa-clock"></i> السماسرة غير الموثقين</td>
+                                            <td><strong>@Model.UnverifiedAgents</strong></td>
+                                            <td>
+                                                @if (Model.TotalAgents > 0)
+                                                {
+                                                @(((double)Model.UnverifiedAgents / Model.TotalAgents * 100).ToString("F1"))
+                                                                                                
+                                                                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="UnverifiedAgents" class="btn btn-sm btn-warning">
+                                                    <i class="fas fa-eye"></i> مراجعة
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="table-danger">
+                                            <td><i class="fas fa-user-shield"></i> المشرفين</td>
+                                            <td><strong>@Model.Admins</strong></td>
+                                            <td>
+                                                @if (Model.TotalUsers > 0)
+                                                {
+                                                    @(((double)Model.Admins / Model.TotalUsers * 100).ToString("F1"))
+                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="Index" asp-route-role="3" class="btn btn-sm btn-danger">
+                                                    <i class="fas fa-filter"></i> فلترة
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // User Role Distribution Chart
+        const userRoleCtx = document.getElementById('userRoleChart').getContext('2d');
+        new Chart(userRoleCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['أصحاب العقارات', 'السماسرة', 'المشرفين'],
+                datasets: [{
+                    data: [@Model.TotalOwners, @Model.TotalAgents, @Model.Admins],
+                    backgroundColor: ['#4e73df', '#f6c23e', '#e74a3b'],
+                    hoverBackgroundColor: ['#2e59d9', '#d4a21a', '#be2617'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Agent Verification Status Chart
+        const agentVerificationCtx = document.getElementById('agentVerificationChart').getContext('2d');
+        new Chart(agentVerificationCtx, {
+            type: 'bar',
+            data: {
+                labels: ['موثقين', 'غير موثقين'],
+                datasets: [{
+                    label: 'عدد السماسرة',
+                    data: [@Model.VerifiedAgents, @Model.UnverifiedAgents],
+                    backgroundColor: ['#1cc88a', '#f6c23e'],
+                    borderColor: ['#17a673', '#d4a21a'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+}
+
+<style>
+    .border-left-primary {
+        border-left: 0.25rem solid #4e73df !important;
+    }
+
+    .border-left-success {
+        border-left: 0.25rem solid #1cc88a !important;
+    }
+
+    .border-left-info {
+        border-left: 0.25rem solid #36b9cc !important;
+    }
+
+    .border-left-warning {
+        border-left: 0.25rem solid #f6c23e !important;
+    }
+
+    canvas {
+        max-height: 300px;
+    }
+</style>

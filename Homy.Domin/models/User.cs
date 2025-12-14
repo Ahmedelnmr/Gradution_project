@@ -21,11 +21,12 @@ namespace Homy.Domin.models
 
         public bool IsDeleted { get; set; }
 
-        //public string? PasswordHash { get; set; }
+        public string? PasswordHash { get; set; }
 
         public UserRole Role { get; set; } = UserRole.Owner; // Owner, Agent, Admin
         public bool IsVerified { get; set; } = false;
         public bool IsActive { get; set; } = true;
+        public DateTime CreatedAt { get; set; }
 
         [MaxLength(500)]
         public string? ProfileImageUrl { get; set; }

@@ -1,0 +1,250 @@
+﻿@using Homy.Application.Dtos.UserDtos
+@model UserDto
+@{
+    ViewData["Title"] = "تفاصيل المستخدم";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-user-circle"></i> تفاصيل المستخدم</h2>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-right"></i> رجوع للقائمة
+                </a>
+            </div>
+
+            <!-- User Profile Card -->
+            <div class="card mb-4 shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-id-card"></i> البيانات الشخصية</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <!-- صورة المستخدم -->
+                        <div class="col-md-3 text-center mb-3">
+                            @if (!string.IsNullOrEmpty(Model.ProfileImageUrl))
+                            {
+                                <img src="@Model.ProfileImageUrl" alt="@Model.FullName"
+                                     class="img-fluid rounded-circle shadow-lg" style="width: 180px; height: 180px; object-fit: cover;">
+                            }
+                            else
+                            {
+                                <div class="bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center shadow-lg"
+                                     style="width: 180px; height: 180px;">
+                                    <i class="fas fa-user fa-5x"></i>
+                                </div>
+                            }
+
+                            <!-- Badges -->
+                            <div class="mt-3">
+                                @if (Model.Role == Homy.Domin.models.UserRole.Admin)
+                                {
+                                    <span class="badge bg-danger fs-6">أدمن</span>
+                                }
+                                else if (Model.Role == Homy.Domin.models.UserRole.Agent)
+                                {
+                                    <span class="badge bg-warning fs-6">سمسار</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary fs-6">مالك</span>
+                                }
+
+                                @if (Model.IsVerified)
+                                {
+                                    <br>
+                                
+                                    <span class="badge bg-success mt-2"><i class="fas fa-check-circle"></i> موثق</span>
+                                }
+                                else
+                                {
+                                    <br>
+                                
+                                    <span class="badge bg-warning mt-2"><i class="fas fa-clock"></i> غير موثق</span>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- معلومات المستخدم -->
+                        <div class="col-md-9">
+                            <table class="table table-borderless table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th style="width: 30%;"><i class="fas fa-user"></i> الاسم الكامل:</th>
+                                        <td><strong class="fs-5">@Model.FullName</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-phone"></i> رقم الهاتف:</th>
+                                        <td>
+                                            <a href="tel:@Model.PhoneNumber" class="text-decoration-none">
+                                                @Model.PhoneNumber
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fab fa-whatsapp text-success"></i> الواتساب:</th>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(Model.WhatsAppNumber))
+                                            {
+                                                <a href="https://wa.me/@Model.WhatsAppNumber.Replace("+", "")"
+                                                   target="_blank" class="text-decoration-none text-success">
+                                                    @Model.WhatsAppNumber <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">غير محدد</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-envelope"></i> الإيميل:</th>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(Model.Email))
+                                            {
+                                                <a href="mailto:@Model.Email" class="text-decoration-none">
+                                                    @Model.Email
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">غير محدد</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-user-tag"></i> الدور:</th>
+                                        <td>@Model.RoleText</td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-check-circle"></i> حالة التوثيق:</th>
+                                        <td>
+                                            @if (Model.IsVerified)
+                                            {
+                                                <span class="badge bg-success">موثق ✓</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-warning">غير موثق</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-power-off"></i> حالة الحساب:</th>
+                                        <td>
+                                            @if (Model.IsActive)
+                                            {
+                                                <span class="badge bg-success">نشط</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-secondary">معطل</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><i class="fas fa-calendar"></i> تاريخ التسجيل:</th>
+                                        <td>@Model.CreatedAt.ToString("yyyy/MM/dd HH:mm")</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Card -->
+            <div class="card mb-4 shadow">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0"><i class="fas fa-chart-bar"></i> الإحصائيات</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded">
+                                <i class="fas fa-home fa-3x text-primary mb-2"></i>
+                                <h4 class="mb-0">@Model.PropertiesCount</h4>
+                                <small class="text-muted">عدد الإعلانات</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded">
+                                <i class="fas fa-heart fa-3x text-danger mb-2"></i>
+                                <h4 class="mb-0">@Model.SavedPropertiesCount</h4>
+                                <small class="text-muted">الإعلانات المحفوظة</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded">
+                                @if (Model.HasActiveSubscription)
+                                {
+                                    <i class="fas fa-crown fa-3x text-warning mb-2"></i>
+                                    <h4 class="mb-0 text-success">نشط</h4>
+                                    <small class="text-muted">الاشتراك</small>
+                                }
+                                else
+                                {
+                                    <i class="fas fa-times-circle fa-3x text-secondary mb-2"></i>
+                                    <h4 class="mb-0 text-muted">غير نشط</h4>
+                                    <small class="text-muted">الاشتراك</small>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions Card -->
+            <div class="card shadow">
+                <div class="card-header bg-warning">
+                    <h5 class="mb-0"><i class="fas fa-tools"></i> الإجراءات</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        @if (Model.Role == Homy.Domin.models.UserRole.Agent && !Model.IsVerified)
+                        {
+                            <a asp-action="VerifyAgent" asp-route-id="@Model.Id" class="btn btn-success btn-lg">
+                                <i class="fas fa-check"></i> توثيق السمسار
+                            </a>
+                        }
+
+                        <button type="button" class="btn btn-@(Model.IsActive ? "secondary" : "primary") btn-lg"
+                                onclick="toggleActive('@Model.Id', @(!Model.IsActive).ToString().ToLower())">
+                            <i class="fas fa-power-off"></i> @(Model.IsActive ? "إلغاء التفعيل" : "تفعيل الحساب")
+                        </button>
+
+                        @if (Model.Role != Homy.Domin.models.UserRole.Admin)
+                        {
+                            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-lg">
+                                <i class="fas fa-trash"></i> حذف المستخدم
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function toggleActive(userId, isActive) {
+            if (confirm('هل أنت متأكد من ' + (isActive ? 'تفعيل' : 'إلغاء تفعيل') + ' هذا المستخدم؟')) {
+                $.post('@Url.Action("ToggleActive")', {
+                    userId: userId,
+                    isActive: isActive
+                }, function (response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert(response.message);
+                    }
+                });
+            }
+        }
+    </script>
+}
+
+
