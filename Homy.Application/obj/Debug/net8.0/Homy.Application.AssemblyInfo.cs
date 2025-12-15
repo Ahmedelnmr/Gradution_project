@@ -15,10 +15,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e4bf23b798547c296106dcc9ad195e6622e76ac")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a23717b4968efd4ada55b3f099bad4b52fc2a0b7")]
 >>>>>>> sharqawy
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+792a2d8a0a89eb1254b59ab9cb98b5668211a7b1")]
+>>>>>>> youssef_arram
 [assembly: System.Reflection.AssemblyProductAttribute("Homy.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homy.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

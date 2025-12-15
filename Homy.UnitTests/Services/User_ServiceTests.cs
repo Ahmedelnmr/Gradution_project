@@ -6,6 +6,7 @@ using Xunit;
 using Moq;
 using Homy.Infurastructure.Service;
 using Homy.Application.Dtos;
+using Homy.Application.Dtos.UserDtos;
 using Homy.Domin.models;
 using Homy.Infurastructure.Unitofworks;
 using Homy.Domin.Contract_Repo;

@@ -14,7 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homy.presentaion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a23717b4968efd4ada55b3f099bad4b52fc2a0b7")]
+=======
+<<<<<<<< HEAD:Homy.Domin/obj/Release/net8.0/Homy.Domin.AssemblyInfo.cs
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e4bf23b798547c296106dcc9ad195e6622e76ac")]
+========
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+792a2d8a0a89eb1254b59ab9cb98b5668211a7b1")]
+>>>>>>>> youssef_arram:Homy.presentaion/obj/Debug/net8.0/Homy.presentaion.AssemblyInfo.cs
+>>>>>>> youssef_arram
 [assembly: System.Reflection.AssemblyProductAttribute("Homy.presentaion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homy.presentaion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

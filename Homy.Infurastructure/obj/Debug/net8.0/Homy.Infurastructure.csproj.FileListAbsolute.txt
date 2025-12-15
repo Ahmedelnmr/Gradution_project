@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\ITI Materials .Net\Homy\Homy\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.deps.json
 D:\ITI Materials .Net\Homy\Homy\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.runtimeconfig.json
 D:\ITI Materials .Net\Homy\Homy\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.dll
@@ -52,3 +53,23 @@ D:\Final_projectt\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\refint
 D:\Final_projectt\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.pdb
 D:\Final_projectt\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.genruntimeconfig.cache
 D:\Final_projectt\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\ref\Homy.Infurastructure.dll
+=======
+D:\FinalProject\Gradution_project\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.deps.json
+D:\FinalProject\Gradution_project\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.runtimeconfig.json
+D:\FinalProject\Gradution_project\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.dll
+D:\FinalProject\Gradution_project\Homy.Infurastructure\bin\Debug\net8.0\Homy.Infurastructure.pdb
+D:\FinalProject\Gradution_project\Homy.Infurastructure\bin\Debug\net8.0\Homy.Domin.dll
+D:\FinalProject\Gradution_project\Homy.Infurastructure\bin\Debug\net8.0\Homy.Domin.pdb
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.csproj.AssemblyReference.cache
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.AssemblyInfoInputs.cache
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.AssemblyInfo.cs
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.csproj.CoreCompileInputs.cache
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.sourcelink.json
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Inf.68AD0EFB.Up2Date
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.dll
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\refint\Homy.Infurastructure.dll
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.pdb
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\Homy.Infurastructure.genruntimeconfig.cache
+D:\FinalProject\Gradution_project\Homy.Infurastructure\obj\Debug\net8.0\ref\Homy.Infurastructure.dll
+>>>>>>> youssef_arram

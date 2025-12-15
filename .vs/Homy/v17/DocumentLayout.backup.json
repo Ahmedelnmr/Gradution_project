@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\Final_projectt\\Gradution_project\\",
   "Documents": [
     {
@@ -45,6 +46,152 @@
     {
       "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\final_projectt\\gradution_project\\homy.infurastructure\\homy.infurastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\homy.infurastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+=======
+  "WorkspaceRootPath": "D:\\FinalProject\\Gradution_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\igenric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\igenric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\views\\usersubscription\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\usersubscription\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\controllers\\usersubscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\controllers\\usersubscriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\views\\usersubscription\\bypackage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\usersubscription\\bypackage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\migrations\\20251124020647_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\migrations\\20251124020647_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|d:\\finalproject\\gradution_project\\homy.unittests\\homy.unittests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|solutionrelative:homy.unittests\\homy.unittests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\finalproject\\gradution_project\\homy.application\\service\\usersubscription_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\service\\usersubscription_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\finalproject\\gradution_project\\homy.application\\service\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\service\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\finalproject\\gradution_project\\homy.presentaion\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\finalproject\\gradution_project\\homy.application\\contract_service\\iusersubscription_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\contract_service\\iusersubscription_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\repository\\usersubscription_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\usersubscription_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\repository\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\repository\\project_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\project_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\repository\\notification_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\notification_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\finalproject\\gradution_project\\homy.application\\dtos\\userdtos\\usersubdtos\\usersubreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\dtos\\userdtos\\usersubdtos\\usersubreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\finalproject\\gradution_project\\homy.application\\dtos\\userdtos\\usersubdtos\\usersubupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\dtos\\userdtos\\usersubdtos\\usersubupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\finalproject\\gradution_project\\homy.application\\dtos\\userdtos\\usersubdtos\\usersubcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\dtos\\userdtos\\usersubdtos\\usersubcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\finalproject\\gradution_project\\homy.infurastructure\\repository\\property_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\property_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\iusersubscription_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\iusersubscription_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\ireports_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\ireports_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\ipropertyreview_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\ipropertyreview_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\ipropertytype_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\ipropertytype_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\idistrict_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\idistrict_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\isavedproperty_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\isavedproperty_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\inotification_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\inotification_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\icity_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\icity_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\iamenity_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\iamenity_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\ipropertyamenity_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\ipropertyamenity_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\finalproject\\gradution_project\\homy.domin\\contract_repo\\iproperty_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\iproperty_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> youssef_arram
     }
   ],
   "DocumentGroupContainers": [
@@ -54,6 +201,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -112,10 +260,42 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+=======
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ByPackage.cshtml",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\UserSubscription\\ByPackage.cshtml",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Views\\UserSubscription\\ByPackage.cshtml",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\UserSubscription\\ByPackage.cshtml",
+              "RelativeToolTip": "Homy.presentaion\\Views\\UserSubscription\\ByPackage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T00:12:01.446Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Genric_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T15:31:50.85Z",
+              "EditorCaption": ""
+            },
+            {
+>>>>>>> youssef_arram
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+<<<<<<< HEAD
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
@@ -169,11 +349,24 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-13T22:19:26.578Z",
+=======
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetAll.cshtml",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\UserSubscription\\GetAll.cshtml",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Views\\UserSubscription\\GetAll.cshtml",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\UserSubscription\\GetAll.cshtml",
+              "RelativeToolTip": "Homy.presentaion\\Views\\UserSubscription\\GetAll.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T14:42:27.723Z",
+>>>>>>> youssef_arram
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+<<<<<<< HEAD
               "Title": "ICity_Service.cs",
               "DocumentMoniker": "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Contract_Service\\ICity_Service.cs",
               "RelativeDocumentMoniker": "Homy.Application\\Contract_Service\\ICity_Service.cs",
@@ -183,10 +376,69 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T22:19:20.571Z",
               "EditorCaption": ""
+=======
+              "Title": "20251124020647_init.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Migrations\\20251124020647_init.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Migrations\\20251124020647_init.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Migrations\\20251124020647_init.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Migrations\\20251124020647_init.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T12:41:57.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\appsettings.json",
+              "RelativeDocumentMoniker": "Homy.presentaion\\appsettings.json",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\appsettings.json",
+              "RelativeToolTip": "Homy.presentaion\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-15T12:35:53.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Homy.presentaion\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAAAPIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T00:55:42.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserSubscriptionController.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Controllers\\UserSubscriptionController.cs",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Controllers\\UserSubscriptionController.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Controllers\\UserSubscriptionController.cs",
+              "RelativeToolTip": "Homy.presentaion\\Controllers\\UserSubscriptionController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwEQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T00:55:13.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Homy.UnitTests.csproj",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.UnitTests\\Homy.UnitTests.csproj",
+              "RelativeDocumentMoniker": "Homy.UnitTests\\Homy.UnitTests.csproj",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.UnitTests\\Homy.UnitTests.csproj",
+              "RelativeToolTip": "Homy.UnitTests\\Homy.UnitTests.csproj",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-15T00:24:42.83Z"
+>>>>>>> youssef_arram
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+<<<<<<< HEAD
               "Title": "District_Service.cs",
               "DocumentMoniker": "D:\\Final_projectt\\Gradution_project\\Homy.Application\\Service\\District_Service.cs",
               "RelativeDocumentMoniker": "Homy.Application\\Service\\District_Service.cs",
@@ -195,11 +447,32 @@
               "ViewState": "AgIAAAIAAAAAAAAAAAAcwBAAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T22:18:30.247Z",
+=======
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAACYWAAAAAAAAAAAlwFcWAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-12-15T00:24:16.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IGenric_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:54.321Z",
+>>>>>>> youssef_arram
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+<<<<<<< HEAD
               "Title": "ProjectsController.cs",
               "DocumentMoniker": "D:\\Final_projectt\\Gradution_project\\Homy.presentaion\\Controllers\\ProjectsController.cs",
               "RelativeDocumentMoniker": "Homy.presentaion\\Controllers\\ProjectsController.cs",
@@ -240,6 +513,316 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+=======
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "Homy.presentaion\\Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAADUAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T13:25:24.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Homy.presentaion\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T23:48:49.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Service\\UserServices.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Service\\UserServices.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Service\\UserServices.cs",
+              "RelativeToolTip": "Homy.Application\\Service\\UserServices.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T17:49:14.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IUserRepo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IUserRepo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IUserRepo.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T17:48:25.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Unitofwork.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Unitofworks\\Unitofwork.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Unitofworks\\Unitofwork.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Unitofworks\\Unitofwork.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Unitofworks\\Unitofwork.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAxwEYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:45:44.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserSubscription_Service.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Service\\UserSubscription_Service.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Service\\UserSubscription_Service.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Service\\UserSubscription_Service.cs",
+              "RelativeToolTip": "Homy.Application\\Service\\UserSubscription_Service.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAwwE8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:38:24.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUserSubscription_Service.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Contract_Service\\IUserSubscription_Service.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Contract_Service\\IUserSubscription_Service.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Contract_Service\\IUserSubscription_Service.cs",
+              "RelativeToolTip": "Homy.Application\\Contract_Service\\IUserSubscription_Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:33:34.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Notification_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Notification_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Notification_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Notification_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Notification_Repo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:26:16.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Project_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Project_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Project_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Project_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Project_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:26:14.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserRepo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\UserRepo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\UserRepo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\UserRepo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\UserRepo.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwIIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:17:31.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserSubscription_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\UserSubscription_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\UserSubscription_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\UserSubscription_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\UserSubscription_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:16:51.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Property_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Property_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Property_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Repository\\Property_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Property_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:26:11.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserSubReadDTO.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubReadDTO.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubReadDTO.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubReadDTO.cs",
+              "RelativeToolTip": "Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubReadDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:10:01.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserSubUpdateDTO.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubUpdateDTO.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubUpdateDTO.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubUpdateDTO.cs",
+              "RelativeToolTip": "Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:09:40.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserSubCreateDTO.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubCreateDTO.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubCreateDTO.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubCreateDTO.cs",
+              "RelativeToolTip": "Homy.Application\\Dtos\\UserDtos\\UserSubDTOs\\UserSubCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:08:57.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IReports_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IReports_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IReports_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IReports_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IReports_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:18:03.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ISavedProperty_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\ISavedProperty_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\ISavedProperty_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\ISavedProperty_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\ISavedProperty_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:18:00.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IUserSubscription_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IUserSubscription_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IUserSubscription_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IUserSubscription_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IUserSubscription_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:17:52.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IPropertyReview_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IPropertyReview_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IPropertyReview_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IPropertyReview_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IPropertyReview_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:17:12.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IPropertyType_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IPropertyType_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IPropertyType_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IPropertyType_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IPropertyType_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:17:09.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "INotification_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\INotification_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\INotification_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\INotification_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\INotification_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:56.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IDistrict_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IDistrict_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IDistrict_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IDistrict_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IDistrict_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:53.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ICity_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\ICity_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\ICity_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\ICity_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\ICity_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:51.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IAmenity_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IAmenity_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IAmenity_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IAmenity_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IAmenity_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:50.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IPropertyAmenity_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IPropertyAmenity_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IPropertyAmenity_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IPropertyAmenity_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IPropertyAmenity_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:48.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IProperty_Repo.cs",
+              "DocumentMoniker": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IProperty_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IProperty_Repo.cs",
+              "ToolTip": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Contract_Repo\\IProperty_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IProperty_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:16:44.153Z"
+>>>>>>> youssef_arram
             }
           ]
         }
