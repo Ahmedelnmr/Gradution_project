@@ -1,4 +1,7 @@
 ﻿using Homy.Application.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Homy.Domin.Contract_Service
 {
@@ -55,8 +58,13 @@ namespace Homy.Domin.Contract_Service
         Task<IEnumerable<ProjectListDto>> GetActiveProjectsAsync();
 
         /// <summary>
+        /// جلب المشاريع حسب النوع المحسوب (بدون تعديل Model)
+        /// </summary>
+        Task<IEnumerable<ProjectListDto>> GetProjectsByComputedTypeAsync(ProjectTypeEnum type);
+
+        /// <summary>
         /// جلب إحصائيات المشاريع
         /// </summary>
         Task<ProjectStatsDto> GetProjectStatsAsync();
-    }   
+    }
 }
