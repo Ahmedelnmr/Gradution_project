@@ -2,7 +2,7 @@
 @model IEnumerable<UserDto>
 @{
     ViewData["Title"] = "إدارة المستخدمين";
-    var filter = (ViewBag.CurrentFilter as UserFilterDto) ?? new Homy.Application.Dtos.UserFilterDto();
+    var filter = (ViewBag.CurrentFilter as UserFilterDto) ?? new Homy.Application.Dtos.UserDtos.UserFilterDto();
     var totalCount = (int)(ViewBag.TotalCount ?? 0);
     var totalPages = (int)Math.Ceiling((double)totalCount / filter.PageSize);
     var currentPage = filter.PageNumber;

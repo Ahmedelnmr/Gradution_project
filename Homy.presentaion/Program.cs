@@ -5,18 +5,18 @@ using Homy.Domin.Contract_Service;
 using Homy.Domin.models;
 using Homy.Infurastructure.Data;
 using Homy.Infurastructure.Repository;
-<<<<<<< HEAD
+
 using Homy.Domin.Contract_Repo;
 using Homy.Application.Contract_Service;
 using Homy.Application.Service;
 using Homy.Infurastructure.Unitofworks;
 
-=======
+
 using Homy.Infurastructure.Service;
 using Homy.Infurastructure.Unitofworks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
->>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
+
 namespace Homy.presentaion
 {
     public class Program
@@ -42,14 +42,12 @@ namespace Homy.presentaion
 
             // ==================== Register Repositories ====================
             builder.Services.AddScoped<IProperty_Repo, Property_Repo>();
-<<<<<<< HEAD
+
             builder.Services.AddScoped<IReports_Repo, Reports_Repo>(); // ← جديد
 
             // ==================== Register Services ====================
             builder.Services.AddScoped<IReports_Service, Reports_Service>(); // ← جديد
 
-=======
-<<<<<<< HEAD
 
             // Register UnitOfWork
             builder.Services.AddScoped<Homy.Infurastructure.Unitofworks.IUnitofwork, Homy.Infurastructure.Unitofworks.Unitofwork>();
@@ -61,13 +59,13 @@ namespace Homy.presentaion
 
             // Register Mapster Mappings
             Homy.Application.Mapping.MappingConfig.RegisterMappings();
-=======
+
             builder.Services.AddScoped<IUserRepo, UserRepo>();
             builder.Services.AddScoped<IUnitofwork, Unitofwork>();
             builder.Services.AddScoped<IUser_Service, User_Service>();
+            builder.Services.AddScoped<IUserSubscription_Service, UserSubscription_Service>();
 
->>>>>>> sharqawy
->>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
+
             var app = builder.Build();
 
             using (var scope = app.Services.CreateScope())

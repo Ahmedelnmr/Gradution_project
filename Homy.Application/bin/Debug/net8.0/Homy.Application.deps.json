@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Homy.Application/1.0.0": {
         "dependencies": {
+          "Homy.Domin": "1.0.0",
           "Homy.Infurastructure": "1.0.0",
           "Mapster": "7.4.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.22"

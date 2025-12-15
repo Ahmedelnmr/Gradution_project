@@ -51,7 +51,7 @@
 
             <!-- إدارة الاشتراكات -->
             <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Subscriptions" ? "active" : "")">
-                <a asp-controller="Subscriptions" asp-action="Index" class="nav-link">
+                <a asp-controller="UserSubscription" asp-action="GetAll" class="nav-link">
                     <i class="fas fa-credit-card"></i>
                     <span>إدارة الاشتراكات</span>
                 </a>

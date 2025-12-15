@@ -140,7 +140,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("UpdatedById");
 
                     b.ToTable("Districts");
-<<<<<<< HEAD
+
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Notification", b =>
@@ -198,8 +198,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Notifications");
-=======
->>>>>>> sharqawy
+
                 });
 
             modelBuilder.Entity("Homy.Domin.models.Package", b =>
@@ -531,7 +530,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("UpdatedById");
 
                     b.ToTable("PropertyImages");
-<<<<<<< HEAD
+
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyReview", b =>
@@ -581,8 +580,7 @@ namespace Homy.Infurastructure.Migrations
                     b.HasIndex("UpdatedById");
 
                     b.ToTable("PropertyReviews");
-=======
->>>>>>> sharqawy
+
                 });
 
             modelBuilder.Entity("Homy.Domin.models.PropertyType", b =>

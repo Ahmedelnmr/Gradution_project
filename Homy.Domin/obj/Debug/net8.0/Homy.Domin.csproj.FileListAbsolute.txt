@@ -1,55 +1,13 @@
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\bin\Debug\net8.0\Homy.Domin.deps.json
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\bin\Debug\net8.0\Homy.Domin.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\bin\Debug\net8.0\Homy.Domin.pdb
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.AssemblyReference.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.GeneratedMSBuildEditorConfig.editorconfig
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfoInputs.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfo.cs
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.CoreCompileInputs.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
-D:\ITI Materials .Net\Homy\Homy\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll
-D:\Graduation_project\Homy\Homy.Domin\bin\Debug\net8.0\Homy.Domin.deps.json
-D:\Graduation_project\Homy\Homy.Domin\bin\Debug\net8.0\Homy.Domin.dll
-D:\Graduation_project\Homy\Homy.Domin\bin\Debug\net8.0\Homy.Domin.pdb
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.AssemblyReference.cache
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.GeneratedMSBuildEditorConfig.editorconfig
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfoInputs.cache
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfo.cs
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.CoreCompileInputs.cache
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll
-D:\Graduation_project\Homy\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json
-<<<<<<< HEAD
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.AssemblyReference.cache
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.GeneratedMSBuildEditorConfig.editorconfig
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfoInputs.cache
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfo.cs
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.CoreCompileInputs.cache
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
-F:\iti .net\Project\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.deps.json
-F:\iti .net\Project\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.dll
-F:\iti .net\Project\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.pdb
-F:\iti .net\Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll
-=======
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.deps.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.AssemblyReference.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.GeneratedMSBuildEditorConfig.editorconfig
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfoInputs.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfo.cs
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.CoreCompileInputs.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll
->>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
+D:\FinalProject\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.deps.json
+D:\FinalProject\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.dll
+D:\FinalProject\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.pdb
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.AssemblyReference.cache
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfoInputs.cache
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfo.cs
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.CoreCompileInputs.cache
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
+D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll

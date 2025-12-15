@@ -45,7 +45,7 @@ namespace Homy.Infurastructure.Repository
             return entity;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllAsync()
         {
             return await dbset.ToListAsync();
         }

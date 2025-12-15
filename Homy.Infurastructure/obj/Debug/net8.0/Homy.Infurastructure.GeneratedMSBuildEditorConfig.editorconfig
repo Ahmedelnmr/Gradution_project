@@ -10,11 +10,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Homy.Infurastructure
-<<<<<<< HEAD
-build_property.ProjectDir = F:\iti .net\Project\Gradution_project\Homy.Infurastructure\
-=======
-build_property.ProjectDir = D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.Infurastructure\
->>>>>>> 0ca8d04ab3305a7cc483404e79ad64412492f101
+build_property.ProjectDir = D:\FinalProject\Gradution_project\Homy.Infurastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0

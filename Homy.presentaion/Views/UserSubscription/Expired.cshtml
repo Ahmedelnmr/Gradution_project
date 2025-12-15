@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
+
+
+<h2>الاشتراكات المنتهية</h2>
+
+
+@if (!Model.Any())
+{
+    <p>لا يوجد اشتراكات منتهية</p>
+}
+else
+{
+    <table class="table table-danger">
+        <tr>
+            <th>User</th>
+            <th>End Date</th>
+        </tr>
+        @foreach (var sub in Model)
+        {
+            <tr>
+                <td>@sub.UserName</td>
+                <td>@sub.EndDate.ToShortDateString()</td>
+            </tr>
+        }
+    </table>
+}

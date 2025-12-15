@@ -1,4 +1,4 @@
-git checkout -b name origin/name  
+git checkout -b youssef_arram origin/youssef_arram  
 name the name of branch
 
 git fetch --all

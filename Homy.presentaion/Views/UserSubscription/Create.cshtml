@@ -1,0 +1,48 @@
+﻿@model Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubCreateDTO
+
+
+<h2>إنشاء اشتراك جديد</h2>
+
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group">
+        <label>User Id</label>
+        <input asp-for="UserId" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label>Package Id</label>
+        <input asp-for="PackageId" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label>Start Date</label>
+        <input asp-for="StartDate" type="date" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label>End Date</label>
+        <input asp-for="EndDate" type="date" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label>Payment Method</label>
+        <input asp-for="PaymentMethod" class="form-control" />
+    </div>
+
+
+    <div class="form-group">
+        <label>Amount Paid</label>
+        <input asp-for="AmountPaid" class="form-control" />
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

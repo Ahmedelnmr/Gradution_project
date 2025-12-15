@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
+
+
+<h2>اشتراكات الباكدج</h2>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.StartDate.ToShortDateString()</td>
+                <td>@item.EndDate.ToShortDateString()</td>
+                <td>@item.IsActive</td>
+            </tr>
+        }
+    </tbody>
+</table>
