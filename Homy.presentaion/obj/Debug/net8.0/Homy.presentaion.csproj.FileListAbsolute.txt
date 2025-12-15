@@ -578,4 +578,3 @@ D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\
 D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
