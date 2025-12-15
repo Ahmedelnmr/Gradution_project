@@ -125,8 +125,32 @@ namespace Homy.Web.Controllers
             return RedirectToAction(nameof(VerifyAgent), new { id = request.UserId });
         }
 
-        
+
+        //[HttpPost]
+        //public async Task<IActionResult> ToggleActive(Guid userId, bool isActive)
+        //{
+        //    var request = new UpdateUserStatusDto
+        //    {
+        //        UserId = userId,
+        //        IsActive = isActive
+        //    };
+
+        //    var result = await _userService.UpdateUserActiveStatusAsync(request);
+
+        //    if (result.Success)
+        //    {
+        //        TempData["Success"] = result.Message;
+        //    }
+        //    else
+        //    {
+        //        TempData["Error"] = result.Message;
+        //    }
+
+        //    return RedirectToAction(nameof(Index));
+        //}
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ToggleActive(Guid userId, bool isActive)
         {
             var request = new UpdateUserStatusDto
@@ -138,18 +162,14 @@ namespace Homy.Web.Controllers
             var result = await _userService.UpdateUserActiveStatusAsync(request);
 
             if (result.Success)
-            {
                 TempData["Success"] = result.Message;
-            }
             else
-            {
                 TempData["Error"] = result.Message;
-            }
 
             return RedirectToAction(nameof(Index));
         }
 
-        
+
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _userService.GetUserByIdAsync(id);

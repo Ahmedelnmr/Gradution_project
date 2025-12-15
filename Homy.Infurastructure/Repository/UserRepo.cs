@@ -73,16 +73,27 @@ namespace Homy.Infurastructure.Repository
                 .FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
         }
 
+        //public async Task<bool> UpdateActiveStatusAsync(Guid userId, bool isActive)
+        //{
+        //    var user = await _context.Users.FindAsync(userId);
+        //    if (user == null)
+        //        return false;
+
+        //    user.IsActive = isActive;
+        //    _context.Users.Update(user);
+            
+
+        //    return true;
+        //}
+
         public async Task<bool> UpdateActiveStatusAsync(Guid userId, bool isActive)
         {
-            var user = await _context.Users.FindAsync(userId);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
                 return false;
 
             user.IsActive = isActive;
-            _context.Users.Update(user);
-            await _context.SaveChangesAsync();
-
+            
             return true;
         }
 
@@ -136,7 +147,7 @@ namespace Homy.Infurastructure.Repository
             user.IsVerified = (bool) isVerified;
 
             _context.Users.Update(user);
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
             return true;  
         }
@@ -150,7 +161,7 @@ namespace Homy.Infurastructure.Repository
             user.IsDeleted = true;
             user.IsActive = false;
             _context.Users.Update(user);
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
             return true;
         }

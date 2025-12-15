@@ -210,10 +210,15 @@
                             </a>
                         }
 
-                        <button type="button" class="btn btn-@(Model.IsActive ? "secondary" : "primary") btn-lg"
-                                onclick="toggleActive('@Model.Id', @(!Model.IsActive).ToString().ToLower())">
-                            <i class="fas fa-power-off"></i> @(Model.IsActive ? "إلغاء التفعيل" : "تفعيل الحساب")
-                        </button>
+                        <form asp-action="ToggleActive" method="post" class="d-inline"
+                              onsubmit="return confirm('هل أنت متأكد من @(Model.IsActive ? "إلغاء تفعيل" : "تفعيل") هذا المستخدم؟')">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="userId" value="@Model.Id" />
+                            <input type="hidden" name="isActive" value="@((!Model.IsActive).ToString().ToLower())" />
+                            <button type="submit" class="btn btn-@(Model.IsActive ? "secondary" : "primary") btn-lg">
+                                <i class="fas fa-power-off"></i> @(Model.IsActive ? "إلغاء التفعيل" : "تفعيل الحساب")
+                            </button>
+                        </form>
 
                         @if (Model.Role != Homy.Domin.models.UserRole.Admin)
                         {

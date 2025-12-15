@@ -10,6 +10,7 @@ using Homy.Domin.models;
 using Homy.Infurastructure.Unitofworks;
 using Homy.Domin.Contract_Repo;
 using Homy.Application.Service;
+using Homy.Application.Dtos.UserDtos;
 
 namespace Homy.UnitTests.Services
 {

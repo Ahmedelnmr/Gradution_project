@@ -243,6 +243,43 @@ namespace Homy.Application.Service
         }
 
         
+        //public async Task<ApiResponse<bool>> UpdateUserActiveStatusAsync(UpdateUserStatusDto request)
+        //{
+        //    var response = new ApiResponse<bool>();
+
+        //    try
+        //    {
+        //        var result = await _unitOfWork.UserRepo.UpdateActiveStatusAsync(
+        //            request.UserId,
+        //            request.IsActive
+        //        );
+
+        //        if (result)
+        //        {
+        //            await _unitOfWork.Save();
+
+        //            response.Success = true;
+        //            response.Data = true;
+        //            response.Message = request.IsActive
+        //                ? "تم تفعيل المستخدم بنجاح"
+        //                : "تم إلغاء تفعيل المستخدم بنجاح";
+        //        }
+        //        else
+        //        {
+        //            response.Success = false;
+        //            response.Message = "المستخدم غير موجود";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        response.Success = false;
+        //        response.Message = "حدث خطأ أثناء تحديث حالة المستخدم";
+        //        response.Errors.Add(ex.Message);
+        //    }
+
+        //    return response;
+        //}
+
         public async Task<ApiResponse<bool>> UpdateUserActiveStatusAsync(UpdateUserStatusDto request)
         {
             var response = new ApiResponse<bool>();
@@ -252,15 +289,14 @@ namespace Homy.Application.Service
                 var result = await _unitOfWork.UserRepo.UpdateActiveStatusAsync(
                     request.UserId,
                     request.IsActive
-                );
+                    );
 
                 if (result)
                 {
                     await _unitOfWork.Save();
-
                     response.Success = true;
                     response.Data = true;
-                    response.Message = request.IsActive
+                    response.Message = request.IsActive 
                         ? "تم تفعيل المستخدم بنجاح"
                         : "تم إلغاء تفعيل المستخدم بنجاح";
                 }
@@ -270,7 +306,7 @@ namespace Homy.Application.Service
                     response.Message = "المستخدم غير موجود";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 response.Success = false;
                 response.Message = "حدث خطأ أثناء تحديث حالة المستخدم";
@@ -280,7 +316,8 @@ namespace Homy.Application.Service
             return response;
         }
 
-        
+
+
         public async Task<ApiResponse<bool>> DeleteUserAsync(Guid userId)
         {
             var response = new ApiResponse<bool>();
