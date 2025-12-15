@@ -1,11 +1,14 @@
 ﻿using Homy.Application.Dtos;
 using Homy.Domin.Contract_Service;
-using Homy.Infurastructure.Unitofworks;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Homy.presentaion.Controllers
 {
-     public class ProjectsController : Controller
+    public class ProjectsController : Controller
     {
         private readonly IProject_Service _projectService;
         private readonly ICity_Service _cityService;
@@ -26,10 +29,10 @@ namespace Homy.presentaion.Controllers
 
         /// <summary>
         /// GET: /Projects
-        /// صفحة عرض كل المشاريع
+        /// صفحة عرض كل المشاريع مع الفلترة
         /// </summary>
         [HttpGet]
-        public async Task<IActionResult> Index(string searchTerm = null, long? cityId = null)
+        public async Task<IActionResult> Index(string searchTerm = null, long? cityId = null, string filter = null)
         {
             try
             {
@@ -45,6 +48,18 @@ namespace Homy.presentaion.Controllers
                 {
                     projects = await _projectService.GetProjectsByCityAsync(cityId.Value);
                     ViewBag.CityId = cityId.Value;
+                }
+                else if (!string.IsNullOrWhiteSpace(filter))
+                {
+                    projects = filter.ToLower() switch
+                    {
+                        "active" => await _projectService.GetActiveProjectsAsync(),
+                        "residential" => await _projectService.GetProjectsByComputedTypeAsync(ProjectTypeEnum.ResidentialCompound),
+                        "commercial" => await _projectService.GetProjectsByComputedTypeAsync(ProjectTypeEnum.CommercialProject),
+                        "construction" => await _projectService.GetProjectsByComputedTypeAsync(ProjectTypeEnum.UnderConstruction),
+                        _ => await _projectService.GetProjectsListAsync()
+                    };
+                    ViewBag.CurrentFilter = filter;
                 }
                 else
                 {
@@ -69,10 +84,6 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// GET: /Projects/Details/5
-        /// صفحة تفاصيل مشروع معين
-        /// </summary>
         [HttpGet]
         public async Task<IActionResult> Details(long id)
         {
@@ -96,16 +107,11 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// GET: /Projects/Create
-        /// صفحة إضافة مشروع جديد
-        /// </summary>
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             try
             {
-                // جلب المدن والأحياء للـ Dropdown
                 await LoadCitiesAndDistricts();
                 return View();
             }
@@ -117,10 +123,6 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// POST: /Projects/Create
-        /// إضافة مشروع جديد
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateProjectDto createDto)
@@ -133,9 +135,7 @@ namespace Homy.presentaion.Controllers
                     return View(createDto);
                 }
 
-                // جلب User Id من الـ Claims
                 var userId = GetCurrentUserId();
-
                 var createdProject = await _projectService.CreateProjectAsync(createDto, userId);
 
                 TempData["SuccessMessage"] = $"تم إضافة المشروع '{createdProject.Name}' بنجاح";
@@ -156,10 +156,6 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// GET: /Projects/Edit/5
-        /// صفحة تعديل مشروع
-        /// </summary>
         [HttpGet]
         public async Task<IActionResult> Edit(long id)
         {
@@ -196,10 +192,6 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// POST: /Projects/Edit/5
-        /// تعديل بيانات مشروع
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(UpdateProjectDto updateDto)
@@ -233,10 +225,6 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// POST: /Projects/Delete/5
-        /// حذف مشروع (Soft Delete)
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(long id)
@@ -269,10 +257,6 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// POST: /Projects/ToggleStatus/5
-        /// تفعيل/إلغاء تفعيل مشروع
-        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ToggleStatus(long id)
@@ -300,36 +284,8 @@ namespace Homy.presentaion.Controllers
             }
         }
 
-        /// <summary>
-        /// GET: /Projects/ActiveProjects
-        /// صفحة المشاريع النشطة فقط
-        /// </summary>
-        [HttpGet]
-        public async Task<IActionResult> ActiveProjects()
-        {
-            try
-            {
-                var projects = await _projectService.GetActiveProjectsAsync();
-                var stats = await _projectService.GetProjectStatsAsync();
-                
-                ViewBag.Stats = stats;
-                ViewBag.FilterType = "Active";
-
-                return View("Index", projects);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "خطأ في جلب المشاريع النشطة");
-                TempData["ErrorMessage"] = "حدث خطأ أثناء جلب البيانات";
-                return RedirectToAction(nameof(Index));
-            }
-        }
-
         #region Helper Methods
 
-        /// <summary>
-        /// جلب User ID من الـ Claims
-        /// </summary>
         private Guid? GetCurrentUserId()
         {
             var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
@@ -340,13 +296,8 @@ namespace Homy.presentaion.Controllers
             return null;
         }
 
-        /// <summary>
-        /// تحميل المدن والأحياء في ViewBag
-        /// </summary>
         private async Task LoadCitiesAndDistricts()
         {
-            // TODO: تنفيذ GetAllCitiesAsync و GetAllDistrictsAsync في Services
-            // مؤقتاً نستخدم Repository مباشرة
             ViewBag.Cities = await _cityService.GetAllCitiesAsync();
             ViewBag.Districts = await _districtService.GetAllDistrictsAsync();
         }
