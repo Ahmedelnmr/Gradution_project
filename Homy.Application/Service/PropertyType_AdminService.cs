@@ -43,7 +43,7 @@ namespace Homy.Application.Service
 
         public async Task<PropertyTypeDto?> GetByIdAsync(long id)
         {
-            var pt = await _unitOfWork.PropertyTypeRepo.GetByIdAsync((int)id);
+            var pt = await _unitOfWork.PropertyTypeRepo.GetByIdAsync((long)id);
             if (pt == null) return null;
 
             // Mapster Mapping

@@ -1,61 +1,77 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\",
+  "WorkspaceRootPath": "D:\\Main to run\\Gradution_project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\main to run\\gradution_project\\homy.application\\service\\propertytype_adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\service\\propertytype_adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.infurastructure\\repository\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\main to run\\gradution_project\\homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\genric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.application\\service\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\service\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\main to run\\gradution_project\\homy.domin\\contract_repo\\igenric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\contract_repo\\igenric_repo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\views\\users\\verifyagent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\verifyagent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.application\\contract_service\\iuser_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\contract_service\\iuser_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\views\\users\\unverifiedagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\unverifiedagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.unittests\\services\\user_servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|solutionrelative:homy.unittests\\services\\user_servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.unittests\\controllers\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|d:\\main to run\\gradution_project\\homy.unittests\\controllers\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|solutionrelative:homy.unittests\\controllers\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\iti materials .net\\graduation_project\\gradution_project\\homy.presentaion\\views\\users\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|d:\\main to run\\gradution_project\\homy.infurastructure\\repository\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C58657E-CEF3-4624-B773-A96085656951}|Homy.Infurastructure\\Homy.Infurastructure.csproj|solutionrelative:homy.infurastructure\\repository\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\main to run\\gradution_project\\homy.application\\service\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\service\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\views\\users\\verifyagent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\verifyagent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|d:\\main to run\\gradution_project\\homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DD7F9C7-A78D-4641-9E76-7EE93C0D3DD0}|Homy.Domin\\Homy.Domin.csproj|solutionrelative:homy.domin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\main to run\\gradution_project\\homy.application\\contract_service\\iuser_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\contract_service\\iuser_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|d:\\main to run\\gradution_project\\homy.application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AACD4C22-B501-4C0D-A8AC-02CFD0B98139}|Homy.Application\\Homy.Application.csproj|solutionrelative:homy.application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\views\\users\\unverifiedagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\unverifiedagents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|d:\\main to run\\gradution_project\\homy.unittests\\services\\user_servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DF4E151-61FD-4E90-8487-54B41143C7C7}|Homy.UnitTests\\Homy.UnitTests.csproj|solutionrelative:homy.unittests\\services\\user_servicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|d:\\main to run\\gradution_project\\homy.presentaion\\views\\users\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2EC7861B-07B3-4001-995B-EE9F08E300D3}|Homy.presentaion\\Homy.presentaion.csproj|solutionrelative:homy.presentaion\\views\\users\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -66,8 +82,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PropertyType_AdminService.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Application\\Service\\PropertyType_AdminService.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Service\\PropertyType_AdminService.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Application\\Service\\PropertyType_AdminService.cs",
+              "RelativeToolTip": "Homy.Application\\Service\\PropertyType_AdminService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwC0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:17:01.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGenric_Repo.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "RelativeToolTip": "Homy.Domin\\Contract_Repo\\IGenric_Repo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:11:33.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Genric_Repo.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "RelativeToolTip": "Homy.Infurastructure\\Repository\\Genric_Repo.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:10:24.107Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -82,36 +137,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Index.cshtml",
-              "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\Index.cshtml",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Index.cshtml",
-              "RelativeToolTip": "Homy.presentaion\\Views\\Users\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-13T21:49:03.659Z",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\appsettings.json",
+              "RelativeDocumentMoniker": "Homy.presentaion\\appsettings.json",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\appsettings.json",
+              "RelativeToolTip": "Homy.presentaion\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-15T18:23:29.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserServices.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Service\\UserServices.cs",
-              "RelativeDocumentMoniker": "Homy.Application\\Service\\UserServices.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Service\\UserServices.cs",
-              "RelativeToolTip": "Homy.Application\\Service\\UserServices.cs",
-              "ViewState": "AgIAAB8BAAAAAAAAAAAgwDEBAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T10:35:19.877Z"
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\Index.cshtml",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Homy.presentaion\\Views\\Users\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T21:49:03.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Domin\\models\\User.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Domin\\models\\User.cs",
               "RelativeDocumentMoniker": "Homy.Domin\\models\\User.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Domin\\models\\User.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Domin\\models\\User.cs",
               "RelativeToolTip": "Homy.Domin\\models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -119,11 +174,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "UserDto.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserDto.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserDto.cs",
               "RelativeDocumentMoniker": "Homy.Application\\Dtos\\UserDtos\\UserDto.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserDto.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Application\\Dtos\\UserDtos\\UserDto.cs",
               "RelativeToolTip": "Homy.Application\\Dtos\\UserDtos\\UserDto.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAuwBEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -131,24 +186,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "UserRepo.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Infurastructure\\Repository\\UserRepo.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Repository\\UserRepo.cs",
               "RelativeDocumentMoniker": "Homy.Infurastructure\\Repository\\UserRepo.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Infurastructure\\Repository\\UserRepo.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Repository\\UserRepo.cs",
               "RelativeToolTip": "Homy.Infurastructure\\Repository\\UserRepo.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAgwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T23:38:13.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T23:38:13.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Controllers\\UserController.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Homy.presentaion\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Controllers\\UserController.cs",
               "RelativeToolTip": "Homy.presentaion\\Controllers\\UserController.cs",
               "ViewState": "AgIAAIcAAAAAAAAAAADgv6gAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -156,11 +210,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Delete.cshtml",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Delete.cshtml",
               "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\Delete.cshtml",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Delete.cshtml",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Delete.cshtml",
               "RelativeToolTip": "Homy.presentaion\\Views\\Users\\Delete.cshtml",
               "ViewState": "AgIAADgAAAAAAAAAAAAwwEYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -168,11 +222,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "IUser_Service.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Contract_Service\\IUser_Service.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Application\\Contract_Service\\IUser_Service.cs",
               "RelativeDocumentMoniker": "Homy.Application\\Contract_Service\\IUser_Service.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.Application\\Contract_Service\\IUser_Service.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Application\\Contract_Service\\IUser_Service.cs",
               "RelativeToolTip": "Homy.Application\\Contract_Service\\IUser_Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -181,10 +235,34 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UsersControllerTests.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
+              "RelativeDocumentMoniker": "Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
+              "RelativeToolTip": "Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:40:19.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.Application\\Service\\UserServices.cs",
+              "RelativeDocumentMoniker": "Homy.Application\\Service\\UserServices.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.Application\\Service\\UserServices.cs",
+              "RelativeToolTip": "Homy.Application\\Service\\UserServices.cs",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAgwDEBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T10:35:19.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "VerifyAgent.cshtml",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\VerifyAgent.cshtml",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\VerifyAgent.cshtml",
               "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\VerifyAgent.cshtml",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\VerifyAgent.cshtml",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\VerifyAgent.cshtml",
               "RelativeToolTip": "Homy.presentaion\\Views\\Users\\VerifyAgent.cshtml",
               "ViewState": "AgIAADoAAAAAAAAAAIAwwEkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -192,11 +270,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Details.cshtml",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Details.cshtml",
               "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\Details.cshtml",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Details.cshtml",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Details.cshtml",
               "RelativeToolTip": "Homy.presentaion\\Views\\Users\\Details.cshtml",
               "ViewState": "AgIAAIUAAAAAAAAAAAAwwJMAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -204,11 +282,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "UnverifiedAgents.cshtml",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\UnverifiedAgents.cshtml",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\UnverifiedAgents.cshtml",
               "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\UnverifiedAgents.cshtml",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\UnverifiedAgents.cshtml",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\UnverifiedAgents.cshtml",
               "RelativeToolTip": "Homy.presentaion\\Views\\Users\\UnverifiedAgents.cshtml",
               "ViewState": "AgIAAGEAAAAAAAAAAAAwwGkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -216,11 +294,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Statistics.cshtml",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Statistics.cshtml",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Statistics.cshtml",
               "RelativeDocumentMoniker": "Homy.presentaion\\Views\\Users\\Statistics.cshtml",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.presentaion\\Views\\Users\\Statistics.cshtml",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Views\\Users\\Statistics.cshtml",
               "RelativeToolTip": "Homy.presentaion\\Views\\Users\\Statistics.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -228,23 +306,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UsersControllerTests.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
-              "RelativeDocumentMoniker": "Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
-              "RelativeToolTip": "Homy.UnitTests\\Controllers\\UsersControllerTests.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T10:40:19.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "User_ServiceTests.cs",
-              "DocumentMoniker": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.UnitTests\\Services\\User_ServiceTests.cs",
+              "DocumentMoniker": "D:\\Main to run\\Gradution_project\\Homy.UnitTests\\Services\\User_ServiceTests.cs",
               "RelativeDocumentMoniker": "Homy.UnitTests\\Services\\User_ServiceTests.cs",
-              "ToolTip": "D:\\ITI Materials .Net\\Graduation_Project\\Gradution_project\\Homy.UnitTests\\Services\\User_ServiceTests.cs",
+              "ToolTip": "D:\\Main to run\\Gradution_project\\Homy.UnitTests\\Services\\User_ServiceTests.cs",
               "RelativeToolTip": "Homy.UnitTests\\Services\\User_ServiceTests.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAwwA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {}
+    "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {}
   },
   "projects": {
-    "D:\\FinalProject\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
+    "D:\\Main to run\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+        "projectUniqueName": "D:\\Main to run\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
         "projectName": "Homy.Application",
-        "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\FinalProject\\Gradution_project\\Homy.Application\\obj\\",
+        "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Main to run\\Gradution_project\\Homy.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,18 +26,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               },
-              "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-                "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+              "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+                "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
               }
             }
           }
@@ -78,20 +77,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -101,20 +86,20 @@
         }
       }
     },
-    "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+    "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+        "projectUniqueName": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
         "projectName": "Homy.Domin",
-        "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\obj\\",
+        "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Main to run\\Gradution_project\\Homy.Domin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -123,7 +108,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -164,20 +148,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -187,20 +157,20 @@
         }
       }
     },
-    "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+    "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+        "projectUniqueName": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
         "projectName": "Homy.Infurastructure",
-        "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\obj\\",
+        "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -209,15 +179,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               }
             }
           }
@@ -268,20 +237,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -291,20 +246,20 @@
         }
       }
     },
-    "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {
+    "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
+        "projectUniqueName": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
         "projectName": "Homy.presentaion",
-        "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\FinalProject\\Gradution_project\\Homy.presentaion\\obj\\",
+        "projectPath": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Main to run\\Gradution_project\\Homy.presentaion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -313,21 +268,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\FinalProject\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
-                "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Application\\Homy.Application.csproj"
+              "D:\\Main to run\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
+                "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Application\\Homy.Application.csproj"
               },
-              "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               },
-              "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-                "projectPath": "D:\\FinalProject\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+              "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+                "projectPath": "D:\\Main to run\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
               }
             }
           }
@@ -374,24 +328,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

@@ -53,3 +53,16 @@ D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
 D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
 D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
 D:\FinalProject\Gradution_project\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll
+D:\Main to run\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.deps.json
+D:\Main to run\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.dll
+D:\Main to run\Gradution_project\Homy.Domin\bin\Debug\net8.0\Homy.Domin.pdb
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.AssemblyReference.cache
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.GeneratedMSBuildEditorConfig.editorconfig
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfoInputs.cache
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.AssemblyInfo.cs
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.csproj.CoreCompileInputs.cache
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.sourcelink.json
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.dll
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\refint\Homy.Domin.dll
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\Homy.Domin.pdb
+D:\Main to run\Gradution_project\Homy.Domin\obj\Debug\net8.0\ref\Homy.Domin.dll

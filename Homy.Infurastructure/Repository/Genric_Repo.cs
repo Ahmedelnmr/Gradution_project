@@ -35,7 +35,7 @@ namespace Homy.Infurastructure.Repository
             return item;
         }
 
-        public async Task<T> DeleteAsync(int id)
+        public async Task<T> DeleteAsync(long id)
         {
             var entity = await dbset.FindAsync(id);
             if (entity != null)
@@ -50,7 +50,7 @@ namespace Homy.Infurastructure.Repository
             return await dbset.ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(long id)
         {
             return await dbset.FindAsync(id);
         }
