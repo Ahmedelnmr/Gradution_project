@@ -1,4 +1,4 @@
-﻿@model Homy.Application.Dtos.CreateProjectDto
+@model Homy.Application.Dtos.CreateProjectDto
 @{
     ViewData["Title"] = "إضافة مشروع جديد";
 }
@@ -12,9 +12,9 @@
         </h1>
         <nav class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
-                <li class="breadcrumb-item"><a asp-action="Index">المشاريع</a></li>
-                <li class="breadcrumb-item active">إضافة جديد</li>
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">إدارة المشاريع</a></li>
+                <li class="breadcrumb-item active">إضافة مشروع جديد</li>
             </ol>
         </nav>
     </div>
@@ -42,7 +42,7 @@
                         <label asp-for="Name" class="form-label">
                             <i class="fas fa-building text-primary"></i> اسم المشروع *
                         </label>
-                        <input asp-for="Name" class="form-control" placeholder="مثال: كمبوند النخيل" />
+                        <input asp-for="Name" class="form-control" placeholder="اسم المشروع" />
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
 
@@ -52,7 +52,7 @@
                             <i class="fas fa-city text-primary"></i> المدينة *
                         </label>
                         <select asp-for="CityId" class="form-select" id="citySelect">
-                            <option value="">-- اختر المدينة --</option>
+                            <option value="">اختر المدينة</option>
                             @if (ViewBag.Cities != null)
                             {
                                 foreach (var city in ViewBag.Cities)
@@ -67,10 +67,10 @@
                     <!-- الحي -->
                     <div class="mb-3">
                         <label asp-for="DistrictId" class="form-label">
-                            <i class="fas fa-map-marked-alt text-primary"></i> الحي (اختياري)
+                            <i class="fas fa-map-marked-alt text-primary"></i> الحي
                         </label>
                         <select asp-for="DistrictId" class="form-select" id="districtSelect">
-                            <option value="">-- اختر الحي --</option>
+                            <option value="">اختر الحي</option>
                             @if (ViewBag.Districts != null)
                             {
                                 foreach (var district in ViewBag.Districts)
@@ -87,40 +87,40 @@
                     <!-- وصف الموقع -->
                     <div class="mb-3">
                         <label asp-for="LocationDescription" class="form-label">
-                            <i class="fas fa-map-marker-alt text-primary"></i> وصف الموقع (اختياري)
+                            <i class="fas fa-map-marker-alt text-primary"></i> وصف الموقع
                         </label>
                         <textarea asp-for="LocationDescription" class="form-control" rows="3"
-                                  placeholder="مثال: بجوار الجامعة الجديدة، الطريق الدائري"></textarea>
+                                  placeholder="وصف الموقع"></textarea>
                         <span asp-validation-for="LocationDescription" class="text-danger"></span>
                     </div>
 
-                    <!-- رابط الشعار -->
+                    <!-- شعار المشروع -->
                     <div class="mb-3">
                         <label asp-for="LogoUrl" class="form-label">
-                            <i class="fas fa-image text-primary"></i> رابط شعار المشروع (اختياري)
+                            <i class="fas fa-image text-primary"></i> شعار المشروع
                         </label>
                         <input asp-for="LogoUrl" class="form-control" type="url"
                                placeholder="https://example.com/logo.png" />
                         <span asp-validation-for="LogoUrl" class="text-danger"></span>
                         <small class="form-text text-muted">
-                            رابط URL للشعار (يفضل صورة مربعة)
+                            شعار المشروع (URL)
                         </small>
                     </div>
 
-                    <!-- رابط صورة الغلاف -->
+                    <!-- صورة الغلاف -->
                     <div class="mb-3">
                         <label asp-for="CoverImageUrl" class="form-label">
-                            <i class="fas fa-image text-primary"></i> رابط صورة الغلاف (اختياري)
+                            <i class="fas fa-image text-primary"></i> صورة الغلاف
                         </label>
                         <input asp-for="CoverImageUrl" class="form-control" type="url"
                                placeholder="https://example.com/cover.jpg" />
                         <span asp-validation-for="CoverImageUrl" class="text-danger"></span>
                         <small class="form-text text-muted">
-                            رابط URL لصورة الغلاف (يفضل عرضية 16:9)
+                            صورة الغلاف (URL)
                         </small>
                     </div>
 
-                    <!-- الحالة -->
+                    <!-- التفعيل -->
                     <div class="mb-3 form-check">
                         <input asp-for="IsActive" class="form-check-input" type="checkbox" checked />
                         <label asp-for="IsActive" class="form-check-label">

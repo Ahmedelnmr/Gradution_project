@@ -1,7 +1,7 @@
-﻿@using Homy.Application.Dtos.UserDtos
+@using Homy.Application.Dtos.UserDtos
 @model VerificationRequestDto
 @{
-    ViewData["Title"] = "توثيق السمسار";
+    ViewData["Title"] = "توثيق الوسيط";
     var userInfo = (ViewBag.UserInfo as UserDto);
 }
 
@@ -10,9 +10,9 @@
         <div class="col-lg-8">
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2><i class="fas fa-user-check"></i> توثيق السمسار</h2>
+                <h2><i class="fas fa-user-check"></i> توثيق الوسيط</h2>
                 <a asp-action="UnverifiedAgents" class="btn btn-secondary">
-                    <i class="fas fa-arrow-right"></i> رجوع
+                    <i class="fas fa-arrow-right"></i> عودة
                 </a>
             </div>
 
@@ -30,11 +30,11 @@
             {
                 <div class="card mb-4">
                     <div class="card-header bg-warning text-dark">
-                        <h5 class="mb-0"><i class="fas fa-user"></i> بيانات السمسار</h5>
+                        <h5 class="mb-0"><i class="fas fa-user"></i> بيانات الوسيط</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <!-- صورة السمسار -->
+                            <!-- صورة الوسيط -->
                             <div class="col-md-4 text-center mb-3">
                                 @if (!string.IsNullOrEmpty(userInfo.ProfileImageUrl))
                                 {
@@ -50,7 +50,7 @@
                                 }
                             </div>
 
-                            <!-- بيانات السمسار -->
+                            <!-- تفاصيل الوسيط -->
                             <div class="col-md-8">
                                 <table class="table table-borderless">
                                     <tbody>
@@ -63,19 +63,19 @@
                                             <td>@userInfo.PhoneNumber</td>
                                         </tr>
                                         <tr>
-                                            <th><i class="fab fa-whatsapp text-success"></i> الواتساب:</th>
-                                            <td>@(userInfo.WhatsAppNumber ?? "غير محدد")</td>
+                                            <th><i class="fab fa-whatsapp text-success"></i> واتساب:</th>
+                                            <td>@(userInfo.WhatsAppNumber ?? "غير متوفر")</td>
                                         </tr>
                                         <tr>
-                                            <th><i class="fas fa-envelope"></i> الإيميل:</th>
-                                            <td>@(userInfo.Email ?? "غير محدد")</td>
+                                            <th><i class="fas fa-envelope"></i> البريد:</th>
+                                            <td>@(userInfo.Email ?? "غير متوفر")</td>
                                         </tr>
                                         <tr>
-                                            <th><i class="fas fa-calendar"></i> تاريخ التسجيل:</th>
+                                            <th><i class="fas fa-calendar"></i> تاريخ الانضمام:</th>
                                             <td>@userInfo.CreatedAt.ToString("yyyy/MM/dd HH:mm")</td>
                                         </tr>
                                         <tr>
-                                            <th><i class="fas fa-home"></i> عدد الإعلانات:</th>
+                                            <th><i class="fas fa-home"></i> عدد العقارات:</th>
                                             <td><span class="badge bg-info">@userInfo.PropertiesCount</span></td>
                                         </tr>
                                     </tbody>
@@ -83,12 +83,12 @@
                             </div>
                         </div>
 
-                        <!-- ملاحظة مهمة -->
+                        <!-- إشعار هام -->
                         <div class="alert alert-info mt-3" role="alert">
                             <i class="fas fa-info-circle"></i>
                             <strong>ملاحظة:</strong>
-                            يُرجى التحقق من بيانات السمسار (الهوية، الصور، الرخصة) قبل الموافقة على التوثيق.
-                            في حالة الرفض، يجب كتابة سبب واضح ومحدد.
+                            توثيق الحساب يمنح الوسيط المزيد من الثقة والمميزات (مثل علامة التوثيق) ويحسن ظهوره في النتائج.
+                            تأكد من صحة البيانات قبل اتخاذ أي إجراء.
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                         @Html.AntiForgeryToken()
                         @Html.HiddenFor(m => m.UserId)
 
-                        <!-- خيارات القبول/الرفض -->
+                        <!-- اختيار قبول/رفض -->
                         <div class="mb-4">
                             <label class="form-label fw-bold">القرار: <span class="text-danger">*</span></label>
                             <div class="row">
@@ -114,10 +114,10 @@
                                                id="approve" value="true" checked onchange="toggleReasonField(false)">
                                         <label class="form-check-label" for="approve">
                                             <strong class="text-success">
-                                                <i class="fas fa-check-circle"></i> قبول وتوثيق السمسار
+                                                <i class="fas fa-check-circle"></i> قبول وتوثيق الوسيط
                                             </strong>
                                             <br>
-                                            <small class="text-muted">سيتمكن من نشر الإعلانات بعد الاشتراك</small>
+                                            <small class="text-muted">نعم، البيانات صحيحة ويستحق التوثيق</small>
                                         </label>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                                                 <i class="fas fa-times-circle"></i> رفض طلب التوثيق
                                             </strong>
                                             <br>
-                                            <small class="text-muted">يجب كتابة سبب الرفض</small>
+                                            <small class="text-muted">لا، هناك نقص أو مشكلة</small>
                                         </label>
                                     </div>
                                 </div>
@@ -143,10 +143,10 @@
                                 سبب الرفض: <span class="text-danger">*</span>
                             </label>
                             <textarea asp-for="Reason" class="form-control" rows="4"
-                                      placeholder="مثال: صورة الهوية غير واضحة / بيانات غير مكتملة / شكوك في المصداقية"></textarea>
+                                      placeholder="مثال: صورة الهوية غير واضحة / البيانات غير مكتملة / رقم الهاتف لا يعمل"></textarea>
                             <small class="text-muted">
                                 <i class="fas fa-lightbulb"></i>
-                                سيتم إرسال هذا السبب للسمسار، يُرجى أن يكون محدداً وواضحاً
+                                كتابة سبب الرفض يساعد الوسيط على تصحيح وضعه وإعادة تقديم الطلب
                             </small>
                         </div>
 
@@ -168,7 +168,7 @@
 
 @section Scripts {
     <script>
-        // إظهار/إخفاء حقل السبب
+        // إظهار/إخفاء سبب الرفض
         function toggleReasonField(show) {
             const reasonField = document.getElementById('reasonField');
             const reasonTextarea = document.getElementById('Reason');
@@ -184,7 +184,7 @@
                 reasonField.style.display = 'none';
                 reasonTextarea.required = false;
                 reasonTextarea.value = '';
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> تأكيد الموافقة';
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> تأكيد القبول';
                 submitBtn.classList.remove('btn-danger');
                 submitBtn.classList.add('btn-success');
             }
@@ -194,7 +194,7 @@
         document.querySelector('form').addEventListener('submit', function(e) {
             const isApproved = document.querySelector('input[name="IsApproved"]:checked').value === 'true';
             const message = isApproved
-                ? 'هل أنت متأكد من قبول وتوثيق هذا السمسار؟'
+                ? 'هل أنت متأكد من قبول وتوثيق هذا الوسيط؟'
                 : 'هل أنت متأكد من رفض طلب التوثيق؟';
 
             if (!confirm(message)) {
@@ -203,5 +203,3 @@
         });
     </script>
 }
-
-

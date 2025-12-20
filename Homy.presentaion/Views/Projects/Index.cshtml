@@ -1,7 +1,7 @@
-﻿@using Homy.Application.Dtos
+@using Homy.Application.Dtos
 @model IEnumerable<ProjectListDto>
 @{
-    ViewData["Title"] = "المشاريع والكمبوندات - هومي";
+    ViewData["Title"] = "إدارة المشاريع";
     var stats = ViewBag.Stats as Homy.Application.Dtos.ProjectStatsDto;
     var currentFilter = ViewBag.CurrentFilter as string;
 }
@@ -11,12 +11,12 @@
     <div class="header-content">
         <h1 class="page-title">
             <i class="fas fa-building text-primary"></i>
-            المشاريع والكمبوندات
+            إدارة المشاريع
         </h1>
         <nav class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
-                <li class="breadcrumb-item active">المشاريع والكمبوندات</li>
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item active">إدارة المشاريع</li>
             </ol>
         </nav>
     </div>
@@ -77,7 +77,7 @@
         <form asp-action="Index" method="get" class="search-form">
             <div class="input-group">
                 <input type="text" name="searchTerm" class="form-control"
-                       placeholder="ابحث عن مشروع..." value="@ViewBag.SearchTerm">
+                       placeholder="بحث..." value="@ViewBag.SearchTerm">
                 <button type="submit" class="btn btn-primary">
                     <i class="fas fa-search"></i> بحث
                 </button>
@@ -87,7 +87,7 @@
     <div class="col-lg-6">
         <form asp-action="Index" method="get" class="filter-form">
             <select name="cityId" class="form-select" onchange="this.form.submit()">
-                <option value="">كل المدن</option>
+                <option value="">الكل</option>
                 @if (ViewBag.Cities != null)
                 {
                     foreach (var city in ViewBag.Cities)
@@ -109,7 +109,7 @@
         <span class="tab-count">@Model.Count()</span>
     </a>
     <a asp-action="Index" asp-route-filter="active" class="filter-tab @(currentFilter == "active" ? "active" : "")">
-        <span>نشطة فقط</span>
+        <span>النشطة فقط</span>
         <span class="tab-count">@Model.Count(p => p.IsActive)</span>
     </a>
     <a asp-action="Index" asp-route-filter="residential" class="filter-tab @(currentFilter == "residential" ? "active" : "")">
@@ -121,7 +121,7 @@
         <span class="tab-count">@Model.Count(p => p.ComputedType == ProjectTypeEnum.CommercialProject)</span>
     </a>
     <a asp-action="Index" asp-route-filter="construction" class="filter-tab @(currentFilter == "construction" ? "active" : "")">
-        <span><i class="fas fa-hard-hat"></i> قيد الإنشاء</span>
+        <span><i class="fas fa-hard-hat"></i> تحت الإنشاء</span>
         <span class="tab-count">@Model.Count(p => p.ComputedType == ProjectTypeEnum.UnderConstruction)</span>
     </a>
 </div>
@@ -151,7 +151,7 @@
                         <!-- Price -->
                         @if (project.MinPrice.HasValue)
                         {
-                            <div class="ad-price">من @project.MinPrice.Value.ToString("N0") جنيه</div>
+                            <div class="ad-price">من @project.MinPrice.Value.ToString("N0") ج.م</div>
                         }
                     </div>
                     <div class="ad-content">
@@ -161,7 +161,7 @@
                             @project.CityName @(project.DistrictName != null ? $"- {project.DistrictName}" : "")
                         </p>
                         <div class="ad-details">
-                            <span><i class="fas fa-home"></i> @project.PropertiesCount وحدة</span>
+                            <span><i class="fas fa-home"></i> @project.PropertiesCount وحدات</span>
                         </div>
                         <div class="ad-footer">
                             <span class="ad-owner">
@@ -187,7 +187,7 @@
     {
         <div class="col-12">
             <div class="alert alert-info text-center">
-                <i class="fas fa-info-circle"></i> لا توجد مشاريع متاحة حالياً
+                <i class="fas fa-info-circle"></i> لا توجد مشاريع متاحة.
             </div>
         </div>
     }

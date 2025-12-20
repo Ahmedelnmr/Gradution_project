@@ -12,6 +12,9 @@ namespace Homy.Domin.models
         [Required, MaxLength(100)]
         public string Name { get; set; } = null!;             // أسانسير – بلكونة – جراج
 
+        [MaxLength(100)]
+        public string? NameEn { get; set; }                   // English name
+
         [MaxLength(500)]
         public string? IconUrl { get; set; }
 

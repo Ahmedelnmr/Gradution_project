@@ -12,15 +12,15 @@
             <h2>تفاصيل الإعلان</h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">الرئيسية</a></li>
-                    <li class="breadcrumb-item"><a href="@Url.Action("Index")">الإعلانات</a></li>
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">لوحة التحكم</a></li>
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index")">إدارة الإعلانات</a></li>
                     <li class="breadcrumb-item active">@Model.Title</li>
                 </ol>
             </nav>
         </div>
         <div class="col-auto">
             <span class="badge @(Model.Status == PropertyStatus.Active ? "bg-success" : (Model.Status == PropertyStatus.PendingReview ? "bg-warning" : "bg-danger")) fs-6 px-3 py-2">
-                @(Model.Status == PropertyStatus.PendingReview ? "تحت المراجعة" : Model.Status == PropertyStatus.Active ? "نشط" : "مرفوض")
+                @(Model.Status == PropertyStatus.PendingReview ? "قيد المراجعة" : Model.Status == PropertyStatus.Active ? "نشط" : "مرفوض")
             </span>
         </div>
     </div>
@@ -62,14 +62,14 @@
                             <div class="p-3 border rounded">
                                 <i class="fas fa-bed fs-4 text-primary"></i>
                                 <div class="fw-bold mt-2">@Model.Rooms</div>
-                                <small>غرف</small>
+                                <small>الغرف</small>
                             </div>
                         </div>
                         <div class="col-3 text-center">
                             <div class="p-3 border rounded">
                                 <i class="fas fa-bath fs-4 text-primary"></i>
                                 <div class="fw-bold mt-2">@Model.Bathrooms</div>
-                                <small>حمامات</small>
+                                <small>الحمامات</small>
                             </div>
                         </div>
                         <div class="col-3 text-center">
@@ -115,7 +115,7 @@
                             </div>
                             <div class="mb-1">
                                 <span class="badge @(review.Action == ReviewAction.Approved ? "bg-success" : review.Action == ReviewAction.Rejected ? "bg-danger" : "bg-warning")">
-                                    @(review.Action == ReviewAction.Approved ? "قبول" : review.Action == ReviewAction.Rejected ? "رفض" : "طلب تعديل")
+                                    @(review.Action == ReviewAction.Approved ? "مقبول" : review.Action == ReviewAction.Rejected ? "مرفوض" : "مطلوب تعديل")
                                 </span>
                             </div>
                             <small>@review.Message</small>
@@ -132,7 +132,7 @@
         <div class="col-lg-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5>المعلن</h5>
+                    <h5>المالك</h5>
                     <div class="d-flex align-items-center mb-3">
                         <img src="@(string.IsNullOrEmpty(Model.OwnerImage) ? "https://ui-avatars.com/api/?name=" + Model.OwnerName : Model.OwnerImage)" class="rounded-circle me-3" width="50" height="50">
                         <div>
@@ -180,3 +180,4 @@
         </div>
     </div>
 </div>
+

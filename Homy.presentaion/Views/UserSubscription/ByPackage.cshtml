@@ -1,16 +1,18 @@
-﻿@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
+@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
 
+@{
+    ViewData["Title"] = "اشتراكات الباقة";
+}
 
-<h2>اشتراكات الباكدج</h2>
-
+<h2>اشتراكات الباقة</h2>
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>User</th>
-            <th>Start</th>
-            <th>End</th>
-            <th>Active</th>
+            <th>المستخدم</th>
+            <th>تاريخ البدء</th>
+            <th>تاريخ الانتهاء</th>
+            <th>نشط</th>
         </tr>
     </thead>
     <tbody>

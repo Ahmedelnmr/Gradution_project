@@ -2,6 +2,8 @@ using Homy.Application.Contract_Service;
 using Homy.Application.Service;
 using Homy.Domin.Contract_Repo;
 using Homy.Domin.Contract_Service;
+using Homy.Application.Services.Implementations;
+using Homy.Application.Services.Interfaces;
 using Homy.Domin.models;
 using Homy.Infurastructure.Data;
 using Homy.Infurastructure.Repository;
@@ -9,6 +11,7 @@ using Homy.Infurastructure.Service;
 using Homy.Infurastructure.Unitofworks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace Homy.presentaion
 {
@@ -17,6 +20,10 @@ namespace Homy.presentaion
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // ========== Configure Console Encoding for Arabic ==========
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
 
             // ========== Services Configuration ==========
 
@@ -80,7 +87,10 @@ namespace Homy.presentaion
 
 
             // ========== Build Application ==========
-            var app = builder.Build();
+            
+builder.Services.AddScoped<IPackage_Service, Package_Service>();
+
+var app = builder.Build();
 
             // Ensure Database Created
             using (var scope = app.Services.CreateScope())
@@ -99,7 +109,6 @@ namespace Homy.presentaion
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
             // Default Route
             app.MapControllerRoute(
                 name: "default",

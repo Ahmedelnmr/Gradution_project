@@ -1,28 +1,28 @@
 @model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
 
 @{
-    ViewData["Title"] = "All User Subscriptions";
+    ViewData["Title"] = "إدارة الاشتراكات";
 }
 
-<h1>All User Subscriptions</h1>
+<h1>إدارة الاشتراكات</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
-    <a asp-action="Expired" class="btn btn-danger">Expired Subscriptions</a>
-    <a asp-action="ExpiringSoon" class="btn btn-warning">Expiring Soon</a>
+    <a asp-action="Create" class="btn btn-primary">إنشاء</a>
+    <a asp-action="Expired" class="btn btn-danger">الاشتراكات المنتهية</a>
+    <a asp-action="ExpiringSoon" class="btn btn-warning">تنتهي قريباً</a>
 </p>
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>User Name</th>
-            <th>Package ID</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Active</th>
-            <th>Payment Method</th>
-            <th>Amount Paid</th>
-            <th>Actions</th>
+            <th>الاسم</th>
+            <th>اسم الباقة</th>
+            <th>تاريخ البدء</th>
+            <th>تاريخ الانتهاء</th>
+            <th>الحالة</th>
+            <th>طريقة الدفع</th>
+            <th>المبلغ المدفوع</th>
+            <th>إجراءات</th>
         </tr>
     </thead>
     <tbody>
@@ -36,18 +36,18 @@
                 <td>
                     @if (item.IsActive)
                     {
-                        <span class="badge bg-success">Active</span>
+                        <span class="badge bg-success">نشط</span>
                     }
                     else
                     {
-                        <span class="badge bg-secondary">Inactive</span>
+                        <span class="badge bg-secondary">غير نشط</span>
                     }
                 </td>
                 <td>@item.PaymentMethod</td>
                 <td>@item.AmountPaid</td>
                 <td>
-                    <a asp-action="Details" asp-route-userId="@item.UserId" class="btn btn-info btn-sm">Details</a>
-                    <a asp-action="Update" asp-route-userId="@item.UserId" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Details" asp-route-userId="@item.UserId" class="btn btn-info btn-sm">تفاصيل</a>
+                    <a asp-action="Update" asp-route-userId="@item.UserId" class="btn btn-warning btn-sm">تعديل</a>
                 </td>
             </tr>
         }

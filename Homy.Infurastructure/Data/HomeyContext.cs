@@ -242,6 +242,31 @@ namespace Homy.Infurastructure.Data
             builder.Entity<User>()
                 .HasIndex(u => u.IsActive);
 
+            // ====================== Decimal Precision Configuration ======================
+            builder.Entity<Property>()
+                .Property(p => p.Latitude)
+                .HasPrecision(10, 7); // 10 digits total, 7 after decimal point (suitable for GPS)
+
+            builder.Entity<Property>()
+                .Property(p => p.Longitude)
+                .HasPrecision(10, 7); // 10 digits total, 7 after decimal point (suitable for GPS)
+
+            // ====================== Performance Indexes for Soft Delete ======================
+            builder.Entity<Property>()
+                .HasIndex(p => p.IsDeleted);
+
+            builder.Entity<User>()
+                .HasIndex(u => u.IsDeleted);
+
+            builder.Entity<City>()
+                .HasIndex(c => c.IsDeleted);
+
+            builder.Entity<District>()
+                .HasIndex(d => d.IsDeleted);
+
+            builder.Entity<PropertyType>()
+                .HasIndex(pt => pt.IsDeleted);
+
             // ====================== Query Filters (Soft Delete) ======================
             builder.Entity<City>().HasQueryFilter(e => !e.IsDeleted);
             builder.Entity<District>().HasQueryFilter(e => !e.IsDeleted);

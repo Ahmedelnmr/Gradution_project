@@ -12,6 +12,9 @@ namespace Homy.Domin.models
         [Required, MaxLength(100)]
         public string Name { get; set; } = null!;        // سوهاج – القاهرة – الإسكندرية
 
+        [MaxLength(100)]
+        public string? NameEn { get; set; }              // English name
+
         public virtual ICollection<District> Districts { get; set; } = new List<District>();
         public virtual ICollection<Property> Properties { get; set; } = new List<Property>();
         public virtual ICollection<Project> Projects { get; set; } = new List<Project>();

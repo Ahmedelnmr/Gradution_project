@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Homy.Domin\\Contract_Repo",
-    "\\Homy.Domin\\IUnitofwork",
-    "\\Homy.Infurastructure\\Repository",
-    "\\Homy.Infurastructure\\Unitofworks",
     "\\Homy.presentaion",
-    "\\Homy.presentaion\\Controllers"
+    "\\Homy.presentaion\\Properties",
+    "\\Homy.presentaion\\Views",
+    "\\Homy.presentaion\\Views\\Shared"
   ],
-  "SelectedNode": "\\Homy.presentaion\\Controllers\\UserController.cs",
+  "SelectedNode": "\\Homy.presentaion\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

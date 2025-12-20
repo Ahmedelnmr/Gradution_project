@@ -1,18 +1,18 @@
 @model Homy.Application.Dtos.ReportsDto
 @{
-    ViewData["Title"] = "الإحصائيات والتقارير - هومي";
+    ViewData["Title"] = "التقارير والإحصائيات - Homy";
 }
 
 <div class="page-header">
     <div class="header-content">
         <h1 class="page-title">
             <i class="fas fa-chart-bar text-primary"></i>
-            الإحصائيات والتقارير
+            التقارير والإحصائيات
         </h1>
         <nav class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
-                <li class="breadcrumb-item active">الإحصائيات والتقارير</li>
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item active">التقارير والإحصائيات</li>
             </ol>
         </nav>
     </div>
@@ -61,7 +61,7 @@
             <div class="stat-icon"><i class="fas fa-eye"></i></div>
             <div class="stat-content">
                 <h3 class="stat-value">@Model.MonthlyViews.ToString("N0")</h3>
-                <p class="stat-label">المشاهدات الكلية</p>
+                <p class="stat-label">إجمالي المشاهدات</p>
             </div>
             <div class="stat-trend @(Model.ViewsGrowthPercentage >= 0 ? "up" : "down")">
                 <i class="fas fa-arrow-@(Model.ViewsGrowthPercentage >= 0 ? "up" : "down")"></i>
@@ -74,7 +74,7 @@
             <div class="stat-icon"><i class="fas fa-coins"></i></div>
             <div class="stat-content">
                 <h3 class="stat-value" id="totalRevenueValue">@Model.TotalRevenue.ToString("N0") <small>جنيه</small></h3>
-                <p class="stat-label">إيرادات السنة</p>
+                <p class="stat-label">الإيرادات السنوية</p>
             </div>
             <div class="stat-trend @(Model.RevenueGrowthPercentage >= 0 ? "up" : "down")">
                 <i class="fas fa-arrow-@(Model.RevenueGrowthPercentage >= 0 ? "up" : "down")"></i>
@@ -144,7 +144,7 @@
             <div class="card-header">
                 <h5 class="card-title">
                     <i class="fas fa-map-marked-alt"></i>
-                    أكثر المناطق نشاطاً
+                    المناطق الأكثر نشاطاً
                 </h5>
             </div>
             <div class="card-body">
@@ -211,7 +211,7 @@
                         <div class="comp-label">إعلانات جديدة</div>
                         <div class="comp-values">
                             <span class="comp-current">@Model.MonthlyComparison.NewAds.CurrentValue</span>
-                            <span class="comp-vs">vs</span>
+                            <span class="comp-vs">مقابل</span>
                             <span class="comp-previous">@Model.MonthlyComparison.NewAds.PreviousValue</span>
                         </div>
                         <span class="comp-change text-@(Model.MonthlyComparison.NewAds.IsPositive ? "success" : "danger")">
@@ -223,7 +223,7 @@
                         <div class="comp-label">مستخدمين جدد</div>
                         <div class="comp-values">
                             <span class="comp-current">@Model.MonthlyComparison.NewUsers.CurrentValue</span>
-                            <span class="comp-vs">vs</span>
+                            <span class="comp-vs">مقابل</span>
                             <span class="comp-previous">@Model.MonthlyComparison.NewUsers.PreviousValue</span>
                         </div>
                         <span class="comp-change text-@(Model.MonthlyComparison.NewUsers.IsPositive ? "success" : "danger")">
@@ -235,7 +235,7 @@
                         <div class="comp-label">اشتراكات جديدة</div>
                         <div class="comp-values">
                             <span class="comp-current">@Model.MonthlyComparison.NewSubscriptions.CurrentValue</span>
-                            <span class="comp-vs">vs</span>
+                            <span class="comp-vs">مقابل</span>
                             <span class="comp-previous">@Model.MonthlyComparison.NewSubscriptions.PreviousValue</span>
                         </div>
                         <span class="comp-change text-@(Model.MonthlyComparison.NewSubscriptions.IsPositive ? "success" : "danger")">
@@ -247,7 +247,7 @@
                         <div class="comp-label">الإيرادات</div>
                         <div class="comp-values">
                             <span class="comp-current">@Model.MonthlyComparison.Revenue.CurrentValue.ToString("N0")</span>
-                            <span class="comp-vs">vs</span>
+                            <span class="comp-vs">مقابل</span>
                             <span class="comp-previous">@Model.MonthlyComparison.Revenue.PreviousValue.ToString("N0")</span>
                         </div>
                         <span class="comp-change text-@(Model.MonthlyComparison.Revenue.IsPositive ? "success" : "danger")">
@@ -259,7 +259,7 @@
                         <div class="comp-label">تذاكر الدعم</div>
                         <div class="comp-values">
                             <span class="comp-current">@Model.MonthlyComparison.SupportTickets.CurrentValue</span>
-                            <span class="comp-vs">vs</span>
+                            <span class="comp-vs">مقابل</span>
                             <span class="comp-previous">@Model.MonthlyComparison.SupportTickets.PreviousValue</span>
                         </div>
                         <span class="comp-change text-@(Model.MonthlyComparison.SupportTickets.IsPositive ? "danger" : "success")">
@@ -291,7 +291,7 @@
                 data: {
                     labels: data.map(d => d.month || d.Month),
                     datasets: [{
-                        label: 'الإيرادات (جنيه)',
+                        label: 'الإيرادات',
                         data: data.map(d => d.revenue || d.Revenue),
                         backgroundColor: 'rgba(99, 102, 241, 0.8)',
                         borderColor: 'rgba(99, 102, 241, 1)',
@@ -313,7 +313,7 @@
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    return context.parsed.y.toLocaleString('ar-EG') + ' جنيه';
+                                    return context.parsed.y.toLocaleString('@System.Globalization.CultureInfo.CurrentCulture.Name') + ' جنيه';
                                 }
                             }
                         }
@@ -323,7 +323,7 @@
                             beginAtZero: true,
                             ticks: {
                                 callback: function(value) {
-                                    return value.toLocaleString('ar-EG');
+                                    return value.toLocaleString('@System.Globalization.CultureInfo.CurrentCulture.Name');
                                 }
                             }
                         }
@@ -349,7 +349,7 @@
                         const totalRevenueElement = document.getElementById('totalRevenueValue');
                         if (totalRevenueElement) {
                             // Format number with commas (e.g. 42,700)
-                            const formattedRevenue = result.totalRevenue.toLocaleString('en-US');
+                            const formattedRevenue = result.totalRevenue.toLocaleString('@System.Globalization.CultureInfo.CurrentCulture.Name');
                             // Ensure the small tag is preserved with correct margin
                             totalRevenueElement.innerHTML = `${formattedRevenue} <small>جنيه</small>`;
                         }
@@ -360,7 +360,7 @@
 
         function exportReport() {
             alert('جاري تصدير التقرير...');
-            // يمكن إضافة منطق التصدير هنا
+            // Logic here
         }
     </script>
 }

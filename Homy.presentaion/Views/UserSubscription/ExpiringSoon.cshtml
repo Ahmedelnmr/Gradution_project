@@ -1,21 +1,23 @@
-﻿@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
+@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
 
+@{
+    ViewData["Title"] = "اشتراكات تنتهي قريباً";
+}
 
-<h2>اشتراكات هتنتهي قريب</h2>
-
+<h2>اشتراكات تنتهي قريباً</h2>
 
 <table class="table table-warning">
     <tr>
-        <th>User</th>
-        <th>End Date</th>
-        <th>Status</th>
+        <th>المستخدم</th>
+        <th>تاريخ الانتهاء</th>
+        <th>حالة الاشتراك</th>
     </tr>
     @foreach (var sub in Model)
     {
         <tr>
             <td>@sub.UserName</td>
             <td>@sub.EndDate.ToShortDateString()</td>
-            <td>@(sub.IsActive ? "Active" : "Inactive")</td>
+            <td>@(sub.IsActive ? "نشط" : "غير نشط")</td>
         </tr>
     }
 </table>

@@ -1,1278 +1,282 @@
-<<<<<<< HEAD
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\appsettings.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\swae.build.ex.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Homy\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\appsettings.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
-D:\Graduation_project\Homy\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
-D:\Graduation_project\Homy\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Drawing.Common.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Windows.Extensions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
-D:\Final_projectt\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
-D:\Final_projectt\Gradution_project\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
-=======
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\swae.build.ex.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.Framework.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Common.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Configuration.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Frameworks.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.LibraryModel.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Packaging.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.ProjectModel.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Protocol.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Versioning.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\af\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ar\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\az\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bg\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\da\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\el\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fa\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\he\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hr\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hu\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hy\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\id\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\is\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ku\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\lv\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\mt\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nl\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ro\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sk\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sl\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sv\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uk\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\vi\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\ITI Materials .Net\Graduation_Project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
->>>>>>> sharqawy
->>>>>>> youssef_arram
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mapster.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mapster.Core.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.Framework.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Common.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Configuration.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Frameworks.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.LibraryModel.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Packaging.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.ProjectModel.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Protocol.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Versioning.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\af\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ar\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\az\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bg\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\da\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\el\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fa\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\he\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hr\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hu\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hy\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\id\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\is\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ku\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\lv\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\mt\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nl\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ro\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sk\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sl\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sv\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uk\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\vi\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
-D:\FinalProject\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\swae.build.ex.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
-D:\FinalProject\Gradution_project\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
-D:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.json
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mapster.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mapster.Core.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.Framework.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Newtonsoft.Json.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Common.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Configuration.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Frameworks.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.LibraryModel.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Packaging.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.ProjectModel.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Protocol.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Versioning.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\af\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ar\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\az\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bg\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\da\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\el\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fa\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\he\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hr\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hu\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hy\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\id\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\is\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ku\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\lv\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\mt\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nl\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ro\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sk\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sl\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sv\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uk\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\vi\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
-d:\Main to run\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\swae.build.ex.cache
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
-d:\Main to run\Gradution_project\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.Development.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\appsettings.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.runtime.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.staticwebassets.endpoints.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.exe
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.deps.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.runtimeconfig.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.presentaion.pdb
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Core.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Azure.Identity.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Humanizer.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mapster.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mapster.Core.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Common.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Configuration.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Frameworks.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.LibraryModel.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Packaging.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.ProjectModel.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Protocol.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.ClientModel.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.CodeDom.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\System.Text.Json.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\af\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ar\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\az\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bg\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\da\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\el\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fa\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\he\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hr\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hu\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\hy\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\id\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\is\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ku\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\lv\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\mt\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\nl\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ro\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sk\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sl\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\sv\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uk\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\vi\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Domin.pdb
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Infurastructure.pdb
+D:\Graduation_project\Gradution_project\Homy.presentaion\bin\Debug\net8.0\Homy.Application.pdb
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.AssemblyReference.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.GenerateResource.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.GeneratedMSBuildEditorConfig.editorconfig
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfoInputs.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.AssemblyInfo.cs
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.csproj.CoreCompileInputs.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.MvcApplicationPartsAssemblyInfo.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.RazorAssemblyInfo.cs
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.sourcelink.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\bundle\Homy.presentaion.styles.css
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\scopedcss\projectbundle\Homy.presentaion.bundle.scp.css
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.development.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.pre.7BA7594B.Up2Date
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\refint\Homy.presentaion.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.pdb
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.genruntimeconfig.cache
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\ref\Homy.presentaion.dll
+D:\Graduation_project\Gradution_project\Homy.presentaion\obj\Debug\net8.0\Homy.presentaion.Resources.SharedResources.resources

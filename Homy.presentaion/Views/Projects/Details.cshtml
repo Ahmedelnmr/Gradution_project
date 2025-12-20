@@ -1,4 +1,4 @@
-﻿@model Homy.Application.Dtos.ProjectDto
+@model Homy.Application.Dtos.ProjectDto
 @{
     ViewData["Title"] = $"{Model.Name} - تفاصيل المشروع";
 }
@@ -12,8 +12,8 @@
         </h1>
         <nav class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
-                <li class="breadcrumb-item"><a asp-action="Index">المشاريع</a></li>
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">إدارة المشاريع</a></li>
                 <li class="breadcrumb-item active">@Model.Name</li>
             </ol>
         </nav>
@@ -26,7 +26,7 @@
             @Html.AntiForgeryToken()
             <button type="submit" class="btn @(Model.IsActive ? "btn-warning" : "btn-success")">
                 <i class="fas fa-@(Model.IsActive ? "pause" : "play")-circle"></i>
-                @(Model.IsActive ? "إلغاء التفعيل" : "تفعيل")
+                @(Model.IsActive ? "تعطيل" : "تفعيل")
             </button>
         </form>
         <form asp-action="Delete" asp-route-id="@Model.Id" method="post"
@@ -76,7 +76,7 @@
                 @if (!string.IsNullOrEmpty(Model.LocationDescription))
                 {
                     <div class="mb-3">
-                        <p><strong><i class="fas fa-map-marker-alt text-primary"></i> الموقع:</strong></p>
+                        <p><strong><i class="fas fa-map-marker-alt text-primary"></i> وصف الموقع:</strong></p>
                         <p class="text-muted">@Model.LocationDescription</p>
                     </div>
                 }
@@ -92,7 +92,7 @@
                     {
                         <div class="col-md-4">
                             <p>
-                                <strong><i class="fas fa-tag text-warning"></i> السعر من:</strong>
+                                <strong><i class="fas fa-tag text-warning"></i> السعر يبدأ من:</strong>
                                 @Model.MinPrice.Value.ToString("N0") جنيه
                             </p>
                         </div>
@@ -102,7 +102,7 @@
                         <div class="col-md-4">
                             <p>
                                 <strong><i class="fas fa-ruler-combined text-info"></i> المساحة:</strong>
-                                @Model.MinArea - @Model.MaxArea م²
+                                @Model.MinArea - @Model.MaxArea متر مربع
                             </p>
                         </div>
                     }
@@ -118,7 +118,7 @@
                 <div>
                     <span class="badge @(Model.IsActive ? "bg-success" : "bg-warning") p-2">
                         <i class="fas fa-@(Model.IsActive ? "check" : "pause")-circle"></i>
-                        @(Model.IsActive ? "مشروع نشط" : "غير نشط")
+                        @(Model.IsActive ? "مشروع نشط" : "مشروع غير نشط")
                     </span>
                 </div>
             </div>

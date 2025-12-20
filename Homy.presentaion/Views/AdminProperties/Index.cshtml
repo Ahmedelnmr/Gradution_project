@@ -33,7 +33,7 @@
             <span class="tab-count">@totalAds</span>
         </a>
         <a href="@Url.Action("Index", new { Status = PropertyStatus.PendingReview })" class="filter-tab @(currentStatus == PropertyStatus.PendingReview ? "active" : "")">
-            <span>تحت المراجعة</span>
+            <span>قيد المراجعة</span>
             <span class="tab-count">@GetCount(PropertyStatus.PendingReview)</span>
         </a>
         <a href="@Url.Action("Index", new { Status = PropertyStatus.Active })" class="filter-tab @(currentStatus == PropertyStatus.Active ? "active" : "")">
@@ -57,7 +57,7 @@
                         @switch (item.Status)
                         {
                             case PropertyStatus.PendingReview:
-                                <span class="position-absolute top-0 start-0 badge bg-warning m-2">تحت المراجعة</span>
+                                <span class="position-absolute top-0 start-0 badge bg-warning m-2">قيد المراجعة</span>
                                 break;
                             case PropertyStatus.Active:
                                 <span class="position-absolute top-0 start-0 badge bg-success m-2">نشط</span>
@@ -70,7 +70,7 @@
                         <div class="position-absolute bottom-0 end-0 bg-primary text-white px-2 py-1 m-2 rounded">
                             @if(item.Purpose == PropertyPurpose.ForRent && item.RentPriceMonthly.HasValue)
                             {
-                                <small>@item.RentPriceMonthly.Value.ToString("N0") جنيه/شهر</small>
+                                <small>@item.RentPriceMonthly.Value.ToString("N0") جنيه / شهر</small>
                             }
                             else
                             {
@@ -129,3 +129,4 @@
         </nav>
     }
 </div>
+

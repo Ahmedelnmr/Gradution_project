@@ -1,0 +1,90 @@
+/* ================================================
+   LTR (English) Specific Styles
+   ================================================ */
+
+body[dir="ltr"] {
+    text-align: left !important;
+}
+
+/* Sidebar LTR */
+body[dir="ltr"] .sidebar {
+    left: 0;
+    right: auto;
+}
+
+/* Main Content LTR */
+body[dir="ltr"] .main-content {
+    margin-left: 280px;
+    margin-right: 0;
+}
+
+body[dir="ltr"] .main-content.collapsed {
+    margin-left: 80px;
+}
+
+/* Text Alignment */
+body[dir="ltr"] .text-end {
+    text-align: left !important;
+}
+
+body[dir="ltr"] .text-start {
+    text-align: right !important;
+}
+
+/* Margins and Padding */
+body[dir="ltr"] .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+body[dir="ltr"] .ms-2 {
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
+}
+
+body[dir="ltr"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+body[dir="ltr"] .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+/* Float */
+body[dir="ltr"] .float-end {
+    float: left !important;
+}
+
+body[dir="ltr"] .float-start {
+    float: right !important;
+}
+
+/* Icons */
+body[dir="ltr"] .sidebar-nav .nav-link i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* Cards */
+body[dir="ltr"] .card {
+    text-align: left;
+}
+
+/* Dropdowns */
+body[dir="ltr"] .dropdown-menu {
+    text-align: left;
+}
+
+/* Form Controls */
+body[dir="ltr"] .form-control,
+body[dir="ltr"] .form-select {
+    text-align: left;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,8 +1,0 @@
-D:\Main to run\Gradution_project\Homy.UnitTests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_Homy.UnitTests
-D:\Main to run\Gradution_project\Homy.UnitTests\bin\Debug\net10.0\CoverletSourceRootsMapping_Homy.UnitTests
-D:\Main to run\Gradution_project\Homy.UnitTests\obj\Debug\net10.0\Homy.UnitTests.csproj.AssemblyReference.cache
-D:\Main to run\Gradution_project\Homy.UnitTests\obj\Debug\net10.0\Homy.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
-D:\Main to run\Gradution_project\Homy.UnitTests\obj\Debug\net10.0\Homy.UnitTests.AssemblyInfoInputs.cache
-D:\Main to run\Gradution_project\Homy.UnitTests\obj\Debug\net10.0\Homy.UnitTests.AssemblyInfo.cs
-D:\Main to run\Gradution_project\Homy.UnitTests\obj\Debug\net10.0\Homy.UnitTests.csproj.CoreCompileInputs.cache
-D:\Main to run\Gradution_project\Homy.UnitTests\obj\Debug\net10.0\Homy.UnitTests.sourcelink.json

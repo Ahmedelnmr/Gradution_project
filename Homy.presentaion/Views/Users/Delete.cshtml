@@ -1,7 +1,7 @@
-﻿@using Homy.Application.Dtos.UserDtos
+@using Homy.Application.Dtos.UserDtos
 @model UserDto
 @{
-    ViewData["Title"] = "حذف المستخدم";
+    ViewData["Title"] = "حذف مستخدم";
 }
 
 <div class="container">
@@ -10,7 +10,7 @@
             <!-- Header -->
             <div class="text-center mb-4">
                 <i class="fas fa-exclamation-triangle text-danger" style="font-size: 4rem;"></i>
-                <h2 class="mt-3 text-danger">⚠️ تحذير: حذف المستخدم</h2>
+                <h2 class="mt-3 text-danger">تحذير: حذف مستخدم</h2>
             </div>
 
             <!-- Warning Card -->
@@ -21,17 +21,17 @@
                 <div class="card-body">
                     <div class="alert alert-danger" role="alert">
                         <h5 class="alert-heading">
-                            <i class="fas fa-exclamation-circle"></i> هل أنت متأكد من حذف هذا المستخدم؟
+                            <i class="fas fa-exclamation-circle"></i> هل أنت متأكد من أنك تريد حذف هذا المستخدم؟
                         </h5>
                         <hr>
                         <p class="mb-0">
-                            <strong>ملاحظة مهمة:</strong> هذا الإجراء <strong>لا يمكن التراجع عنه!</strong>
+                            <strong>ملاحظة هامة:</strong> هذا الإجراء لا يمكن التراجع عنه.
                             <br>
-                            سيتم إخفاء المستخدم من النظام (Soft Delete) وإلغاء تفعيل حسابه.
+                            سيتم حذف جميع بيانات المستخدم والعقارات المرتبطة به نهائياً من النظام.
                         </p>
                     </div>
 
-                    <!-- بيانات المستخدم المراد حذفه -->
+                    <!-- User Data Summary -->
                     <div class="row mt-4">
                         <div class="col-md-4 text-center">
                             @if (!string.IsNullOrEmpty(Model.ProfileImageUrl))
@@ -56,11 +56,11 @@
                                         <td>@Model.PhoneNumber</td>
                                     </tr>
                                     <tr>
-                                        <th><i class="fas fa-user-tag"></i> الدور:</th>
+                                        <th><i class="fas fa-user-tag"></i> الصلاحية:</th>
                                         <td>@Model.RoleText</td>
                                     </tr>
                                     <tr>
-                                        <th><i class="fas fa-home"></i> عدد الإعلانات:</th>
+                                        <th><i class="fas fa-home"></i> عدد العقارات:</th>
                                         <td><span class="badge bg-danger">@Model.PropertiesCount</span></td>
                                     </tr>
                                     <tr>
@@ -68,7 +68,7 @@
                                         <td><span class="badge bg-danger">@Model.SavedPropertiesCount</span></td>
                                     </tr>
                                     <tr>
-                                        <th><i class="fas fa-calendar"></i> تاريخ التسجيل:</th>
+                                        <th><i class="fas fa-calendar"></i> تاريخ الانضمام:</th>
                                         <td>@Model.CreatedAt.ToString("yyyy/MM/dd")</td>
                                     </tr>
                                 </tbody>
@@ -76,16 +76,16 @@
                         </div>
                     </div>
 
-                    <!-- معلومات إضافية -->
+                    <!-- Related Data Warning -->
                     @if (Model.PropertiesCount > 0 || Model.SavedPropertiesCount > 0)
                     {
                         <div class="alert alert-warning mt-3" role="alert">
                             <i class="fas fa-info-circle"></i>
-                            <strong>تنبيه:</strong>
-                            هذا المستخدم لديه
+                            <strong>تحذير:</strong>
+                            هذا المستخدم يملك
                             @if (Model.PropertiesCount > 0)
                             {
-                                <strong>@Model.PropertiesCount إعلان</strong>
+                                <strong>@Model.PropertiesCount عقار</strong>
                             }
                             @if (Model.PropertiesCount > 0 && Model.SavedPropertiesCount > 0)
                             {
@@ -112,7 +112,7 @@
                                 <i class="fas fa-eye"></i> مراجعة البيانات
                             </a>
                             <button type="submit" class="btn btn-danger btn-lg"
-                                    onclick="return confirm('هل أنت متأكد تماماً من حذف هذا المستخدم؟ لا يمكن التراجع عن هذا الإجراء!');">
+                                    onclick="return confirm('هل أنت متأكد نهائياً من الحذف؟');">
                                 <i class="fas fa-trash"></i> تأكيد الحذف
                             </button>
                         </div>
@@ -120,18 +120,19 @@
                 </div>
             </div>
 
-            <!-- إذا كان أدمن -->
+            <!-- Protection Alert -->
             @if (Model.Role == Homy.Domin.models.UserRole.Admin)
             {
                 <div class="alert alert-danger text-center" role="alert">
                     <i class="fas fa-ban fa-3x mb-3"></i>
-                    <h4>لا يمكن حذف حساب الأدمن!</h4>
-                    <p>حسابات الأدمن محمية من الحذف للحفاظ على أمان النظام.</p>
+                    <h4>لا يمكن حذف المسؤول</h4>
+                    <p>حسابات المسؤولين محمية ولا يمكن حذفها.</p>
                     <a asp-action="Index" class="btn btn-secondary mt-3">
-                        <i class="fas fa-arrow-right"></i> رجوع للقائمة
+                        <i class="fas fa-arrow-right"></i> العودة للقائمة
                     </a>
                 </div>
             }
         </div>
     </div>
 </div>
+

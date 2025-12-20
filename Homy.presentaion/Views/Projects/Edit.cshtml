@@ -1,6 +1,6 @@
-﻿@model Homy.Application.Dtos.UpdateProjectDto
+@model Homy.Application.Dtos.UpdateProjectDto
 @{
-    ViewData["Title"] = $"تعديل: {Model.Name}";
+    ViewData["Title"] = $"تعديل المشروع: {Model.Name}";
 }
 
 <!-- Page Header -->
@@ -8,12 +8,12 @@
     <div class="header-content">
         <h1 class="page-title">
             <i class="fas fa-edit text-primary"></i>
-            تعديل مشروع: @Model.Name
+            تعديل المشروع: @Model.Name
         </h1>
         <nav class="breadcrumb-nav">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">الرئيسية</a></li>
-                <li class="breadcrumb-item"><a asp-action="Index">المشاريع</a></li>
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">إدارة المشاريع</a></li>
                 <li class="breadcrumb-item active">تعديل</li>
             </ol>
         </nav>
@@ -53,7 +53,7 @@
                             <i class="fas fa-city text-primary"></i> المدينة *
                         </label>
                         <select asp-for="CityId" class="form-select" id="citySelect">
-                            <option value="">-- اختر المدينة --</option>
+                            <option value="">اختر المدينة</option>
                             @if (ViewBag.Cities != null)
                             {
                                 foreach (var city in ViewBag.Cities)
@@ -70,10 +70,10 @@
                     <!-- الحي -->
                     <div class="mb-3">
                         <label asp-for="DistrictId" class="form-label">
-                            <i class="fas fa-map-marked-alt text-primary"></i> الحي (اختياري)
+                            <i class="fas fa-map-marked-alt text-primary"></i> الحي
                         </label>
                         <select asp-for="DistrictId" class="form-select" id="districtSelect">
-                            <option value="">-- اختر الحي --</option>
+                            <option value="">اختر الحي</option>
                             @if (ViewBag.Districts != null)
                             {
                                 foreach (var district in ViewBag.Districts)
@@ -91,16 +91,16 @@
                     <!-- وصف الموقع -->
                     <div class="mb-3">
                         <label asp-for="LocationDescription" class="form-label">
-                            <i class="fas fa-map-marker-alt text-primary"></i> وصف الموقع (اختياري)
+                            <i class="fas fa-map-marker-alt text-primary"></i> وصف الموقع
                         </label>
                         <textarea asp-for="LocationDescription" class="form-control" rows="3"></textarea>
                         <span asp-validation-for="LocationDescription" class="text-danger"></span>
                     </div>
 
-                    <!-- رابط الشعار -->
+                    <!-- شعار المشروع -->
                     <div class="mb-3">
                         <label asp-for="LogoUrl" class="form-label">
-                            <i class="fas fa-image text-primary"></i> رابط شعار المشروع (اختياري)
+                            <i class="fas fa-image text-primary"></i> شعار المشروع
                         </label>
                         <input asp-for="LogoUrl" class="form-control" type="url" />
                         <span asp-validation-for="LogoUrl" class="text-danger"></span>
@@ -113,10 +113,10 @@
                         }
                     </div>
 
-                    <!-- رابط صورة الغلاف -->
+                    <!-- صورة الغلاف -->
                     <div class="mb-3">
                         <label asp-for="CoverImageUrl" class="form-label">
-                            <i class="fas fa-image text-primary"></i> رابط صورة الغلاف (اختياري)
+                            <i class="fas fa-image text-primary"></i> صورة الغلاف
                         </label>
                         <input asp-for="CoverImageUrl" class="form-control" type="url" />
                         <span asp-validation-for="CoverImageUrl" class="text-danger"></span>
@@ -129,7 +129,7 @@
                         }
                     </div>
 
-                    <!-- الحالة -->
+                    <!-- التفعيل -->
                     <div class="mb-3 form-check">
                         <input asp-for="IsActive" class="form-check-input" type="checkbox" />
                         <label asp-for="IsActive" class="form-check-label">
@@ -140,7 +140,7 @@
                     <!-- Action Buttons -->
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-save"></i> حفظ التعديلات
+                            <i class="fas fa-save"></i> حفظ التغييرات
                         </button>
                         <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">
                             <i class="fas fa-times"></i> إلغاء

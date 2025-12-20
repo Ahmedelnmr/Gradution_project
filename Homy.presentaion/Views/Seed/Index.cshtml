@@ -1,46 +1,44 @@
-@model dynamic
-
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-            <h1 class="mb-4">🌱 Data Seeder</h1>
+            <h1 class="mb-4">🌱 منشئ البيانات</h1>
             
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Current Statistics</h5>
+                    <h5 class="card-title">الإحصائيات الحالية</h5>
                     <div class="row mt-3">
                         <div class="col-4 mb-3">
                             <h3>@Model.PropertyTypes</h3>
-                            <small class="text-muted">Types</small>
+                            <small class="text-muted">أنواع العقارات</small>
                         </div>
                         <div class="col-4 mb-3">
                             <h3>@Model.Properties</h3>
-                            <small class="text-muted">Properties</small>
+                            <small class="text-muted">العقارات</small>
                         </div>
                         <div class="col-4 mb-3">
                             <h3>@Model.Users</h3>
-                            <small class="text-muted">Users</small>
+                            <small class="text-muted">المستخدمين</small>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="d-flex gap-3 justify-content-center">
-                <form asp-action="CreateData" method="post">
+                <form asp-action="SeedArabicData" method="post">
                     <button type="submit" class="btn btn-success btn-lg">
-                        <i class="fas fa-database"></i> Generate Fake Data
+                        <i class="fas fa-language"></i> إضافة بيانات عربية
                     </button>
                 </form>
 
-                <form asp-action="ClearData" method="post">
-                    <button type="submit" class="btn btn-danger btn-lg" onclick="return confirm('Are you sure you want to delete all seed data?');">
-                        <i class="fas fa-trash"></i> Clear Fake Data
+                <form asp-action="ClearAllData" method="post">
+                    <button type="submit" class="btn btn-danger btn-lg" onclick="return confirm('هل أنت متأكد من حذف جميع البيانات؟');">
+                        <i class="fas fa-trash-alt"></i> مسح جميع البيانات
                     </button>
                 </form>
             </div>
             
             <div class="mt-4 alert alert-info">
-                <strong>Note:</strong> Generated data will have prefix "Seed_" for easy identification.
+                <strong>ملاحظة:</strong> سيقوم هذا الإجراء بإضافة بيانات تجريبية باللغة العربية واختبار النظام.
             </div>
         </div>
     </div>

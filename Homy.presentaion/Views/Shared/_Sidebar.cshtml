@@ -33,7 +33,6 @@
             </li>
 
             <!-- إدارة الإعلانات -->
-            <!-- إدارة الإعلانات -->
             <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "AdminProperties" ? "active" : "")">
                 <a asp-controller="AdminProperties" asp-action="Index" class="nav-link">
                     <i class="fas fa-bullhorn"></i>
@@ -59,7 +58,7 @@
 
             <!-- إدارة الباقات -->
             <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Packages" ? "active" : "")">
-                <a asp-controller="Packages" asp-action="Index" class="nav-link">
+                <a asp-controller="Packges" asp-action="Index" class="nav-link">
                     <i class="fas fa-box"></i>
                     <span>إدارة الباقات</span>
                 </a>
@@ -72,15 +71,7 @@
                     <span>المشاريع والكمبوندات</span>
                 </a>
             </li>
-
-            <!-- الشكاوى والدعم -->
-            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Support" ? "active" : "")">
-                <a asp-controller="Support" asp-action="Index" class="nav-link">
-                    <i class="fas fa-headset"></i>
-                    <span>الشكاوى والدعم</span>
-                </a>
-            </li>
-
+     
             <!-- الإحصائيات والتقارير -->
             <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Reports" ? "active" : "")">
                 <a asp-controller="Reports" asp-action="Index" class="nav-link">
@@ -117,3 +108,4 @@
 
 <!-- Sidebar Overlay for Mobile -->
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
+

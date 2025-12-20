@@ -1,19 +1,21 @@
-﻿@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
+@model IEnumerable<Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>
 
+@{
+    ViewData["Title"] = "الاشتراكات المنتهية";
+}
 
 <h2>الاشتراكات المنتهية</h2>
 
-
 @if (!Model.Any())
 {
-    <p>لا يوجد اشتراكات منتهية</p>
+    <p>لا توجد اشتراكات منتهية</p>
 }
 else
 {
     <table class="table table-danger">
         <tr>
-            <th>User</th>
-            <th>End Date</th>
+            <th>المستخدم</th>
+            <th>تاريخ الانتهاء</th>
         </tr>
         @foreach (var sub in Model)
         {

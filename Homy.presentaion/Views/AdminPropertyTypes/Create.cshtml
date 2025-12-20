@@ -2,15 +2,15 @@
 @model CreatePropertyTypeDto
 
 @{
-    ViewData["Title"] = "إضافة نوع عقار";
+    ViewData["Title"] = "إنشاء إدارة أنواع العقارات";
 }
 
 <div class="container-fluid py-4">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">الرئيسية</a></li>
-            <li class="breadcrumb-item"><a href="@Url.Action("Index")">أنواع العقارات</a></li>
-            <li class="breadcrumb-item active">إضافة نوع جديد</li>
+            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">لوحة التحكم</a></li>
+            <li class="breadcrumb-item"><a href="@Url.Action("Index")">إدارة أنواع العقارات</a></li>
+            <li class="breadcrumb-item active">إنشاء</li>
         </ol>
     </nav>
 
@@ -18,20 +18,20 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="mb-0">إضافة نوع عقار جديد</h4>
+                    <h4 class="mb-0">إنشاء إدارة أنواع العقارات</h4>
                 </div>
                 <div class="card-body">
                     <form asp-action="Create" method="post">
                         @Html.AntiForgeryToken()
                         
                         <div class="mb-3">
-                            <label asp-for="Name" class="form-label">اسم النوع <span class="text-danger">*</span></label>
+                            <label asp-for="Name" class="form-label">الاسم <span class="text-danger">*</span></label>
                             <input asp-for="Name" class="form-control" placeholder="مثال: شقة، فيلا، أرض..." />
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="IconUrl" class="form-label">رابط الأيقونة</label>
+                            <label asp-for="IconUrl" class="form-label">الأيقونة</label>
                             <input asp-for="IconUrl" class="form-control" placeholder="https://example.com/icon.png" />
                             <span asp-validation-for="IconUrl" class="text-danger"></span>
                             <small class="form-text text-muted">اختياري - يمكنك إضافة رابط لأيقونة النوع</small>
@@ -55,3 +55,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
