@@ -3519,7 +3519,10 @@
         },
         "runtime": {
           "bin/placeholder/Homy.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Homy.Domin/1.0.0": {
         "type": "project",

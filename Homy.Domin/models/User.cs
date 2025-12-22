@@ -13,17 +13,20 @@ namespace Homy.Domin.models
         [Required, MaxLength(200)]
         public string FullName { get; set; } = null!;
 
-        [Required, Phone, MaxLength(20)]
-        public string PhoneNumber { get; set; } = null!;     // رقم الدخول
+
+
 
         [Phone, MaxLength(20)]
         public string? WhatsAppNumber { get; set; }
 
         public bool IsDeleted { get; set; }
 
-        public string? PasswordHash { get; set; }
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public UserRole Role { get; set; } = UserRole.Owner; // Default to Owner
 
-        public UserRole Role { get; set; } = UserRole.Owner; // Owner, Agent, Admin
+
+
+
         public bool IsVerified { get; set; } = false;
         public bool IsActive { get; set; } = true;
         public DateTime CreatedAt { get; set; }

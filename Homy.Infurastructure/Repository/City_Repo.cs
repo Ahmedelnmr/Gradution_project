@@ -16,23 +16,17 @@ namespace Homy.Infurastructure.Repository
         {
         }
 
-        /// <summary>
-        /// جلب كل المدن مع الأحياء التابعة لها
-        /// استخدام Include لجلب البيانات المرتبطة في Query واحد (Eager Loading)
-        /// </summary>
+   
         public async Task<IEnumerable<City>> GetAllWithDistrictsAsync()
         {
             return await dbset
-                .Include(c => c.Districts)           // جلب الأحياء
+                .Include(c => c.Districts)           
                 .Where(c => !c.IsDeleted)            // استبعاد المحذوف
                 .OrderBy(c => c.Name)                // ترتيب أبجدي
                 .ToListAsync();
         }
 
-        /// <summary>
-        /// جلب مدينة واحدة مع كل التفاصيل
-        /// Include متعدد للحصول على كل البيانات المرتبطة
-        /// </summary>
+        
         public async Task<City> GetByIdWithDetailsAsync(long id)
         {
             return await dbset
@@ -43,10 +37,7 @@ namespace Homy.Infurastructure.Repository
                 .FirstOrDefaultAsync(c => c.Id == id && !c.IsDeleted);
         }
 
-        /// <summary>
-        /// جلب المدن النشطة (اللي فيها عقارات أو مشاريع)
-        /// استخدام Any() للتحقق من وجود بيانات مرتبطة
-        /// </summary>
+       
         public async Task<IEnumerable<City>> GetActiveCitiesAsync()
         {
             return await dbset

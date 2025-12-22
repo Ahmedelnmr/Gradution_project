@@ -1,0 +1,89 @@
+@model Homy.Application.Dtos.AdminDtos.AdminProfileDto
+@{
+    ViewData["Title"] = "الملف الشخصي";
+}
+
+<div class="row">
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <div class="card-body text-center">
+                <div class="profile-image-wrapper mb-3">
+                    <img src="@(string.IsNullOrEmpty(Model.ProfileImageUrl) ? "https://ui-avatars.com/api/?name=" + (Model.FullName ?? "Admin") + "&background=6366f1&color=fff&size=150" : Model.ProfileImageUrl)" 
+                         alt="@Model.FullName" 
+                         class="img-fluid rounded-circle profile-img-preview" 
+                         style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #f3f4f6;">
+                </div>
+                <h4 class="font-weight-bold text-dark mb-1">@Model.FullName</h4>
+                <p class="text-muted mb-3">@Model.Email</p>
+                <div class="badge bg-primary px-3 py-2">مدير النظام</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">تعديل البيانات الشخصية</h6>
+            </div>
+            <div class="card-body">
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @TempData["SuccessMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                <form asp-action="Profile" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Email" />
+                    <input type="hidden" asp-for="ProfileImageUrl" />
+
+                    <div class="mb-3">
+                        <label asp-for="FullName" class="form-label">الاسم الكامل</label>
+                        <input asp-for="FullName" class="form-control" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">البريد الإلكتروني</label>
+                        <input asp-for="Email" class="form-control" disabled />
+                        <small class="text-muted">لا يمكن تغيير البريد الإلكتروني</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="PhoneNumber" class="form-label">رقم الهاتف</label>
+                        <input asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="ProfileImage" class="form-label">صورة الملف الشخصي</label>
+                        <input asp-for="ProfileImage" class="form-control" type="file" accept="image/*" onchange="previewImage(this)">
+                        <span asp-validation-for="ProfileImage" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-1"></i> حفظ التغييرات
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('.profile-img-preview').attr('src', e.target.result);
+                    // Update header/sidebar images immediately for better UX (optional)
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

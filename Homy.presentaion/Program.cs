@@ -2,8 +2,7 @@ using Homy.Application.Contract_Service;
 using Homy.Application.Service;
 using Homy.Domin.Contract_Repo;
 using Homy.Domin.Contract_Service;
-using Homy.Application.Services.Implementations;
-using Homy.Application.Services.Interfaces;
+
 using Homy.Domin.models;
 using Homy.Infurastructure.Data;
 using Homy.Infurastructure.Repository;
@@ -35,6 +34,14 @@ namespace Homy.presentaion
                 .AddEntityFrameworkStores<HomyContext>()
                 .AddDefaultTokenProviders();
 
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.AccessDeniedPath = "/Home/Error";
+                options.ExpireTimeSpan = TimeSpan.FromDays(7);
+                options.SlidingExpiration = true;
+            });
+
             // Configure DbContext
             builder.Services.AddDbContext<HomyContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -60,7 +67,7 @@ namespace Homy.presentaion
 
             // ==================== Register Unit of Work ====================
             builder.Services.AddScoped<IUnitofwork, Unitofwork>();
-            builder.Services.AddScoped<Homy.Infurastructure.Unitofworks.IUnitofwork, Homy.Infurastructure.Unitofworks.Unitofwork>(); // Duplicate safety if needed
+
 
             // ==================== Register Services ====================
             builder.Services.AddScoped<ICity_Service, City_Service>();
@@ -88,7 +95,7 @@ namespace Homy.presentaion
 
             // ========== Build Application ==========
             
-builder.Services.AddScoped<IPackage_Service, Package_Service>();
+
 
 var app = builder.Build();
 

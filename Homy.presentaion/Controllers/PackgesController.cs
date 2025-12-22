@@ -1,5 +1,5 @@
 using Homy.Application.Dtos;
-using Homy.Application.Services.Interfaces;
+using Homy.Application.Contract_Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Homy.presentaion.Controllers

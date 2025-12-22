@@ -1,4 +1,12 @@
-@* Homy Admin Dashboard - Top Navbar *@
+@using Microsoft.AspNetCore.Identity
+@using Homy.Domin.models
+@inject UserManager<User> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+    var displayName = user?.FullName ?? "Admin";
+    var profileImage = !string.IsNullOrEmpty(user?.ProfileImageUrl) ? user.ProfileImageUrl : "https://ui-avatars.com/api/?name=" + displayName + "&background=6366f1&color=fff&size=36";
+}
 
 <nav class="top-navbar">
     <div class="navbar-right">
@@ -73,13 +81,13 @@
         <!-- User Dropdown -->
         <div class="nav-dropdown">
             <button class="user-dropdown-btn" id="userDropdownBtn">
-                <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=36"
-                     alt="Admin" class="user-avatar-sm">
-                <span class="user-name-nav d-none d-md-inline">أدمن هومي</span>
+                <img src="@profileImage"
+                     alt="@displayName" class="user-avatar-sm" style="object-fit:cover;">
+                <span class="user-name-nav d-none d-md-inline">@displayName</span>
                 <i class="fas fa-chevron-down"></i>
             </button>
             <div class="dropdown-menu user-menu" id="userDropdownMenu">
-                <a href="#" class="dropdown-item">
+                <a asp-controller="Account" asp-action="Profile" class="dropdown-item">
                     <i class="fas fa-user"></i>
                     <span>الملف الشخصي</span>
                 </a>

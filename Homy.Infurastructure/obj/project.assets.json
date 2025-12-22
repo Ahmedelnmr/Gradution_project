@@ -4205,11 +4205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+      "projectUniqueName": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
       "projectName": "Homy.Infurastructure",
-      "projectPath": "d:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+      "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "d:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\obj\\",
+      "outputPath": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

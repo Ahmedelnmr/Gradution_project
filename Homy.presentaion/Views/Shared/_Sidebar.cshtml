@@ -1,4 +1,12 @@
-@* Homy Admin Dashboard - Sidebar *@
+@using Microsoft.AspNetCore.Identity
+@using Homy.Domin.models
+@inject UserManager<User> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+    var displayName = user?.FullName ?? "Admin";
+    var profileImage = !string.IsNullOrEmpty(user?.ProfileImageUrl) ? user.ProfileImageUrl : "https://ui-avatars.com/api/?name=" + displayName + "&background=6366f1&color=fff&size=40";
+}
 
 <aside class="sidebar" id="sidebar">
     <!-- Sidebar Header -->
@@ -16,7 +24,7 @@
     <nav class="sidebar-nav">
         <ul class="nav-list">
             <!-- لوحة التحكم -->
-            <li class="nav-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+            <li class="nav-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Index" && ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">
                 <a asp-controller="Home" asp-action="Index" class="nav-link">
                     <i class="fas fa-th-large"></i>
                     <span>لوحة التحكم</span>
@@ -49,7 +57,7 @@
             </li>
 
             <!-- إدارة الاشتراكات -->
-            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Subscriptions" ? "active" : "")">
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "UserSubscription" ? "active" : "")">
                 <a asp-controller="UserSubscription" asp-action="GetAll" class="nav-link">
                     <i class="fas fa-credit-card"></i>
                     <span>إدارة الاشتراكات</span>
@@ -57,7 +65,7 @@
             </li>
 
             <!-- إدارة الباقات -->
-            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Packages" ? "active" : "")">
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Packges" ? "active" : "")">
                 <a asp-controller="Packges" asp-action="Index" class="nav-link">
                     <i class="fas fa-box"></i>
                     <span>إدارة الباقات</span>
@@ -95,14 +103,14 @@
 
     <!-- Sidebar Footer -->
     <div class="sidebar-footer">
-        <div class="user-info">
-            <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff&size=40" alt="Admin"
-                class="user-avatar">
+        <a asp-controller="Account" asp-action="Profile" class="user-info text-decoration-none">
+            <img src="@profileImage" alt="@displayName"
+                class="user-avatar" style="object-fit:cover;">
             <div class="user-details">
-                <span class="user-name">أدمن هومي</span>
+                <span class="user-name">@displayName</span>
                 <span class="user-role">مدير النظام</span>
             </div>
-        </div>
+        </a>
     </div>
 </aside>
 

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homy.Application", "Homy.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homy.Infurastructure", "Homy.Infurastructure\Homy.Infurastructure.csproj", "{9C58657E-CEF3-4624-B773-A96085656951}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homy.api", "Homy.api\Homy.api.csproj", "{BA89A746-C02D-43CF-BD54-D8861A223905}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{9C58657E-CEF3-4624-B773-A96085656951}.Release|x64.Build.0 = Release|Any CPU
 		{9C58657E-CEF3-4624-B773-A96085656951}.Release|x86.ActiveCfg = Release|Any CPU
 		{9C58657E-CEF3-4624-B773-A96085656951}.Release|x86.Build.0 = Release|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Debug|x64.Build.0 = Debug|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Debug|x86.Build.0 = Debug|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Release|x64.ActiveCfg = Release|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Release|x64.Build.0 = Release|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA89A746-C02D-43CF-BD54-D8861A223905}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
