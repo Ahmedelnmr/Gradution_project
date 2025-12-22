@@ -1,8 +1,14 @@
 
+
 using Homy.Application.Service;
+using Homy.Application.Service.ApiServices;
 using Homy.Application.Contract_Service;
+using Homy.Application.Contract_Service.ApiServices;
 using Homy.Domin.models;
+using Homy.Domin.Contract_Repo;
 using Homy.Infurastructure.Data;
+using Homy.Infurastructure.Repository;
+using Homy.Infurastructure.Unitofworks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +30,28 @@ namespace Homy.api
             // Configure DbContext
             builder.Services.AddDbContext<HomyContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // Register Repositories
+            builder.Services.AddScoped(typeof(IGenric_Repo<>), typeof(Genric_Repo<>));
+            builder.Services.AddScoped<ICity_Repo, City_Repo>();
+            builder.Services.AddScoped<IDistrict_Repo, District_Repo>();
+            builder.Services.AddScoped<IProperty_Repo, Property_Repo>();
+            builder.Services.AddScoped<IPropertyType_Repo, PropertyType_Repo>();
+            builder.Services.AddScoped<IAmenity_Repo, Amenity_Repo>();
+            builder.Services.AddScoped<IPropertyImage_Repo, PropertyImage_Repo>();
+            builder.Services.AddScoped<IPropertyAmenity_Repo, PropertyAmenity_Repo>();
+            builder.Services.AddScoped<ISavedProperty_Repo, SavedProperty_Repo>();
+            builder.Services.AddScoped<IPackage_Repo, Package_Repo>();
+            builder.Services.AddScoped<IUserSubscription_Repo, UserSubscription_Repo>();
+            builder.Services.AddScoped<IProject_Repo, Project_Repo>();
+            builder.Services.AddScoped<IReports_Repo, Reports_Repo>();
+            builder.Services.AddScoped<IPropertyReview_Repo, PropertyReview_Repo>();
+            builder.Services.AddScoped<INotification_Repo, Notification_Repo>();
+            builder.Services.AddScoped<IUserRepo, UserRepo>();
+
+            // Register Unit of Work
+            builder.Services.AddScoped<IUnitofwork, Unitofwork>();
+
 
             // Configure Identity (without cookies for API)
             builder.Services.AddIdentity<User, IdentityRole<Guid>>(options =>
@@ -62,6 +90,22 @@ namespace Homy.api
 
             // Register Services
             builder.Services.AddScoped<ITokenService, TokenService>();
+            
+            // Register API Services
+            builder.Services.AddScoped<IPropertyApiService, PropertyApiService>();
+            builder.Services.AddScoped<IAgentApiService, AgentApiService>();
+
+            // Configure CORS for Angular frontend
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200") // Angular default port
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
+                });
+            });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -77,6 +121,9 @@ namespace Homy.api
             }
 
             app.UseHttpsRedirection();
+
+            // Enable CORS
+            app.UseCors("AllowAngularApp");
 
             app.UseAuthentication();
             app.UseAuthorization();
