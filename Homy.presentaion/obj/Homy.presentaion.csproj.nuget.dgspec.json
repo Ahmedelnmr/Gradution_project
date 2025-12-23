@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Graduation_project\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {}
+    "D:\\graduation-project2\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {}
   },
   "projects": {
-    "D:\\Graduation_project\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
+    "D:\\graduation-project2\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+        "projectUniqueName": "D:\\graduation-project2\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
         "projectName": "Homy.Application",
-        "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
+        "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Application\\Homy.Application.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Gradution_project\\Homy.Application\\obj\\",
+        "outputPath": "D:\\graduation-project2\\Gradution_project\\Homy.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               },
-              "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-                "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+              "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+                "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+    "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+        "projectUniqueName": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
         "projectName": "Homy.Domin",
-        "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+        "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\obj\\",
+        "outputPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -160,14 +160,14 @@
         }
       }
     },
-    "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+    "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+        "projectUniqueName": "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
         "projectName": "Homy.Infurastructure",
-        "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
+        "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\obj\\",
+        "outputPath": "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -188,8 +188,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               }
             }
           }
@@ -249,14 +249,14 @@
         }
       }
     },
-    "D:\\Graduation_project\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {
+    "D:\\graduation-project2\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Graduation_project\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
+        "projectUniqueName": "D:\\graduation-project2\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
         "projectName": "Homy.presentaion",
-        "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
+        "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.presentaion\\Homy.presentaion.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Graduation_project\\Gradution_project\\Homy.presentaion\\obj\\",
+        "outputPath": "D:\\graduation-project2\\Gradution_project\\Homy.presentaion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -277,14 +277,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Graduation_project\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
-                "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Application\\Homy.Application.csproj"
+              "D:\\graduation-project2\\Gradution_project\\Homy.Application\\Homy.Application.csproj": {
+                "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Application\\Homy.Application.csproj"
               },
-              "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
-                "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
+              "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj": {
+                "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj"
               },
-              "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
-                "projectPath": "D:\\Graduation_project\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
+              "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj": {
+                "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Infurastructure\\Homy.Infurastructure.csproj"
               }
             }
           }

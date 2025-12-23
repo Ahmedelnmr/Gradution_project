@@ -78,15 +78,23 @@ namespace Homy.api
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
+                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
+                    ),
+
                     ValidateIssuer = true,
                     ValidIssuer = builder.Configuration["Jwt:Issuer"],
+
                     ValidateAudience = true,
                     ValidAudience = builder.Configuration["Jwt:Audience"],
+
                     ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero
+                    ClockSkew = TimeSpan.Zero,
+
+                    // ?? ????? ?????
+                    ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha512 }
                 };
             });
+
 
             // Register Services
             builder.Services.AddScoped<ITokenService, TokenService>();
@@ -94,6 +102,8 @@ namespace Homy.api
             // Register API Services
             builder.Services.AddScoped<IPropertyApiService, PropertyApiService>();
             builder.Services.AddScoped<IAgentApiService, AgentApiService>();
+            builder.Services.AddScoped<ISavedPropertyApiService, SavedPropertyApiService>();
+
 
             // Configure CORS for Angular frontend
             builder.Services.AddCors(options =>
@@ -109,7 +119,33 @@ namespace Homy.api
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme. Enter 'Bearer' [space] and then your token."
+                });
+
+                options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+                {
+                    {
+                        new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                        {
+                            Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                            {
+                                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+            });
 
             var app = builder.Build();
 

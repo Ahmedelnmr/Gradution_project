@@ -332,5 +332,79 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Homy.api.Controllers.SavedPropertiesController",
+    "Method": "GetMySavedProperties",
+    "RelativePath": "api/SavedProperties",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Homy.api.Controllers.SavedPropertiesController",
+    "Method": "SaveProperty",
+    "RelativePath": "api/SavedProperties/{propertyId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Homy.api.Controllers.SavedPropertiesController",
+    "Method": "UnsaveProperty",
+    "RelativePath": "api/SavedProperties/{propertyId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Homy.api.Controllers.SavedPropertiesController",
+    "Method": "IsPropertySaved",
+    "RelativePath": "api/SavedProperties/{propertyId}/is-saved",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Homy.api.Controllers.SavedPropertiesController",
+    "Method": "ToggleSaveProperty",
+    "RelativePath": "api/SavedProperties/{propertyId}/toggle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homy.presentaion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c363d466a7a1709ff71d664aac1483650d7a7ab3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+959dc2c064b470c290775b5529841863d3bc0245")]
 [assembly: System.Reflection.AssemblyProductAttribute("Homy.presentaion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homy.presentaion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
