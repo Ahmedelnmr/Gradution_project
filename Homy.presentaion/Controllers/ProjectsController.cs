@@ -1,6 +1,7 @@
 ﻿using Homy.Application.Dtos;
 using Homy.Domin.Contract_Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Homy.presentaion.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProjectsController : Controller
     {
         private readonly IProject_Service _projectService;

@@ -242,6 +242,7 @@
     </div>
 </div>
 
+
 @section Scripts {
     <script>
         function toggleActive(userId, isActive) {
@@ -250,23 +251,33 @@
             if (confirm(message)) {
                 var form = document.createElement('form');
                 form.method = 'POST';
-                form.action = '@Url.Action("ToggleActive")';
+                form.action = '@Url.Action("ToggleActive", "Users")';
                 
-                var antiForgeryToken = document.createElement('input');
-                antiForgeryToken.type = 'hidden';
-                antiForgeryToken.name = '__RequestVerificationToken';
-                antiForgeryToken.value = '@Context.Request.RouteValues["__RequestVerificationToken"]'; 
+                var userIdInput = document.createElement('input');
+                userIdInput.type = 'hidden';
+                userIdInput.name = 'userId';
+                userIdInput.value = userId;
+                form.appendChild(userIdInput);
                 
-                 $.post('@Url.Action("ToggleActive")', {
-                    userId: userId,
-                    isActive: isActive,
-                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val() 
-                }, function (response) {
-                     location.reload();
-                }).fail(function() {
-                    alert('Error occurred');
-                });
+                var isActiveInput = document.createElement('input');
+                isActiveInput.type = 'hidden';
+                isActiveInput.name = 'isActive';
+                isActiveInput.value = isActive;
+                form.appendChild(isActiveInput);
+                
+                var tokenInput = document.querySelector('input[name="__RequestVerificationToken"]');
+                if (tokenInput) {
+                    var antiForgeryToken = document.createElement('input');
+                    antiForgeryToken.type = 'hidden';
+                    antiForgeryToken.name = '__RequestVerificationToken';
+                    antiForgeryToken.value = tokenInput.value;
+                    form.appendChild(antiForgeryToken);
+                }
+                
+                document.body.appendChild(form);
+                form.submit();
             }
         }
     </script>
 }
+@Html.AntiForgeryToken()

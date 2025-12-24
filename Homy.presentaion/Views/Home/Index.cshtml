@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a asp-controller="Users" asp-action="Index" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a asp-controller="AdminProperties" asp-action="Index" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
 
@@ -80,7 +80,7 @@
                 <div class="stat-badge">عقارات نشطة</div>
             </div>
             <div class="stat-card-body">
-                <h2 class="stat-number" data-target="@(Model.AdsCount - 15)">0</h2>
+                <h2 class="stat-number" data-target="@Model.ActivePropertiesCount">0</h2>
                 <p class="stat-label">عقارات قيد العرض</p>
                 <div class="stat-trend positive">
                     <i class="fas fa-arrow-up"></i>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a asp-controller="AdminProperties" asp-action="Index" asp-route-status="Active" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
 
@@ -101,7 +101,7 @@
                 <div class="stat-badge">إيرادات</div>
             </div>
             <div class="stat-card-body">
-                <h2 class="stat-number">$45,890</h2>
+                <h2 class="stat-number">@Model.MonthlyRevenue.ToString("N0") ج.م</h2>
                 <p class="stat-label">الإيرادات الشهرية</p>
                 <div class="stat-trend positive">
                     <i class="fas fa-arrow-up"></i>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a asp-controller="Reports" asp-action="Index" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
     </div>
@@ -234,7 +234,7 @@
         
         <div class="quick-access-grid">
             <!-- Users Management -->
-            <a href="#" class="quick-access-card card-gradient-1">
+            <a asp-controller="Users" asp-action="Index" class="quick-access-card card-gradient-1">
                 <div class="quick-card-icon">
                     <i class="fas fa-user-gear"></i>
                 </div>
@@ -251,7 +251,7 @@
             </a>
 
             <!-- Ads Management -->
-            <a href="#" class="quick-access-card card-gradient-2">
+            <a asp-controller="AdminProperties" asp-action="Index" class="quick-access-card card-gradient-2">
                 <div class="quick-card-icon">
                     <i class="fas fa-signs-post"></i>
                 </div>
@@ -268,7 +268,7 @@
             </a>
 
             <!-- Subscriptions -->
-            <a href="#" class="quick-access-card card-gradient-3">
+            <a asp-controller="UserSubscription" asp-action="GetAll" class="quick-access-card card-gradient-3">
                 <div class="quick-card-icon">
                     <i class="fas fa-crown"></i>
                 </div>
@@ -285,7 +285,7 @@
             </a>
 
             <!-- Reports -->
-            <a href="#" class="quick-access-card card-gradient-4">
+            <a asp-controller="Reports" asp-action="Index" class="quick-access-card card-gradient-4">
                 <div class="quick-card-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>

@@ -17,6 +17,7 @@ namespace Homy.presentaion.Controllers
             _signInManager = signInManager;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Login(string? returnUrl = null)
         {
@@ -28,6 +29,7 @@ namespace Homy.presentaion.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(AdminLoginDto loginDto, string? returnUrl = null)
@@ -54,13 +56,19 @@ namespace Homy.presentaion.Controllers
                         return View(loginDto);
                     }
 
-                    // Verify password and sign in
-                    var result = await _signInManager.PasswordSignInAsync(user, loginDto.Password, loginDto.RememberMe, false);
+                    // Verify password and sign in (RememberMe disabled for security)
+                    var result = await _signInManager.PasswordSignInAsync(user, loginDto.Password, isPersistent: false, lockoutOnFailure: false);
 
                     if (result.Succeeded)
                     {
-                        // Check roles to ensure it's an admin or authorized personnel if needed
-                        // For now we assume any valid login can access, or we can restrict in program.cs policies
+                        // Check if user has Admin role
+                        var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+                        if (!isAdmin)
+                        {
+                            await _signInManager.SignOutAsync();
+                            ModelState.AddModelError(string.Empty, "عذراً، هذه اللوحة مخصصة للمشرفين فقط");
+                            return View(loginDto);
+                        }
                         
                          if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                             return Redirect(returnUrl);

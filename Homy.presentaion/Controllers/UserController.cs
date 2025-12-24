@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Homy.Web.Controllers
 {
     
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
         private readonly IUser_Service _userService;

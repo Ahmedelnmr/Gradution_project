@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homy.presentaion.Controllers
 {
-    // [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminPropertyTypesController : Controller
     {
         private readonly IPropertyType_AdminService _propertyTypeService;

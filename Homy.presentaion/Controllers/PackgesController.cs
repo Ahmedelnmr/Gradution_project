@@ -1,9 +1,11 @@
 using Homy.Application.Dtos;
 using Homy.Application.Contract_Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Homy.presentaion.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PackgesController : Controller
     {
         private readonly IPackage_Service _packageService;

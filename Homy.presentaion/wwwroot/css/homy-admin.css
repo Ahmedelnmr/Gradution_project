@@ -832,6 +832,19 @@ button {
 
 .card-body {
     padding: 1rem;
+    color: var(--text-primary);
+}
+
+.card-body p {
+    color: var(--text-secondary);
+}
+
+.card-body strong {
+    color: var(--text-primary);
+}
+
+.card-body .text-muted {
+    color: var(--text-secondary) !important;
 }
 
 /* Tables */
@@ -1071,6 +1084,30 @@ button {
 
 .text-warning {
     color: var(--warning) !important;
+}
+
+/* Better text visibility in dark mode */
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+p strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+}
+
+label {
+    color: var(--text-secondary);
+}
+
+.bg-light {
+    background-color: var(--dark-light) !important;
+    color: var(--text-primary) !important;
 }
 
 /* ===================================================================

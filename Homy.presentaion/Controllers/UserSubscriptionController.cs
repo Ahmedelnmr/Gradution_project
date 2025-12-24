@@ -1,9 +1,11 @@
 ﻿using Homy.Application.Dtos.UserDtos.UserSubDTOs;
 using Homy.Domin.Contract_Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Homy.presentaion.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserSubscriptionController : Controller
     {
         private readonly IUserSubscription_Service _userSubscriptionService;

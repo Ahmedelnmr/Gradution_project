@@ -1,0 +1,38 @@
+@section Scripts {
+    <script>
+        function toggleActive(userId, isActive) {
+            var action = isActive ? 'تفعيل' : 'تعطيل';
+            var message = 'هل أنت متأكد من ' + action + ' حساب هذا المستخدم؟';
+            if (confirm(message)) {
+                var form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '@Url.Action("ToggleActive", "Users")';
+                
+                var userIdInput = document.createElement('input');
+                userIdInput.type = 'hidden';
+                userIdInput.name = 'userId';
+                userIdInput.value = userId;
+                form.appendChild(userIdInput);
+                
+                var isActiveInput = document.createElement('input');
+                isActiveInput.type = 'hidden';
+                isActiveInput.name = 'isActive';
+                isActiveInput.value = isActive;
+                form.appendChild(isActiveInput);
+                
+                var tokenInput = document.querySelector('input[name="__RequestVerificationToken"]');
+                if (tokenInput) {
+                    var antiForgeryToken = document.createElement('input');
+                    antiForgeryToken.type = 'hidden';
+                    antiForgeryToken.name = '__RequestVerificationToken';
+                    antiForgeryToken.value = tokenInput.value;
+                    form.appendChild(antiForgeryToken);
+                }
+                
+                document.body.appendChild(form);
+                form.submit();
+            }
+        }
+    </script>
+}
+@Html.AntiForgeryToken()

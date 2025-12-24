@@ -16,3 +16,21 @@ D:\Graduation_project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.A
 D:\Graduation_project\Gradution_project\Homy.Application\obj\Debug\net8.0\refint\Homy.Application.dll
 D:\Graduation_project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.pdb
 D:\Graduation_project\Gradution_project\Homy.Application\obj\Debug\net8.0\ref\Homy.Application.dll
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Application.deps.json
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Application.dll
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Application.pdb
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Domin.dll
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Infurastructure.dll
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Domin.pdb
+D:\A . H\final_Project\Gradution_project\Homy.Application\bin\Debug\net8.0\Homy.Infurastructure.pdb
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.csproj.AssemblyReference.cache
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.AssemblyInfoInputs.cache
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.AssemblyInfo.cs
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.csproj.CoreCompileInputs.cache
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.sourcelink.json
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.App.F310B7D4.Up2Date
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.dll
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\refint\Homy.Application.dll
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\Homy.Application.pdb
+D:\A . H\final_Project\Gradution_project\Homy.Application\obj\Debug\net8.0\ref\Homy.Application.dll

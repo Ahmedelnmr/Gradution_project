@@ -11,6 +11,7 @@ namespace Homy.Application.Dtos.Admin
         public long? PropertyTypeId { get; set; }
         public long? CityId { get; set; }
         public Guid? UserId { get; set; }
+        public long? ProjectId { get; set; }  // للفلترة حسب المشروع
         
         // البحث (يبحث في: العنوان، الوصف، اسم المعلن)
         public string? Search { get; set; }

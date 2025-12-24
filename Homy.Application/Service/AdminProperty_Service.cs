@@ -47,6 +47,9 @@ namespace Homy.Application.Service
             if (filter.UserId.HasValue)
                 query = query.Where(p => p.UserId == filter.UserId.Value);
 
+            if (filter.ProjectId.HasValue)
+                query = query.Where(p => p.ProjectId == filter.ProjectId.Value);
+
             if (!string.IsNullOrEmpty(filter.Search))
             {
                 var search = filter.Search.ToLower();

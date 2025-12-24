@@ -1,9 +1,11 @@
 using Homy.Application.Contract_Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 
 namespace Homy.presentaion.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ReportsController : Controller
     {
         private readonly IReports_Service _reportsService;

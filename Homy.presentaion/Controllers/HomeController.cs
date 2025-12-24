@@ -2,9 +2,11 @@ using Homy.presentaion.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Homy.Domin.Contract_Service;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Homy.presentaion.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

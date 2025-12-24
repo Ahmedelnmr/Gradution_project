@@ -37,9 +37,22 @@ namespace Homy.presentaion
             builder.Services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
-                options.AccessDeniedPath = "/Home/Error";
-                options.ExpireTimeSpan = TimeSpan.FromDays(7);
-                options.SlidingExpiration = true;
+                options.AccessDeniedPath = "/Account/Login";
+                // Cookie expires when browser closes - requires login every time
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(60); // Session timeout after 60 minutes of inactivity
+                options.SlidingExpiration = false; // No sliding - must login again after timeout
+                options.Cookie.IsEssential = true;
+                options.Cookie.HttpOnly = true;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+            });
+
+            // Configure Global Authorization Policy - Require Admin Role by Default
+            builder.Services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .RequireRole("Admin")
+                    .Build();
             });
 
             // Configure DbContext
@@ -116,10 +129,10 @@ var app = builder.Build();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            // Default Route
+            // Default Route - Redirect to Login
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Login}/{id?}");
 
             app.Run();
         }
