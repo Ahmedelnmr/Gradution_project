@@ -34,6 +34,18 @@ namespace Homy.Domin.models
         [MaxLength(500)]
         public string? ProfileImageUrl { get; set; }
 
+        // Verification Documents
+        [MaxLength(500)]
+        public string? IdCardFrontUrl { get; set; }
+        
+        [MaxLength(500)]
+        public string? IdCardBackUrl { get; set; }
+        
+        [MaxLength(500)]
+        public string? SelfieWithIdUrl { get; set; }
+
+        public string? VerificationRejectReason { get; set; }
+
         // العلاقات
         public virtual ICollection<Property> Properties { get; set; } = new List<Property>();
         public virtual ICollection<SavedProperty> SavedProperties { get; set; } = new List<SavedProperty>();

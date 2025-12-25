@@ -68,8 +68,15 @@ namespace Homy.Application.Service
             var propertyType = await _unitOfWork.PropertyTypeRepo.GetByIdAsync((int)dto.Id);
             if (propertyType == null) return false;
 
-            // Mapster Mapping (Update existing entity)
-            dto.Adapt(propertyType);
+            // Update properties
+            propertyType.Name = dto.Name;
+            
+            // Update IconUrl if a new image was uploaded
+            if (!string.IsNullOrEmpty(dto.CurrentIconUrl))
+            {
+                propertyType.IconUrl = dto.CurrentIconUrl;
+            }
+            
             propertyType.UpdatedAt = DateTime.Now;
 
             _unitOfWork.PropertyTypeRepo.Update(propertyType);

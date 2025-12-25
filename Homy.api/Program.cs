@@ -103,6 +103,13 @@ namespace Homy.api
             builder.Services.AddScoped<IPropertyApiService, PropertyApiService>();
             builder.Services.AddScoped<IAgentApiService, AgentApiService>();
             builder.Services.AddScoped<ISavedPropertyApiService, SavedPropertyApiService>();
+            builder.Services.AddScoped<INotificationApiService, NotificationApiService>();
+            builder.Services.AddScoped<IPayPalService, PayPalService>();
+            builder.Services.AddScoped<ISubscriptionApiService, SubscriptionApiService>();
+            builder.Services.AddScoped<IFileUploadService, FileUploadService>();
+
+            // Register Background Services
+            builder.Services.AddHostedService<Homy.api.BackgroundServices.SubscriptionExpiryBackgroundService>();
 
 
             // Configure CORS for Angular frontend
@@ -157,6 +164,9 @@ namespace Homy.api
             }
 
             app.UseHttpsRedirection();
+
+            // Enable static files (for serving uploaded images)
+            app.UseStaticFiles();
 
             // Enable CORS
             app.UseCors("AllowAngularApp");

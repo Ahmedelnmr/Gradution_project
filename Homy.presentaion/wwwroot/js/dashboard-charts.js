@@ -1,26 +1,48 @@
 /* ===================================================================
    DASHBOARD CHARTS - Chart.js Configuration
-   Interactive Donut Charts for Data Visualization
+   Interactive Donut Charts for Data Visualization - REAL DATA
    ================================================================== */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Chart.js default configuration for RTL and dark theme
     Chart.defaults.font.family = "'Cairo', sans-serif";
     Chart.defaults.color = '#94a3b8';
-    
+
+    // Color palette for consistent theming
+    const colors = {
+        primary: '#6366f1',
+        purple: '#8b5cf6',
+        pink: '#ec4899',
+        success: '#10b981',
+        warning: '#f59e0b',
+        cyan: '#06b6d4',
+        danger: '#ef4444',
+        // Additional colors for property types
+        emerald: '#34d399',
+        amber: '#fbbf24',
+        rose: '#fb7185',
+        indigo: '#818cf8',
+        violet: '#a78bfa',
+        fuchsia: '#e879f9'
+    };
+
     // ===== USERS DISTRIBUTION CHART =====
     const usersChartCanvas = document.getElementById('usersChart');
-    if (usersChartCanvas) {
+    if (usersChartCanvas && typeof dashboardData !== 'undefined') {
         const usersChart = new Chart(usersChartCanvas, {
             type: 'doughnut',
             data: {
-                labels: ['مستخدمين نشطين', 'مستخدمين جدد', 'غير نشطين'],
+                labels: ['أصحاب عقارات', 'سماسرة', 'مديري النظام'],
                 datasets: [{
-                    data: [65, 25, 10],
+                    data: [
+                        dashboardData.users.owners,
+                        dashboardData.users.agents,
+                        dashboardData.users.admins
+                    ],
                     backgroundColor: [
-                        '#6366f1',
-                        '#8b5cf6',
-                        '#ec4899'
+                        colors.primary,
+                        colors.purple,
+                        colors.pink
                     ],
                     borderWidth: 0,
                     hoverOffset: 10
@@ -44,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         cornerRadius: 8,
                         displayColors: true,
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.label + ': ' + context.parsed + '%';
                             }
                         }
@@ -58,21 +80,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+
+        // Update Legend Values
+        updateLegendValue('legend-owners', dashboardData.users.owners);
+        updateLegendValue('legend-agents', dashboardData.users.agents);
+        updateLegendValue('legend-admins', dashboardData.users.admins);
     }
 
     // ===== ADS DISTRIBUTION CHART =====
     const adsChartCanvas = document.getElementById('adsChart');
-    if (adsChartCanvas) {
+    if (adsChartCanvas && typeof dashboardData !== 'undefined') {
         const adsChart = new Chart(adsChartCanvas, {
             type: 'doughnut',
             data: {
-                labels: ['إعلانات نشطة', 'قيد المراجعة', 'منتهية'],
+                labels: ['نشطة', 'قيد المراجعة', 'مباعة/مؤجرة', 'مرفوضة'],
                 datasets: [{
-                    data: [70, 20, 10],
+                    data: [
+                        dashboardData.properties.active,
+                        dashboardData.properties.pending,
+                        dashboardData.properties.soldRented,
+                        dashboardData.properties.rejected
+                    ],
                     backgroundColor: [
-                        '#10b981',
-                        '#f59e0b',
-                        '#ef4444'
+                        colors.success,
+                        colors.warning,
+                        colors.cyan,
+                        colors.danger
                     ],
                     borderWidth: 0,
                     hoverOffset: 10
@@ -96,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         cornerRadius: 8,
                         displayColors: true,
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.label + ': ' + context.parsed + '%';
                             }
                         }
@@ -110,23 +143,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+
+        // Update Legend Values
+        updateLegendValue('legend-active', dashboardData.properties.active);
+        updateLegendValue('legend-pending', dashboardData.properties.pending);
+        updateLegendValue('legend-sold', dashboardData.properties.soldRented);
+        updateLegendValue('legend-rejected', dashboardData.properties.rejected);
     }
 
     // ===== PROPERTY TYPES CHART =====
     const propertyTypesChartCanvas = document.getElementById('propertyTypesChart');
-    if (propertyTypesChartCanvas) {
+    if (propertyTypesChartCanvas && typeof dashboardData !== 'undefined') {
+        const propertyTypesData = dashboardData.propertyTypes;
+        const labels = Object.keys(propertyTypesData);
+        const values = Object.values(propertyTypesData);
+        const total = values.reduce((a, b) => a + b, 0) || 1;
+        const percentages = values.map(v => Math.round((v / total) * 100 * 10) / 10);
+
+        // Generate colors dynamically
+        const chartColors = [
+            colors.cyan, colors.purple, colors.warning, colors.pink,
+            colors.emerald, colors.amber, colors.rose, colors.indigo,
+            colors.violet, colors.fuchsia, colors.primary, colors.success
+        ];
+
         const propertyTypesChart = new Chart(propertyTypesChartCanvas, {
             type: 'doughnut',
             data: {
-                labels: ['شقق', 'فيلات', 'أراضي', 'أخرى'],
+                labels: labels,
                 datasets: [{
-                    data: [45, 30, 15, 10],
-                    backgroundColor: [
-                        '#06b6d4',
-                        '#8b5cf6',
-                        '#f59e0b',
-                        '#ec4899'
-                    ],
+                    data: percentages,
+                    backgroundColor: chartColors.slice(0, labels.length),
                     borderWidth: 0,
                     hoverOffset: 10
                 }]
@@ -149,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         cornerRadius: 8,
                         displayColors: true,
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.label + ': ' + context.parsed + '%';
                             }
                         }
@@ -162,13 +209,43 @@ document.addEventListener('DOMContentLoaded', function() {
                     easing: 'easeOutQuart'
                 }
             }
+        });
+
+        // Generate Legend Dynamically
+        generatePropertyTypesLegend(labels, percentages, chartColors);
+    }
+
+    // ===== HELPER FUNCTIONS =====
+
+    function updateLegendValue(elementId, value) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.textContent = value + '%';
+        }
+    }
+
+    function generatePropertyTypesLegend(labels, percentages, chartColors) {
+        const legendContainer = document.getElementById('property-types-legend');
+        if (!legendContainer) return;
+
+        legendContainer.innerHTML = '';
+
+        labels.forEach((label, index) => {
+            const legendItem = document.createElement('div');
+            legendItem.className = 'legend-item';
+            legendItem.innerHTML = `
+                <span class="legend-dot" style="background: ${chartColors[index]};"></span>
+                <span class="legend-label">${label}</span>
+                <span class="legend-value">${percentages[index]}%</span>
+            `;
+            legendContainer.appendChild(legendItem);
         });
     }
 
     // ===== ANIMATE STAT NUMBERS =====
     function animateNumbers() {
         const statNumbers = document.querySelectorAll('.stat-number[data-target]');
-        
+
         statNumbers.forEach(element => {
             const target = parseInt(element.getAttribute('data-target'));
             const duration = 2000;
@@ -193,17 +270,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== CHART REFRESH BUTTONS =====
     const chartActionBtns = document.querySelectorAll('.chart-action-btn');
     chartActionBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
             e.preventDefault();
             const icon = this.querySelector('i');
-            
+
             // Add spin animation
             icon.style.animation = 'spin 1s ease';
-            
+
             setTimeout(() => {
                 icon.style.animation = '';
             }, 1000);
-            
+
             // Show toast notification
             showToast('تم تحديث البيانات', 'success');
         });
@@ -230,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const toast = document.createElement('div');
         toast.className = 'toast-notification';
 
-        const colors = {
+        const toastColors = {
             success: '#10b981',
             danger: '#ef4444',
             warning: '#f59e0b',
@@ -252,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
             background: #1e293b;
             border-radius: 10px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            border-right: 4px solid ${colors[type] || colors.info};
+            border-right: 4px solid ${toastColors[type] || toastColors.info};
             color: #f8fafc;
             font-family: 'Cairo', sans-serif;
             font-size: 14px;
@@ -262,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         toast.innerHTML = `
-            <i class="fas ${icons[type] || icons.info}" style="color: ${colors[type] || colors.info}; font-size: 18px;"></i>
+            <i class="fas ${icons[type] || icons.info}" style="color: ${toastColors[type] || toastColors.info}; font-size: 18px;"></i>
             <span>${message}</span>
         `;
 
@@ -290,5 +367,5 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    console.log('📊 Dashboard Charts Initialized Successfully!');
+    console.log('📊 Dashboard Charts Initialized Successfully with REAL DATA!');
 });

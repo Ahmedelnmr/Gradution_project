@@ -13,6 +13,12 @@ namespace Homy.presentaion.Controllers
             _userSubscriptionService = userSubscriptionService;
         }
 
+        public async Task<IActionResult> Index()
+        {
+            var subs = await _userSubscriptionService.GetAllSubscriptionsAsync();
+            return View("GetAll", subs);
+        }
+
         public async Task<IActionResult> GetAll()
         {
             var subs = await _userSubscriptionService.GetAllSubscriptionsAsync();

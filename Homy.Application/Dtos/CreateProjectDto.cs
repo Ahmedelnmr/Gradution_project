@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,12 +14,12 @@ namespace Homy.Application.Dtos
         [MaxLength(300)]
         public string Name { get; set; } = null!;
 
-        [Url(ErrorMessage = "رابط الشعار غير صحيح")]
-        [MaxLength(500)]
+        // Image uploads
+        public IFormFile? LogoImage { get; set; }
+        public IFormFile? CoverImage { get; set; }
+        
+        // Store paths after upload
         public string? LogoUrl { get; set; }
-
-        [Url(ErrorMessage = "رابط الصورة غير صحيح")]
-        [MaxLength(1000)]
         public string? CoverImageUrl { get; set; }
 
         [Required(ErrorMessage = "المدينة مطلوبة")]

@@ -15,6 +15,7 @@ namespace Homy.Domin.models
         public string ImageUrl { get; set; } = null!;
 
         public bool IsMain { get; set; } = false;
+        public bool IsPrimary { get; set; } = false; // For new API - primary image for listing
         public int SortOrder { get; set; } = 0;
 
         public virtual Property Property { get; set; } = null!;

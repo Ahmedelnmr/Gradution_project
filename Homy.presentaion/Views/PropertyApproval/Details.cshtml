@@ -1,0 +1,233 @@
+@model Homy.Application.Dtos.ApiDtos.PropertyDetailsDto
+
+@{
+    ViewData["Title"] = "تفاصيل الإعلان";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title">تفاصيل الإعلان</h3>
+                    <a href="@Url.Action("Index")" class="btn btn-secondary">
+                        <i class="fas fa-arrow-right"></i> رجوع
+                    </a>
+                </div>
+                <div class="card-body">
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger">@TempData["Error"]</div>
+                    }
+
+                    <div class="row">
+                        <!-- Property Images -->
+                        <div class="col-md-6">
+                            <h4>صور الإعلان</h4>
+                            @if (Model.Images != null && Model.Images.Any())
+                            {
+                                <div id="propertyCarousel" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @for (int i = 0; i < Model.Images.Count; i++)
+                                        {
+                                            <div class="carousel-item @(i == 0 ? "active" : "")">
+                                                <img src="@Model.Images[i].ImageUrl" class="d-block w-100" alt="صورة @(i+1)" style="max-height: 500px; object-fit: contain;">
+                                                @if (Model.Images[i].IsMain)
+                                                {
+                                                    <div class="badge badge-primary position-absolute" style="top: 10px; left: 10px;">
+                                                        الصورة الرئيسية
+                                                    </div>
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+                                    <a class="carousel-control-prev" href="#propertyCarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#propertyCarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="alert alert-warning">لا توجد صور</div>
+                            }
+                        </div>
+
+                        <!-- Property Details -->
+                        <div class="col-md-6">
+                            <h4>بيانات الإعلان</h4>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th style="width: 30%;">الحالة</th>
+                                    <td>
+                                        @switch (Model.Status)
+                                        {
+                                            case "PendingReview":
+                                                <span class="badge badge-warning">قيد المراجعة</span>
+                                                break;
+                                            case "Active":
+                                                <span class="badge badge-success">مقبول</span>
+                                                break;
+                                            case "Rejected":
+                                                <span class="badge badge-danger">مرفوض</span>
+                                                break;
+                                            default:
+                                                <span class="badge badge-secondary">@Model.Status</span>
+                                                break;
+                                        }
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>العنوان (عربي)</th>
+                                    <td>@Model.Title</td>
+                                </tr>
+                                <tr>
+                                    <th>النوع</th>
+                                    <td>@Model.PropertyType</td>
+                                </tr>
+                                <tr>
+                                    <th>المدينة</th>
+                                    <td>@Model.City</td>
+                                </tr>
+                                @if (!string.IsNullOrEmpty(Model.District))
+                                {
+                                    <tr>
+                                        <th>الحي</th>
+                                        <td>@Model.District</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <th>السعر</th>
+                                    <td>@Model.Price.ToString("N0") EGP</td>
+                                </tr>
+                                @if (Model.RentPriceMonthly.HasValue)
+                                {
+                                    <tr>
+                                        <th>الإيجار الشهري</th>
+                                        <td>@Model.RentPriceMonthly.Value.ToString("N0") EGP</td>
+                                    </tr>
+                                }
+                                @if (Model.Area.HasValue)
+                                {
+                                    <tr>
+                                        <th>المساحة</th>
+                                        <td>@Model.Area m²</td>
+                                    </tr>
+                                }
+                                @if (Model.Rooms.HasValue)
+                                {
+                                    <tr>
+                                        <th>عدد الغرف</th>
+                                        <td>@Model.Rooms</td>
+                                    </tr>
+                                }
+                                @if (Model.Bathrooms.HasValue)
+                                {
+                                    <tr>
+                                        <th>عدد الحمامات</th>
+                                        <td>@Model.Bathrooms</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <th>تاريخ الإضافة</th>
+                                    <td>@Model.CreatedAt.ToString("yyyy-MM-dd hh:mm tt")</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <h4>الوصف</h4>
+                                <p>@Model.Description</p>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- Agent Info -->
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <h4>بيانات المعلن</h4>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th style="width: 20%;">الاسم</th>
+                                    <td>@Model.Agent.FullName</td>
+                                </tr>
+                                <tr>
+                                    <th>الهاتف</th>
+                                    <td>@Model.Agent.Phone</td>
+                                </tr>
+                                <tr>
+                                    <th>الحالة</th>
+                                    <td>
+                                        @if (Model.Agent.IsVerified)
+                                        {
+                                            <span class="badge badge-success">موثق</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-warning">غير موثق</span>
+                                        }
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Approval Actions -->
+                    @if (Model.Status == "PendingReview")
+                    {
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h4>إجراءات المراجعة</h4>
+                                <div class="d-flex gap-2">
+                                    <form asp-action="Approve" asp-route-id="@Model.Id" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-success btn-lg" onclick="return confirm('هل أنت متأكد من قبول الإعلان؟')">
+                                            <i class="fas fa-check"></i> قبول الإعلان
+                                        </button>
+                                    </form>
+
+                                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#rejectModal">
+                                        <i class="fas fa-times"></i> رفض الإعلان
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reject Modal -->
+<div class="modal fade" id="rejectModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">رفض الإعلان</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <form asp-action="Reject" asp-route-id="@Model.Id" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="reason">سبب الرفض <span class="text-danger">*</span></label>
+                        <textarea name="reason" id="reason" class="form-control" rows="4" required placeholder="اكتب سبب رفض الإعلان..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">إلغاء</button>
+                    <button type="submit" class="btn btn-danger">رفض الإعلان</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

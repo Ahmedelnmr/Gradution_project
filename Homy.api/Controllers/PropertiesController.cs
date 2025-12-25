@@ -117,5 +117,129 @@ namespace Homy.api.Controllers
                 return StatusCode(500, new { message = "An error occurred", error = ex.Message });
             }
         }
+
+        // ===== NEW: Property Management Endpoints =====
+
+        /// <summary>
+        /// Create a new property (requires authentication and subscription)
+        /// </summary>
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> CreateProperty([FromForm] CreatePropertyDto dto)
+        {
+            try
+            {
+                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userIdClaim) || !System.Guid.TryParse(userIdClaim, out var userId))
+                    return Unauthorized(new { message = "User not authenticated" });
+
+                var (success, message, propertyId) = await _propertyService.CreatePropertyAsync(userId, dto);
+
+                if (!success)
+                    return BadRequest(new { message });
+
+                return Ok(new { message, propertyId });
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Admin: Approve or reject a property
+        /// </summary>
+        [HttpPost("approve")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ApproveOrRejectProperty([FromBody] PropertyApprovalDto dto)
+        {
+            try
+            {
+                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(dto);
+
+                if (!success)
+                    return BadRequest(new { message });
+
+                return Ok(new { message });
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Update property (requires ownership)
+        /// </summary>
+        [HttpPut("{id}")]
+        [Authorize]
+        public async Task<IActionResult> UpdateProperty(long id, [FromForm] UpdatePropertyDto dto)
+        {
+            try
+            {
+                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userIdClaim) || !System.Guid.TryParse(userIdClaim, out var userId))
+                    return Unauthorized(new { message = "User not authenticated" });
+
+                var (success, message) = await _propertyService.UpdatePropertyAsync(userId, id, dto);
+
+                if (!success)
+                    return BadRequest(new { message });
+
+                return Ok(new { message });
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Delete property (soft delete, requires ownership)
+        /// </summary>
+        [HttpDelete("{id}")]
+        [Authorize]
+        public async Task<IActionResult> DeleteProperty(long id)
+        {
+            try
+            {
+                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userIdClaim) || !System.Guid.TryParse(userIdClaim, out var userId))
+                    return Unauthorized(new { message = "User not authenticated" });
+
+                var success = await _propertyService.DeletePropertyAsync(userId, id);
+
+                if (!success)
+                    return NotFound(new { message = "Property not found or you don't have permission" });
+
+                return Ok(new { message = "تم حذف الإعلان بنجاح" });
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Get my properties (requires authentication)
+        /// </summary>
+        [HttpGet("my-properties")]
+        [Authorize]
+        public async Task<ActionResult<PagedResultDto<PropertyCardDto>>> GetMyProperties([FromQuery] PropertyFilterDto filter)
+        {
+            try
+            {
+                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userIdClaim) || !System.Guid.TryParse(userIdClaim, out var userId))
+                    return Unauthorized(new { message = "User not authenticated" });
+
+                var result = await _propertyService.GetUserPropertiesAsync(userId, filter);
+                return Ok(result);
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred", error = ex.Message });
+            }
+        }
     }
 }

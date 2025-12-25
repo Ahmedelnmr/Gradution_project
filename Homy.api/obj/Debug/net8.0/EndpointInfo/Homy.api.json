@@ -210,6 +210,443 @@
         }
       }
     },
+    "/api/Agents/verify-identity": {
+      "post": {
+        "tags": [
+          "Agents"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "IdCardBack",
+                  "IdCardFront",
+                  "SelfieWithId"
+                ],
+                "type": "object",
+                "properties": {
+                  "IdCardFront": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "IdCardBack": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "SelfieWithId": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "IdCardFront": {
+                  "style": "form"
+                },
+                "IdCardBack": {
+                  "style": "form"
+                },
+                "SelfieWithId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Agents/profile": {
+      "get": {
+        "tags": [
+          "Agents"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentProfileDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentProfileDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentProfileDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Agents"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "FullName"
+                ],
+                "type": "object",
+                "properties": {
+                  "FullName": {
+                    "maxLength": 200,
+                    "type": "string"
+                  },
+                  "PhoneNumber": {
+                    "type": "string",
+                    "format": "tel"
+                  },
+                  "WhatsAppNumber": {
+                    "type": "string",
+                    "format": "tel"
+                  },
+                  "ProfileImage": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "FullName": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "WhatsAppNumber": {
+                  "style": "form"
+                },
+                "ProfileImage": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Agents/change-password": {
+      "post": {
+        "tags": [
+          "Agents"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Agents/my-properties": {
+      "get": {
+        "tags": [
+          "Agents"
+        ],
+        "parameters": [
+          {
+            "name": "Purpose",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CityId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "DistrictId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "ProjectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "PropertyTypeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MinPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MaxPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MinRentPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MaxRentPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MinArea",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MaxArea",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MinRooms",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MaxRooms",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MinBathrooms",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "FinishingType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsFeatured",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notifications": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          },
+          {
+            "name": "unreadOnly",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notifications/unread-count": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notifications/{id}/mark-read": {
+      "post": {
+        "tags": [
+          "Notifications"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notifications/mark-all-read": {
+      "post": {
+        "tags": [
+          "Notifications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Properties": {
       "get": {
         "tags": [
@@ -411,6 +848,220 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Properties"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "CityId",
+                  "Images",
+                  "Price",
+                  "PropertyTypeId",
+                  "Purpose",
+                  "Title"
+                ],
+                "type": "object",
+                "properties": {
+                  "Title": {
+                    "maxLength": 500,
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "TitleEn": {
+                    "maxLength": 500,
+                    "type": "string"
+                  },
+                  "DescriptionEn": {
+                    "type": "string"
+                  },
+                  "CityId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "DistrictId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "ProjectId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "AddressDetails": {
+                    "maxLength": 1000,
+                    "type": "string"
+                  },
+                  "AddressDetailsEn": {
+                    "maxLength": 1000,
+                    "type": "string"
+                  },
+                  "Latitude": {
+                    "maximum": 90,
+                    "minimum": -90,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Longitude": {
+                    "maximum": 180,
+                    "minimum": -180,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "PropertyTypeId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Purpose": {
+                    "$ref": "#/components/schemas/PropertyPurpose"
+                  },
+                  "Price": {
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "RentPriceMonthly": {
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Rooms": {
+                    "maximum": 10000,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Bathrooms": {
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Area": {
+                    "maximum": 1000000,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "FinishingType": {
+                    "$ref": "#/components/schemas/FinishingType"
+                  },
+                  "FloorNumber": {
+                    "maximum": 200,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "IsAgricultural": {
+                    "type": "boolean"
+                  },
+                  "IsFeatured": {
+                    "type": "boolean"
+                  },
+                  "Images": {
+                    "maxItems": 6,
+                    "minItems": 1,
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "PrimaryImageIndex": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "Title": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "TitleEn": {
+                  "style": "form"
+                },
+                "DescriptionEn": {
+                  "style": "form"
+                },
+                "CityId": {
+                  "style": "form"
+                },
+                "DistrictId": {
+                  "style": "form"
+                },
+                "ProjectId": {
+                  "style": "form"
+                },
+                "AddressDetails": {
+                  "style": "form"
+                },
+                "AddressDetailsEn": {
+                  "style": "form"
+                },
+                "Latitude": {
+                  "style": "form"
+                },
+                "Longitude": {
+                  "style": "form"
+                },
+                "PropertyTypeId": {
+                  "style": "form"
+                },
+                "Purpose": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "RentPriceMonthly": {
+                  "style": "form"
+                },
+                "Rooms": {
+                  "style": "form"
+                },
+                "Bathrooms": {
+                  "style": "form"
+                },
+                "Area": {
+                  "style": "form"
+                },
+                "FinishingType": {
+                  "style": "form"
+                },
+                "FloorNumber": {
+                  "style": "form"
+                },
+                "IsAgricultural": {
+                  "style": "form"
+                },
+                "IsFeatured": {
+                  "style": "form"
+                },
+                "Images": {
+                  "style": "form"
+                },
+                "PrimaryImageIndex": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Properties/{id}": {
@@ -449,6 +1100,249 @@
                 }
               }
             }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Properties"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "CityId",
+                  "Price",
+                  "PropertyTypeId",
+                  "Purpose",
+                  "Title"
+                ],
+                "type": "object",
+                "properties": {
+                  "Images": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "Title": {
+                    "maxLength": 500,
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
+                  "TitleEn": {
+                    "maxLength": 500,
+                    "type": "string"
+                  },
+                  "DescriptionEn": {
+                    "type": "string"
+                  },
+                  "CityId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "DistrictId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "ProjectId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "AddressDetails": {
+                    "maxLength": 1000,
+                    "type": "string"
+                  },
+                  "AddressDetailsEn": {
+                    "maxLength": 1000,
+                    "type": "string"
+                  },
+                  "Latitude": {
+                    "maximum": 90,
+                    "minimum": -90,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Longitude": {
+                    "maximum": 180,
+                    "minimum": -180,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "PropertyTypeId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Purpose": {
+                    "$ref": "#/components/schemas/PropertyPurpose"
+                  },
+                  "Price": {
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "RentPriceMonthly": {
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Rooms": {
+                    "maximum": 10000,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Bathrooms": {
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Area": {
+                    "maximum": 1000000,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "FinishingType": {
+                    "$ref": "#/components/schemas/FinishingType"
+                  },
+                  "FloorNumber": {
+                    "maximum": 200,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "IsAgricultural": {
+                    "type": "boolean"
+                  },
+                  "IsFeatured": {
+                    "type": "boolean"
+                  },
+                  "PrimaryImageIndex": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "Images": {
+                  "style": "form"
+                },
+                "Title": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "TitleEn": {
+                  "style": "form"
+                },
+                "DescriptionEn": {
+                  "style": "form"
+                },
+                "CityId": {
+                  "style": "form"
+                },
+                "DistrictId": {
+                  "style": "form"
+                },
+                "ProjectId": {
+                  "style": "form"
+                },
+                "AddressDetails": {
+                  "style": "form"
+                },
+                "AddressDetailsEn": {
+                  "style": "form"
+                },
+                "Latitude": {
+                  "style": "form"
+                },
+                "Longitude": {
+                  "style": "form"
+                },
+                "PropertyTypeId": {
+                  "style": "form"
+                },
+                "Purpose": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "RentPriceMonthly": {
+                  "style": "form"
+                },
+                "Rooms": {
+                  "style": "form"
+                },
+                "Bathrooms": {
+                  "style": "form"
+                },
+                "Area": {
+                  "style": "form"
+                },
+                "FinishingType": {
+                  "style": "form"
+                },
+                "FloorNumber": {
+                  "style": "form"
+                },
+                "IsAgricultural": {
+                  "style": "form"
+                },
+                "IsFeatured": {
+                  "style": "form"
+                },
+                "PrimaryImageIndex": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Properties"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -518,6 +1412,240 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Properties/approve": {
+      "post": {
+        "tags": [
+          "Properties"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropertyApprovalDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropertyApprovalDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PropertyApprovalDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Properties/my-properties": {
+      "get": {
+        "tags": [
+          "Properties"
+        ],
+        "parameters": [
+          {
+            "name": "Purpose",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CityId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "DistrictId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "ProjectId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "PropertyTypeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "MinPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MaxPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MinRentPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MaxRentPrice",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "MinArea",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MaxArea",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MinRooms",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MaxRooms",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MinBathrooms",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "FinishingType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsFeatured",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortDescending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyCardDtoPagedResultDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyCardDtoPagedResultDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PropertyCardDtoPagedResultDto"
+                }
+              }
+            }
           }
         }
       }
@@ -616,6 +1744,178 @@
               "format": "int64"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/packages": {
+      "get": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/status": {
+      "get": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/create-order": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePayPalOrderDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePayPalOrderDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePayPalOrderDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/capture-payment": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapturePayPalPaymentDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapturePayPalPaymentDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CapturePayPalPaymentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/can-add-property": {
+      "get": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "parameters": [
+          {
+            "name": "isFeatured",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/process-expiring": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/process-expired": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/payment-success": {
+      "get": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PayerID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Subscriptions/payment-cancel": {
+      "get": {
+        "tags": [
+          "Subscriptions"
         ],
         "responses": {
           "200": {
@@ -831,6 +2131,66 @@
         },
         "additionalProperties": false
       },
+      "CapturePayPalPaymentDto": {
+        "type": "object",
+        "properties": {
+          "packageId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "payPalOrderId": {
+            "type": "string",
+            "nullable": true
+          },
+          "payPalPayerId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePasswordDto": {
+        "required": [
+          "confirmPassword",
+          "currentPassword",
+          "newPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "currentPassword": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "newPassword": {
+            "minLength": 6,
+            "type": "string"
+          },
+          "confirmPassword": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePayPalOrderDto": {
+        "type": "object",
+        "properties": {
+          "packageId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FinishingType": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "LoginDto": {
         "required": [
           "email",
@@ -846,6 +2206,140 @@
           "password": {
             "minLength": 6,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PropertyApprovalDto": {
+        "required": [
+          "isApproved",
+          "propertyId"
+        ],
+        "type": "object",
+        "properties": {
+          "propertyId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isApproved": {
+            "type": "boolean"
+          },
+          "rejectionReason": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PropertyCardDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "titleEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "propertyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyTypeEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "cityEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "district": {
+            "type": "string",
+            "nullable": true
+          },
+          "primaryImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "purpose": {
+            "$ref": "#/components/schemas/PropertyPurpose"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PropertyStatus"
+          },
+          "rooms": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "bathrooms": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "area": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isFeatured": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PropertyCardDtoPagedResultDto": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PropertyCardDto"
+            },
+            "nullable": true
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "hasPreviousPage": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "hasNextPage": {
+            "type": "boolean",
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -1194,6 +2688,26 @@
           }
         },
         "additionalProperties": false
+      },
+      "PropertyPurpose": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PropertyStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "RegisterDto": {
         "required": [

@@ -1,0 +1,124 @@
+@model Homy.Application.Dtos.ApiDtos.PagedResultDto<Homy.Application.Dtos.ApiDtos.PropertyListItemDto>
+
+@{
+    ViewData["Title"] = "مراجعة الإعلانات";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">مراجعة الإعلانات</h3>
+                </div>
+                <div class="card-body">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            @TempData["Success"]
+                        </div>
+                    }
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            @TempData["Error"]
+                        </div>
+                    }
+
+                    <div class="mb-3">
+                        <div class="btn-group" role="group">
+                            <a href="@Url.Action("Index", new { status = "Pending" })" 
+                               class="btn @(ViewBag.CurrentStatus == "Pending" ? "btn-primary" : "btn-outline-primary")">
+                                قيد المراجعة
+                            </a>
+                            <a href="@Url.Action("Index", new { status = "Active" })" 
+                               class="btn @(ViewBag.CurrentStatus == "Active" ? "btn-success" : "btn-outline-success")">
+                                المقبولة
+                            </a>
+                            <a href="@Url.Action("Index", new { status = "Rejected" })" 
+                               class="btn @(ViewBag.CurrentStatus == "Rejected" ? "btn-danger" : "btn-outline-danger")">
+                                المرفوضة
+                            </a>
+                        </div>
+                    </div>
+
+                    @if (Model != null && Model.Items.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>الصورة</th>
+                                        <th>العنوان</th>
+                                        <th>النوع</th>
+                                        <th>المدينة</th>
+                                        <th>السعر</th>
+                                        <th>الحالة</th>
+                                        <th>التاريخ</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var property in Model.Items)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(property.MainImageUrl))
+                                                {
+                                                    <img src="@property.MainImageUrl" alt="@property.Title" class="img-thumbnail" style="max-width: 100px;" />
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge badge-secondary">لا توجد صورة</span>
+                                                }
+                                            </td>
+                                            <td>@property.Title</td>
+                                            <td>@property.PropertyType</td>
+                                            <td>@property.City</td>
+                                            <td>@property.Price.ToString("N0") EGP</td>
+                                            <td>
+                                                @switch (property.Status)
+                                                {
+                                                    case "PendingReview":
+                                                        <span class="badge badge-warning">قيد المراجعة</span>
+                                                        break;
+                                                    case "Active":
+                                                        <span class="badge badge-success">مقبول</span>
+                                                        break;
+                                                    case "Rejected":
+                                                        <span class="badge badge-danger">مرفوض</span>
+                                                        break;
+                                                    default:
+                                                        <span class="badge badge-secondary">@property.Status</span>
+                                                        break;
+                                                }
+                                            </td>
+                                            <td>@property.CreatedAt.ToString("yyyy-MM-dd")</td>
+                                            <td>
+                                                <a href="@Url.Action("Details", new { id = property.Id })" class="btn btn-sm btn-info">
+                                                    <i class="fas fa-eye"></i> عرض التفاصيل
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-3">
+                            <p>إجمالي النتائج: @Model.TotalCount</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            لا توجد إعلانات @(ViewBag.CurrentStatus == "Pending" ? "قيد المراجعة" : ViewBag.CurrentStatus == "Active" ? "مقبولة" : "مرفوضة")
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

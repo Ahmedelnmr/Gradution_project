@@ -2,12 +2,28 @@
 @model IEnumerable<UserDto>
 @{
     ViewData["Title"] = "إدارة المستخدمين";
-    var currentFilter = ViewBag.CurrentFilter as string;
-    var currentRole = ViewBag.CurrentRole as string;
-    var showOnlyUnverified = ViewBag.ShowOnlyUnverified as bool? ?? false;
 }
 
 <div class="container-fluid">
+    <!-- Hidden CSRF token for toggle function -->
+    @Html.AntiForgeryToken()
+    
+    <!-- Alerts -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2><i class="fas fa-users-cog"></i> إدارة المستخدمين</h2>
         @if (ViewBag.UnverifiedCount > 0)
@@ -35,27 +51,25 @@
                 <div class="col-md-4">
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-search"></i></span>
-                        <input type="text" name="searchString" class="form-control"
+                        <input type="text" name="SearchTerm" class="form-control"
                                placeholder="بحث بالاسم، البريد الإلكتروني أو الهاتف..."
-                               value="@currentFilter">
+                               value="@ViewBag.CurrentFilter?.SearchTerm">
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <select name="userRole" class="form-select" onchange="this.form.submit()">
-                        <!option value="" @(string.IsNullOrEmpty(currentRole) ? "selected" : "")>كل الصلاحيات</!option>
-                        <!option value="Admin" @(currentRole == "Admin" ? "selected" : "")>مسؤول</!option>
-                        <!option value="Owner" @(currentRole == "Owner" ? "selected" : "")>مالك</!option>
-                        <!option value="Agent" @(currentRole == "Agent" ? "selected" : "")>وسيط</!option>
+                    <select name="Role" class="form-select">
+                        <option value="" selected="@(ViewBag.CurrentFilter?.Role == null)">كل الصلاحيات</option>
+                        <option value="3" selected="@(ViewBag.CurrentFilter?.Role == (Homy.Domin.models.UserRole)3)">مسؤول</option>
+                        <option value="1" selected="@(ViewBag.CurrentFilter?.Role == (Homy.Domin.models.UserRole)1)">مالك</option>
+                        <option value="2" selected="@(ViewBag.CurrentFilter?.Role == (Homy.Domin.models.UserRole)2)">وسيط</option>
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" name="showOnlyUnverified" value="true"
-                               id="showOnlyUnverified" @(showOnlyUnverified ? "checked" : "") onchange="this.form.submit()">
-                        <label class="form-check-label" for="showOnlyUnverified">
-                            غير موثقين فقط
-                        </label>
-                    </div>
+                    <select name="IsVerified" class="form-select">
+                        <option value="" selected="@(ViewBag.CurrentFilter?.IsVerified == null)">كل الحالات</option>
+                        <option value="true" selected="@(ViewBag.CurrentFilter?.IsVerified == true)">موثقين فقط</option>
+                        <option value="false" selected="@(ViewBag.CurrentFilter?.IsVerified == false)">غير موثقين</option>
+                    </select>
                 </div>
                 <div class="col-md-3">
                     <div class="btn-group w-100" role="group">
@@ -215,28 +229,56 @@
                 </tbody>
             </table>
         </div>
-        @if (ViewBag.TotalPages > 1)
+        
+        <!-- Pagination -->
+        @if (ViewBag.TotalCount > 0)
         {
-            <div class="card-footer clearfix">
-                <nav>
-                    <ul class="pagination pagination-sm m-0 float-end">
-                        <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
-                            <a class="page-link" asp-route-page="@(ViewBag.CurrentPage - 1)" asp-route-searchString="@currentFilter" asp-route-userRole="@currentRole">«</a>
+            var totalPages = (int)Math.Ceiling((double)ViewBag.TotalCount / (ViewBag.CurrentFilter?.PageSize ?? 10));
+            var currentPage = ViewBag.CurrentFilter?.PageNumber ?? 1;
+            
+            <div class="card-footer">
+                <nav aria-label="User pagination">
+                    <ul class="pagination justify-content-center mb-0">
+                        <!-- Previous -->
+                        <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { 
+                                PageNumber = currentPage - 1,
+                                PageSize = ViewBag.CurrentFilter?.PageSize,
+                                SearchTerm = ViewBag.CurrentFilter?.SearchTerm,
+                                Role = ViewBag.CurrentFilter?.Role,
+                                IsVerified = ViewBag.CurrentFilter?.IsVerified
+                            })">السابق</a>
                         </li>
-                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                        
+                        <!-- Page Numbers -->
+                        @for (int i = Math.Max(1, currentPage - 2); i <= Math.Min(totalPages, currentPage + 2); i++)
                         {
-                            <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
-                                <a class="page-link" asp-route-page="@i" asp-route-searchString="@currentFilter" asp-route-userRole="@currentRole">@i</a>
+                            <li class="page-item @(i == currentPage ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("Index", new { 
+                                    PageNumber = i,
+                                    PageSize = ViewBag.CurrentFilter?.PageSize,
+                                    SearchTerm = ViewBag.CurrentFilter?.SearchTerm,
+                                    Role = ViewBag.CurrentFilter?.Role,
+                                    IsVerified = ViewBag.CurrentFilter?.IsVerified
+                                })">@i</a>
                             </li>
                         }
-                        <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
-                            <a class="page-link" asp-route-page="@(ViewBag.CurrentPage + 1)" asp-route-searchString="@currentFilter" asp-route-userRole="@currentRole">»</a>
+                        
+                        <!-- Next -->
+                        <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { 
+                                PageNumber = currentPage + 1,
+                                PageSize = ViewBag.CurrentFilter?.PageSize,
+                                SearchTerm = ViewBag.CurrentFilter?.SearchTerm,
+                                Role = ViewBag.CurrentFilter?.Role,
+                                IsVerified = ViewBag.CurrentFilter?.IsVerified
+                            })">التالي</a>
                         </li>
                     </ul>
-                    <span class="align-middle text-muted small">
-                        عرض @(Model.Count()) من @ViewBag.TotalUsers مستخدم
-                    </span>
                 </nav>
+                <div class="text-center text-muted mt-2">
+                    <small>الصفحة @currentPage من @totalPages - عرض @Model.Count() من @ViewBag.TotalCount مستخدم</small>
+                </div>
             </div>
         }
     </div>
@@ -247,26 +289,73 @@
         function toggleActive(userId, isActive) {
             var action = isActive ? 'تفعيل' : 'تعطيل';
             var message = 'هل أنت متأكد من ' + action + ' حساب هذا المستخدم؟';
-            if (confirm(message)) {
-                var form = document.createElement('form');
-                form.method = 'POST';
-                form.action = '@Url.Action("ToggleActive")';
-                
-                var antiForgeryToken = document.createElement('input');
-                antiForgeryToken.type = 'hidden';
-                antiForgeryToken.name = '__RequestVerificationToken';
-                antiForgeryToken.value = '@Context.Request.RouteValues["__RequestVerificationToken"]'; 
-                
-                 $.post('@Url.Action("ToggleActive")', {
-                    userId: userId,
-                    isActive: isActive,
-                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val() 
-                }, function (response) {
-                     location.reload();
-                }).fail(function() {
-                    alert('Error occurred');
-                });
+            
+            if (!confirm(message)) {
+                return;
             }
+            
+            // Create form element
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '@Url.Action("ToggleActive")';
+            
+            // Add CSRF token
+            var tokenInput = document.createElement('input');
+            tokenInput.type = 'hidden';
+            tokenInput.name = '__RequestVerificationToken';
+            tokenInput.value = document.querySelector('input[name="__RequestVerificationToken"]').value;
+            form.appendChild(tokenInput);
+            
+            // Add userId
+            var userIdInput = document.createElement('input');
+            userIdInput.type = 'hidden';
+            userIdInput.name = 'userId';
+            userIdInput.value = userId;
+            form.appendChild(userIdInput);
+            
+            // Add isActive
+            var isActiveInput = document.createElement('input');
+            isActiveInput.type = 'hidden';
+            isActiveInput.name = 'isActive';
+            isActiveInput.value = isActive;
+            form.appendChild(isActiveInput);
+            
+            // Submit form
+            document.body.appendChild(form);
+            form.submit();
         }
     </script>
 }
+
+<style>
+    /* Pagination Dark Mode Fixes */
+    .pagination .page-link {
+        background-color: var(--card-bg);
+        border-color: var(--card-border);
+        color: var(--text-secondary);
+    }
+    
+    .pagination .page-link:hover {
+        background-color: var(--dark-light);
+        border-color: var(--primary);
+        color: var(--text-primary);
+    }
+    
+    .pagination .page-item.active .page-link {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+    }
+    
+    .pagination .page-item.disabled .page-link {
+        background-color: var(--dark);
+        border-color: var(--card-border);
+        color: var(--text-muted);
+    }
+    
+    .card-footer {
+        background-color: var(--card-bg);
+        border-top: 1px solid var(--card-border);
+        color: var(--text-secondary);
+    }
+</style>

@@ -21,9 +21,10 @@
                     <h4 class="mb-0">تعديل إدارة أنواع العقارات</h4>
                 </div>
                 <div class="card-body">
-                    <form asp-action="Edit" method="post">
+                    <form asp-action="Edit" method="post" enctype="multipart/form-data">
                         @Html.AntiForgeryToken()
                         <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="CurrentIconUrl" />
                         
                         <div class="mb-3">
                             <label asp-for="Name" class="form-label">الاسم <span class="text-danger">*</span></label>
@@ -32,10 +33,19 @@
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="IconUrl" class="form-label">الأيقونة</label>
-                            <input asp-for="IconUrl" class="form-control" placeholder="https://example.com/icon.png" />
-                            <span asp-validation-for="IconUrl" class="text-danger"></span>
-                            <small class="form-text text-muted">اختياري - يمكنك إضافة رابط لأيقونة النوع</small>
+                            <label asp-for="IconImage" class="form-label">أيقونة النوع</label>
+                            
+                            @if (!string.IsNullOrEmpty(Model.CurrentIconUrl))
+                            {
+                                <div class="mb-2">
+                                    <img src="@Model.CurrentIconUrl" alt="Current Icon" class="img-thumbnail" style="max-width: 100px; max-height: 100px; object-fit: contain;" />
+                                    <small class="d-block text-muted">الصورة الحالية</small>
+                                </div>
+                            }
+                            
+                            <input asp-for="IconImage" class="form-control" type="file" accept="image/*" />
+                            <span asp-validation-for="IconImage" class="text-danger"></span>
+                            <small class="form-text text-muted">اختياري - حدد صورة جديدة لاستبدال الحالية (PNG, JPG, SVG)</small>
                         </div>
 
                         <div class="d-flex gap-2">

@@ -32,6 +32,13 @@ namespace Homy.Domin.models
         PropertyApproved = 1,
         PropertyRejected = 2,
         PropertyChangesRequested = 3,
-        General = 10
+        VerificationApproved = 4,
+        VerificationRejected = 5,
+        SubscriptionCreated = 6,
+        SubscriptionExpiring = 7,
+        SubscriptionExpired = 8,
+        PaymentFailed = 9,
+        General = 10,
+        PropertyLimitReached = 11
     }
 }

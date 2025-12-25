@@ -53,7 +53,7 @@ namespace Homy.presentaion.Controllers
             {
                 Id = type.Id,
                 Name = type.Name,
-                IconUrl = type.IconUrl
+                CurrentIconUrl = type.IconUrl  // For preview
             };
 
             return View(updateDto);
@@ -69,9 +69,28 @@ namespace Homy.presentaion.Controllers
                 return View(dto);
             }
 
+            // Handle image upload
+            if (dto.IconImage != null)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "property-types");
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                var uniqueFileName = $"{Guid.NewGuid()}_{dto.IconImage.FileName}";
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await dto.IconImage.CopyToAsync(stream);
+                }
+
+                dto.CurrentIconUrl = $"/uploads/property-types/{uniqueFileName}";
+            }
+
             var result = await _propertyTypeService.UpdateAsync(dto);
             if (!result) return NotFound();
 
+            TempData["Success"] = "تم تحديث نوع العقار بنجاح";
             return RedirectToAction(nameof(Index));
         }
 

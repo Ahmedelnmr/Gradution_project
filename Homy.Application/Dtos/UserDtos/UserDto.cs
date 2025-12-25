@@ -24,5 +24,11 @@ namespace Homy.Application.Dtos.UserDtos
         public int PropertiesCount { get; set; }
         public int SavedPropertiesCount { get; set; }
         public bool HasActiveSubscription { get; set; }
+
+        // Verification Documents
+        public string? IdCardFrontUrl { get; set; }
+        public string? IdCardBackUrl { get; set; }
+        public string? SelfieWithIdUrl { get; set; }
+        public string? VerificationRejectReason { get; set; }
     }
 }

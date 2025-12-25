@@ -19,11 +19,24 @@ namespace Homy.presentaion.Controllers
         }
 
         // GET: /AdminProperties
-        public async Task<IActionResult> Index(PropertyFilterDto filter)
+        public async Task<IActionResult> Index(PropertyFilterDto? filter)
         {
+            // Initialize filter with defaults if null
+            filter ??= new PropertyFilterDto();
+            
+            // Set default page size if not specified
+            if (filter.PageSize == 0)
+                filter.PageSize = 12;
+            
+            if (filter.Page == 0)
+                filter.Page = 1;
+
             var result = await _propertyService.GetPropertiesAsync(filter);
             var counts = await _propertyService.GetStatusCountsAsync();
+            
             ViewBag.StatusCounts = counts;
+            ViewBag.CurrentFilter = filter;
+            
             return View(result);
         }
 
@@ -31,7 +44,13 @@ namespace Homy.presentaion.Controllers
         public async Task<IActionResult> Details(long id)
         {
             var property = await _propertyService.GetPropertyDetailsAsync(id);
-            if (property == null) return NotFound();
+            
+            if (property == null)
+            {
+                TempData["Error"] = "الإعلان غير موجود";
+                return RedirectToAction(nameof(Index));
+            }
+            
             return View(property);
         }
 
@@ -43,13 +62,29 @@ namespace Homy.presentaion.Controllers
             var adminId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(adminId))
             {
-                return RedirectToAction("Login", "Account"); // Or handle as unauthorized
+                TempData["Error"] = "يجب تسجيل الدخول أولاً";
+                return RedirectToAction("Login", "Account");
             }
 
-            await _propertyService.ReviewPropertyAsync(Guid.Parse(adminId), dto);
+            var success = await _propertyService.ReviewPropertyAsync(Guid.Parse(adminId), dto);
             
-            // Return to details with clear cache or updated status
-            return RedirectToAction(nameof(Details), new { id = dto.PropertyId });
+            if (success)
+            {
+                var actionText = dto.Action switch
+                {
+                    Homy.Domin.models.ReviewAction.Approved => "تم قبول الإعلان بنجاح",
+                    Homy.Domin.models.ReviewAction.Rejected => "تم رفض الإعلان",
+                    Homy.Domin.models.ReviewAction.ChangesRequested => "تم طلب التعديلات",
+                    _ => "تم تحديث حالة الإعلان"
+                };
+                TempData["Success"] = actionText;
+            }
+            else
+            {
+                TempData["Error"] = "حدث خطأ أثناء مراجعة الإعلان";
+            }
+            
+            return RedirectToAction(nameof(Index));
         }
     }
 }

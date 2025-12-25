@@ -1,0 +1,503 @@
+/* ===================================================================
+   ENHANCED COMPONENTS - Dark/Light Mode Optimization
+   Added for Maximum Visibility and Modern Design
+   ================================================================== */
+
+/* ===== BUTTONS ENHANCEMENT ===== */
+.btn {
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    padding: 0.625rem 1.25rem;
+    transition: all var(--transition-fast);
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Primary Button - ALWAYS white text */
+.btn-primary {
+    background: var(--primary);
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    color: #ffffff !important;
+}
+
+/* Success Button */
+.btn-success {
+    background: var(--success);
+    color: #ffffff !important;
+}
+
+.btn-success:hover {
+    background: #059669;
+    /* Emerald 600 */
+    color: #ffffff !important;
+}
+
+/* Danger Button */
+.btn-danger {
+    background: var(--danger);
+    color: #ffffff !important;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    /* Red 600 */
+    color: #ffffff !important;
+}
+
+/* Warning Button */
+.btn-warning {
+    background: var(--warning);
+    color: #ffffff !important;
+}
+
+.btn-warning:hover {
+    background: #d97706;
+    /* Amber 600 */
+    color: #ffffff !important;
+}
+
+/* Info Button */
+.btn-info {
+    background: var(--info);
+    color: #ffffff !important;
+}
+
+.btn-info:hover {
+    background: #2563eb;
+    /* Blue 600 */
+    color: #ffffff !important;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: var(--dark-light);
+    color: var(--text-primary);
+    border: 1px solid var(--card-border);
+}
+
+.btn-secondary:hover {
+    background: var(--dark-lighter);
+    color: var(--text-primary);
+}
+
+/* ===== BADGES ENHANCEMENT ===== */
+.badge {
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.badge.bg-success,
+.badge.bg-success-subtle {
+    background: var(--success) !important;
+    color: #ffffff !important;
+}
+
+.badge.bg-danger,
+.badge.bg-danger-subtle {
+    background: var(--danger) !important;
+    color: #ffffff !important;
+}
+
+.badge.bg-warning,
+.badge.bg-warning-subtle {
+    background: var(--warning) !important;
+    color: #111827 !important;
+    /* Dark text for yellow background */
+}
+
+.badge.bg-info,
+.badge.bg-info-subtle {
+    background: var(--info) !important;
+    color: #ffffff !important;
+}
+
+.badge.bg-primary,
+.badge.bg-primary-subtle {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+.badge.bg-secondary {
+    background: var(--dark-lighter) !important;
+    color: var(--text-primary) !important;
+}
+
+.badge.bg-light {
+    background: #e5e7eb !important;
+    /* Gray 200 */
+    color: #111827 !important;
+    /* Dark text */
+}
+
+.badge.bg-dark {
+    background: #1f2937 !important;
+    /* Gray 800 */
+    color: #f9fafb !important;
+    /* Light text */
+}
+
+/* ===== CARDS ENHANCEMENT ===== */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    background: var(--dark);
+    border-bottom: 2px solid var(--primary);
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+    color: var(--text-primary);
+}
+
+.card-footer {
+    background: var(--dark);
+    border-top: 1px solid var(--card-border);
+    padding: 1rem 1.5rem;
+}
+
+/* ===== TABLES ENHANCEMENT ===== */
+.table {
+    color: var(--text-primary);
+    background: var(--card-bg);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead {
+    background: var(--dark);
+    border-bottom: 2px solid var(--primary);
+}
+
+.table thead th {
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 1rem;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--card-border);
+    transition: background var(--transition-fast);
+}
+
+.table tbody tr:hover {
+    background: var(--dark-light);
+}
+
+.table tbody td {
+    color: var(--text-primary);
+    padding: 0.875rem 1rem;
+    border: none;
+    vertical-align: middle;
+}
+
+/* Striped Table */
+.table-striped tbody tr:nth-of-type(odd) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.table-striped tbody tr:nth-of-type(odd):hover {
+    background: var(--dark-light);
+}
+
+/* Bordered Table */
+.table-bordered {
+    border: 1px solid var(--card-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--card-border);
+}
+
+/* ===== FORM CONTROLS ENHANCEMENT ===== */
+.form-control,
+.form-select {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    padding: 0.625rem 0.875rem;
+    transition: all var(--transition-fast);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: var(--card-bg);
+    border-color: var(--primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--text-dim);
+    opacity: 0.7;
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-text {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* ===== ALERTS ENHANCEMENT ===== */
+.alert {
+    border-radius: var(--radius-md);
+    border: none;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-light);
+    border-left: 4px solid var(--success);
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-light);
+    border-left: 4px solid var(--danger);
+}
+
+.alert-warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning-light);
+    border-left: 4px solid var(--warning);
+}
+
+.alert-info {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    /* Blue 400 */
+    border-left: 4px solid var(--info);
+}
+
+/* ===== PAGINATION ENHANCEMENT ===== */
+.pagination {
+    gap: 0.5rem;
+}
+
+.page-link {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.875rem;
+    transition: all var(--transition-fast);
+}
+
+.page-link:hover {
+    background: var(--dark-light);
+    color: var(--text-primary);
+    border-color: var(--primary);
+}
+
+.page-item.active .page-link {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.page-item.disabled .page-link {
+    background: var(--dark);
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+/* ===== MODAL ENHANCEMENT ===== */
+.modal-content {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+    background: var(--dark);
+    border-bottom: 2px solid var(--primary);
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-title {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    color: var(--text-primary);
+}
+
+.modal-footer {
+    background: var(--dark);
+    border-top: 1px solid var(--card-border);
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* ===== BREADCRUMB ENHANCEMENT ===== */
+.breadcrumb {
+    background: transparent;
+    padding: 0.75rem 0;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    color: var(--text-muted);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--text-dim);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.breadcrumb-item a {
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary);
+}
+
+/* ===== DROPDOWN ENHANCEMENT ===== */
+.dropdown-menu {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+    background: var(--dark-light);
+    color: var(--text-primary);
+}
+
+.dropdown-item:active {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.dropdown-divider {
+    border-color: var(--card-border);
+    margin: 0.5rem 0;
+}
+
+/* ===== TEXT UTILITIES ===== */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-success {
+    color: var(--success-light) !important;
+}
+
+.text-danger {
+    color: var(--danger-light) !important;
+}
+
+.text-warning {
+    color: var(--warning-light) !important;
+}
+
+.text-info {
+    color: #60a5fa !important;
+    /* Blue 400 */
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+/* ===== BACKGROUND UTILITIES ===== */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-success {
+    background-color: var(--success) !important;
+}
+
+.bg-danger {
+    background-color: var(--danger) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning) !important;
+}
+
+.bg-info {
+    background-color: var(--info) !important;
+}

@@ -31,7 +31,7 @@
                 </h5>
             </div>
             <div class="card-body">
-                <form asp-action="Create" method="post">
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
                     @Html.AntiForgeryToken()
 
                     <!-- Validation Summary -->
@@ -96,27 +96,25 @@
 
                     <!-- شعار المشروع -->
                     <div class="mb-3">
-                        <label asp-for="LogoUrl" class="form-label">
+                        <label asp-for="LogoImage" class="form-label">
                             <i class="fas fa-image text-primary"></i> شعار المشروع
                         </label>
-                        <input asp-for="LogoUrl" class="form-control" type="url"
-                               placeholder="https://example.com/logo.png" />
-                        <span asp-validation-for="LogoUrl" class="text-danger"></span>
+                        <input asp-for="LogoImage" class="form-control" type="file" accept="image/*" />
+                        <span asp-validation-for="LogoImage" class="text-danger"></span>
                         <small class="form-text text-muted">
-                            شعار المشروع (URL)
+                            اختياري - صورة شعار المشروع (PNG, JPG)
                         </small>
                     </div>
 
                     <!-- صورة الغلاف -->
                     <div class="mb-3">
-                        <label asp-for="CoverImageUrl" class="form-label">
+                        <label asp-for="CoverImage" class="form-label">
                             <i class="fas fa-image text-primary"></i> صورة الغلاف
                         </label>
-                        <input asp-for="CoverImageUrl" class="form-control" type="url"
-                               placeholder="https://example.com/cover.jpg" />
-                        <span asp-validation-for="CoverImageUrl" class="text-danger"></span>
+                        <input asp-for="CoverImage" class="form-control" type="file" accept="image/*" />
+                        <span asp-validation-for="CoverImage" class="text-danger"></span>
                         <small class="form-text text-muted">
-                            صورة الغلاف (URL)
+                            اختياري - صورة غلاف المشروع (PNG, JPG)
                         </small>
                     </div>
 

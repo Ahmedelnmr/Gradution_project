@@ -4,6 +4,8 @@
     ViewData["Title"] = "الإحصائيات المستخدمين";
 }
 
+<link rel="stylesheet" href="~/css/statistics-dark.css" />
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -32,13 +34,13 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1" style="font-size: 0.95rem;">
                                         إجمالي المستخدمين
                                     </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalUsers</div>
+                                    <div class="h5 mb-0 font-weight-bold" style="color: var(--text-primary); font-size: 1.75rem;">@Model.TotalUsers</div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-users fa-2x text-gray-300"></i>
+                                    <i class="fas fa-users fa-2x" style="color: var(--primary);"></i>
                                 </div>
                             </div>
                         </div>
@@ -51,11 +53,11 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style="font-size: 0.95rem;">
                                         المستخدمين النشطين
                                     </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.ActiveUsers</div>
-                                    <small class="text-muted">
+                                    <div class="h5 mb-0 font-weight-bold" style="color: var(--text-primary); font-size: 1.75rem;">@Model.ActiveUsers</div>
+                                    <small style="color: var(--text-secondary); font-size: 0.9rem;">
                                         @if (Model.TotalUsers > 0)
                                         {
                                         @(((double)Model.ActiveUsers / Model.TotalUsers * 100).ToString("F1"))
@@ -64,7 +66,7 @@
                                     </small>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-user-check fa-2x text-gray-300"></i>
+                                    <i class="fas fa-user-check fa-2x" style="color: var(--success);"></i>
                                 </div>
                             </div>
                         </div>
@@ -77,14 +79,14 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1" style="font-size: 0.95rem;">
                                         الوسطاء الموثقين
                                     </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.VerifiedAgents</div>
-                                    <small class="text-muted">من أصل @Model.TotalAgents وسيط</small>
+                                    <div class="h5 mb-0 font-weight-bold" style="color: var(--text-primary); font-size: 1.75rem;">@Model.VerifiedAgents</div>
+                                    <small style="color: var(--text-secondary); font-size: 0.9rem;">من أصل @Model.TotalAgents وسيط</small>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                                    <i class="fas fa-user-tie fa-2x" style="color: var(--info);"></i>
                                 </div>
                             </div>
                         </div>
@@ -97,10 +99,10 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1" style="font-size: 0.95rem;">
                                         في انتظار التوثيق
                                     </div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.UnverifiedAgents</div>
+                                    <div class="h5 mb-0 font-weight-bold" style="color: var(--text-primary); font-size: 1.75rem;">@Model.UnverifiedAgents</div>
                                     @if (Model.UnverifiedAgents > 0)
                                     {
                                         <a asp-action="UnverifiedAgents" class="btn btn-sm btn-warning mt-2">
@@ -109,7 +111,7 @@
                                     }
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-clock fa-2x text-gray-300"></i>
+                                    <i class="fas fa-clock fa-2x" style="color: var(--warning);"></i>
                                 </div>
                             </div>
                         </div>
@@ -129,15 +131,15 @@
                         </div>
                         <div class="card-body">
                             <canvas id="userRoleChart"></canvas>
-                            <div class="mt-4 text-center">
-                                <span class="mr-3">
-                                    <i class="fas fa-circle text-primary"></i> ملاك: @Model.TotalOwners
+                            <div class="mt-4 text-center" style="font-size: 1rem;">
+                                <span class="mr-3" style="color: var(--text-primary);">
+                                    <i class="fas fa-circle" style="color: #818cf8;"></i> ملاك: <strong>@Model.TotalOwners</strong>
                                 </span>
-                                <span class="mr-3">
-                                    <i class="fas fa-circle text-warning"></i> وسطاء: @Model.TotalAgents
+                                <span class="mr-3" style="color: var(--text-primary);">
+                                    <i class="fas fa-circle" style="color: #fbbf24;"></i> وسطاء: <strong>@Model.TotalAgents</strong>
                                 </span>
-                                <span>
-                                    <i class="fas fa-circle text-danger"></i> مسؤولين: @Model.Admins
+                                <span style="color: var(--text-primary);">
+                                    <i class="fas fa-circle" style="color: #f87171;"></i> مسؤولين: <strong>@Model.Admins</strong>
                                 </span>
                             </div>
                         </div>
@@ -154,12 +156,12 @@
                         </div>
                         <div class="card-body">
                             <canvas id="agentVerificationChart"></canvas>
-                            <div class="mt-4 text-center">
-                                <span class="mr-3">
-                                    <i class="fas fa-circle text-success"></i> موثق: @Model.VerifiedAgents
+                            <div class="mt-4 text-center" style="font-size: 1rem;">
+                                <span class="mr-3" style="color: var(--text-primary);">
+                                    <i class="fas fa-circle" style="color: #34d399;"></i> موثق: <strong>@Model.VerifiedAgents</strong>
                                 </span>
-                                <span>
-                                    <i class="fas fa-circle text-warning"></i> غير موثق: @Model.UnverifiedAgents
+                                <span style="color: var(--text-primary);">
+                                    <i class="fas fa-circle" style="color: #fbbf24;"></i> غير موثق: <strong>@Model.UnverifiedAgents</strong>
                                 </span>
                             </div>
                         </div>
@@ -290,7 +292,7 @@
                                                 }
                                             </td>
                                             <td>
-                                                <a asp-action="Index" asp-route-role="3" class="btn btn-sm btn-danger">
+                                                <a asp-action="Index" asp-route-role="0" class="btn btn-sm btn-danger">
                                                     <i class="fas fa-filter"></i> تصفية
                                                 </a>
                                             </td>
@@ -309,6 +311,15 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        // Color palette (consistent with Dashboard)
+        const colors = {
+            primary: '#818cf8',
+            warning: '#fbbf24', 
+            danger: '#f87171',
+            success: '#34d399',
+            info: '#22d3ee'
+        };
+
         // User Role Distribution Chart
         const userRoleCtx = document.getElementById('userRoleChart').getContext('2d');
         new Chart(userRoleCtx, {
@@ -317,8 +328,8 @@
                 labels: ['ملاك', 'وسطاء', 'مسؤولين'],
                 datasets: [{
                     data: [@Model.TotalOwners, @Model.TotalAgents, @Model.Admins],
-                    backgroundColor: ['#4e73df', '#f6c23e', '#e74a3b'],
-                    hoverBackgroundColor: ['#2e59d9', '#d4a21a', '#be2617'],
+                    backgroundColor: [colors.primary, colors.warning, colors.danger],
+                    hoverBackgroundColor: [colors.primary, colors.warning, colors.danger],
                     borderWidth: 2
                 }]
             },
@@ -341,8 +352,8 @@
                 datasets: [{
                     label: 'عدد الوسطاء',
                     data: [@Model.VerifiedAgents, @Model.UnverifiedAgents],
-                    backgroundColor: ['#1cc88a', '#f6c23e'],
-                    borderColor: ['#17a673', '#d4a21a'],
+                    backgroundColor: [colors.success, colors.warning],
+                    borderColor: [colors.success, colors.warning],
                     borderWidth: 1
                 }]
             },

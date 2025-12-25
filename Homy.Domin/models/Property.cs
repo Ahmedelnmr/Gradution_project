@@ -13,7 +13,12 @@ namespace Homy.Domin.models
         [Required, MaxLength(500)]
         public string Title { get; set; } = null!;
 
+        [MaxLength(500)]
+        public string? TitleEn { get; set; }
+
         public string? Description { get; set; }
+
+        public string? DescriptionEn { get; set; }
 
         public long PropertyTypeId { get; set; }
         public virtual PropertyType PropertyType { get; set; } = null!;
@@ -47,6 +52,9 @@ namespace Homy.Domin.models
         [MaxLength(1000)]
         public string? AddressDetails { get; set; }
 
+        [MaxLength(1000)]
+        public string? AddressDetailsEn { get; set; }
+
         public bool IsAgricultural { get; set; } = false;
 
         public Guid UserId { get; set; }
@@ -60,6 +68,9 @@ namespace Homy.Domin.models
         public DateTime? FeaturedUntil { get; set; }
 
         public PropertyStatus Status { get; set; } = PropertyStatus.PendingReview;
+
+        [MaxLength(500)]
+        public string? RejectionReason { get; set; }
 
         // العلاقات
         public virtual ICollection<PropertyImage> Images { get; set; } = new List<PropertyImage>();

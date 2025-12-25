@@ -1,8 +1,11 @@
 @using Homy.Application.Dtos.UserDtos
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
 @model VerificationRequestDto
 @{
     ViewData["Title"] = "توثيق الوسيط";
     var userInfo = (ViewBag.UserInfo as UserDto);
+    var apiBaseUrl = Configuration["ApiSettings:BaseUrl"] ?? "http://localhost:5235";
 }
 
 <div class="container">
@@ -94,6 +97,68 @@
                 </div>
             }
 
+            <!-- Verification Documents Card -->
+            @if (userInfo != null && (!string.IsNullOrEmpty(userInfo.IdCardFrontUrl) || !string.IsNullOrEmpty(userInfo.IdCardBackUrl) || !string.IsNullOrEmpty(userInfo.SelfieWithIdUrl)))
+            {
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="fas fa-id-card"></i> المستندات المرفوعة</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            @if (!string.IsNullOrEmpty(userInfo.IdCardFrontUrl))
+                            {
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <label class="form-label fw-bold"><i class="fas fa-id-card"></i> البطاقة (وجه)</label>
+                                        <div class="border rounded p-2 bg-light" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#idFrontModal">
+                                            <img src="@(apiBaseUrl + userInfo.IdCardFrontUrl)" alt="ID Front" class="img-fluid rounded shadow-sm" style="max-height: 200px; object-fit: contain;">
+                                            <p class="text-muted mt-2 mb-0"><small><i class="fas fa-search-plus"></i> اضغط للتكبير</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(userInfo.IdCardBackUrl))
+                            {
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <label class="form-label fw-bold"><i class="fas fa-id-card"></i> البطاقة (ظهر)</label>
+                                        <div class="border rounded p-2 bg-light" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#idBackModal">
+                                            <img src="@(apiBaseUrl + userInfo.IdCardBackUrl)" alt="ID Back" class="img-fluid rounded shadow-sm" style="max-height: 200px; object-fit: contain;">
+                                            <p class="text-muted mt-2 mb-0"><small><i class="fas fa-search-plus"></i> اضغط للتكبير</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(userInfo.SelfieWithIdUrl))
+                            {
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <label class="form-label fw-bold"><i class="fas fa-camera"></i> صورة السيلفي</label>
+                                        <div class="border rounded p-2 bg-light" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#selfieModal">
+                                            <img src="@(apiBaseUrl + userInfo.SelfieWithIdUrl)" alt="Selfie" class="img-fluid rounded shadow-sm" style="max-height: 200px; object-fit: contain;">
+                                            <p class="text-muted mt-2 mb-0"><small><i class="fas fa-search-plus"></i> اضغط للتكبير</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="alert alert-warning mt-3" role="alert">
+                            <i class="fas fa-check-circle"></i>
+                            <strong>تأكد من:</strong>
+                            <ul class="mb-0">
+                                <li>الصور واضحة ويمكن قراءة البيانات</li>
+                                <li>صورة البطاقة تطابق الصورة الشخصية في السيلفي</li>
+                                <li>البيانات المكتوبة تتطابق مع بيانات التسجيل</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+
             <!-- Verification Form -->
             <div class="card">
                 <div class="card-header bg-primary text-white">
@@ -165,6 +230,64 @@
         </div>
     </div>
 </div>
+
+<!-- Modals for Full-Size Images -->
+@if (userInfo != null)
+{
+    <!-- ID Front Modal -->
+    @if (!string.IsNullOrEmpty(userInfo.IdCardFrontUrl))
+    {
+        <div class="modal fade" id="idFrontModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="fas fa-id-card"></i> البطاقة (وجه)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="@(apiBaseUrl + userInfo.IdCardFrontUrl)" alt="ID Front" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- ID Back Modal -->
+    @if (!string.IsNullOrEmpty(userInfo.IdCardBackUrl))
+    {
+        <div class="modal fade" id="idBackModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="fas fa-id-card"></i> البطاقة (ظهر)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="@(apiBaseUrl + userInfo.IdCardBackUrl)" alt="ID Back" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Selfie Modal -->
+    @if (!string.IsNullOrEmpty(userInfo.SelfieWithIdUrl))
+    {
+        <div class="modal fade" id="selfieModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="fas fa-camera"></i> صورة السيلفي مع البطاقة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="@(apiBaseUrl + userInfo.SelfieWithIdUrl)" alt="Selfie" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
 
 @section Scripts {
     <script>

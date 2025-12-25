@@ -151,6 +151,7 @@ namespace Homy.Application.Service
         public async Task<Dictionary<PropertyStatus, int>> GetStatusCountsAsync()
         {
             var counts = await _unitOfWork.PropertyRepo.GetAll()
+                .Where(p => !p.IsDeleted)  // ✅ Exclude deleted properties
                 .GroupBy(p => p.Status)
                 .Select(g => new { Status = g.Key, Count = g.Count() })
                 .ToDictionaryAsync(x => x.Status, x => x.Count);

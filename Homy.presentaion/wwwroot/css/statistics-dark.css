@@ -1,0 +1,82 @@
+/* Additional Statistics Page Styles for Dark Mode */
+
+/* Card improvements */
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.card-header {
+    background-color: var(--dark);
+    border-bottom-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.card-body {
+    color: var(--text-primary);
+}
+
+/* Table improvements */
+.table {
+    --bs-table-bg: var(--card-bg);
+    --bs-table-color: var(--text-primary);
+    --bs-table-border-color: var(--card-border);
+}
+
+.table thead {
+    background-color: var(--dark-light);
+    color: var(--text-primary);
+}
+
+.table tbody tr {
+    border-color: var(--card-border);
+}
+
+.table tbody tr:hover {
+    background-color: var(--dark-light);
+}
+
+/* Text color improvements */
+.text-gray-800 {
+    color: var(--text-primary) !important;
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+.text-xs {
+    font-size: 0.95rem !important;
+}
+
+/* Border colors */
+.border-left-primary {
+    border-left-color: var(--primary) !important;
+}
+
+.border-left-success {
+    border-left-color: var(--success) !important;
+}
+
+.border-left-info {
+    border-left-color: var(--info) !important;
+}
+
+.border-left-warning {
+    border-left-color: var(--warning) !important;
+}
+
+/* Ensure good contrast */
+th,
+td {
+    color: var(--text-primary) !important;
+}
+
+strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+small {
+    color: var(--text-secondary);
+}

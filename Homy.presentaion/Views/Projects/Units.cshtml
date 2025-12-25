@@ -1,0 +1,154 @@
+@using Homy.Domin.models
+@model IEnumerable<Property>
+@{
+    ViewData["Title"] = $"وحدات المشروع - {ViewBag.ProjectName}";
+    var projectId = ViewBag.ProjectId;
+    var projectName = ViewBag.ProjectName;
+}
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <i class="fas fa-home text-primary"></i>
+            وحدات المشروع: @projectName
+        </h1>
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">إدارة المشاريع</a></li>
+                <li class="breadcrumb-item"><a asp-action="Details" asp-route-id="@projectId">@projectName</a></li>
+                <li class="breadcrumb-item active">الوحدات</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="header-actions">
+        <a asp-action="Details" asp-route-id="@projectId" class="btn btn-secondary">
+            <i class="fas fa-arrow-right"></i> العودة للمشروع
+        </a>
+    </div>
+</div>
+
+<!-- Units Grid -->
+<div class="row g-4">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var property in Model)
+        {
+            var mainImage = property.Images?.FirstOrDefault()?.ImageUrl ?? "/images/placeholder.jpg";
+            
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm property-card">
+                    <div class="position-relative">
+                        <img src="@mainImage" 
+                             alt="@property.Title" 
+                             class="card-img-top" 
+                             style="height: 200px; object-fit: cover;">
+                        
+                        <!-- Status Badge -->
+                        @switch (property.Status)
+                        {
+                            case PropertyStatus.Active:
+                                <span class="position-absolute top-0 end-0 badge bg-success m-2">
+                                    <i class="fas fa-check-circle"></i> نشط
+                                </span>
+                                break;
+                            case PropertyStatus.PendingReview:
+                                <span class="position-absolute top-0 end-0 badge bg-warning m-2">
+                                    <i class="fas fa-clock"></i> قيد المراجعة
+                                </span>
+                                break;
+                            case PropertyStatus.Rejected:
+                                <span class="position-absolute top-0 end-0 badge bg-danger m-2">
+                                    <i class="fas fa-times-circle"></i> مرفوض
+                                </span>
+                                break;
+                        }
+                        
+                        <!-- Price -->
+                        <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75">
+                            <span class="text-white fw-bold">
+                                @property.Price.ToString("N0") جنيه
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">@property.Title</h5>
+                        
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-tag"></i> @property.PropertyType.Name
+                        </p>
+                        
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-map-marker-alt"></i> 
+                            @property.City.Name@(property.District != null ? $" - {property.District.Name}" : "")
+                        </p>
+                        
+                        <div class="d-flex justify-content-between text-muted small mb-3">
+                            <span><i class="fas fa-bed"></i> @property.Rooms</span>
+                            <span><i class="fas fa-bath"></i> @property.Bathrooms</span>
+                            <span><i class="fas fa-ruler-combined"></i> @property.Area م²</span>
+                        </div>
+                        
+                        <a asp-controller="AdminProperties" asp-action="Details" asp-route-id="@property.Id" 
+                           class="btn btn-primary w-100">
+                            <i class="fas fa-eye"></i> عرض التفاصيل
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-12">
+            <div class="alert alert-info text-center py-5">
+                <i class="fas fa-info-circle fa-3x mb-3"></i>
+                <h4>لا توجد وحدات في هذا المشروع بعد</h4>
+                <p class="text-muted">سيتم عرض الوحدات هنا بمجرد إضافتها للمشروع</p>
+                <a asp-action="Details" asp-route-id="@projectId" class="btn btn-primary mt-3">
+                    <i class="fas fa-arrow-right"></i> العودة للمشروع
+                </a>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+/* Property Card Styles */
+.property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.property-card .card-img-top {
+    transition: opacity 0.3s ease;
+}
+
+.property-card:hover .card-img-top {
+    opacity: 0.9;
+}
+
+.property-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.property-card .btn {
+    transition: all 0.3s ease;
+}
+
+.property-card .btn:hover {
+    transform: scale(1.05);
+}
+</style>

@@ -341,6 +341,10 @@ namespace Homy.Infurastructure.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<string>("AddressDetailsEn")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
                     b.Property<int?>("Area")
                         .HasColumnType("int");
 
@@ -357,6 +361,9 @@ namespace Homy.Infurastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescriptionEn")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("DistrictId")
@@ -403,6 +410,10 @@ namespace Homy.Infurastructure.Migrations
                     b.Property<byte>("Purpose")
                         .HasColumnType("tinyint");
 
+                    b.Property<string>("RejectionReason")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<decimal?>("RentPriceMonthly")
                         .HasColumnType("decimal(18,2)");
 
@@ -414,6 +425,10 @@ namespace Homy.Infurastructure.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("TitleEn")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -525,6 +540,9 @@ namespace Homy.Infurastructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrimary")
                         .HasColumnType("bit");
 
                     b.Property<long>("PropertyId")
@@ -720,6 +738,14 @@ namespace Homy.Infurastructure.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("IdCardBackUrl")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("IdCardFrontUrl")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -759,12 +785,19 @@ namespace Homy.Infurastructure.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SelfieWithIdUrl")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("VerificationRejectReason")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WhatsAppNumber")
                         .HasMaxLength(20)
@@ -819,6 +852,17 @@ namespace Homy.Infurastructure.Migrations
 
                     b.Property<long>("PackageId")
                         .HasColumnType("bigint");
+
+                    b.Property<string>("PayPalPayerId")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PayPalTransactionId")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("PaymentDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentMethod")
                         .HasMaxLength(50)

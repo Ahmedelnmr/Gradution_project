@@ -40,55 +40,54 @@
             <div class="stat-card-body">
                 <h2 class="stat-number" data-target="@Model.UsersCount">0</h2>
                 <p class="stat-label">إجمالي المستخدمين</p>
-                <div class="stat-trend positive">
-                    <i class="fas fa-arrow-up"></i>
-                    <span>+12% هذا الشهر</span>
+                <div class="stat-detail-row">
+                    <span class="stat-detail"><i class="fas fa-check-circle"></i> @Model.ActiveUsersCount نشط</span>
+                    <span class="stat-detail"><i class="fas fa-user-check"></i> @Model.VerifiedAgentsCount موثق</span>
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a href="@Url.Action("Index", "Users")" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
 
-        <!-- Ads Card -->
+        <!-- Properties Card -->
         <div class="stat-card-modern stat-success">
-            <div class="stat-card-header">
-                <div class="stat-icon-wrapper">
-                    <i class="fas fa-bullhorn"></i>
-                </div>
-                <div class="stat-badge">إدارة الإعلانات</div>
-            </div>
-            <div class="stat-card-body">
-                <h2 class="stat-number" data-target="@Model.AdsCount">0</h2>
-                <p class="stat-label">إجمالي الإعلانات</p>
-                <div class="stat-trend positive">
-                    <i class="fas fa-arrow-up"></i>
-                    <span>+8% هذا الشهر</span>
-                </div>
-            </div>
-            <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
-            </div>
-        </div>
-
-        <!-- Active Properties Card -->
-        <div class="stat-card-modern stat-warning">
             <div class="stat-card-header">
                 <div class="stat-icon-wrapper">
                     <i class="fas fa-home"></i>
                 </div>
-                <div class="stat-badge">عقارات نشطة</div>
+                <div class="stat-badge">العقارات</div>
             </div>
             <div class="stat-card-body">
-                <h2 class="stat-number" data-target="@(Model.AdsCount - 15)">0</h2>
-                <p class="stat-label">عقارات قيد العرض</p>
-                <div class="stat-trend positive">
-                    <i class="fas fa-arrow-up"></i>
-                    <span>+5% هذا الأسبوع</span>
+                <h2 class="stat-number" data-target="@Model.ActivePropertiesCount">0</h2>
+                <p class="stat-label">عقارات نشطة</p>
+                <div class="stat-detail-row">
+                    <span class="stat-detail"><i class="fas fa-clock"></i> @Model.PendingPropertiesCount قيد المراجعة</span>
+                    <span class="stat-detail"><i class="fas fa-star"></i> @Model.FeaturedPropertiesCount مميز</span>
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a href="@Url.Action("Index", "PropertyApproval")" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <!-- Subscriptions Card -->
+        <div class="stat-card-modern stat-warning">
+            <div class="stat-card-header">
+                <div class="stat-icon-wrapper">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="stat-badge">الاشتراكات</div>
+            </div>
+            <div class="stat-card-body">
+                <h2 class="stat-number" data-target="@Model.ActiveSubscriptionsCount">0</h2>
+                <p class="stat-label">اشتراك نشط</p>
+                <div class="stat-detail-row">
+                    <span class="stat-detail"><i class="fas fa-list"></i> @Model.TotalSubscriptionsCount إجمالي</span>
+                </div>
+            </div>
+            <div class="stat-card-footer">
+                <a href="@Url.Action("Index", "UserSubscription")" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
 
@@ -98,18 +97,17 @@
                 <div class="stat-icon-wrapper">
                     <i class="fas fa-dollar-sign"></i>
                 </div>
-                <div class="stat-badge">إيرادات</div>
+                <div class="stat-badge">الإيرادات</div>
             </div>
             <div class="stat-card-body">
-                <h2 class="stat-number">$45,890</h2>
+                <h2 class="stat-number">@Model.MonthlyRevenue.ToString("N0") EGP</h2>
                 <p class="stat-label">الإيرادات الشهرية</p>
-                <div class="stat-trend positive">
-                    <i class="fas fa-arrow-up"></i>
-                    <span>+18% هذا الشهر</span>
+                <div class="stat-detail-row">
+                    <span class="stat-detail"><i class="fas fa-coins"></i> @Model.TotalRevenue.ToString("N0") EGP إجمالي</span>
                 </div>
             </div>
             <div class="stat-card-footer">
-                <a href="#" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
+                <a href="@Url.Action("Index", "Reports")" class="stat-link">عرض التفاصيل <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
     </div>
@@ -138,18 +136,18 @@
                 <div class="chart-legend">
                     <div class="legend-item">
                         <span class="legend-dot" style="background: #6366f1;"></span>
-                        <span class="legend-label">مستخدمين نشطين</span>
-                        <span class="legend-value">65%</span>
+                        <span class="legend-label">أصحاب عقارات</span>
+                        <span class="legend-value" id="legend-owners">0%</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot" style="background: #8b5cf6;"></span>
-                        <span class="legend-label">مستخدمين جدد</span>
-                        <span class="legend-value">25%</span>
+                        <span class="legend-label">سماسرة</span>
+                        <span class="legend-value" id="legend-agents">0%</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot" style="background: #ec4899;"></span>
-                        <span class="legend-label">غير نشطين</span>
-                        <span class="legend-value">10%</span>
+                        <span class="legend-label">مديري النظام</span>
+                        <span class="legend-value" id="legend-admins">0%</span>
                     </div>
                 </div>
             </div>
@@ -170,18 +168,23 @@
                 <div class="chart-legend">
                     <div class="legend-item">
                         <span class="legend-dot" style="background: #10b981;"></span>
-                        <span class="legend-label">إعلانات نشطة</span>
-                        <span class="legend-value">70%</span>
+                        <span class="legend-label">نشطة</span>
+                        <span class="legend-value" id="legend-active">0%</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot" style="background: #f59e0b;"></span>
                         <span class="legend-label">قيد المراجعة</span>
-                        <span class="legend-value">20%</span>
+                        <span class="legend-value" id="legend-pending">0%</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #06b6d4;"></span>
+                        <span class="legend-label">مباعة/مؤجرة</span>
+                        <span class="legend-value" id="legend-sold">0%</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-dot" style="background: #ef4444;"></span>
-                        <span class="legend-label">منتهية</span>
-                        <span class="legend-value">10%</span>
+                        <span class="legend-label">مرفوضة</span>
+                        <span class="legend-value" id="legend-rejected">0%</span>
                     </div>
                 </div>
             </div>
@@ -199,27 +202,8 @@
                 <div class="chart-wrapper">
                     <canvas id="propertyTypesChart"></canvas>
                 </div>
-                <div class="chart-legend">
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #06b6d4;"></span>
-                        <span class="legend-label">شقق</span>
-                        <span class="legend-value">45%</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #8b5cf6;"></span>
-                        <span class="legend-label">فيلات</span>
-                        <span class="legend-value">30%</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #f59e0b;"></span>
-                        <span class="legend-label">أراضي</span>
-                        <span class="legend-value">15%</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #ec4899;"></span>
-                        <span class="legend-label">أخرى</span>
-                        <span class="legend-value">10%</span>
-                    </div>
+                <div class="chart-legend" id="property-types-legend">
+                    <!-- Will be populated dynamically by JavaScript -->
                 </div>
             </div>
         </div>
@@ -234,7 +218,7 @@
         
         <div class="quick-access-grid">
             <!-- Users Management -->
-            <a href="#" class="quick-access-card card-gradient-1">
+            <a href="@Url.Action("Index", "Users")" class="quick-access-card card-gradient-1">
                 <div class="quick-card-icon">
                     <i class="fas fa-user-gear"></i>
                 </div>
@@ -250,16 +234,16 @@
                 </div>
             </a>
 
-            <!-- Ads Management -->
-            <a href="#" class="quick-access-card card-gradient-2">
+            <!-- Property Approval -->
+            <a href="@Url.Action("Index", "PropertyApproval")" class="quick-access-card card-gradient-2">
                 <div class="quick-card-icon">
-                    <i class="fas fa-signs-post"></i>
+                    <i class="fas fa-clipboard-check"></i>
                 </div>
                 <div class="quick-card-content">
-                    <h3 class="quick-card-title">إدارة الإعلانات</h3>
-                    <p class="quick-card-desc">مراجعة، الموافقة، ورفض الإعلانات</p>
+                    <h3 class="quick-card-title">مراجعة العقارات</h3>
+                    <p class="quick-card-desc">الموافقة أو رفض الإعلانات المعلقة</p>
                     <div class="quick-card-stats">
-                        <span><i class="fas fa-bullhorn"></i> @Model.AdsCount إعلان</span>
+                        <span><i class="fas fa-clock"></i> @Model.PendingPropertiesCount قيد المراجعة</span>
                     </div>
                 </div>
                 <div class="quick-card-arrow">
@@ -268,7 +252,7 @@
             </a>
 
             <!-- Subscriptions -->
-            <a href="#" class="quick-access-card card-gradient-3">
+            <a href="@Url.Action("Index", "UserSubscription")" class="quick-access-card card-gradient-3">
                 <div class="quick-card-icon">
                     <i class="fas fa-crown"></i>
                 </div>
@@ -276,7 +260,7 @@
                     <h3 class="quick-card-title">إدارة الاشتراكات</h3>
                     <p class="quick-card-desc">الباقات والاشتراكات النشطة</p>
                     <div class="quick-card-stats">
-                        <span><i class="fas fa-star"></i> 24 اشتراك نشط</span>
+                        <span><i class="fas fa-star"></i> @Model.ActiveSubscriptionsCount اشتراك نشط</span>
                     </div>
                 </div>
                 <div class="quick-card-arrow">
@@ -284,16 +268,16 @@
                 </div>
             </a>
 
-            <!-- Reports -->
-            <a href="#" class="quick-access-card card-gradient-4">
+            <!-- Packages -->
+            <a href="@Url.Action("Index", "Packges")" class="quick-access-card card-gradient-4">
                 <div class="quick-card-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-box-open"></i>
                 </div>
                 <div class="quick-card-content">
-                    <h3 class="quick-card-title">الإحصائيات والتقارير</h3>
-                    <p class="quick-card-desc">تقارير مفصلة عن الأداء والنمو</p>
+                    <h3 class="quick-card-title">إدارة الباقات</h3>
+                    <p class="quick-card-desc">إنشاء وتعديل باقات الاشتراك</p>
                     <div class="quick-card-stats">
-                        <span><i class="fas fa-file-chart-line"></i> 12 تقرير جديد</span>
+                        <span><i class="fas fa-layer-group"></i> إدارة الباقات</span>
                     </div>
                 </div>
                 <div class="quick-card-arrow">
@@ -301,16 +285,16 @@
                 </div>
             </a>
 
-            <!-- Support -->
-            <a href="#" class="quick-access-card card-gradient-5">
+            <!-- Property Types -->
+            <a href="@Url.Action("Index", "AdminPropertyTypes")" class="quick-access-card card-gradient-5">
                 <div class="quick-card-icon">
-                    <i class="fas fa-headset"></i>
+                    <i class="fas fa-tags"></i>
                 </div>
                 <div class="quick-card-content">
-                    <h3 class="quick-card-title">الشكاوى والدعم</h3>
-                    <p class="quick-card-desc">إدارة طلبات الدعم والشكاوى</p>
+                    <h3 class="quick-card-title">أنواع العقارات</h3>
+                    <p class="quick-card-desc">إدارة تصنيفات العقارات</p>
                     <div class="quick-card-stats">
-                        <span><i class="fas fa-ticket"></i> 7 تذاكر مفتوحة</span>
+                        <span><i class="fas fa-list"></i> @Model.TotalPropertyTypes نوع</span>
                     </div>
                 </div>
                 <div class="quick-card-arrow">
@@ -318,16 +302,16 @@
                 </div>
             </a>
 
-            <!-- Settings -->
-            <a href="#" class="quick-access-card card-gradient-6">
+            <!-- Projects -->
+            <a href="@Url.Action("Index", "Projects")" class="quick-access-card card-gradient-6">
                 <div class="quick-card-icon">
-                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-building"></i>
                 </div>
                 <div class="quick-card-content">
-                    <h3 class="quick-card-title">الإعدادات</h3>
-                    <p class="quick-card-desc">ضبط إعدادات النظام والتفضيلات</p>
+                    <h3 class="quick-card-title">المشاريع والكمبوندات</h3>
+                    <p class="quick-card-desc">إدارة المشاريع العقارية</p>
                     <div class="quick-card-stats">
-                        <span><i class="fas fa-sliders-h"></i> إعدادات متقدمة</span>
+                        <span><i class="fas fa-city"></i> @Model.TotalProjects مشروع</span>
                     </div>
                 </div>
                 <div class="quick-card-arrow">
@@ -338,7 +322,84 @@
     </div>
 </div>
 
+@{
+    // Calculate percentages for charts - MUTUALLY EXCLUSIVE CATEGORIES
+    var totalUsers = Model.UsersCount > 0 ? Model.UsersCount : 1;
+    
+    // Users Distribution BY ROLE (Owners, Agents, Admins) - Sum = 100%
+    var ownersPercent = Math.Round((double)Model.OwnersCount / totalUsers * 100, 1);
+    var agentsPercent = Math.Round((double)Model.AgentsCount / totalUsers * 100, 1);
+    var adminsCount = totalUsers - Model.OwnersCount - Model.AgentsCount;
+    var adminsPercent = Math.Round((double)adminsCount / totalUsers * 100, 1);
+    
+    // Ensure exact 100% (fix rounding errors)
+    var userPercentSum = ownersPercent + agentsPercent + adminsPercent;
+    if (userPercentSum != 100 && userPercentSum > 0)
+    {
+        // Adjust the largest category
+        if (ownersPercent >= agentsPercent && ownersPercent >= adminsPercent)
+            ownersPercent += (100 - userPercentSum);
+        else if (agentsPercent >= adminsPercent)
+            agentsPercent += (100 - userPercentSum);
+        else
+            adminsPercent += (100 - userPercentSum);
+    }
+    
+    // Properties Distribution (Active, Pending, Sold/Rented, Rejected) - Sum = 100%
+    var totalAds = Model.AdsCount > 0 ? Model.AdsCount : 1;
+    var activeAdsPercent = Math.Round((double)Model.ActivePropertiesCount / totalAds * 100, 1);
+    var pendingAdsPercent = Math.Round((double)Model.PendingPropertiesCount / totalAds * 100, 1);
+    var soldRentedAdsPercent = Math.Round((double)Model.SoldOrRentedPropertiesCount / totalAds * 100, 1);
+    var rejectedAdsPercent = Math.Round((double)Model.RejectedPropertiesCount / totalAds * 100, 1);
+    
+    // Ensure exact 100% for properties (fix rounding errors)
+    var adsPercentSum = activeAdsPercent + pendingAdsPercent + soldRentedAdsPercent + rejectedAdsPercent;
+    if (adsPercentSum != 100 && adsPercentSum > 0)
+    {
+        // Adjust the largest category
+        if (activeAdsPercent >= pendingAdsPercent && activeAdsPercent >= soldRentedAdsPercent && activeAdsPercent >= rejectedAdsPercent)
+            activeAdsPercent += (100 - adsPercentSum);
+        else if (pendingAdsPercent >= soldRentedAdsPercent && pendingAdsPercent >= rejectedAdsPercent)
+            pendingAdsPercent += (100 - adsPercentSum);
+        else if (soldRentedAdsPercent >= rejectedAdsPercent)
+            soldRentedAdsPercent += (100 - adsPercentSum);
+        else
+            rejectedAdsPercent += (100 - adsPercentSum);
+    }
+    
+    // Property types percentages
+    var propertyTypesJson = Newtonsoft.Json.JsonConvert.SerializeObject(Model.PropertyTypesDistribution);
+}
+
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        // Pass server-side data to JavaScript - REAL DATA FROM SERVER
+        const dashboardData = {
+            users: {
+                owners: @ownersPercent,
+                ownersCount: @Model.OwnersCount,
+                agents: @agentsPercent,
+                agentsCount: @Model.AgentsCount,
+                admins: @adminsPercent,
+                adminsCount: @adminsCount
+            },
+            properties: {
+                active: @activeAdsPercent,
+                activeCount: @Model.ActivePropertiesCount,
+                pending: @pendingAdsPercent,
+                pendingCount: @Model.PendingPropertiesCount,
+                soldRented: @soldRentedAdsPercent,
+                soldRentedCount: @Model.SoldOrRentedPropertiesCount,
+                rejected: @rejectedAdsPercent,
+                rejectedCount: @Model.RejectedPropertiesCount
+            },
+            propertyTypes: @Html.Raw(propertyTypesJson)
+        };
+        
+        console.log('📊 Dashboard Data Loaded:', dashboardData);
+        console.log('✅ Users % Sum:', dashboardData.users.owners + dashboardData.users.agents + dashboardData.users.admins);
+        console.log('✅ Properties % Sum:', dashboardData.properties.active + dashboardData.properties.pending + dashboardData.properties.soldRented + dashboardData.properties.rejected);
+    </script>
     <script src="~/js/dashboard-charts.js"></script>
 }

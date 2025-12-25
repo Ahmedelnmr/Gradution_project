@@ -24,6 +24,15 @@ namespace Homy.Domin.models
         [Column(TypeName = "decimal(10,2)")]
         public decimal AmountPaid { get; set; }
 
+        // PayPal Transaction Info
+        [MaxLength(100)]
+        public string? PayPalTransactionId { get; set; }
+
+        [MaxLength(100)]
+        public string? PayPalPayerId { get; set; }
+
+        public DateTime? PaymentDate { get; set; }
+
         public virtual User User { get; set; } = null!;
         public virtual Package Package { get; set; } = null!;
         

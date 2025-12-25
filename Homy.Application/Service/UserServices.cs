@@ -25,8 +25,6 @@ namespace Homy.Application.Service
             var response = new PaginatedResponse<UserDto>();
             try
             {
-                Console.WriteLine("=== Start GetAllUsersAsync ===");
-
                 // جلب كل المستخدمين حسب الفلترة
                 var allUsers = await _unitOfWork.UserRepo.GetAllUsersAsync(
                     role: filter.Role,
@@ -35,57 +33,34 @@ namespace Homy.Application.Service
                     searchTerm: filter.SearchTerm
                 );
 
-                Console.WriteLine($"✅ Got {allUsers.Count()} users from repo");
-
                 // حساب العدد الإجمالي
                 response.TotalCount = allUsers.Count();
                 response.CurrentPage = filter.PageNumber;
                 response.PageSize = filter.PageSize;
 
                 // تطبيق الـ Pagination
-                var pagedUsers = allUsers
+                var pagedUsersList = allUsers
                     .Skip((filter.PageNumber - 1) * filter.PageSize)
-                    .Take(filter.PageSize);
+                    .Take(filter.PageSize)
+                    .ToList();
 
-                Console.WriteLine($"✅ After pagination: {pagedUsers.Count()} users");
-
-                // ⭐ هنا المشكلة غالباً - في الـ MapUserToDto
-                Console.WriteLine("Starting mapping...");
-                var usersList = new List<UserDto>();
-
-                foreach (var user in pagedUsers)
+                // Map to DTOs
+                var userDtos = new List<UserDto>();
+                foreach (var user in pagedUsersList)
                 {
-                    try
-                    {
-                        Console.WriteLine($"Mapping user: {user.Id}");
-                        var dto = MapUserToDto(user);
-                        usersList.Add(dto);
-                    }
-                    catch (Exception mapEx)
-                    {
-                        Console.WriteLine($"❌ Error mapping user {user.Id}: {mapEx.Message}");
-                        Console.WriteLine($"❌ Stack: {mapEx.StackTrace}");
-                        throw; // رمي الخطأ عشان نشوفه
-                    }
+                    userDtos.Add(MapUserToDto(user));
                 }
 
-                response.Data = usersList;
+                response.Data = userDtos;
                 response.Success = true;
-                response.Message = $"تم جلب {usersList.Count} من {response.TotalCount} مستخدم";
-
-                Console.WriteLine("✅ Success!");
+                response.Message = $"تم جلب {userDtos.Count} من {response.TotalCount} مستخدم";
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"❌ EXCEPTION: {ex.Message}");
-                Console.WriteLine($"❌ INNER: {ex.InnerException?.Message}");
-                Console.WriteLine($"❌ STACK: {ex.StackTrace}");
-
                 response.Success = false;
                 response.Message = "حدث خطأ أثناء جلب المستخدمين";
                 response.Errors.Add(ex.Message);
-
-                // ⭐ أضف الـ Inner Exception لو موجودة
+                
                 if (ex.InnerException != null)
                 {
                     response.Errors.Add($"Inner: {ex.InnerException.Message}");
@@ -93,44 +68,6 @@ namespace Homy.Application.Service
             }
             return response;
         }
-
-        //public async Task<PaginatedResponse<UserDto>> GetAllUsersAsync(UserFilterDto filter)
-        //{
-        //    var response = new PaginatedResponse<UserDto>();
-
-        //    try
-        //    {
-        //        // جلب كل المستخدمين حسب الفلترة
-        //        var allUsers = await _unitOfWork.UserRepo.GetAllUsersAsync(
-        //            role: filter.Role,
-        //            isVerified: filter.IsVerified,
-        //            isActive: filter.IsActive,
-        //            searchTerm: filter.SearchTerm
-        //        );
-
-        //        // حساب العدد الإجمالي
-        //        response.TotalCount = allUsers.Count();
-        //        response.CurrentPage = filter.PageNumber;
-        //        response.PageSize = filter.PageSize;
-
-        //        // تطبيق الـ Pagination
-        //        var pagedUsers = allUsers
-        //            .Skip((filter.PageNumber - 1) * filter.PageSize)
-        //            .Take(filter.PageSize);
-
-        //        response.Data = pagedUsers.Select(MapUserToDto).ToList();
-        //        response.Success = true;
-        //        response.Message = $"تم جلب {pagedUsers.Count()} من {response.TotalCount} مستخدم";
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        response.Success = false;
-        //        response.Message = "حدث خطأ أثناء جلب المستخدمين";
-        //        response.Errors.Add(ex.Message);
-        //    }
-
-        //    return response;
-        //}
 
 
         public async Task<ApiResponse<UserDto>> GetUserByIdAsync(Guid userId)
@@ -218,6 +155,26 @@ namespace Homy.Application.Service
                 {
                     await _unitOfWork.Save();
 
+                    // Create notification for user
+                    var notification = new Notification
+                    {
+                        UserId = request.UserId,
+                        Title = request.IsApproved 
+                            ? "تم توثيق حسابك بنجاح! ✅" 
+                            : "تم رفض طلب التوثيق ❌",
+                        Message = request.IsApproved 
+                            ? "مبروك! تم توثيق حسابك بنجاح. يمكنك الآن الاستفادة من جميع مميزات الحساب الموثق." 
+                            : $"عذراً، تم رفض طلب التوثيق. السبب: {request.Reason}. يمكنك تقديم طلب جديد بعد تصحيح المشكلة.",
+                        Type = request.IsApproved 
+                            ? NotificationType.VerificationApproved 
+                            : NotificationType.VerificationRejected,
+                        CreatedAt = DateTime.UtcNow,
+                        IsRead = false
+                    };
+
+                    await _unitOfWork.NotificationRepo.AddAsync(notification);
+                    await _unitOfWork.Save();
+
                     
 
                     response.Success = true;
@@ -241,44 +198,6 @@ namespace Homy.Application.Service
 
             return response;
         }
-
-        
-        //public async Task<ApiResponse<bool>> UpdateUserActiveStatusAsync(UpdateUserStatusDto request)
-        //{
-        //    var response = new ApiResponse<bool>();
-
-        //    try
-        //    {
-        //        var result = await _unitOfWork.UserRepo.UpdateActiveStatusAsync(
-        //            request.UserId,
-        //            request.IsActive
-        //        );
-
-        //        if (result)
-        //        {
-        //            await _unitOfWork.Save();
-
-        //            response.Success = true;
-        //            response.Data = true;
-        //            response.Message = request.IsActive
-        //                ? "تم تفعيل المستخدم بنجاح"
-        //                : "تم إلغاء تفعيل المستخدم بنجاح";
-        //        }
-        //        else
-        //        {
-        //            response.Success = false;
-        //            response.Message = "المستخدم غير موجود";
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        response.Success = false;
-        //        response.Message = "حدث خطأ أثناء تحديث حالة المستخدم";
-        //        response.Errors.Add(ex.Message);
-        //    }
-
-        //    return response;
-        //}
 
         public async Task<ApiResponse<bool>> UpdateUserActiveStatusAsync(UpdateUserStatusDto request)
         {
@@ -443,7 +362,13 @@ namespace Homy.Application.Service
                 CreatedAt = user.CreatedAt,
                 PropertiesCount = user.Properties?.Count ?? 0,
                 SavedPropertiesCount = user.SavedProperties?.Count ?? 0,
-                HasActiveSubscription = user.Subscriptions?.Any(s => s.IsActive) ?? false
+                HasActiveSubscription = user.Subscriptions?.Any(s => s.IsActive) ?? false,
+                
+                // Verification Documents
+                IdCardFrontUrl = user.IdCardFrontUrl,
+                IdCardBackUrl = user.IdCardBackUrl,
+                SelfieWithIdUrl = user.SelfieWithIdUrl,
+                VerificationRejectReason = user.VerificationRejectReason
             };
         }
 

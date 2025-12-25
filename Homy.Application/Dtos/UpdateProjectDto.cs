@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace Homy.Application.Dtos
 {
     public class UpdateProjectDto
     {
-        [Required]
         public long Id { get; set; }
 
         [Required(ErrorMessage = "اسم المشروع مطلوب")]
         [MaxLength(300)]
         public string Name { get; set; } = null!;
 
-        [Url]
-        [MaxLength(500)]
+        // Image uploads
+        public IFormFile? LogoImage { get; set; }
+        public IFormFile? CoverImage { get; set; }
+        
+        // Current images for preview
+        public string? CurrentLogoUrl { get; set; }
+        public string? CurrentCoverUrl { get; set; }
+        
+        // Store paths after upload
         public string? LogoUrl { get; set; }
-
-        [Url]
-        [MaxLength(1000)]
         public string? CoverImageUrl { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "المدينة مطلوبة")]
         public long CityId { get; set; }
 
         public long? DistrictId { get; set; }
@@ -32,6 +36,6 @@ namespace Homy.Application.Dtos
         [MaxLength(1000)]
         public string? LocationDescription { get; set; }
 
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }

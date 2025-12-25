@@ -25,7 +25,9 @@ namespace Homy.Infurastructure.Repository
                 bool? isActive = null,
                 string searchTerm = null)
         {
-            var query = _context.Users.AsQueryable();
+            var query = _context.Users
+                .Include(u => u.Properties)  // Include properties for agents API
+                .AsQueryable();
 
             // Filters
             if (isVerified.HasValue)

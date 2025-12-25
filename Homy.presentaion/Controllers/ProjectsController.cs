@@ -1,6 +1,8 @@
 ﻿using Homy.Application.Dtos;
 using Homy.Domin.Contract_Service;
+using Homy.Infurastructure.Unitofworks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +16,20 @@ namespace Homy.presentaion.Controllers
         private readonly ICity_Service _cityService;
         private readonly IDistrict_Service _districtService;
         private readonly ILogger<ProjectsController> _logger;
+        private readonly IUnitofwork _unitofwork;
 
         public ProjectsController(
             IProject_Service projectService,
             ICity_Service cityService,
             IDistrict_Service districtService,
-            ILogger<ProjectsController> logger)
+            ILogger<ProjectsController> logger,
+            IUnitofwork unitofwork)
         {
             _projectService = projectService;
             _cityService = cityService;
             _districtService = districtService;
             _logger = logger;
+            _unitofwork = unitofwork;
         }
 
         /// <summary>
@@ -135,6 +140,39 @@ namespace Homy.presentaion.Controllers
                     return View(createDto);
                 }
 
+                // Handle image uploads
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "projects");
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                // Handle Logo Upload
+                if (createDto.LogoImage != null)
+                {
+                    var logoFileName = $"logo_{Guid.NewGuid()}_{createDto.LogoImage.FileName}";
+                    var logoPath = Path.Combine(uploadsFolder, logoFileName);
+                    
+                    using (var stream = new FileStream(logoPath, FileMode.Create))
+                    {
+                        await createDto.LogoImage.CopyToAsync(stream);
+                    }
+                    
+                    createDto.LogoUrl = $"/uploads/projects/{logoFileName}";
+                }
+
+                // Handle Cover Upload
+                if (createDto.CoverImage != null)
+                {
+                    var coverFileName = $"cover_{Guid.NewGuid()}_{createDto.CoverImage.FileName}";
+                    var coverPath = Path.Combine(uploadsFolder, coverFileName);
+                    
+                    using (var stream = new FileStream(coverPath, FileMode.Create))
+                    {
+                        await createDto.CoverImage.CopyToAsync(stream);
+                    }
+                    
+                    createDto.CoverImageUrl = $"/uploads/projects/{coverFileName}";
+                }
+
                 var userId = GetCurrentUserId();
                 var createdProject = await _projectService.CreateProjectAsync(createDto, userId);
 
@@ -173,8 +211,8 @@ namespace Homy.presentaion.Controllers
                 {
                     Id = project.Id,
                     Name = project.Name,
-                    LogoUrl = project.LogoUrl,
-                    CoverImageUrl = project.CoverImageUrl,
+                    CurrentLogoUrl = project.LogoUrl,        // ✅ For preview
+                    CurrentCoverUrl = project.CoverImageUrl, // ✅ For preview
                     CityId = project.CityId,
                     DistrictId = project.DistrictId,
                     LocationDescription = project.LocationDescription,
@@ -202,6 +240,39 @@ namespace Homy.presentaion.Controllers
                 {
                     await LoadCitiesAndDistricts();
                     return View(updateDto);
+                }
+
+                // ✅ Handle image uploads
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "projects");
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                // ✅ Handle Logo Upload
+                if (updateDto.LogoImage != null)
+                {
+                    var logoFileName = $"logo_{Guid.NewGuid()}_{updateDto.LogoImage.FileName}";
+                    var logoPath = Path.Combine(uploadsFolder, logoFileName);
+                    
+                    using (var stream = new FileStream(logoPath, FileMode.Create))
+                    {
+                        await updateDto.LogoImage.CopyToAsync(stream);
+                    }
+                    
+                    updateDto.LogoUrl = $"/uploads/projects/{logoFileName}";
+                }
+
+                // ✅ Handle Cover Upload
+                if (updateDto.CoverImage != null)
+                {
+                    var coverFileName = $"cover_{Guid.NewGuid()}_{updateDto.CoverImage.FileName}";
+                    var coverPath = Path.Combine(uploadsFolder, coverFileName);
+                    
+                    using (var stream = new FileStream(coverPath, FileMode.Create))
+                    {
+                        await updateDto.CoverImage.CopyToAsync(stream);
+                    }
+                    
+                    updateDto.CoverImageUrl = $"/uploads/projects/{coverFileName}";
                 }
 
                 var userId = GetCurrentUserId();
@@ -281,6 +352,43 @@ namespace Homy.presentaion.Controllers
                 _logger.LogError(ex, $"خطأ في تغيير حالة المشروع {id}");
                 TempData["ErrorMessage"] = "حدث خطأ أثناء تغيير الحالة";
                 return RedirectToAction(nameof(Index));
+            }
+        }
+
+        // GET: /Projects/{id}/Units
+        [HttpGet]
+        public async Task<IActionResult> Units(long id)
+        {
+            try
+            {
+                // Get project details for display
+                var project = await _projectService.GetProjectByIdAsync(id);
+                if (project == null)
+                {
+                    TempData["ErrorMessage"] = "المشروع غير موجود";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                ViewBag.ProjectId = id;
+                ViewBag.ProjectName = project.Name;
+
+                // Get all properties for this project
+                var properties = await _unitofwork.PropertyRepo.GetAll()
+                    .Where(p => p.ProjectId == id && !p.IsDeleted)
+                    .Include(p => p.PropertyType)
+                    .Include(p => p.City)
+                    .Include(p => p.District)
+                    .Include(p => p.User)
+                    .Include(p => p.Images)
+                    .ToListAsync();
+
+                return View(properties);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"خطأ في جلب وحدات المشروع {id}");
+                TempData["ErrorMessage"] = "حدث خطأ أثناء جلب الوحدات";
+                return RedirectToAction(nameof(Details), new { id });
             }
         }
 
