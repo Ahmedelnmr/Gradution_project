@@ -56,6 +56,6 @@ namespace Homy.Application.Contract_Service.ApiServices
         /// <summary>
         /// Admin: Approve or reject a property
         /// </summary>
-        Task<(bool success, string message)> ApproveOrRejectPropertyAsync(PropertyApprovalDto dto);
+        Task<(bool success, string message)> ApproveOrRejectPropertyAsync(Guid adminId, PropertyApprovalDto dto);
     }
 }

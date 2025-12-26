@@ -106,6 +106,32 @@
 
                     <h5 style="color: var(--text-primary);">الوصف</h5>
                     <p style="color: var(--text-secondary);">@Model.Description</p>
+                    
+                    @if (!string.IsNullOrEmpty(Model.DescriptionEn))
+                    {
+                        <h5 class="mt-4" style="color: var(--text-primary);">Description (En)</h5>
+                        <p style="color: var(--text-secondary);" dir="ltr">@Model.DescriptionEn</p>
+                    }
+                    
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small class="text-muted d-block">العنوان (بالعربية)</small>
+                            <span class="d-block mb-2">@Model.CityName، @Model.DistrictName</span>
+                            @if (!string.IsNullOrEmpty(Model.AddressDetails))
+                            {
+                                <span class="d-block text-muted small">@Model.AddressDetails</span>
+                            }
+                        </div>
+                        <div class="col-md-6">
+                            <small class="text-muted d-block">Address (English)</small>
+                            <span class="d-block mb-2" dir="ltr">@(Model.CityNameEn ?? Model.CityName), @(Model.DistrictNameEn ?? Model.DistrictName)</span>
+                            @if (!string.IsNullOrEmpty(Model.AddressDetailsEn))
+                            {
+                                <span class="d-block text-muted small" dir="ltr">@Model.AddressDetailsEn</span>
+                            }
+                        </div>
+                    </div>
 
                     <h5 class="mt-4" style="color: var(--text-primary);">المرافق</h5>
                     <div class="d-flex flex-wrap gap-2">

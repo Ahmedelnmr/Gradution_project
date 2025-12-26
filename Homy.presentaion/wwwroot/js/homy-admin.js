@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initTheme() {
         const savedTheme = localStorage.getItem('homy-theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
+        document.documentElement.setAttribute('data-bs-theme', savedTheme); // Bootstrap 5.3 support
         updateThemeIcon(savedTheme);
     }
 
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.setAttribute('data-bs-theme', newTheme); // Bootstrap 5.3 support
         localStorage.setItem('homy-theme', newTheme);
         updateThemeIcon(newTheme);
         showToast(newTheme === 'dark' ? 'تم التبديل للوضع الداكن' : 'تم التبديل للوضع الفاتح', 'info');

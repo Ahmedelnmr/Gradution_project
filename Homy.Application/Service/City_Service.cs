@@ -66,7 +66,7 @@ namespace Homy.Infurastructure.Service
         /// <summary>
         /// ????? ????? ?????
         /// </summary>
-        public async Task<City> CreateCityAsync(string name, Guid? createdById)
+        public async Task<City> CreateCityAsync(string name, string? nameEn, Guid? createdById)
         {
             // Validation
             if (string.IsNullOrWhiteSpace(name))
@@ -80,6 +80,7 @@ namespace Homy.Infurastructure.Service
             var city = new City
             {
                 Name = name,
+                NameEn = nameEn, 
                 CreatedAt = DateTime.Now,
                 CreatedById = createdById,
                 IsDeleted = false
@@ -94,7 +95,7 @@ namespace Homy.Infurastructure.Service
         /// <summary>
         /// ????? ?????
         /// </summary>
-        public async Task<City> UpdateCityAsync(long id, string name, Guid? updatedById)
+        public async Task<City> UpdateCityAsync(long id, string name, string? nameEn, Guid? updatedById)
         {
             var city = await _unitofwork.CityRepo.GetByIdAsync((int)id);
 
@@ -105,6 +106,7 @@ namespace Homy.Infurastructure.Service
                 throw new ArgumentException("??? ??????? ?????");
 
             city.Name = name;
+            city.NameEn = nameEn;
             city.UpdatedAt = DateTime.Now;
             city.UpdatedById = updatedById;
 

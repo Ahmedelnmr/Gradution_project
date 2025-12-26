@@ -13,6 +13,9 @@ namespace Homy.Domin.models
         [Required, MaxLength(100)]
         public string Name { get; set; } = null!;           // برونز – فضي – ذهبي
 
+        [MaxLength(100)]
+        public string? NameEn { get; set; }                 // Added: English Name
+
         [Column(TypeName = "decimal(10,2)")]
         public decimal Price { get; set; }
 

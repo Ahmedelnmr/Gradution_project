@@ -15,6 +15,9 @@ namespace Homy.Application.Dtos
         [Required(ErrorMessage = "اسم المشروع مطلوب")]
         [MaxLength(300)]
         public string Name { get; set; } = null!;
+        
+        [MaxLength(300)]
+        public string? NameEn { get; set; } // Added
 
         // Image uploads
         public IFormFile? LogoImage { get; set; }
@@ -35,6 +38,9 @@ namespace Homy.Application.Dtos
 
         [MaxLength(1000)]
         public string? LocationDescription { get; set; }
+
+        [MaxLength(1000)]
+        public string? LocationDescriptionEn { get; set; } // Added
 
         public bool IsActive { get; set; } = true;
     }

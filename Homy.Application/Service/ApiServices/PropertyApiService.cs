@@ -551,7 +551,7 @@ namespace Homy.Application.Service.ApiServices
             };
         }
 
-        public async Task<(bool success, string message)> ApproveOrRejectPropertyAsync(PropertyApprovalDto dto)
+        public async Task<(bool success, string message)> ApproveOrRejectPropertyAsync(Guid adminId, PropertyApprovalDto dto)
         {
             var property = await _unitOfWork.PropertyRepo.GetAll()
                 .Include(p => p.User)
@@ -563,6 +563,7 @@ namespace Homy.Application.Service.ApiServices
             property.Status = dto.IsApproved ? PropertyStatus.Active : PropertyStatus.Rejected;
             property.RejectionReason = dto.IsApproved ? null : dto.RejectionReason;
             
+            // Create Notification
             var notification = new Notification
             {
                 UserId = property.UserId,
@@ -574,8 +575,19 @@ namespace Homy.Application.Service.ApiServices
                 PropertyId = property.Id,
                 CreatedAt = DateTime.UtcNow
             };
-            
             await _unitOfWork.NotificationRepo.AddAsync(notification);
+
+            // Create PropertyReview Log
+            var review = new PropertyReview
+            {
+                PropertyId = property.Id,
+                AdminId = adminId,
+                Action = dto.IsApproved ? ReviewAction.Approved : ReviewAction.Rejected,
+                Message = dto.IsApproved ? "Approved by admin" : dto.RejectionReason,
+                CreatedAt = DateTime.UtcNow
+            };
+            await _unitOfWork.PropertyReviewRepo.AddAsync(review);
+            
             _unitOfWork.PropertyRepo.Update(property);
             await _unitOfWork.Save();
 

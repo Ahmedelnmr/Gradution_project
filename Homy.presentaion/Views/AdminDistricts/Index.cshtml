@@ -1,0 +1,111 @@
+@model IEnumerable<Homy.Domin.models.District>
+@{
+    ViewData["Title"] = "إدارة الأحياء";
+    var cities = ViewBag.Cities as IEnumerable<Homy.Domin.models.City>;
+}
+
+<div class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <i class="fas fa-map-marked-alt text-primary"></i> إدارة الأحياء
+        </h1>
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item active">الأحياء</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="header-actions">
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus"></i> إضافة حي جديد
+        </a>
+    </div>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+         <form method="get" class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="cityId" class="col-form-label fw-bold">تصفية حسب المدينة:</label>
+            </div>
+            <div class="col-auto">
+                <select name="cityId" class="form-select" onchange="this.form.submit()">
+                    <option value="">كل المدن</option>
+                    @if (cities != null)
+                    {
+                        foreach (var city in cities)
+                        {
+                            <option value="@city.Id" selected="@(ViewBag.CurrentCityId == city.Id)">@city.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show">
+                @TempData["Success"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show">
+                @TempData["Error"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>اسم الحي</th>
+                        <th>Name (En)</th>
+                        <th>المدينة</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td class="fw-bold">@item.Name</td>
+                                <td>@item.NameEn</td>
+                                <td>
+                                    <span class="badge bg-secondary">@item.City?.Name</span>
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-edit"></i> تعديل
+                                    </a>
+                                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline" onsubmit="return confirm('هل أنت متأكد من الحذف؟')">
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            <i class="fas fa-trash"></i> حذف
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center py-4 text-muted">لا توجد أحياء مضافة</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

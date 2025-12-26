@@ -30,5 +30,37 @@ namespace Homy.Infurastructure.Service
             var allDistricts = await _unitofwork.DistrictRepo.GetAllAsync();
             return allDistricts.Where(d => d.CityId == cityId).ToList();
         }
+
+        public async Task<District> CreateDistrictAsync(string name, string? nameEn, long cityId)
+        {
+            var district = new District { Name = name, NameEn = nameEn, CityId = cityId };
+            await _unitofwork.DistrictRepo.AddAsync(district);
+            await _unitofwork.Save();
+            return district;
+        }
+
+        public async Task<District> UpdateDistrictAsync(int id, string name, string? nameEn, long cityId)
+        {
+            var district = await _unitofwork.DistrictRepo.GetByIdAsync(id);
+            if (district == null) return null;
+
+            district.Name = name;
+            district.NameEn = nameEn;
+            district.CityId = cityId;
+            
+            _unitofwork.DistrictRepo.Update(district);
+            await _unitofwork.Save();
+            return district;
+        }
+
+        public async Task<bool> DeleteDistrictAsync(int id)
+        {
+            var district = await _unitofwork.DistrictRepo.GetByIdAsync(id);
+            if (district == null) return false;
+
+            await _unitofwork.DistrictRepo.DeleteAsync(id);
+            await _unitofwork.Save();
+            return true;
+        }
     }
 }

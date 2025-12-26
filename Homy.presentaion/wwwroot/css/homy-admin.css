@@ -2947,3 +2947,42 @@ button {
     background: var(--primary);
     color: white;
 }
+
+/* ===================================================================
+   DARK MODE FORM STYLES
+   ================================================================== */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .input-group-text {
+    background-color: var(--dark-light);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: var(--dark-lighter);
+    border-color: var(--primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .form-control:disabled,
+[data-theme="dark"] .form-control[readonly] {
+    background-color: var(--dark);
+    opacity: 1;
+}
+
+[data-theme="dark"] .form-check-input {
+    background-color: var(--dark-light);
+    border-color: var(--card-border);
+}
+
+[data-theme="dark"] .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}

@@ -98,6 +98,27 @@ namespace Homy.Application.Service
             return dto;
         }
 
+        public async Task<UpdatePropertyDto?> GetPropertyForEditAsync(long id)
+        {
+            var property = await _unitOfWork.PropertyRepo.GetAll()
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (property == null) return null;
+
+            var dto = property.Adapt<UpdatePropertyDto>();
+            
+            // Populate existing images
+            dto.CurrentImages = property.Images.Select(img => new ExistingImageDto 
+            {
+                Id = img.Id,
+                ImageUrl = img.ImageUrl,
+                IsMain = img.IsMain
+            }).ToList();
+            
+            return dto;
+        }
+
         public async Task<bool> ReviewPropertyAsync(Guid adminId, CreatePropertyReviewDto dto)
         {
             var property = await _unitOfWork.PropertyRepo.GetByIdAsync((int)dto.PropertyId);
@@ -190,6 +211,93 @@ namespace Homy.Application.Service
                 ReviewAction.ChangesRequested => "تنبيه: إعلانك يحتاج لتعديلات",
                 _ => "لديك إشعار جديد"
             };
+        }
+
+        public async Task<Property> CreatePropertyAsync(CreatePropertyDto dto, Guid userId)
+        {
+            var property = dto.Adapt<Property>();
+            property.UserId = userId;
+            property.CreatedAt = DateTime.Now;
+            property.Status = PropertyStatus.Active; // Admin created properties are active by default
+
+            // Add Images
+            if (dto.ImageUrls != null && dto.ImageUrls.Any())
+            {
+                foreach (var url in dto.ImageUrls)
+                {
+                    property.Images.Add(new PropertyImage
+                    {
+                        ImageUrl = url,
+                        IsMain = property.Images.Count == 0 // First image is main
+                    });
+                }
+            }
+
+            await _unitOfWork.PropertyRepo.AddAsync(property);
+            await _unitOfWork.Save();
+            return property;
+        }
+
+        public async Task<Property> UpdatePropertyAsync(UpdatePropertyDto dto, Guid userId)
+        {
+            var property = await _unitOfWork.PropertyRepo.GetAll()
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == dto.Id);
+
+            if (property == null) throw new Exception("Property not found");
+
+            // Update fields
+            dto.Adapt(property);
+            property.UpdatedAt = DateTime.Now;
+
+            // Handle Deleted Images
+            if (dto.DeletedImageIds != null && dto.DeletedImageIds.Any())
+            {
+                var imagesToDelete = property.Images.Where(i => dto.DeletedImageIds.Contains(i.Id)).ToList();
+                foreach (var img in imagesToDelete)
+                {
+                    // Note: Physical file deletion could be handled here if we had IWebHostEnvironment, 
+                    // but usually kept simple or handled by a cleanup job.
+                    property.Images.Remove(img);
+                }
+            }
+
+            // Handle New Images
+            if (dto.NewImageUrls != null && dto.NewImageUrls.Any())
+            {
+                foreach (var url in dto.NewImageUrls)
+                {
+                    property.Images.Add(new PropertyImage
+                    {
+                        ImageUrl = url,
+                        IsMain = !property.Images.Any() // If no images exist, this is main
+                    });
+                }
+            }
+
+            // Update Main Image if requested
+            if (dto.MainImageId.HasValue)
+            {
+                foreach (var img in property.Images)
+                {
+                    img.IsMain = img.Id == dto.MainImageId.Value;
+                }
+            }
+
+            _unitOfWork.PropertyRepo.Update(property);
+            await _unitOfWork.Save();
+            return property;
+        }
+
+        public async Task<bool> DeletePropertyAsync(long id)
+        {
+            var property = await _unitOfWork.PropertyRepo.GetByIdAsync((int)id);
+            if (property == null) return false;
+
+            property.IsDeleted = true; // Soft Delete
+            _unitOfWork.PropertyRepo.Update(property);
+            await _unitOfWork.Save();
+            return true;
         }
     }
 }

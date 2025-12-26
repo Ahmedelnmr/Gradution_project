@@ -1,0 +1,72 @@
+/* Dark Mode Visibility Fixes */
+
+/* Force table text color to be light in dark mode */
+[data-bs-theme="dark"] .table,
+[data-bs-theme="dark"] .table th,
+[data-bs-theme="dark"] .table td {
+    color: var(--text-primary) !important;
+}
+
+/* Ensure striped rows have visible contrast but keep text readable */
+[data-bs-theme="dark"] .table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary) !important;
+}
+
+/* Fix table hover state */
+[data-bs-theme="dark"] .table-hover>tbody>tr:hover>* {
+    --bs-table-accent-bg: var(--dark-light);
+    color: var(--text-primary) !important;
+}
+
+/* General Text Fixes for Dark Mode */
+[data-bs-theme="dark"] body {
+    color: var(--text-primary) !important;
+    background-color: var(--body-bg) !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Ensure headings are visible */
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+    color: var(--text-primary) !important;
+}
+
+/* Card Backgrounds */
+[data-bs-theme="dark"] .card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+/* Form Controls */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: var(--dark);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: var(--dark);
+    color: var(--text-primary);
+}
+
+/* Pagination Links */
+[data-bs-theme="dark"] .page-link {
+    background-color: var(--dark);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .page-item.disabled .page-link {
+    background-color: var(--dark-lighter);
+    color: var(--text-muted);
+}

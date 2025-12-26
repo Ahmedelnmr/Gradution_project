@@ -10,11 +10,13 @@ namespace Homy.Application.Dtos
     {
         public long Id { get; set; }
         public string Name { get; set; } = null!;
+        public string? NameEn { get; set; } // Added
         public string? LogoUrl { get; set; }
         public string CityName { get; set; } = null!;
         public string? DistrictName { get; set; }
         public bool IsActive { get; set; }
         public string? LocationDescription { get; set; }
+        public string? LocationDescriptionEn { get; set; } // Added
         public int PropertiesCount { get; set; }
         public decimal? MinPrice { get; set; }
 

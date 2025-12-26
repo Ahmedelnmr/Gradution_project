@@ -8,6 +8,8 @@ using Homy.Infurastructure.Data;
 using Homy.Infurastructure.Repository;
 using Homy.Infurastructure.Service;
 using Homy.Infurastructure.Unitofworks;
+using Homy.Application.Contract_Service.ApiServices;
+using Homy.Application.Service.ApiServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
@@ -63,6 +65,8 @@ namespace Homy.presentaion
             builder.Services.AddScoped<IUserSubscription_Repo, UserSubscription_Repo>();
             builder.Services.AddScoped<IProject_Repo, Project_Repo>();
             builder.Services.AddScoped<IReports_Repo, Reports_Repo>();
+            builder.Services.AddScoped<IPropertyReview_Repo, PropertyReview_Repo>();
+            builder.Services.AddScoped<INotification_Repo, Notification_Repo>();
             builder.Services.AddScoped<IUserRepo, UserRepo>();
 
             // ==================== Register Unit of Work ====================
@@ -88,6 +92,11 @@ namespace Homy.presentaion
             builder.Services.AddScoped<IDashboard_Service, Dashboard_Service>();
             builder.Services.AddScoped<IAdminProperty_Service, AdminProperty_Service>();
             builder.Services.AddScoped<IPropertyType_AdminService, PropertyType_AdminService>();
+            builder.Services.AddScoped<IPropertyReview_Service, PropertyReview_Service>();
+
+            // API Services
+            builder.Services.AddScoped<IPropertyApiService, PropertyApiService>();
+            builder.Services.AddScoped<IFileUploadService, FileUploadService>();
 
             // Register Mapster Mappings
             Homy.Application.Mapping.MappingConfig.RegisterMappings();

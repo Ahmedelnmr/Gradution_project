@@ -9,6 +9,9 @@ namespace Homy.Application.Dtos
         [Required(ErrorMessage = "Name is required")]
         [Display(Name = "Name")]
         public string Name { get; set; } = null!;
+        
+        [Display(Name = "Name (En)")]
+        public string? NameEn { get; set; } // Added
 
         [Required(ErrorMessage = "Price is required")]
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive number")]

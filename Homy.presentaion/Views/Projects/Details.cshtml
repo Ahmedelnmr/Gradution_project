@@ -9,6 +9,7 @@
         <h1 class="page-title">
             <i class="fas fa-building text-primary"></i>
             @Model.Name
+            @if(!string.IsNullOrEmpty(Model.NameEn)) { <span class="text-muted h4">| @Model.NameEn</span> }
         </h1>
         <nav class="breadcrumb-nav">
             <ol class="breadcrumb">

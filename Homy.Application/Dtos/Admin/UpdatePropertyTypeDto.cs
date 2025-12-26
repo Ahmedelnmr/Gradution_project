@@ -10,6 +10,9 @@ namespace Homy.Application.Dtos.Admin
         [Required(ErrorMessage = "الاسم مطلوب")]
         [StringLength(100, ErrorMessage = "الاسم يجب ألا يتجاوز 100 حرف")]
         public string Name { get; set; }
+        
+        [StringLength(100)]
+        public string? NameEn { get; set; } // Added
 
         // Image upload
         public IFormFile? IconImage { get; set; }

@@ -70,6 +70,7 @@ namespace Homy.Application.Service
 
             // Update properties
             propertyType.Name = dto.Name;
+            propertyType.NameEn = dto.NameEn; // Added
             
             // Update IconUrl if a new image was uploaded
             if (!string.IsNullOrEmpty(dto.CurrentIconUrl))

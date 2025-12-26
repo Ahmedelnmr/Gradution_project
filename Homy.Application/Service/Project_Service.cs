@@ -62,11 +62,13 @@ namespace Homy.Infurastructure.Service
             var project = new Project
             {
                 Name = createDto.Name,
+                NameEn = createDto.NameEn, // Added
                 LogoUrl = createDto.LogoUrl,
                 CoverImageUrl = createDto.CoverImageUrl,
                 CityId = createDto.CityId,
                 DistrictId = createDto.DistrictId,
                 LocationDescription = createDto.LocationDescription,
+                LocationDescriptionEn = createDto.LocationDescriptionEn, // Added
                 IsActive = createDto.IsActive,
                 CreatedAt = DateTime.Now,
                 CreatedById = createdById,
@@ -97,11 +99,13 @@ namespace Homy.Infurastructure.Service
             }
 
             project.Name = updateDto.Name;
+            project.NameEn = updateDto.NameEn; // Added
             project.LogoUrl = updateDto.LogoUrl;
             project.CoverImageUrl = updateDto.CoverImageUrl;
             project.CityId = updateDto.CityId;
             project.DistrictId = updateDto.DistrictId;
             project.LocationDescription = updateDto.LocationDescription;
+            project.LocationDescriptionEn = updateDto.LocationDescriptionEn; // Added
             project.IsActive = updateDto.IsActive;
             project.UpdatedAt = DateTime.Now;
             project.UpdatedById = updatedById;
@@ -225,6 +229,7 @@ namespace Homy.Infurastructure.Service
             {
                 Id = project.Id,
                 Name = project.Name,
+                NameEn = project.NameEn, // Added
                 LogoUrl = project.LogoUrl,
                 CoverImageUrl = project.CoverImageUrl,
                 CityId = project.CityId,
@@ -232,6 +237,7 @@ namespace Homy.Infurastructure.Service
                 DistrictId = project.DistrictId,
                 DistrictName = project.District?.Name,
                 LocationDescription = project.LocationDescription,
+                LocationDescriptionEn = project.LocationDescriptionEn, // Added
                 IsActive = project.IsActive,
                 PropertiesCount = propertiesCount,
                 MinPrice = minPrice,
@@ -254,10 +260,12 @@ namespace Homy.Infurastructure.Service
                 {
                     Id = project.Id,
                     Name = project.Name,
+                    NameEn = project.NameEn, // Added
                     LogoUrl = project.LogoUrl,
                     CityName = project.City?.Name ?? "غير محدد",
                     DistrictName = project.District?.Name,
                     LocationDescription = project.LocationDescription,
+                    LocationDescriptionEn = project.LocationDescriptionEn, // Added
                     IsActive = project.IsActive,
                     PropertiesCount = propertiesCount,
                     MinPrice = minPrice

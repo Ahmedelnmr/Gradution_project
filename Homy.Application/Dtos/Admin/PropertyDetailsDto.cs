@@ -6,6 +6,7 @@ namespace Homy.Application.Dtos.Admin
     public class PropertyDetailsDto : PropertyListDto
     {
         public string? Description { get; set; }
+        public string? DescriptionEn { get; set; } // Added
         public List<string> Images { get; set; } = new();
         public List<string> Amenities { get; set; } = new();
         
@@ -17,6 +18,7 @@ namespace Homy.Application.Dtos.Admin
         public decimal? Latitude { get; set; }
         public decimal? Longitude { get; set; }
         public string? AddressDetails { get; set; }
+        public string? AddressDetailsEn { get; set; } // Added
         
         // تفاصيل إضافية
         public FinishingType? FinishingType { get; set; }

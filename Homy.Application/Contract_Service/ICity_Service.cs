@@ -38,12 +38,12 @@ namespace Homy.Domin.Contract_Service
         /// <summary>
         /// ????? ????? ?????
         /// </summary>
-        Task<City> CreateCityAsync(string name, Guid? createdById);
+        Task<City> CreateCityAsync(string name, string? nameEn, Guid? createdById);
 
         /// <summary>
         /// ????? ?????
         /// </summary>
-        Task<City> UpdateCityAsync(long id, string name, Guid? updatedById);
+        Task<City> UpdateCityAsync(long id, string name, string? nameEn, Guid? updatedById);
 
         /// <summary>
         /// ??? ????? (Soft Delete)

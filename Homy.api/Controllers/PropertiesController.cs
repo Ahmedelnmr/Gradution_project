@@ -155,7 +155,11 @@ namespace Homy.api.Controllers
         {
             try
             {
-                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(dto);
+                var adminIdStr = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(adminIdStr) || !System.Guid.TryParse(adminIdStr, out var adminId))
+                    return Unauthorized(new { message = "User not authenticated" });
+
+                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(adminId, dto);
 
                 if (!success)
                     return BadRequest(new { message });

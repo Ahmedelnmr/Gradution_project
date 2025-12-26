@@ -155,13 +155,21 @@
                         }
                     </div>
                     <div class="ad-content">
-                        <h4 class="ad-title">@project.Name</h4>
+                        <h4 class="ad-title">
+                            @project.Name
+                            @if (!string.IsNullOrEmpty(project.NameEn))
+                            {
+                                <div class="text-muted small mt-1" style="font-size: 0.9rem;">@project.NameEn</div>
+                            }
+                        </h4>
                         <p class="ad-location">
                             <i class="fas fa-map-marker-alt"></i>
                             @project.CityName @(project.DistrictName != null ? $"- {project.DistrictName}" : "")
                         </p>
                         <div class="ad-details">
-                            <span><i class="fas fa-home"></i> @project.PropertiesCount وحدات</span>
+                            <a asp-action="Units" asp-route-id="@project.Id" class="text-decoration-none text-muted transition-hover">
+                                <i class="fas fa-home"></i> @project.PropertiesCount وحدات
+                            </a>
                         </div>
                         <div class="ad-footer">
                             <span class="ad-owner">
@@ -176,6 +184,11 @@
                                    class="btn-icon btn-edit" title="تعديل">
                                     <i class="fas fa-edit"></i>
                                 </a>
+                                <form asp-action="Delete" asp-route-id="@project.Id" method="post" class="d-inline" onsubmit="return confirm('هل أنت متأكد من حذف هذا المشروع؟');">
+                                    <button type="submit" class="btn-icon btn-delete text-danger" title="حذف">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>

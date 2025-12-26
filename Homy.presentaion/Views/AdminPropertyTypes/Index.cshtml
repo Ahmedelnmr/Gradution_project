@@ -36,6 +36,7 @@
                     <thead>
                         <tr>
                             <th>الاسم</th>
+                            <th>Name (En)</th> <!-- Added -->
                             <th>الأيقونة</th>
                             <th>عدد الإعلانات</th>
                             <th>تاريخ الإنشاء</th>
@@ -47,6 +48,7 @@
                         {
                             <tr>
                                 <td class="fw-bold">@type.Name</td>
+                                <td>@type.NameEn</td> <!-- Added -->
                                 <td>
                                     @if (!string.IsNullOrEmpty(type.IconUrl))
                                     {

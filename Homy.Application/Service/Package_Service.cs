@@ -55,6 +55,7 @@ namespace Homy.Application.Service
             {
                 // Update properties
                 existingPackage.Name = packageDto.Name;
+                existingPackage.NameEn = packageDto.NameEn; // Added
                 existingPackage.Price = packageDto.Price;
                 existingPackage.DurationDays = packageDto.DurationDays;
                 existingPackage.MaxProperties = packageDto.MaxProperties;

@@ -249,6 +249,10 @@ namespace Homy.Infurastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("NameEn")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(10,2)");
 
@@ -301,12 +305,20 @@ namespace Homy.Infurastructure.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<string>("LocationDescriptionEn")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
                     b.Property<string>("LogoUrl")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("NameEn")
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 

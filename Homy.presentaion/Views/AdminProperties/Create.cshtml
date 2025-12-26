@@ -1,0 +1,213 @@
+@using Homy.Domin.models
+@model Homy.Application.Dtos.Admin.CreatePropertyDto
+@{
+    ViewData["Title"] = "إضافة عقار جديد";
+}
+
+<div class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <i class="fas fa-plus-circle text-primary"></i> إضافة عقار جديد
+        </h1>
+        <nav class="breadcrumb-nav">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">لوحة التحكم</a></li>
+                <li class="breadcrumb-item"><a asp-action="Index">إدارة الإعلانات</a></li>
+                <li class="breadcrumb-item active">إضافة</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    
+                    <div class="row g-3">
+                        <!-- Basic Info -->
+                        <div class="col-12">
+                            <h5 class="border-bottom pb-2 mb-3"><i class="fas fa-info-circle"></i> البيانات الأساسية</h5>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="Title" class="form-label">عنوان الإعلان *</label>
+                            <input asp-for="Title" class="form-control" placeholder="مثال: شقة فاخرة للبيع في التجمع" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="TitleEn" class="form-label">Title (English)</label>
+                            <input asp-for="TitleEn" class="form-control" dir="ltr" placeholder="Ex: Luxury Apartment in New Cairo" />
+                            <span asp-validation-for="TitleEn" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label asp-for="Price" class="form-label">السعر (جنيه) *</label>
+                            <input asp-for="Price" type="number" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label asp-for="Area" class="form-label">المساحة (م²) *</label>
+                            <input asp-for="Area" type="number" class="form-control" />
+                            <span asp-validation-for="Area" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label asp-for="Description" class="form-label">وصف العقار</label>
+                            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="DescriptionEn" class="form-label">Description (English)</label>
+                            <textarea asp-for="DescriptionEn" class="form-control" rows="4" dir="ltr"></textarea>
+                            <span asp-validation-for="DescriptionEn" class="text-danger"></span>
+                        </div>
+
+                        <!-- Classification -->
+                        <div class="col-12 mt-4">
+                            <h5 class="border-bottom pb-2 mb-3"><i class="fas fa-tags"></i> التصنيف والموقع</h5>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="PropertyTypeId" class="form-label">نوع العقار *</label>
+                            <select asp-for="PropertyTypeId" class="form-select" asp-items="@(new SelectList(ViewBag.PropertyTypes, "Id", "Name"))">
+                                <option value="">اختر النوع</option>
+                            </select>
+                            <span asp-validation-for="PropertyTypeId" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="FinishingType" class="form-label">نوع التشطيب</label>
+                            <select asp-for="FinishingType" class="form-select" asp-items="Html.GetEnumSelectList<FinishingType>()">
+                                <option value="">اختر..</option>
+                            </select>
+                            <span asp-validation-for="FinishingType" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="Purpose" class="form-label">الغرض *</label>
+                            <select asp-for="Purpose" class="form-select" asp-items="Html.GetEnumSelectList<PropertyPurpose>()"></select>
+                            <span asp-validation-for="Purpose" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="CityId" class="form-label">المدينة *</label>
+                            <select asp-for="CityId" class="form-select" id="citySelect" asp-items="@(new SelectList(ViewBag.Cities, "Id", "Name"))">
+                                <option value="">اختر المدينة</option>
+                            </select>
+                            <span asp-validation-for="CityId" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="DistrictId" class="form-label">الحي</label>
+                            <select asp-for="DistrictId" class="form-select" id="districtSelect">
+                                <option value="">اختر الحي</option>
+                                @if (ViewBag.Districts != null)
+                                {
+                                    foreach (var d in (IEnumerable<District>)ViewBag.Districts)
+                                    {
+                                        <option value="@d.Id" data-city-id="@d.CityId">@d.Name</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="DistrictId" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label asp-for="ProjectId" class="form-label">المشروع (اختياري)</label>
+                            <select asp-for="ProjectId" class="form-select" asp-items="@(new SelectList(ViewBag.Projects, "Id", "Name"))">
+                                <option value="">بدون مشروع</option>
+                            </select>
+                            <span asp-validation-for="ProjectId" class="text-danger"></span>
+                        </div>
+                        
+                         <div class="col-md-12">
+                            <label asp-for="AddressDetails" class="form-label">تفاصيل العنوان</label>
+                            <input asp-for="AddressDetails" class="form-control" />
+                            <span asp-validation-for="AddressDetails" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="AddressDetailsEn" class="form-label">Address Details (English)</label>
+                            <input asp-for="AddressDetailsEn" class="form-control" dir="ltr" />
+                            <span asp-validation-for="AddressDetailsEn" class="text-danger"></span>
+                        </div>
+
+
+                        <!-- Details -->
+                        <div class="col-12 mt-4">
+                            <h5 class="border-bottom pb-2 mb-3"><i class="fas fa-list"></i> تفاصيل إضافية</h5>
+                        </div>
+
+                         <div class="col-md-4">
+                            <label asp-for="Rooms" class="form-label">عدد الغرف</label>
+                            <input asp-for="Rooms" type="number" class="form-control" min="0" />
+                            <span asp-validation-for="Rooms" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="Bathrooms" class="form-label">عدد الحمامات</label>
+                            <input asp-for="Bathrooms" type="number" class="form-control" min="0" />
+                            <span asp-validation-for="Bathrooms" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label asp-for="FloorNumber" class="form-label">الدور</label>
+                            <input asp-for="FloorNumber" type="number" class="form-control" min="0" />
+                            <span asp-validation-for="FloorNumber" class="text-danger"></span>
+                        </div>
+
+                         <!-- Images -->
+                        <div class="col-12 mt-4">
+                            <h5 class="border-bottom pb-2 mb-3"><i class="fas fa-images"></i> صور العقار</h5>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label asp-for="Images" class="form-label">اختر الصور (يمكن اختيار أكثر من صورة)</label>
+                            <input asp-for="Images" class="form-control" type="file" multiple accept="image/*" />
+                            <span asp-validation-for="Images" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 d-flex gap-2 justify-content-end">
+                         <a asp-action="Index" class="btn btn-secondary">إلغاء</a>
+                        <button type="submit" class="btn btn-primary px-4"><i class="fas fa-save"></i> حفظ العقار</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Cascade Dropdown Logic
+        const citySelect = document.getElementById('citySelect');
+        const districtSelect = document.getElementById('districtSelect');
+        const allDistricts = Array.from(districtSelect.querySelectorAll('option[data-city-id]'));
+
+        function filterDistricts() {
+            const cityId = citySelect.value;
+            districtSelect.value = "";
+            let hasVisible = false;
+
+            allDistricts.forEach(opt => {
+                if (cityId && opt.dataset.cityId === cityId) {
+                    opt.style.display = "";
+                    hasVisible = true;
+                } else {
+                    opt.style.display = "none";
+                }
+            });
+            
+            // Auto Select if only one district? No, keep it specific.
+        }
+
+        citySelect.addEventListener('change', filterDistricts);
+        // Run on load
+        if(citySelect.value) filterDistricts();
+    </script>
+}

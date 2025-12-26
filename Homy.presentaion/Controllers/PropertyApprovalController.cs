@@ -76,13 +76,20 @@ namespace Homy.presentaion.Controllers
         {
             try
             {
+                var adminIdStr = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (!Guid.TryParse(adminIdStr, out Guid adminId))
+                {
+                    TempData["Error"] = "لم يتم التعرف على المستخدم الحالي";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 var dto = new PropertyApprovalDto
                 {
                     PropertyId = id,
                     IsApproved = true
                 };
 
-                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(dto);
+                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(adminId, dto);
 
                 if (success)
                     TempData["Success"] = message;
@@ -104,6 +111,13 @@ namespace Homy.presentaion.Controllers
         {
             try
             {
+                var adminIdStr = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                if (!Guid.TryParse(adminIdStr, out Guid adminId))
+                {
+                    TempData["Error"] = "لم يتم التعرف على المستخدم الحالي";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 if (string.IsNullOrWhiteSpace(reason))
                 {
                     TempData["Error"] = "يجب كتابة سبب الرفض";
@@ -117,7 +131,7 @@ namespace Homy.presentaion.Controllers
                     RejectionReason = reason
                 };
 
-                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(dto);
+                var (success, message) = await _propertyService.ApproveOrRejectPropertyAsync(adminId, dto);
 
                 if (success)
                     TempData["Success"] = message;

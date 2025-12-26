@@ -13,6 +13,7 @@ namespace Homy.Application.Dtos.UserDtos.UserSubDTOs
     {
         public Guid UserId { get; set; }
         public long PackageId { get; set; }
+        public string? PackageName { get; set; } // Added for display
         public string? UserName { get; set; }
 
         public DateTime StartDate { get; set; } = DateTime.Now;

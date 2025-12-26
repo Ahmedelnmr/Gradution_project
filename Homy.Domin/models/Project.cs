@@ -12,6 +12,9 @@ namespace Homy.Domin.models
         [Required, MaxLength(300)]
         public string Name { get; set; } = null!;            // ماونتن فيو ألموند – لافيستا رأس الحكمة
 
+        [MaxLength(300)]
+        public string? NameEn { get; set; }                  // Added: English Name
+
         [MaxLength(500)]
         public string? LogoUrl { get; set; }
 
@@ -26,6 +29,9 @@ namespace Homy.Domin.models
 
         [MaxLength(1000)]
         public string? LocationDescription { get; set; }
+
+        [MaxLength(1000)]
+        public string? LocationDescriptionEn { get; set; } // Added: English Location Description
 
         public bool IsActive { get; set; } = true;
 

@@ -33,6 +33,12 @@
                         </div>
 
                         <div class="mb-3">
+                            <label asp-for="NameEn" class="form-label">Name (English)</label>
+                            <input asp-for="NameEn" class="form-control" />
+                            <span asp-validation-for="NameEn" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
                             <label asp-for="IconImage" class="form-label">أيقونة النوع</label>
                             
                             @if (!string.IsNullOrEmpty(Model.CurrentIconUrl))

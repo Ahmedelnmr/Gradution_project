@@ -36,7 +36,6 @@
                 <a asp-controller="Users" asp-action="Index" class="nav-link">
                     <i class="fas fa-users"></i>
                     <span>إدارة المستخدمين</span>
-                    <span class="badge bg-danger">12</span>
                 </a>
             </li>
 
@@ -56,6 +55,38 @@
                 </a>
             </li>
 
+            <!-- إدارة المدن -->
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "AdminCities" ? "active" : "")">
+                <a asp-controller="AdminCities" asp-action="Index" class="nav-link">
+                    <i class="fas fa-city"></i>
+                    <span>إدارة المدن</span>
+                </a>
+            </li>
+
+            <!-- إدارة الأحياء -->
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "AdminDistricts" ? "active" : "")">
+                <a asp-controller="AdminDistricts" asp-action="Index" class="nav-link">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>إدارة الأحياء</span>
+                </a>
+            </li>
+
+            <!-- إدارة المميزات -->
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "AdminAmenities" ? "active" : "")">
+                <a asp-controller="AdminAmenities" asp-action="Index" class="nav-link">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>إدارة المميزات</span>
+                </a>
+            </li>
+
+            <!-- سجل المراجعات -->
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "AdminPropertyReviews" ? "active" : "")">
+                <a asp-controller="AdminPropertyReviews" asp-action="Index" class="nav-link">
+                    <i class="fas fa-history"></i>
+                    <span>سجل المراجعات</span>
+                </a>
+            </li>
+
             <!-- إدارة الاشتراكات -->
             <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "UserSubscription" ? "active" : "")">
                 <a asp-controller="UserSubscription" asp-action="GetAll" class="nav-link">
@@ -65,8 +96,8 @@
             </li>
 
             <!-- إدارة الباقات -->
-            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Packges" ? "active" : "")">
-                <a asp-controller="Packges" asp-action="Index" class="nav-link">
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Packages" ? "active" : "")">
+                <a asp-controller="Packages" asp-action="Index" class="nav-link">
                     <i class="fas fa-box"></i>
                     <span>إدارة الباقات</span>
                 </a>

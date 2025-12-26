@@ -11,7 +11,13 @@ namespace Homy.Domin.Contract_Service
     {
         Task<PaginatedResult<PropertyListDto>> GetPropertiesAsync(PropertyFilterDto filter);
         Task<PropertyDetailsDto?> GetPropertyDetailsAsync(long id);
+        Task<UpdatePropertyDto?> GetPropertyForEditAsync(long id);
         Task<bool> ReviewPropertyAsync(Guid adminId, CreatePropertyReviewDto dto);
         Task<Dictionary<PropertyStatus, int>> GetStatusCountsAsync();
+        
+        // CRUD
+        Task<Property> CreatePropertyAsync(CreatePropertyDto dto, Guid userId);
+        Task<Property> UpdatePropertyAsync(UpdatePropertyDto dto, Guid userId);
+        Task<bool> DeletePropertyAsync(long id);
     }
 }

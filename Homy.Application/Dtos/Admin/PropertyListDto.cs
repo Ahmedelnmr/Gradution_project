@@ -7,12 +7,16 @@ namespace Homy.Application.Dtos.Admin
     {
         public long Id { get; set; }
         public string Title { get; set; } = null!;
+        public string? TitleEn { get; set; } // Added
         public string? ImageUrl { get; set; }
         public decimal Price { get; set; }
         public decimal? RentPriceMonthly { get; set; }
         public string PropertyTypeName { get; set; } = null!;
+        public string? PropertyTypeNameEn { get; set; } // Added
         public string CityName { get; set; } = null!;
+        public string? CityNameEn { get; set; } // Added
         public string? DistrictName { get; set; }
+        public string? DistrictNameEn { get; set; } // Added
         public byte? Rooms { get; set; }
         public byte? Bathrooms { get; set; }
         public int? Area { get; set; }

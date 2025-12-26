@@ -11,6 +11,11 @@ namespace Homy.Application.Mapping
             
             // Add more mapping configs here as needed
             // Example: UserMappingConfig.Configure();
+            
+            // UserSubscription -> UserSubReadDTO
+            TypeAdapterConfig<Homy.Domin.models.UserSubscription, Homy.Application.Dtos.UserDtos.UserSubDTOs.UserSubReadDTO>.NewConfig()
+                .Map(dest => dest.UserName, src => src.User.FullName)
+                .Map(dest => dest.PackageName, src => src.Package.Name);
         }
     }
 }

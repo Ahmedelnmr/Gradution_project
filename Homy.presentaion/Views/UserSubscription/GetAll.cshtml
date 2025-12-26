@@ -30,7 +30,7 @@
         {
             <tr>
                 <td>@item.UserName</td>
-                <td>@item.PackageId</td>
+                <td>@(item.PackageName ?? item.PackageId.ToString())</td>
                 <td>@item.StartDate.ToShortDateString()</td>
                 <td>@item.EndDate.ToShortDateString()</td>
                 <td>
