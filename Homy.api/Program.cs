@@ -168,6 +168,17 @@ namespace Homy.api
             // Enable static files (for serving uploaded images)
             app.UseStaticFiles();
 
+            // Enable serving files from shared upload directory
+            var sharedUploadPath = builder.Configuration["FileUploadSettings:SharedUploadPath"];
+            if (!string.IsNullOrEmpty(sharedUploadPath) && System.IO.Directory.Exists(sharedUploadPath))
+            {
+                app.UseStaticFiles(new Microsoft.AspNetCore.Builder.StaticFileOptions
+                {
+                    FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(sharedUploadPath),
+                    RequestPath = "/uploads"
+                });
+            }
+
             // Enable CORS
             app.UseCors("AllowAngularApp");
 

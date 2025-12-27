@@ -815,23 +815,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ahmed\\.nuget\\packages\\": {},
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Final_Project_ITI_20225\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+      "projectUniqueName": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
       "projectName": "Homy.Domin",
-      "projectPath": "D:\\Final_Project_ITI_20225\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
-      "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-      "outputPath": "D:\\Final_Project_ITI_20225\\Gradution_project\\Homy.Domin\\obj\\",
+      "projectPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\Homy.Domin.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\graduation-project2\\Gradution_project\\Homy.Domin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -885,7 +885,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

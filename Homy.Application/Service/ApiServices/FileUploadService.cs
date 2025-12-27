@@ -1,6 +1,7 @@
 using Homy.Application.Contract_Service.ApiServices;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,12 +13,14 @@ namespace Homy.Application.Service.ApiServices
     public class FileUploadService : IFileUploadService
     {
         private readonly IWebHostEnvironment _environment;
+        private readonly IConfiguration _configuration;
         private readonly long _maxFileSize = 5 * 1024 * 1024; // 5MB
         private readonly string[] _allowedExtensions = { ".jpg", ".jpeg", ".png", ".webp" };
 
-        public FileUploadService(IWebHostEnvironment environment)
+        public FileUploadService(IWebHostEnvironment environment, IConfiguration configuration)
         {
             _environment = environment;
+            _configuration = configuration;
         }
 
         public (bool isValid, string errorMessage) ValidateImage(IFormFile file)
@@ -49,8 +52,16 @@ namespace Homy.Application.Service.ApiServices
             if (!isValid)
                 throw new InvalidOperationException(errorMessage);
 
+            // Get shared upload path from configuration
+            var sharedUploadPath = _configuration["FileUploadSettings:SharedUploadPath"];
+            if (string.IsNullOrEmpty(sharedUploadPath))
+            {
+                // Fallback to WebRootPath if not configured
+                sharedUploadPath = Path.Combine(_environment.WebRootPath, "uploads");
+            }
+
             // Create upload directory if not exists
-            var uploadPath = Path.Combine(_environment.WebRootPath, "uploads", folder);
+            var uploadPath = Path.Combine(sharedUploadPath, folder);
             if (!Directory.Exists(uploadPath))
                 Directory.CreateDirectory(uploadPath);
 
@@ -98,9 +109,17 @@ namespace Homy.Application.Service.ApiServices
                 if (string.IsNullOrEmpty(fileUrl))
                     return Task.FromResult(false);
 
+                // Get shared upload path from configuration
+                var sharedUploadPath = _configuration["FileUploadSettings:SharedUploadPath"];
+                if (string.IsNullOrEmpty(sharedUploadPath))
+                {
+                    // Fallback to WebRootPath if not configured
+                    sharedUploadPath = Path.Combine(_environment.WebRootPath, "uploads");
+                }
+
                 // Extract file path from URL
                 var fileName = fileUrl.Replace("/uploads/", "");
-                var filePath = Path.Combine(_environment.WebRootPath, "uploads", fileName);
+                var filePath = Path.Combine(sharedUploadPath, fileName);
 
                 if (File.Exists(filePath))
                 {

@@ -101,7 +101,12 @@ namespace Homy.presentaion.Controllers
                 // Handle Image Uploads
                 if (dto.Images != null && dto.Images.Any())
                 {
-                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "properties");
+                    // Get shared upload path from configuration
+                    var sharedUploadPath = HttpContext.RequestServices.GetRequiredService<IConfiguration>()["FileUploadSettings:SharedUploadPath"];
+                    var uploadsFolder = string.IsNullOrEmpty(sharedUploadPath) 
+                        ? Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "properties")
+                        : Path.Combine(sharedUploadPath, "properties");
+                    
                     if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
 
                     foreach (var image in dto.Images)
@@ -169,7 +174,12 @@ namespace Homy.presentaion.Controllers
                 // Handle New Images
                 if (dto.NewImages != null && dto.NewImages.Any())
                 {
-                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "properties");
+                    // Get shared upload path from configuration
+                    var sharedUploadPath = HttpContext.RequestServices.GetRequiredService<IConfiguration>()["FileUploadSettings:SharedUploadPath"];
+                    var uploadsFolder = string.IsNullOrEmpty(sharedUploadPath) 
+                        ? Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "properties")
+                        : Path.Combine(sharedUploadPath, "properties");
+                    
                     if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
 
                     foreach (var image in dto.NewImages)
